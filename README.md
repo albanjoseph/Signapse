@@ -3,7 +3,7 @@
 <p align="center">
 
   
-  <img src="Signapse.jpg" alt="logo" width="300" div al ign=center />
+  <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
   <h1 align="center">Signapse</h1>
 
   <p align="center">
@@ -43,7 +43,7 @@
 - Signapse acts as a teacher, helping students progress their learning. Users will be able to score points, complete challenges and view their live signing in our custom GUI.
 
 <p align="center"> 
-<img src="synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
+<img src="images/synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
 
 # Social Media
 <p align="center">
