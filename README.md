@@ -55,7 +55,7 @@
 </p>
 
 # Technologies
-<p align="center"> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="100" height="150"/> </a> </a> 
+<p align="center"> </a> <a href="https://isocpp.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="100" height="150"/> </a> </a> 
 <a href="https://www.raspberrypi.org/" > <img src="https://elinux.org/images/c/cb/Raspberry_Pi_Logo.svg" alt="rpi" width="84" height="105" /> </a> 
 <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="100" height="150"/> </a> 
 
