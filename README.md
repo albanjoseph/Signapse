@@ -70,7 +70,7 @@ Distributed under the GPL-3.0 License. See [`LICENSE`](https://github.com/albanj
 - 📫 Contact us: **signapse.glasgow@gmail.com**
 - 🔭This project is being completed by a team of students at the University of Glasgow :
 
-* [Adam Frew](https://github.com/Saweenbarra) 
-* [Alban Joseph](https://github.com/albanjoseph)
-* [Lewis Russell](https://github.com/charger4241)
-* [Ross Gardiner](https://github.com/rossGardiner)
+  * [Adam Frew](https://github.com/Saweenbarra) 
+  * [Alban Joseph](https://github.com/albanjoseph)
+  * [Lewis Russell](https://github.com/charger4241)
+  * [Ross Gardiner](https://github.com/rossGardiner)
