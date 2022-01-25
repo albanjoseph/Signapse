@@ -4,7 +4,7 @@
 <div align="center">
 
 
-<img src="logo.jpg" alt="logo" width="200" div al ign=center />
+<img src="signapse.jpg" alt="logo" width="200" div al ign=center />
 
 </div>
 
