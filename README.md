@@ -36,7 +36,7 @@
 <!-- CONTACT -->
 </div>
 
-# About The [Project](link?)
+# About Signapse
 
 - Signapse is an open source software tool for helping everyday people learn sign language for free!​
 
