@@ -1,5 +1,14 @@
 <!-- PROJECT LOGO -->
 <br />
+<div align="center">
+ 
+![Contributors](https://img.shields.io/github/contributors/albanjoseph/Signapse?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/albanjoseph/Signapse?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues-raw/albanjoseph/Signapse?style=for-the-badge)
+[![License](https://img.shields.io/github/license/albanjoseph/Signapse?style=for-the-badge)](https://github.com/albanjoseph/Signapse/blob/main/LICENSE)
+
+<!-- CONTACT -->
+</div>
 <p align="center">
 
   
@@ -18,15 +27,7 @@
 
 <h3 align="center"></h3>
 
-<div align="center">
- 
-![Contributors](https://img.shields.io/github/contributors/albanjoseph/Signapse?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/albanjoseph/Signapse?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues-raw/albanjoseph/Signapse?style=for-the-badge)
-[![License](https://img.shields.io/github/license/albanjoseph/Signapse?style=for-the-badge)](https://github.com/albanjoseph/Signapse/blob/main/LICENSE)
 
-<!-- CONTACT -->
-</div>
 
 # About Signapse
 
