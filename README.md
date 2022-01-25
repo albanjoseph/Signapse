@@ -31,7 +31,7 @@
 ![Contributors](https://img.shields.io/github/contributors/albanjoseph/Signapse?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/albanjoseph/Signapse?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues-raw/albanjoseph/Signapse?style=for-the-badge)
-![Apache-2.0 License](https://img.shields.io/github/license/iwishiwasaneagle/boxofhope.svg?style=for-the-badge)
+[![License](https://img.shields.io/github/license/albanjoseph/Signapse?style=for-the-badge)](https://github.com/albanjoseph/Signapse/blob/main/LICENSE)
 
 <!-- CONTACT -->
 </div>
@@ -58,6 +58,13 @@
 <p align="center"> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="100" height="150"/> </a> </a> 
 <a href="https://www.raspberrypi.org/" > <img src="https://elinux.org/images/c/cb/Raspberry_Pi_Logo.svg" alt="rpi" width="84" height="105" /> </a> 
 <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="100" height="150"/> </a> 
+
+<!-- LICENSE -->
+
+# License
+
+Distributed under the GPL-3.0 License. See [`LICENSE`](https://github.com/albanjoseph/Signapse/blob/main/LICENSE) for more information.
+
 
 # Contact Us
 - 📫 Contact us: **signapse.glasgow@gmail.com**
