@@ -10,19 +10,11 @@
     Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
     <br />
     <br />
-    <br />
     <a href="https://github.com/albanjoseph/Signapse/issues">Report Bug</a>
     ·
     <a href="https://github.com/albanjoseph/Signapse/issues">Request Feature</a>
   </p>
 </p>
-
-
-<div align="center">
-
-
-
-</div>
 
 <h3 align="center"></h3>
 
