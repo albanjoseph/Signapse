@@ -1,2 +1,2 @@
-CMake ./build
+cmake ./build
 make Signapse
