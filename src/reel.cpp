@@ -15,7 +15,9 @@ Reel::Reel(){
     frameQueue.push(30);
 }
 int Reel::Pop(){
-    return frameQueue.pop();
+    int elem = frameQueue.front();
+    frameQueue.pop();
+    return elem;
 }
 int Reel::GetNumber(){
     return reelNr;
