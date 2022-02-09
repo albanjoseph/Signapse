@@ -10,7 +10,9 @@ class Camera: public Reel{
 public:
     void Stream(); //Run in thread
     void Populate(); //Test feature
-protected:
+    void set_current_task(char new_task);
+private:
+    char current_task;//TODO set default
 };
 
 

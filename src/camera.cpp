@@ -17,3 +17,6 @@ void Camera::Populate(){
     };
     frameQueue.push(s);
 }
+void Camera::set_current_task(char new_task){
+    current_task = new_task;
+}
