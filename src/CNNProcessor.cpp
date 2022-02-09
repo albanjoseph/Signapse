@@ -1,10 +1,4 @@
-//
-// Created by ross on 09/02/2022.
-//
-
 #include "CNNProcessor.h"
-//#include <iostream>
-
 #include <chrono>
 #include <thread>
 #include "scene.h"
@@ -22,7 +16,6 @@ void CNNProcessor::Loop(){
 
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom.Pop();
-    //std::cout << frame.task;
     frameQueue.push(frame);
 }
 

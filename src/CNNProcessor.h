@@ -5,7 +5,6 @@
 #ifndef SIGNAPSE_CNNPROCESSOR_H
 #define SIGNAPSE_CNNPROCESSOR_H
 
-
 #include "reel.h"
 
 class CNNProcessor: public Reel{
