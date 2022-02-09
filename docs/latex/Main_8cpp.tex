@@ -1,0 +1,76 @@
+\hypertarget{Main_8cpp}{}\doxysection{src/\+Main.cpp File Reference}
+\label{Main_8cpp}\index{src/Main.cpp@{src/Main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+Include dependency graph for Main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{Main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}} (queue$<$ int $>$ gq)
+\item 
+int \mbox{\hyperlink{Main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Main_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{Main_8cpp_source}{Main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     queue<int> gquiz;}
+\DoxyCodeLine{00023     gquiz.push(10);}
+\DoxyCodeLine{00024     gquiz.push(20);}
+\DoxyCodeLine{00025     gquiz.push(30);}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     cout << \textcolor{stringliteral}{"{}The queue gquiz is : "{}};}
+\DoxyCodeLine{00028     \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}}(gquiz);}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.size() : "{}} << gquiz.size();}
+\DoxyCodeLine{00031     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.front() : "{}} << gquiz.front();}
+\DoxyCodeLine{00032     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.back() : "{}} << gquiz.back();}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.pop() : "{}};}
+\DoxyCodeLine{00035     gquiz.pop();}
+\DoxyCodeLine{00036     \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}}(gquiz);}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00039 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}\label{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}} 
+\index{Main.cpp@{Main.cpp}!showq@{showq}}
+\index{showq@{showq}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{showq()}{showq()}}
+{\footnotesize\ttfamily void showq (\begin{DoxyParamCaption}\item[{queue$<$ int $>$}]{gq }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Main_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Main_8cpp_source}{Main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     queue<int> g = gq;}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{while} (!g.empty()) \{}
+\DoxyCodeLine{00013         cout << \textcolor{charliteral}{'\(\backslash\)t'} << g.front();}
+\DoxyCodeLine{00014         g.pop();}
+\DoxyCodeLine{00015     \}}
+\DoxyCodeLine{00016     cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
