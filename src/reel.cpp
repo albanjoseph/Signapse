@@ -7,23 +7,16 @@
 using namespace std;
 #include "reel.h"
 
-class Reel{
-public:
-    Reel(){
-        frameQueue.push(10);
-        frameQueue.push(20);
-        frameQueue.push(30);
-    }
-    int Pop(){
-        return frameQueue.pop();
-    }
-    int GetNumber(){
-        return reelNr;
-    }
-
-private:
-    int reelNr = 10;
-    queue<int> frameQueue;
 
 
-};
+Reel::Reel(){
+    frameQueue.push(10);
+    frameQueue.push(20);
+    frameQueue.push(30);
+}
+int Reel::Pop(){
+    return frameQueue.pop();
+}
+int Reel::GetNumber(){
+    return reelNr;
+}
