@@ -11,11 +11,12 @@ add_library(
         ../src/reel.h
         ../src/reel.cpp
 )
-#add_library(
-#        scene
-#        ../src/scene.h
-#)
+add_library(
+        camera
+        ../src/camera.h
+        ../src/camera.cpp
+)
 
-target_link_libraries(Signapse reel)
+target_link_libraries(Signapse reel camera)
 
 add_compile_options(-Wall)

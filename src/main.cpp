@@ -3,6 +3,7 @@
 #include <iostream>
 #include <queue>
 #include "reel.h"
+#include "camera.h"
 
 using namespace std;
 
@@ -21,8 +22,9 @@ void showq(queue<int> gq)
 
 int main()
 {
-    Reel r = Reel();
-    Scene val = r.Pop();
+    Camera c = Camera();
+    c.Populate();
+    Scene val = c.Pop();
     cout << val.timestamp;
     //printf('%i', val);
 //    queue<int> gquiz;
@@ -41,5 +43,5 @@ int main()
 //    gquiz.pop();
 //    showq(gquiz);
 //
-      return 0;
+    return 0;
 }
