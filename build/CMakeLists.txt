@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.0)
 project(Signapse)
 add_executable(Signapse ../src/main.cpp)
 set_target_properties(Signapse PROPERTIES RUNTIME_OUTPUT_DIRECTORY ./bin/)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./lib)
 
 add_library(
         reel
@@ -10,9 +12,8 @@ add_library(
         ../src/reel.cpp
 )
 #add_library(
-#        Opt
-#        ../src/Option.hpp
-#        ../src/Option.cpp
+#        scene
+#        ../src/scene.h
 #)
 
 target_link_libraries(Signapse reel)

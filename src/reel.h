@@ -5,6 +5,7 @@
 #ifndef SIGNAPSE_REEL_H
 #define SIGNAPSE_REEL_H
 #include <queue>
+#include "scene.h"
 
 class Reel{
 public:
