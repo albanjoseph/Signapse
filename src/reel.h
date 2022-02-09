@@ -13,7 +13,7 @@ public:
     int Pop();
     int GetNumber();
 
-private:
+protected:
     int reelNr;
     std::queue<int> frameQueue;
 };
