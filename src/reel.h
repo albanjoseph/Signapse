@@ -4,6 +4,7 @@
 
 #ifndef SIGNAPSE_REEL_H
 #define SIGNAPSE_REEL_H
+#include <queue>
 
 class Reel{
 public:
@@ -13,7 +14,7 @@ public:
 
 private:
     int reelNr;
-    queue<int> frameQueue;
+    std::queue<int> frameQueue;
 };
 
 

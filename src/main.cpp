@@ -2,6 +2,7 @@
 // Standard Template Library (STL)
 #include <iostream>
 #include <queue>
+#include "reel.h"
 
 using namespace std;
 
@@ -17,9 +18,13 @@ void showq(queue<int> gq)
 }
 
 // Driver Code
+
 int main()
 {
-
+    Reel r = Reel();
+    int val = r.Pop();
+    cout << val;
+    //printf('%i', val);
 //    queue<int> gquiz;
 //    gquiz.push(10);
 //    gquiz.push(20);
