@@ -12,11 +12,13 @@ void Camera::Populate(){
     Scene s = Scene{
             .data = {},
             .timestamp = 1,
-            .task = 'p',
+            .task = currentTask,
             .result = {}
     };
     frameQueue.push(s);
 }
+
+
 void Camera::set_current_task(char new_task){
-    current_task = new_task;
+    currentTask = new_task;
 }

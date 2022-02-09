@@ -12,7 +12,7 @@ public:
     void Populate(); //Test feature
     void set_current_task(char new_task);
 private:
-    char current_task;//TODO set default
+    char currentTask = 'a';
 };
 
 

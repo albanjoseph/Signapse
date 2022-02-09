@@ -4,6 +4,7 @@
 #include <queue>
 #include "reel.h"
 #include "camera.h"
+#include "CNNProcessor.h"
 
 using namespace std;
 
@@ -24,8 +25,25 @@ int main()
 {
     Camera c = Camera();
     c.Populate();
-    Scene val = c.Pop();
-    cout << val.timestamp;
+    c.set_current_task('y');
+    c.Populate();
+    CNNProcessor p = CNNProcessor(c);
+    p.SelfPush();
+    p.SelfPush();
+    p.SelfPush();
+
+    Scene val = p.Pop();
+    cout << val.task;
+    val = p.Pop();
+    cout << val.task;
+    val = p.Pop();
+    cout << val.task;
+
+    //Scene val2 = p.Pop();
+    //cout << val2.task;
+    //Scene val = c.Pop();
+    //cout << val.timestamp;
+
     //printf('%i', val);
 //    queue<int> gquiz;
 //    gquiz.push(10);

@@ -10,13 +10,7 @@ using namespace std;
 
 
 Reel::Reel(){
-    Scene s = Scene{
-            .data = {},
-            .timestamp = 1,
-            .task = 'p',
-            .result = {}
-    };
-    frameQueue.push(s);
+
 }
 Scene Reel::Pop(){
     Scene elem = frameQueue.front();
