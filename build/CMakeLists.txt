@@ -16,7 +16,12 @@ add_library(
         ../src/camera.h
         ../src/camera.cpp
 )
+add_library(
+        taskmaster
+        ../src/taskmaster.h
+        ../src/taskmaster.cpp
+)
 
-target_link_libraries(Signapse reel camera)
+target_link_libraries(Signapse reel camera taskmaster)
 
 add_compile_options(-Wall)
