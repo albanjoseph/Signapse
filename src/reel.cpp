@@ -6,16 +6,20 @@
 
 using namespace std;
 #include "reel.h"
-
+#include "scene.h"
 
 
 Reel::Reel(){
-    frameQueue.push(10);
-    frameQueue.push(20);
-    frameQueue.push(30);
+    Scene s = Scene{
+            .data = {},
+            .timestamp = 1,
+            .task = 'p',
+            .result = {}
+    };
+    frameQueue.push(s);
 }
-int Reel::Pop(){
-    int elem = frameQueue.front();
+Scene Reel::Pop(){
+    Scene elem = frameQueue.front();
     frameQueue.pop();
     return elem;
 }

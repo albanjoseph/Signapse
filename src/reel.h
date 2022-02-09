@@ -10,12 +10,12 @@
 class Reel{
 public:
     Reel();
-    int Pop();
+    Scene Pop();
     int GetNumber();
 
 private:
     int reelNr;
-    std::queue<int> frameQueue;
+    std::queue<Scene> frameQueue;
 };
 
 

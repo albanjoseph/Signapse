@@ -22,8 +22,8 @@ void showq(queue<int> gq)
 int main()
 {
     Reel r = Reel();
-    int val = r.Pop();
-    cout << val;
+    Scene val = r.Pop();
+    cout << val.timestamp;
     //printf('%i', val);
 //    queue<int> gquiz;
 //    gquiz.push(10);
