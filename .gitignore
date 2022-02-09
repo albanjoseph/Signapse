@@ -8,6 +8,7 @@ bin-release/
 .settings/
 Signapse.code-workspace
 
+
 # Executables
 *.swf
 *.air
@@ -19,3 +20,18 @@ Signapse.code-workspace
 # information for Eclipse / Flash Builder.
 
 *.pdf
+
+#CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+
