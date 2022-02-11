@@ -21,7 +21,12 @@ add_library(
         ../src/taskmaster.h
         ../src/taskmaster.cpp
 )
+add_library(
+        CNNProcessor
+        ../src/CNNProcessor.h
+        ../src/CNNProcessor.cpp
+)
 
-target_link_libraries(Signapse reel camera taskmaster)
+target_link_libraries(Signapse reel camera taskmaster CNNProcessor)
 
 add_compile_options(-Wall)
