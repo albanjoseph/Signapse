@@ -20,10 +20,10 @@ int main()
     p.SelfPush();
 
     Scene val = p.Pop();
-    cout << val.task;
+    cout << val.task << endl;
     val = p.Pop();
-    cout << val.task;
+    cout << val.task << endl;
     val = p.Pop();
-    cout << val.task;
+    cout << val.task << endl;
     return 0;
 }
