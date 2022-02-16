@@ -12,7 +12,7 @@ public:
     void Populate(); //Test feature
     void set_current_task(char new_task);
 private:
-    char currentTask = 'a';
+    char currentTask;
 };
 
 

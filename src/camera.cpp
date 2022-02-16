@@ -9,7 +9,7 @@ void Camera::Stream(){
 
 }
 void Camera::Populate(){
-    Scene s = Scene{
+    Scene s = (Scene){
             .data = {},
             .timestamp = 1,
             .task = currentTask,
