@@ -10,7 +10,9 @@
 
 
 void Camera::Stream(){
-
+    while(true){
+        Populate();
+    }
 }
 
 void Camera::Populate(){

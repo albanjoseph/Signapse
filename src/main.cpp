@@ -12,19 +12,22 @@ using namespace std;
 int main(int, char**)
 {
     Camera c = Camera();
+    /*
     c.set_current_task('h');
     c.Populate();
     c.set_current_task('y');
     c.Populate();
+    */
     //CNNProcessor p = CNNProcessor(c);
     //p.SelfPush();
     //p.SelfPush();
     //p.SelfPush();
-
-    Scene val = c.Pop();
-    cout << val.task << endl;
+    c.Stream();
+    Scene val;
+    //cout << val.task << endl;
 
     while (!(waitKey(5) >= 0)){
+        val = c.Pop();
         cv::imshow("window", val.frame);
     }
 
