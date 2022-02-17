@@ -1,32 +1,13 @@
-
 cmake_minimum_required(VERSION 3.0)
+SET("OpenCV_DIR" "./opencv_build")
 project(Signapse)
-add_executable(Signapse ../src/main.cpp)
+
+SET("OpenCV_DIR" "/usr/share/opencv4")
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+add_executable(Signapse ../src/main.cpp ../src/reel.cpp ../src/camera.cpp ../src/taskmaster.cpp ../src/CNNProcessor.cpp)
 set_target_properties(Signapse PROPERTIES RUNTIME_OUTPUT_DIRECTORY ./bin/)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./lib)
 
-add_library(
-        reel
-        ../src/reel.h
-        ../src/reel.cpp
-)
-add_library(
-        camera
-        ../src/camera.h
-        ../src/camera.cpp
-)
-add_library(
-        taskmaster
-        ../src/taskmaster.h
-        ../src/taskmaster.cpp
-)
-add_library(
-        CNNProcessor
-        ../src/CNNProcessor.h
-        ../src/CNNProcessor.cpp
-)
-
-target_link_libraries(Signapse reel camera taskmaster CNNProcessor)
-
+target_link_libraries(Signapse ${OpenCV_LIBS} )
 add_compile_options(-Wall)
