@@ -3,8 +3,6 @@ cmake_minimum_required(VERSION 3.0)
 project(Signapse)
 add_executable(Signapse ../src/main.cpp ../src/reel.cpp ../src/camera.cpp ../src/taskmaster.cpp ../src/CNNProcessor.cpp)
 set_target_properties(Signapse PROPERTIES RUNTIME_OUTPUT_DIRECTORY ./bin/)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./lib)
 
 #target_link_libraries(Signapse reel camera taskmaster CNNProcessor)
 
