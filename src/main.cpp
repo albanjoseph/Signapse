@@ -12,6 +12,9 @@ using namespace std;
 int main(int, char**)
 {
     Camera c = Camera();
+    c.Populate();
+    c.start_thread();
+
     /*
     c.set_current_task('h');
     c.Populate();
@@ -22,18 +25,17 @@ int main(int, char**)
     //p.SelfPush();
     //p.SelfPush();
     //p.SelfPush();
-    c.Stream();
+    //c.Stream();
     Scene val;
     //cout << val.task << endl;
-
     while (!(waitKey(5) >= 0)){
         val = c.Pop();
-        cv::imshow("window", val.frame);
+        //cv::imshow("window", val.frame);
     }
 
     //val = p.Pop();
-    val = c.Pop();
-    cout << val.task << endl;
+    //val = c.Pop();
+    //cout << val.task << endl;
     //val = p.Pop();
     //val = c.Pop();
     //cout << val.task << endl;

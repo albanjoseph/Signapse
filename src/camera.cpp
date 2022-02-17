@@ -7,16 +7,15 @@
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
 #include <iostream>
+#include <thread>
 
 
-void Camera::Stream(){
-    while(true){
-        Populate();
-    }
+Camera::Camera() {
+    isOn = true;
+    videoCapture.open(deviceID, apiID);
 }
 
 void Camera::Populate(){
-    videoCapture.open(deviceID, apiID); // move to constructor
     cv::Mat frame;
     videoCapture.read(frame);
     // check if we succeeded
@@ -33,6 +32,15 @@ void Camera::Populate(){
     frameQueue.push(s);
 }
 
+void Camera::start_thread(){
+    cameraThread = std::thread(&Camera::Stream, this);
+}
+
+void Camera::Stream() {
+    while (isOn) {
+        Populate();
+    }
+}
 
 void Camera::set_current_task(char new_task){
     currentTask = new_task;
