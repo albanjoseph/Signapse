@@ -29,8 +29,10 @@ int main(int, char**)
     Scene val;
     //cout << val.task << endl;
     while (!(waitKey(5) >= 0)){
-        val = c.Pop();
-        //cv::imshow("window", val.frame);
+        if (!(c.IsEmpty())){
+            val = c.Pop();
+        }
+        cv::imshow("window", val.frame);
     }
 
     //val = p.Pop();
