@@ -4,10 +4,11 @@
 
 #ifndef SIGNAPSE_BLOCKINGQUEUE_H
 #define SIGNAPSE_BLOCKINGQUEUE_H
-#include <queue>
+#include <deque>
 #include <mutex>
 #include <condition_variable>
 #include "scene.h"
+
 
 template <typename T>
 class BlockingQueue {
@@ -16,11 +17,10 @@ public:
     T Get();
 
 private:
-    std::queue<T> internalQueue;
+    std::deque<T> internalQueue;
     std::mutex mutex;
     std::condition_variable condition;
 };
-
 
 
 #endif //SIGNAPSE_BLOCKINGQUEUE_H

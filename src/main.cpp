@@ -6,14 +6,27 @@
 #include <queue>
 #include "reel.h"
 #include "camera.h"
+#include "BlockingQueue.h"
+#include "BlockingQueue.cpp"
 using namespace cv;
 using namespace std;
 
 int main(int, char**)
 {
-    Camera c = Camera();
-    c.Populate();
-    c.start_thread();
+    BlockingQueue<int> bq;
+    bq.Put(5);
+    bq.Put(6);
+    bq.Put(7);
+    bq.Put(8);
+    cout << bq.Get() << "\n";
+    cout << bq.Get() << "\n";
+    cout << bq.Get() << "\n";
+    cout << bq.Get() << "\n";
+    cout << bq.Get() << "\n";
+
+    //Camera c = Camera();
+    //c.Populate();
+    //c.start_thread();
 
     /*
     c.set_current_task('h');
@@ -26,14 +39,14 @@ int main(int, char**)
     //p.SelfPush();
     //p.SelfPush();
     //c.Stream();
-    Scene val;
+    //Scene val;
     //cout << val.task << endl;
-    while (!(waitKey(5) >= 0)){
-        if (!(c.IsEmpty())){
-            val = c.Pop();
-        }
-        cv::imshow("window", val.frame);
-    }
+    //while (!(waitKey(5) >= 0)){
+    //    if (!(c.IsEmpty())){
+    //        val = c.Pop();
+    //    }
+    //    cv::imshow("window", val.frame);
+    //}
 
     //val = p.Pop();
     //val = c.Pop();
