@@ -19,8 +19,6 @@ public:
 protected:
     int reelNr;
     std::queue<Scene> frameQueue;
-    std::mutex readerMutex;
-    std::condition_variable isEmpty;
 };
 
 
