@@ -16,13 +16,14 @@ Camera::Camera() {
 }
 
 void Camera::Populate(){
-    cv::Mat frame;
-    videoCapture.read(frame);
+    cv::Mat temp;
+    videoCapture.read(temp);
     // check if we succeeded
-    if (frame.empty()) {
+    if (temp.empty()) {
         std::cerr << "ERROR! blank frame grabbed\n";
     }
-
+    cv::Mat frame;
+    cv::flip(temp, frame, 1);
     Scene s = Scene{
             .frame=frame,
             .timestamp = 1,
