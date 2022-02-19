@@ -3,8 +3,8 @@
 #include <thread>
 #include "scene.h"
 
-CNNProcessor::CNNProcessor(Reel setReadFrom){
-    readFrom = setReadFrom;
+CNNProcessor::CNNProcessor(Reel* setReadFrom){
+ readFrom = setReadFrom;
 }
 
 void CNNProcessor::Loop(){
@@ -15,7 +15,7 @@ void CNNProcessor::Loop(){
 }
 
 void CNNProcessor::SelfPush() {
-    Scene frame = readFrom.Pop();
-    frameQueue.push(frame);
+    Scene frame = readFrom->Pop();
+    frameQueue.Push(frame);
 }
 

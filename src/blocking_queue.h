@@ -1,8 +1,0 @@
-//
-// Created by ross on 17/02/2022.
-//
-
-#ifndef SIGNAPSE_BLOCKING_QUEUE_H
-#define SIGNAPSE_BLOCKING_QUEUE_H
-
-#endif //SIGNAPSE_BLOCKING_QUEUE_H

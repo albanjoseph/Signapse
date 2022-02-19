@@ -13,8 +13,9 @@
 template <typename T>
 class BlockingQueue {
 public:
-    void Put(T toPush);
-    T Get();
+    void Push(T toPush);
+    T Pop();
+    bool IsEmpty();
 
 private:
     std::deque<T> internalQueue;

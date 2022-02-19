@@ -10,11 +10,11 @@
 class CNNProcessor: public Reel{
 public:
     void Loop();
-    CNNProcessor(Reel setReadFrom);
+    CNNProcessor(Reel* setReadFrom);
     void SelfPush();
 
 private:
-    Reel readFrom;
+    Reel* readFrom;
 };
 
 #endif //SIGNAPSE_CNNPROCESSOR_H

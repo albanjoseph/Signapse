@@ -2,23 +2,21 @@
 // Created by ross on 09/02/2022.
 //
 
-#include <queue>
-
-using namespace std;
 #include "reel.h"
 #include "scene.h"
+using namespace std;
+
 
 Reel::Reel(){
 
 }
+
 bool Reel::IsEmpty(){
-    return frameQueue.empty();
+    return frameQueue.IsEmpty();
 }
 
 Scene Reel::Pop(){
-    Scene elem = frameQueue.front();
-    frameQueue.pop();
-    return elem;
+    return frameQueue.Pop();
 }
 
 int Reel::GetNumber(){

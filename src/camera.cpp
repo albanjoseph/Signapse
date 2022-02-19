@@ -29,7 +29,7 @@ void Camera::Populate(){
             .task = currentTask,
             .result = {}
     };
-    frameQueue.push(s);
+    frameQueue.Push(s);
 }
 
 void Camera::start_thread(){

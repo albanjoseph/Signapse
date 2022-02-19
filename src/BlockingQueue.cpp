@@ -1,10 +1,10 @@
 //
-// Created by ross on 18/02/2022.
+// Blocking queue implementation, currently only blocks when Get is attempted while there are no elements inside the queue. In the future and max size could be defined and blocking could be added when the queue is full
 //
 #include "BlockingQueue.h"
 
 template <typename T>
-T BlockingQueue<T>::Get() {
+T BlockingQueue<T>::Pop() {
     std::unique_lock<std::mutex> lock(mutex);
     condition.wait(lock, [=]{ return !internalQueue.empty(); });
     T ret = internalQueue.back();
@@ -13,7 +13,12 @@ T BlockingQueue<T>::Get() {
 }
 
 template <typename T>
-void BlockingQueue<T>::Put(T toPush) {
+bool BlockingQueue<T>::IsEmpty(){
+    return internalQueue.empty();
+}
+
+template <typename T>
+void BlockingQueue<T>::Push(T toPush) {
     {
         std::unique_lock <std::mutex> lock(mutex);
         internalQueue.push_front(toPush);

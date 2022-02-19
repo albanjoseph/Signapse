@@ -5,9 +5,9 @@
 #ifndef SIGNAPSE_REEL_H
 #define SIGNAPSE_REEL_H
 #include "scene.h"
-#include <queue>
-#include <mutex>
-#include <condition_variable>
+#include "BlockingQueue.h"
+#include "BlockingQueue.cpp"
+
 
 class Reel{
 public:
@@ -16,9 +16,10 @@ public:
     int GetNumber();
     bool IsEmpty();
 
+
 protected:
     int reelNr;
-    std::queue<Scene> frameQueue;
+    BlockingQueue<Scene> frameQueue;
 };
 
 
