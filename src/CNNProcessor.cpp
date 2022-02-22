@@ -16,6 +16,6 @@ void CNNProcessor::Loop(){
 
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom->Pop();
-    frameQueue.Push(frame);
+    sceneQueue.Push(frame);
 }
 

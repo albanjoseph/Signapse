@@ -30,7 +30,7 @@ void Camera::Populate(){
             .task = currentTask,
             .result = {}
     };
-    frameQueue.Push(s);
+    sceneQueue.Push(s);
 }
 
 void Camera::start_thread(){

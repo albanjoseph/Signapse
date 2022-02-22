@@ -12,11 +12,11 @@ Reel::Reel(){
 }
 
 bool Reel::IsEmpty(){
-    return frameQueue.IsEmpty();
+    return sceneQueue.IsEmpty();
 }
 
 Scene Reel::Pop(){
-    return frameQueue.Pop();
+    return sceneQueue.Pop();
 }
 
 int Reel::GetNumber(){

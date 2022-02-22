@@ -19,7 +19,7 @@ public:
 
 protected:
     int reelNr;
-    BlockingQueue<Scene> frameQueue;
+    BlockingQueue<Scene> sceneQueue;
 };
 
 
