@@ -1,0 +1,27 @@
+\hypertarget{CNNProcessor_8cpp_source}{}\doxysection{CNNProcessor.\+cpp}
+\label{CNNProcessor_8cpp_source}\index{src/CNNProcessor.cpp@{src/CNNProcessor.cpp}}
+\mbox{\hyperlink{CNNProcessor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{CNNProcessor_8h}{CNNProcessor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00006}\mbox{\hyperlink{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}{00006}} \mbox{\hyperlink{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}{CNNProcessor::CNNProcessor}}(\mbox{\hyperlink{classReel}{Reel}} setReadFrom)\{}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00007}00007     readFrom = setReadFrom;}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00008}00008 \}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00010}\mbox{\hyperlink{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}{00010}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}{CNNProcessor::Loop}}()\{}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00011}00011     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00012}00012         std::this\_thread::sleep\_for(std::chrono::milliseconds(100));}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00013}00013         \mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{SelfPush}}();}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00014}00014     \}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00015}00015 \}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00017}\mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{CNNProcessor::SelfPush}}() \{}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00018}00018     \mbox{\hyperlink{structScene}{Scene}} frame = readFrom.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00019}00019     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.push(frame);}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00020}00020 \}}
+\DoxyCodeLine{\Hypertarget{CNNProcessor_8cpp_source_l00021}00021 }
+
+\end{DoxyCode}

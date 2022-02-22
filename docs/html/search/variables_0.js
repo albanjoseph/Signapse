@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hairstyle_0',['hairstyle',['../classpoodle.html#a4232d021f4016004d088ce2da01a6634',1,'poodle']]]
+  ['conf_0',['conf',['../structResult.html#a19477908b7900d4cd813ef625e3e4942',1,'Result']]]
 ];

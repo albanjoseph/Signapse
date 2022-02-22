@@ -73,8 +73,32 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by ross on 09/02/2022.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="reel_8h.html">reel.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="reel_8h.html">reel.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="scene_8h.html">scene.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classReel.html#a3656fa67f060d2808dc07f337030b537">   12</a></span><a class="code hl_function" href="classReel.html#a3656fa67f060d2808dc07f337030b537">Reel::Reel</a>(){</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">   15</a></span><a class="code hl_struct" href="structScene.html">Scene</a> <a class="code hl_function" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Reel::Pop</a>(){</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_struct" href="structScene.html">Scene</a> elem = <a class="code hl_variable" href="classReel.html#aa100638257af83ba627461df9cd390cb">frameQueue</a>.front();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_variable" href="classReel.html#aa100638257af83ba627461df9cd390cb">frameQueue</a>.pop();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> elem;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classReel.html#ada98684d0365d5162990c3b6b98bf1f8">   20</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classReel.html#ada98684d0365d5162990c3b6b98bf1f8">Reel::GetNumber</a>(){</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classReel.html#a1aaed8e350c44a2992cfca253ca01a76">reelNr</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aclassReel_html_a1aaed8e350c44a2992cfca253ca01a76"><div class="ttname"><a href="classReel.html#a1aaed8e350c44a2992cfca253ca01a76">Reel::reelNr</a></div><div class="ttdeci">int reelNr</div><div class="ttdoc">Protected member variable.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8h_source.html#l00036">reel.h:36</a></div></div>
+<div class="ttc" id="aclassReel_html_a3656fa67f060d2808dc07f337030b537"><div class="ttname"><a href="classReel.html#a3656fa67f060d2808dc07f337030b537">Reel::Reel</a></div><div class="ttdeci">Reel()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8cpp_source.html#l00012">reel.cpp:12</a></div></div>
+<div class="ttc" id="aclassReel_html_a399be7e1755b80d4794a6f19e8f7b80d"><div class="ttname"><a href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Reel::Pop</a></div><div class="ttdeci">Scene Pop()</div><div class="ttdoc">Member function returns the next Scene in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8cpp_source.html#l00015">reel.cpp:15</a></div></div>
+<div class="ttc" id="aclassReel_html_aa100638257af83ba627461df9cd390cb"><div class="ttname"><a href="classReel.html#aa100638257af83ba627461df9cd390cb">Reel::frameQueue</a></div><div class="ttdeci">std::queue&lt; Scene &gt; frameQueue</div><div class="ttdoc">Protected member variable.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8h_source.html#l00041">reel.h:41</a></div></div>
+<div class="ttc" id="aclassReel_html_ada98684d0365d5162990c3b6b98bf1f8"><div class="ttname"><a href="classReel.html#ada98684d0365d5162990c3b6b98bf1f8">Reel::GetNumber</a></div><div class="ttdeci">int GetNumber()</div><div class="ttdoc">Member function returns the Reel number.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8cpp_source.html#l00020">reel.cpp:20</a></div></div>
 <div class="ttc" id="areel_8h_html"><div class="ttname"><a href="reel_8h.html">reel.h</a></div></div>
+<div class="ttc" id="ascene_8h_html"><div class="ttname"><a href="scene_8h.html">scene.h</a></div></div>
+<div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00027">scene.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

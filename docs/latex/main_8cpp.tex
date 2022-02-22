@@ -1,38 +1,70 @@
 \hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
 \label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classdog}{dog}}
-\begin{DoxyCompactList}\small\item\em Dog class. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classpoodle}{poodle}}
-\begin{DoxyCompactList}\small\item\em Chihuahua class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/videoio.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include \char`\"{}reel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camera.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em The main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (int, char $\ast$$\ast$)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\mbox{\Hypertarget{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}\label{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char $\ast$$\ast$}]{ }\end{DoxyParamCaption})}
 
 
 
-The main function. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016           \{}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     \mbox{\hyperlink{classCamera}{Camera}} c = \mbox{\hyperlink{classCamera}{Camera}}();}
+\DoxyCodeLine{00015     c.\mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{Populate}}();}
+\DoxyCodeLine{00016     c.\mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\_thread}}();}
 \DoxyCodeLine{00017 }
-\DoxyCodeLine{00018 \}}
+\DoxyCodeLine{00018     \textcolor{comment}{/*}}
+\DoxyCodeLine{00019 \textcolor{comment}{    c.set\_current\_task('h');}}
+\DoxyCodeLine{00020 \textcolor{comment}{    c.Populate();}}
+\DoxyCodeLine{00021 \textcolor{comment}{    c.set\_current\_task('y');}}
+\DoxyCodeLine{00022 \textcolor{comment}{    c.Populate();}}
+\DoxyCodeLine{00023 \textcolor{comment}{    */}}
+\DoxyCodeLine{00024     \textcolor{comment}{//CNNProcessor p = CNNProcessor(c);}}
+\DoxyCodeLine{00025     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00026     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00027     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00028     \textcolor{comment}{//c.Stream();}}
+\DoxyCodeLine{00029     \mbox{\hyperlink{structScene}{Scene}} val;}
+\DoxyCodeLine{00030     \textcolor{comment}{//cout << val.task << endl;}}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{while} (!(waitKey(5) >= 0))\{}
+\DoxyCodeLine{00032         val = c.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{00033         \textcolor{comment}{//cv::imshow("{}window"{}, val.frame);}}
+\DoxyCodeLine{00034     \}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \textcolor{comment}{//val = p.Pop();}}
+\DoxyCodeLine{00037     \textcolor{comment}{//val = c.Pop();}}
+\DoxyCodeLine{00038     \textcolor{comment}{//cout << val.task << endl;}}
+\DoxyCodeLine{00039     \textcolor{comment}{//val = p.Pop();}}
+\DoxyCodeLine{00040     \textcolor{comment}{//val = c.Pop();}}
+\DoxyCodeLine{00041     \textcolor{comment}{//cout << val.task << endl;}}
+\DoxyCodeLine{00042     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00043 \}}
 
 \end{DoxyCode}
