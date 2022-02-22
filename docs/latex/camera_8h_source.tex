@@ -1,0 +1,46 @@
+\hypertarget{camera_8h_source}{}\doxysection{camera.\+h}
+\label{camera_8h_source}\index{src/camera.h@{src/camera.h}}
+\mbox{\hyperlink{camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00002}00002 \textcolor{comment}{// Created by adam on 09/02/2022.}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef SIGNAPSE\_CAMERA\_H}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00006}00006 \textcolor{preprocessor}{\#define SIGNAPSE\_CAMERA\_H}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{reel_8h}{reel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <opencv2/videoio.hpp>}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00015}\mbox{\hyperlink{classCamera}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classCamera}{Camera}}: \textcolor{keyword}{public} \mbox{\hyperlink{classReel}{Reel}}\{}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00016}00016 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00021}00021     \mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera}}();}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00026}00026     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{Populate}}();}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00031}00031     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a174e83dcf98aebe1057b773e0f8aa204}{set\_current\_task}}(\textcolor{keywordtype}{char} new\_task);}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00036}00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\_thread}}();}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00038}00038 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00043}00043     \textcolor{keywordtype}{void} Stream();}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00048}00048     \textcolor{keywordtype}{char} currentTask;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00053}00053     cv::VideoCapture videoCapture;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00059}00059     \textcolor{keywordtype}{int} deviceID = 0;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00064}00064     \textcolor{keywordtype}{int} apiID = cv::CAP\_ANY;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00066}00066     std::thread cameraThread;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00072}00072     \textcolor{keywordtype}{bool} isOn = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00073}00073 \};}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00076}00076 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SIGNAPSE\_CAMERA\_H}}
+
+\end{DoxyCode}

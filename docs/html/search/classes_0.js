@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dog_0',['dog',['../classdog.html',1,'']]]
+  ['camera_0',['Camera',['../classCamera.html',1,'']]],
+  ['cnnprocessor_1',['CNNProcessor',['../classCNNProcessor.html',1,'']]]
 ];

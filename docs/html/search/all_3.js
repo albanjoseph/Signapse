@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['legs_0',['legs',['../classdog.html#a7f3e18221b1ec6a0b859a2ce29537a97',1,'dog']]]
+  ['loop_0',['Loop',['../classCNNProcessor.html#a90c1b1e93588f81424fd04f8e0b39fc6',1,'CNNProcessor']]]
 ];

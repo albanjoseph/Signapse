@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['poodle_0',['poodle',['../classpoodle.html',1,'']]]
+  ['reel_0',['Reel',['../classReel.html',1,'']]],
+  ['result_1',['Result',['../structResult.html',1,'']]]
 ];

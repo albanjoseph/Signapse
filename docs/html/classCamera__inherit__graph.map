@@ -1,0 +1,4 @@
+<map id="Camera" name="Camera">
+<area shape="rect" id="node1" title="Camera class which inherits from Reel." alt="" coords="5,175,144,296"/>
+<area shape="rect" id="node2" href="$classReel.html" title="Reel class." alt="" coords="20,5,129,127"/>
+</map>

@@ -1,0 +1,134 @@
+\hypertarget{classCNNProcessor}{}\doxysection{CNNProcessor Class Reference}
+\label{classCNNProcessor}\index{CNNProcessor@{CNNProcessor}}
+
+
+\mbox{\hyperlink{classCNNProcessor}{CNNProcessor}} class.  
+
+
+
+
+{\ttfamily \#include $<$CNNProcessor.\+h$>$}
+
+
+
+Inheritance diagram for CNNProcessor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCNNProcessor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CNNProcessor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classCNNProcessor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}{Loop}} ()
+\begin{DoxyCompactList}\small\item\em Public member function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}{CNNProcessor}} (\mbox{\hyperlink{classReel}{Reel}} set\+Read\+From)
+\begin{DoxyCompactList}\small\item\em Constructor takes \mbox{\hyperlink{classReel}{Reel}} object as argument and assigns read\+From \mbox{\hyperlink{classReel}{Reel}} to this value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{Self\+Push}} ()
+\begin{DoxyCompactList}\small\item\em Public member function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCNNProcessor}{CNNProcessor}} class. 
+
+Class for interfacing with convolutional neural network 
+
+Definition at line \mbox{\hyperlink{CNNProcessor_8h_source_l00013}{13}} of file \mbox{\hyperlink{CNNProcessor_8h_source}{CNNProcessor.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}\label{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}} 
+\index{CNNProcessor@{CNNProcessor}!CNNProcessor@{CNNProcessor}}
+\index{CNNProcessor@{CNNProcessor}!CNNProcessor@{CNNProcessor}}
+\doxysubsubsection{\texorpdfstring{CNNProcessor()}{CNNProcessor()}}
+{\footnotesize\ttfamily CNNProcessor\+::\+CNNProcessor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReel}{Reel}}}]{set\+Read\+From }\end{DoxyParamCaption})}
+
+
+
+Constructor takes \mbox{\hyperlink{classReel}{Reel}} object as argument and assigns read\+From \mbox{\hyperlink{classReel}{Reel}} to this value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Read\+From} & \mbox{\hyperlink{classReel}{Reel}} to be copied to read\+From. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CNNProcessor_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{CNNProcessor_8cpp_source}{CNNProcessor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                           \{}
+\DoxyCodeLine{00007     readFrom = setReadFrom;}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}\label{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}} 
+\index{CNNProcessor@{CNNProcessor}!Loop@{Loop}}
+\index{Loop@{Loop}!CNNProcessor@{CNNProcessor}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily void CNNProcessor\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Public member function. 
+
+Loop. 
+
+Definition at line \mbox{\hyperlink{CNNProcessor_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{CNNProcessor_8cpp_source}{CNNProcessor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010                        \{}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00012         std::this\_thread::sleep\_for(std::chrono::milliseconds(100));}
+\DoxyCodeLine{00013         \mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{SelfPush}}();}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCNNProcessor_aa10698a841357d37e427518cafce63a1}\label{classCNNProcessor_aa10698a841357d37e427518cafce63a1}} 
+\index{CNNProcessor@{CNNProcessor}!SelfPush@{SelfPush}}
+\index{SelfPush@{SelfPush}!CNNProcessor@{CNNProcessor}}
+\doxysubsubsection{\texorpdfstring{SelfPush()}{SelfPush()}}
+{\footnotesize\ttfamily void CNNProcessor\+::\+Self\+Push (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Public member function. 
+
+Pops \mbox{\hyperlink{structScene}{Scene}} from read\+From \mbox{\hyperlink{classReel}{Reel}} and pushes to \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}} own scene\+Queue. 
+
+Definition at line \mbox{\hyperlink{CNNProcessor_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{CNNProcessor_8cpp_source}{CNNProcessor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017                             \{}
+\DoxyCodeLine{00018     \mbox{\hyperlink{structScene}{Scene}} frame = readFrom.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{00019     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.push(frame);}
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{CNNProcessor_8h}{CNNProcessor.\+h}}\item 
+src/\mbox{\hyperlink{CNNProcessor_8cpp}{CNNProcessor.\+cpp}}\end{DoxyCompactItemize}

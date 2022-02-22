@@ -69,28 +69,57 @@ $(function() {
   <div class="headertitle"><div class="title">main.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="classdog.html">    2</a></span><span class="keyword">class </span><a class="code hl_class" href="classdog.html">dog</a>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classdog.html#a7f3e18221b1ec6a0b859a2ce29537a97">    4</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classdog.html#a7f3e18221b1ec6a0b859a2ce29537a97">legs</a>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classdog.html#a000e3c57b0b9c59073be49a57afc8baf">    5</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdog.html#a000e3c57b0b9c59073be49a57afc8baf">bark</a>(){</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    }</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>};</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classpoodle.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classpoodle.html">poodle</a> : <span class="keyword">public</span> <a class="code hl_class" href="classdog.html">dog</a>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classpoodle.html#a4232d021f4016004d088ce2da01a6634">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classpoodle.html#a4232d021f4016004d088ce2da01a6634">hairstyle</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   16</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
+<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;opencv2/core.hpp&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;opencv2/videoio.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="reel_8h.html">reel.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="camera_8h.html">camera.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>cv;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">   12</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classCamera.html">Camera</a> c = <a class="code hl_class" href="classCamera.html">Camera</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    c.<a class="code hl_function" href="classCamera.html#aae2b41fd194a0dc3438280a0171dfa9e">Populate</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    c.<a class="code hl_function" href="classCamera.html#a2012959e6725f234584948c98954b0ff">start_thread</a>();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
-<div class="ttc" id="aclassdog_html"><div class="ttname"><a href="classdog.html">dog</a></div><div class="ttdoc">Dog class.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00002">main.cpp:2</a></div></div>
-<div class="ttc" id="aclassdog_html_a000e3c57b0b9c59073be49a57afc8baf"><div class="ttname"><a href="classdog.html#a000e3c57b0b9c59073be49a57afc8baf">dog::bark</a></div><div class="ttdeci">void bark()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00005">main.cpp:5</a></div></div>
-<div class="ttc" id="aclassdog_html_a7f3e18221b1ec6a0b859a2ce29537a97"><div class="ttname"><a href="classdog.html#a7f3e18221b1ec6a0b859a2ce29537a97">dog::legs</a></div><div class="ttdeci">int legs</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
-<div class="ttc" id="aclasspoodle_html"><div class="ttname"><a href="classpoodle.html">poodle</a></div><div class="ttdoc">Chihuahua class.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00010">main.cpp:10</a></div></div>
-<div class="ttc" id="aclasspoodle_html_a4232d021f4016004d088ce2da01a6634"><div class="ttname"><a href="classpoodle.html#a4232d021f4016004d088ce2da01a6634">poodle::hairstyle</a></div><div class="ttdeci">int hairstyle</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">The main function.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    c.set_current_task(&#39;h&#39;);</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    c.Populate();</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    c.set_current_task(&#39;y&#39;);</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    c.Populate();</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">//CNNProcessor p = CNNProcessor(c);</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//c.Stream();</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_struct" href="structScene.html">Scene</a> val;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">while</span> (!(waitKey(5) &gt;= 0)){</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        val = c.<a class="code hl_function" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Pop</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">//cv::imshow(&quot;window&quot;, val.frame);</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//val = p.Pop();</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//val = c.Pop();</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//val = p.Pop();</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//val = c.Pop();</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="acamera_8h_html"><div class="ttname"><a href="camera_8h.html">camera.h</a></div></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdoc">Camera class which inherits from Reel.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00015">camera.h:15</a></div></div>
+<div class="ttc" id="aclassCamera_html_a2012959e6725f234584948c98954b0ff"><div class="ttname"><a href="classCamera.html#a2012959e6725f234584948c98954b0ff">Camera::start_thread</a></div><div class="ttdeci">void start_thread()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00035">camera.cpp:35</a></div></div>
+<div class="ttc" id="aclassCamera_html_aae2b41fd194a0dc3438280a0171dfa9e"><div class="ttname"><a href="classCamera.html#aae2b41fd194a0dc3438280a0171dfa9e">Camera::Populate</a></div><div class="ttdeci">void Populate()</div><div class="ttdoc">Member function.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00018">camera.cpp:18</a></div></div>
+<div class="ttc" id="aclassReel_html_a399be7e1755b80d4794a6f19e8f7b80d"><div class="ttname"><a href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Reel::Pop</a></div><div class="ttdeci">Scene Pop()</div><div class="ttdoc">Member function returns the next Scene in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8cpp_source.html#l00015">reel.cpp:15</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a2c3f6775325c30275d11c6abee2db6a0"><div class="ttname"><a href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a></div><div class="ttdeci">int main(int, char **)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+<div class="ttc" id="areel_8h_html"><div class="ttname"><a href="reel_8h.html">reel.h</a></div></div>
+<div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00027">scene.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

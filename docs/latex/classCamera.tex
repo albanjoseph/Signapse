@@ -1,0 +1,160 @@
+\hypertarget{classCamera}{}\doxysection{Camera Class Reference}
+\label{classCamera}\index{Camera@{Camera}}
+
+
+\mbox{\hyperlink{classCamera}{Camera}} class which inherits from \mbox{\hyperlink{classReel}{Reel}}.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+
+
+Inheritance diagram for Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classCamera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{Populate}} ()
+\begin{DoxyCompactList}\small\item\em Member function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a174e83dcf98aebe1057b773e0f8aa204}{set\+\_\+current\+\_\+task}} (char new\+\_\+task)
+\begin{DoxyCompactList}\small\item\em Member function for setting new signing task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\+\_\+thread}} ()
+\begin{DoxyCompactList}\small\item\em Member function for starting video capturing thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCamera}{Camera}} class which inherits from \mbox{\hyperlink{classReel}{Reel}}. 
+
+Class for reading web cam data, and creating a reel of scenes. 
+
+Definition at line \mbox{\hyperlink{camera_8h_source_l00015}{15}} of file \mbox{\hyperlink{camera_8h_source}{camera.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCamera_a01f94c3543f56ede7af49dc778f19331}\label{classCamera_a01f94c3543f56ede7af49dc778f19331}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Turns the camera object \char`\"{}\+ON\char`\"{} and configures the video capture. 
+
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013                \{}
+\DoxyCodeLine{00014     isOn = \textcolor{keyword}{true};}
+\DoxyCodeLine{00015     videoCapture.open(deviceID, apiID);}
+\DoxyCodeLine{00016 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}\label{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}} 
+\index{Camera@{Camera}!Populate@{Populate}}
+\index{Populate@{Populate}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Populate()}{Populate()}}
+{\footnotesize\ttfamily void Camera\+::\+Populate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Member function. 
+
+Reads webcam data, populates a \mbox{\hyperlink{structScene}{Scene}} struct and pushes scene on to scene\+Queue. 
+
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018                      \{}
+\DoxyCodeLine{00019     cv::Mat frame;}
+\DoxyCodeLine{00020     videoCapture.read(frame);}
+\DoxyCodeLine{00021     \textcolor{comment}{// check if we succeeded}}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{if} (frame.empty()) \{}
+\DoxyCodeLine{00023         std::cerr << \textcolor{stringliteral}{"{}ERROR! blank frame grabbed\(\backslash\)n"{}};}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \mbox{\hyperlink{structScene}{Scene}} s = \mbox{\hyperlink{structScene}{Scene}}\{}
+\DoxyCodeLine{00027             .\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}=frame,}
+\DoxyCodeLine{00028             .timestamp = 1,}
+\DoxyCodeLine{00029             .task = currentTask,}
+\DoxyCodeLine{00030             .result = \{\}}
+\DoxyCodeLine{00031     \};}
+\DoxyCodeLine{00032     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.push(s);}
+\DoxyCodeLine{00033 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCamera_a174e83dcf98aebe1057b773e0f8aa204}\label{classCamera_a174e83dcf98aebe1057b773e0f8aa204}} 
+\index{Camera@{Camera}!set\_current\_task@{set\_current\_task}}
+\index{set\_current\_task@{set\_current\_task}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{set\_current\_task()}{set\_current\_task()}}
+{\footnotesize\ttfamily void Camera\+::set\+\_\+current\+\_\+task (\begin{DoxyParamCaption}\item[{char}]{new\+\_\+task }\end{DoxyParamCaption})}
+
+
+
+Member function for setting new signing task. 
+
+Updates current\+Task with new\+\_\+task 
+
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                                           \{}
+\DoxyCodeLine{00046     currentTask = new\_task;}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCamera_a2012959e6725f234584948c98954b0ff}\label{classCamera_a2012959e6725f234584948c98954b0ff}} 
+\index{Camera@{Camera}!start\_thread@{start\_thread}}
+\index{start\_thread@{start\_thread}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{start\_thread()}{start\_thread()}}
+{\footnotesize\ttfamily void Camera\+::start\+\_\+thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Member function for starting video capturing thread. 
+
+Starts \char`\"{}\+Stream\char`\"{} private member function as a thread. 
+
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                          \{}
+\DoxyCodeLine{00036     cameraThread = std::thread(\&Camera::Stream, \textcolor{keyword}{this});}
+\DoxyCodeLine{00037 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{camera_8h}{camera.\+h}}\item 
+src/\mbox{\hyperlink{camera_8cpp}{camera.\+cpp}}\end{DoxyCompactItemize}
