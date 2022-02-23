@@ -43,7 +43,7 @@ protected:
     /*!
         A queue of Scene.
     */
-    std::queue<Scene> sceneQueue;
+    BlockingQueue<Scene> sceneQueue;
 };
 
 
