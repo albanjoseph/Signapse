@@ -13,6 +13,7 @@ using namespace std;
 int main(int, char**)
 {
     Camera c = Camera();
+
     c.start_thread();
     CNNProcessor cnn = CNNProcessor(&c);
 
@@ -42,12 +43,14 @@ int main(int, char**)
     //p.SelfPush();
     //p.SelfPush();
     //c.Stream();
-    Scene val;
-    cout << val.task << endl;
+    Scene val_cnn;
+    Scene val_camera;
     while (!(waitKey(5) >= 0)){
+        val_camera = c.Pop();
         cnn.SelfPush();
-        val = cnn.Pop();
-        cv::imshow("window", val.frame);
+        val_cnn = cnn.Pop();
+        cv::imshow("window", val_camera.frame);
+        cv::imshow("window2", val_cnn.frame);
     }
 
     //val = p.Pop();
