@@ -1,6 +1,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 #include <iostream>
 #include <stdio.h>
 #include <queue>
@@ -10,10 +11,18 @@
 using namespace cv;
 using namespace std;
 
+cv::Mat drawBox(cv::Mat img, int box[4]){
+    int x  = box[0]; int y = box[1];
+    int width = box[2] - box[0]; int height = box[3] - box[1];
+    cv::Rect rect(x, y, width, height);
+    cv::rectangle(img, rect, cv::Scalar(0, 255, 0));
+    return img;
+}
+
 int main(int, char**)
 {
     Camera c = Camera();
-
+    c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.start_thread();
     CNNProcessor cnn = CNNProcessor(&c);
 
@@ -50,7 +59,8 @@ int main(int, char**)
         cnn.SelfPush();
         val_cnn = cnn.Pop();
         cv::imshow("window", val_camera.frame);
-        cv::imshow("window2", val_cnn.frame);
+        cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
+        cv::imshow("window2", boxFrame);
     }
 
     //val = p.Pop();
@@ -61,3 +71,4 @@ int main(int, char**)
     //cout << val.task << endl;
     return 0;
 }
+
