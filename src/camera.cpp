@@ -46,3 +46,7 @@ void Camera::Stream() {
 void Camera::set_current_task(char new_task){
     currentTask = new_task;
 }
+
+void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
+    boundingBox = {upperLeftX, upperLeftY, lowerRightX, lowerRightY};
+}

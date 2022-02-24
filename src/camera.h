@@ -34,6 +34,11 @@ public:
         Starts "Stream" private member function as a thread.
     */
     void start_thread();
+    //! Member function for setting a new bounding box.
+    /*!
+        Updates boundingBox variable with a new set of coordinates
+     */
+    void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
 
 private:
     //! Private member function.
@@ -70,6 +75,11 @@ private:
         true = Camera is on.
     */
     bool isOn = true;
+    //! Private member variable indicating the bounding box to set the region of interest to for each frame.
+    /*!
+        Box within the frame which bounds the user's hand or sign, used to allow cropping for further processing. Variable contains 4 floats, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (x,y) format and are defined as a fraction of the total frame width and height in range (0-1).
+     */
+     float boundingBox[4];
 };
 
 
