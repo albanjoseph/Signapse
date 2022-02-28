@@ -1,0 +1,45 @@
+\hypertarget{Main_8cpp_source}{}\doxysection{Main.\+cpp}
+\label{Main_8cpp_source}\index{src/Main.cpp@{src/Main.cpp}}
+\mbox{\hyperlink{Main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00001}00001 \textcolor{comment}{// CPP code to illustrate Queue in}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00002}00002 \textcolor{comment}{// Standard Template Library (STL)}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00006}00006 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00008}00008 \textcolor{comment}{// Print the queue}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00009}\mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{00009}} \textcolor{keywordtype}{void} \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}}(queue<int> gq)}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00011}00011     queue<int> g = gq;}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00012}00012     \textcolor{keywordflow}{while} (!g.empty()) \{}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00013}00013         cout << \textcolor{charliteral}{'\(\backslash\)t'} << g.front();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00014}00014         g.pop();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00015}00015     \}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00016}00016     cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00017}00017 \}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00019}00019 \textcolor{comment}{// Driver Code}}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00020}\mbox{\hyperlink{Main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00020}} \textcolor{keywordtype}{int} \mbox{\hyperlink{Main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00022}00022     queue<int> gquiz;}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00023}00023     gquiz.push(10);}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00024}00024     gquiz.push(20);}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00025}00025     gquiz.push(30);}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00027}00027     cout << \textcolor{stringliteral}{"{}The queue gquiz is : "{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00028}00028     \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}}(gquiz);}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00030}00030     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.size() : "{}} << gquiz.size();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00031}00031     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.front() : "{}} << gquiz.front();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00032}00032     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.back() : "{}} << gquiz.back();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00034}00034     cout << \textcolor{stringliteral}{"{}\(\backslash\)ngquiz.pop() : "{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00035}00035     gquiz.pop();}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00036}00036     \mbox{\hyperlink{Main_8cpp_a033f7a8d15ed1f54a4dcad53563472d7}{showq}}(gquiz);}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00038}00038     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{Main_8cpp_source_l00039}00039 \}}
+
+\end{DoxyCode}

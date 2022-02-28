@@ -1,0 +1,115 @@
+\hypertarget{classBlockingQueue}{}\doxysection{Blocking\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classBlockingQueue}\index{BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Blocking\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for Blocking\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classBlockingQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Blocking\+Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classBlockingQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{Push}} (T to\+Push)
+\item 
+T \mbox{\hyperlink{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}{Pop}} ()
+\item 
+bool \mbox{\hyperlink{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}{Is\+Empty}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Blocking\+Queue$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{BlockingQueue_8h_source_l00014}{14}} of file \mbox{\hyperlink{BlockingQueue_8h_source}{Blocking\+Queue.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}\label{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}} 
+\index{BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classBlockingQueue}{Blocking\+Queue}}$<$ T $>$\+::\+Is\+Empty}
+
+
+
+Definition at line \mbox{\hyperlink{BlockingQueue_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{BlockingQueue_8cpp_source}{Blocking\+Queue.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                               \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{return} internalQueue.empty();}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}\label{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}} 
+\index{BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}!Pop@{Pop}}
+\index{Pop@{Pop}!BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classBlockingQueue}{Blocking\+Queue}}$<$ T $>$\+::\+Pop}
+
+
+
+Definition at line \mbox{\hyperlink{BlockingQueue_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{BlockingQueue_8cpp_source}{Blocking\+Queue.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007                         \{}
+\DoxyCodeLine{00008     std::unique\_lock<std::mutex> lock(mutex);}
+\DoxyCodeLine{00009     condition.wait(lock, [=]\{ \textcolor{keywordflow}{return} !internalQueue.empty(); \});}
+\DoxyCodeLine{00010     T ret = internalQueue.back();}
+\DoxyCodeLine{00011     internalQueue.pop\_back();}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}\label{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}} 
+\index{BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}!Push@{Push}}
+\index{Push@{Push}!BlockingQueue$<$ T $>$@{BlockingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classBlockingQueue}{Blocking\+Queue}}$<$ T $>$\+::\+Push (\begin{DoxyParamCaption}\item[{T}]{to\+Push }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{BlockingQueue_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{BlockingQueue_8cpp_source}{Blocking\+Queue.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021                                     \{}
+\DoxyCodeLine{00022     \{}
+\DoxyCodeLine{00023         std::unique\_lock <std::mutex> lock(mutex);}
+\DoxyCodeLine{00024         internalQueue.push\_front(toPush);}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026     condition.notify\_all();}
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{BlockingQueue_8h}{Blocking\+Queue.\+h}}\item 
+src/\mbox{\hyperlink{BlockingQueue_8cpp}{Blocking\+Queue.\+cpp}}\end{DoxyCompactItemize}

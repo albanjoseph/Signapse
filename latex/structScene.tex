@@ -1,0 +1,121 @@
+\hypertarget{structScene}{}\doxysection{Scene Struct Reference}
+\label{structScene}\index{Scene@{Scene}}
+
+
+Struct \mbox{\hyperlink{structScene}{Scene}}.  
+
+
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+
+
+Collaboration diagram for Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{structScene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structScene_afedee5782f87b66770de78421b832ccc}{timestamp}}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structScene_a4bc9453a9dee2e37f0708f179739a9b0}{task}}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structResult}{Result}} \mbox{\hyperlink{structScene_a2a39d94aa09118312caac0c551e85ca0}{result}} \mbox{[}10\mbox{]}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}{region\+Of\+Interest}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct \mbox{\hyperlink{structScene}{Scene}}. 
+
+Holds the video frame data and additional Signapse metadata. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00027}{27}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structScene_a593c61450e51aff8f18da7e493c8f92e}\label{structScene_a593c61450e51aff8f18da7e493c8f92e}} 
+\index{Scene@{Scene}!frame@{frame}}
+\index{frame@{frame}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily cv\+::\+Mat Scene\+::frame}
+
+
+
+Member variable. 
+
+Open\+CV n-\/dimensional dense array object. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00032}{32}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}\label{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}} 
+\index{Scene@{Scene}!regionOfInterest@{regionOfInterest}}
+\index{regionOfInterest@{regionOfInterest}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{regionOfInterest}{regionOfInterest}}
+{\footnotesize\ttfamily int Scene\+::region\+Of\+Interest\mbox{[}4\mbox{]}}
+
+
+
+Member variable. 
+
+Region of the frame which frames the user\textquotesingle{}s hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-\/left bounding box coord with the second two representing lower-\/right. Coordinates are in (column,row) format, units are in pixels. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00052}{52}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{structScene_a2a39d94aa09118312caac0c551e85ca0}\label{structScene_a2a39d94aa09118312caac0c551e85ca0}} 
+\index{Scene@{Scene}!result@{result}}
+\index{result@{result}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResult}{Result}} Scene\+::result\mbox{[}10\mbox{]}}
+
+
+
+Member variable. 
+
+An array of \mbox{\hyperlink{structResult}{Result}} corresponding with the top 10 confidence levels from the output of \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}}. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00047}{47}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{structScene_a4bc9453a9dee2e37f0708f179739a9b0}\label{structScene_a4bc9453a9dee2e37f0708f179739a9b0}} 
+\index{Scene@{Scene}!task@{task}}
+\index{task@{task}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{task}{task}}
+{\footnotesize\ttfamily char Scene\+::task}
+
+
+
+Member variable. 
+
+Holds the value of the signing task the \mbox{\hyperlink{structScene}{Scene}} corresponds with. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00042}{42}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{structScene_afedee5782f87b66770de78421b832ccc}\label{structScene_afedee5782f87b66770de78421b832ccc}} 
+\index{Scene@{Scene}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily int Scene\+::timestamp}
+
+
+
+Member variable. 
+
+Holds timestamp of when the \mbox{\hyperlink{structScene}{Scene}} was created by Populate. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00037}{37}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{scene_8h}{scene.\+h}}\end{DoxyCompactItemize}

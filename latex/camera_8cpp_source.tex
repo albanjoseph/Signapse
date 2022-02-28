@@ -1,0 +1,66 @@
+\hypertarget{camera_8cpp_source}{}\doxysection{camera.\+cpp}
+\label{camera_8cpp_source}\index{src/camera.cpp@{src/camera.cpp}}
+\mbox{\hyperlink{camera_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00002}00002 \textcolor{comment}{// Created by adam on 09/02/2022.}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{camera_8h}{camera.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <opencv2/core.hpp>}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <opencv2/videoio.hpp>}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00013}\mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{00013}} \mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera::Camera}}() \{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00014}00014     isOn = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00015}00015     videoCapture.open(deviceID, apiID);}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00018}\mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{00018}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{Camera::Populate}}()\{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00019}00019     cv::Mat temp;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00020}00020     videoCapture.read(temp);}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00021}00021     \textcolor{comment}{// check if we succeeded}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00022}00022     \textcolor{keywordflow}{if} (temp.empty()) \{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00023}00023         std::cerr << \textcolor{stringliteral}{"{}ERROR! blank frame grabbed\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00025}00025     cv::Mat frame;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00026}00026     cv::flip(temp, frame, 1);}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00027}00027     cv::Size sz = frame.size();}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00028}00028     \mbox{\hyperlink{structScene}{Scene}} s = \mbox{\hyperlink{structScene}{Scene}}\{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00029}00029             .\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}=frame,}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00030}00030             .timestamp = 1,}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00031}00031             .task = currentTask,}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00032}00032             .result = \{\},}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00033}00033             .regionOfInterest = \{(int)(sz.width * boundingBox[0]),}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00034}00034                                  (int)(sz.height * boundingBox[1]),}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00035}00035                                  (int)(sz.width * boundingBox[2]),}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00036}00036                                  (int)(sz.height * boundingBox[3])\}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00037}00037     \};}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00038}00038     \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{sceneQueue}}.\mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{Push}}(s);}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00041}\mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{Camera::start\_thread}}()\{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00042}00042     cameraThread = std::thread(\&Camera::Stream, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00045}00045 \textcolor{keywordtype}{void} Camera::Stream() \{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00046}00046     \textcolor{keywordflow}{while} (isOn) \{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00047}00047         \mbox{\hyperlink{classCamera_aae2b41fd194a0dc3438280a0171dfa9e}{Populate}}();}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00051}\mbox{\hyperlink{classCamera_a174e83dcf98aebe1057b773e0f8aa204}{00051}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a174e83dcf98aebe1057b773e0f8aa204}{Camera::set\_current\_task}}(\textcolor{keywordtype}{char} new\_task)\{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00052}00052     currentTask = new\_task;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00055}\mbox{\hyperlink{classCamera_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9}{Camera ::setBoundingBox}}(\textcolor{keywordtype}{float} upperLeftX, \textcolor{keywordtype}{float} upperLeftY, \textcolor{keywordtype}{float} lowerRightX, \textcolor{keywordtype}{float} lowerRightY) \{}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00056}00056     boundingBox[0] = upperLeftX;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00057}00057     boundingBox[1] = upperLeftY;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00058}00058     boundingBox[2] = lowerRightX;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00059}00059     boundingBox[3] = lowerRightY;}
+\DoxyCodeLine{\Hypertarget{camera_8cpp_source_l00060}00060 \}}
+
+\end{DoxyCode}
