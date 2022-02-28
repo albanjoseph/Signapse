@@ -11,6 +11,10 @@
 
 
 template <typename T>
+//!  BlockingQueue Class
+/*!
+    
+*/
 class BlockingQueue {
 public:
     void Push(T toPush);
