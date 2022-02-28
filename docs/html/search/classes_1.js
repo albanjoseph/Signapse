@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reel_0',['Reel',['../classReel.html',1,'']]],
-  ['result_1',['Result',['../structResult.html',1,'']]]
+  ['camera_0',['Camera',['../classCamera.html',1,'']]],
+  ['cnnprocessor_1',['CNNProcessor',['../classCNNProcessor.html',1,'']]]
 ];

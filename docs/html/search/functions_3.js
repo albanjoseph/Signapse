@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]]
+  ['loop_0',['Loop',['../classCNNProcessor.html#a90c1b1e93588f81424fd04f8e0b39fc6',1,'CNNProcessor']]]
 ];

@@ -1,0 +1,33 @@
+\hypertarget{BlockingQueue_8cpp_source}{}\doxysection{Blocking\+Queue.\+cpp}
+\label{BlockingQueue_8cpp_source}\index{src/BlockingQueue.cpp@{src/BlockingQueue.cpp}}
+\mbox{\hyperlink{BlockingQueue_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00002}00002 \textcolor{comment}{// Blocking queue implementation, currently only blocks when Get is attempted while there are no elements inside the queue. In the future and max size could be defined and blocking could be added when the queue is full}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{BlockingQueue_8h}{BlockingQueue.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00006}00006 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00007}\mbox{\hyperlink{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}{00007}} T \mbox{\hyperlink{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}{BlockingQueue<T>::Pop}}() \{}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00008}00008     std::unique\_lock<std::mutex> lock(mutex);}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00009}00009     condition.wait(lock, [=]\{ \textcolor{keywordflow}{return} !internalQueue.empty(); \});}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00010}00010     T ret = internalQueue.back();}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00011}00011     internalQueue.pop\_back();}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00012}00012     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00015}00015 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00016}\mbox{\hyperlink{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}{00016}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}{BlockingQueue<T>::IsEmpty}}()\{}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00017}\mbox{\hyperlink{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}{00017}}     \textcolor{keywordflow}{return} internalQueue.empty();}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00018}\mbox{\hyperlink{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}{00018}} \}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00020}00020 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00021}\mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{BlockingQueue<T>::Push}}(T toPush) \{}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00023}00023         std::unique\_lock <std::mutex> lock(mutex);}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00024}00024         internalQueue.push\_front(toPush);}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00026}00026     condition.notify\_all();}
+\DoxyCodeLine{\Hypertarget{BlockingQueue_8cpp_source_l00027}00027 \}}
+
+\end{DoxyCode}

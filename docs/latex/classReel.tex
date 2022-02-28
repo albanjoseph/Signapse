@@ -21,11 +21,12 @@ Inheritance diagram for Reel\+:
 \end{figure}
 
 
-Collaboration diagram for Reel\+:\nopagebreak
+Collaboration diagram for Reel\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{classReel__coll__graph}
+\includegraphics[width=256pt]{classReel__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -36,13 +37,15 @@ Collaboration diagram for Reel\+:\nopagebreak
 \mbox{\hyperlink{structScene}{Scene}} \mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}} ()
 \begin{DoxyCompactList}\small\item\em Member function returns the next \mbox{\hyperlink{structScene}{Scene}} in the queue. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classReel_ada98684d0365d5162990c3b6b98bf1f8}{Get\+Number}} ()
-\begin{DoxyCompactList}\small\item\em Member function returns the \mbox{\hyperlink{classReel}{Reel}} number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Member function returns the \mbox{\hyperlink{classReel}{Reel}} number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReel_a35411e3a01cc5fce2b6f45a30668d5c0}{Is\+Empty}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classReel_a1aaed8e350c44a2992cfca253ca01a76}{reel\+Nr}}
 \begin{DoxyCompactList}\small\item\em Protected member variable. \end{DoxyCompactList}\item 
-std\+::queue$<$ \mbox{\hyperlink{structScene}{Scene}} $>$ \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frame\+Queue}}
+\mbox{\hyperlink{classBlockingQueue}{Blocking\+Queue}}$<$ \mbox{\hyperlink{structScene}{Scene}} $>$ \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{scene\+Queue}}
 \begin{DoxyCompactList}\small\item\em Protected member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -51,7 +54,7 @@ std\+::queue$<$ \mbox{\hyperlink{structScene}{Scene}} $>$ \mbox{\hyperlink{class
 
 Class for interfacing with a queue of \mbox{\hyperlink{structScene}{Scene}} 
 
-Definition at line \mbox{\hyperlink{reel_8h_source_l00013}{13}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
+Definition at line \mbox{\hyperlink{reel_8h_source_l00016}{16}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
 
 
 
@@ -68,13 +71,13 @@ Constructor.
 
 No functionality. 
 
-Definition at line \mbox{\hyperlink{reel_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
+Definition at line \mbox{\hyperlink{reel_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00012           \{}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{00010           \{}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \}}
 
 \end{DoxyCode}
 
@@ -95,13 +98,30 @@ reel\+Nr an integer.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{reel_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
+Definition at line \mbox{\hyperlink{reel_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020                    \{}
-\DoxyCodeLine{00021     \textcolor{keywordflow}{return} \mbox{\hyperlink{classReel_a1aaed8e350c44a2992cfca253ca01a76}{reelNr}};}
-\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00022                    \{}
+\DoxyCodeLine{00023     \textcolor{keywordflow}{return} \mbox{\hyperlink{classReel_a1aaed8e350c44a2992cfca253ca01a76}{reelNr}};}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReel_a35411e3a01cc5fce2b6f45a30668d5c0}\label{classReel_a35411e3a01cc5fce2b6f45a30668d5c0}} 
+\index{Reel@{Reel}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Reel@{Reel}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily bool Reel\+::\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{reel_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014                   \{}
+\DoxyCodeLine{00015     \textcolor{keywordflow}{return} \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{sceneQueue}}.\mbox{\hyperlink{classBlockingQueue_ab144302dd6dbdd50fc994f3432581d12}{IsEmpty}}();}
+\DoxyCodeLine{00016 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classReel_a399be7e1755b80d4794a6f19e8f7b80d}\label{classReel_a399be7e1755b80d4794a6f19e8f7b80d}} 
@@ -119,34 +139,18 @@ elem the next \mbox{\hyperlink{structScene}{Scene}} in the queue.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{reel_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
+Definition at line \mbox{\hyperlink{reel_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{reel_8cpp_source}{reel.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015                \{}
-\DoxyCodeLine{00016     \mbox{\hyperlink{structScene}{Scene}} elem = \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.front();}
-\DoxyCodeLine{00017     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.pop();}
-\DoxyCodeLine{00018     \textcolor{keywordflow}{return} elem;}
-\DoxyCodeLine{00019 \}}
+\DoxyCodeLine{00018                \{}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{return} \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{sceneQueue}}.\mbox{\hyperlink{classBlockingQueue_aadf9ce8df034b29537feb5fd492819fd}{Pop}}();}
+\DoxyCodeLine{00020 \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classReel_aa100638257af83ba627461df9cd390cb}\label{classReel_aa100638257af83ba627461df9cd390cb}} 
-\index{Reel@{Reel}!frameQueue@{frameQueue}}
-\index{frameQueue@{frameQueue}!Reel@{Reel}}
-\doxysubsubsection{\texorpdfstring{frameQueue}{frameQueue}}
-{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{structScene}{Scene}}$>$ Reel\+::frame\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Protected member variable. 
-
-A queue of \mbox{\hyperlink{structScene}{Scene}}. 
-
-Definition at line \mbox{\hyperlink{reel_8h_source_l00041}{41}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
-
 \mbox{\Hypertarget{classReel_a1aaed8e350c44a2992cfca253ca01a76}\label{classReel_a1aaed8e350c44a2992cfca253ca01a76}} 
 \index{Reel@{Reel}!reelNr@{reelNr}}
 \index{reelNr@{reelNr}!Reel@{Reel}}
@@ -159,7 +163,21 @@ Protected member variable.
 
 Holds value of the \mbox{\hyperlink{classReel}{Reel}} number. 
 
-Definition at line \mbox{\hyperlink{reel_8h_source_l00036}{36}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
+Definition at line \mbox{\hyperlink{reel_8h_source_l00041}{41}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
+
+\mbox{\Hypertarget{classReel_ab654833c0e44abe46de6c4d963b84039}\label{classReel_ab654833c0e44abe46de6c4d963b84039}} 
+\index{Reel@{Reel}!sceneQueue@{sceneQueue}}
+\index{sceneQueue@{sceneQueue}!Reel@{Reel}}
+\doxysubsubsection{\texorpdfstring{sceneQueue}{sceneQueue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBlockingQueue}{Blocking\+Queue}}$<$\mbox{\hyperlink{structScene}{Scene}}$>$ Reel\+::scene\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Protected member variable. 
+
+A queue of \mbox{\hyperlink{structScene}{Scene}}. 
+
+Definition at line \mbox{\hyperlink{reel_8h_source_l00046}{46}} of file \mbox{\hyperlink{reel_8h_source}{reel.\+h}}.
 
 
 

@@ -26,7 +26,7 @@ Collaboration diagram for CNNProcessor\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{classCNNProcessor__coll__graph}
+\includegraphics[width=261pt]{classCNNProcessor__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -34,7 +34,7 @@ Collaboration diagram for CNNProcessor\+:
 \item 
 void \mbox{\hyperlink{classCNNProcessor_a90c1b1e93588f81424fd04f8e0b39fc6}{Loop}} ()
 \begin{DoxyCompactList}\small\item\em Public member function. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}{CNNProcessor}} (\mbox{\hyperlink{classReel}{Reel}} set\+Read\+From)
+\mbox{\hyperlink{classCNNProcessor_ad575cfb86c280fa6b55a360ff2a7848c}{CNNProcessor}} (\mbox{\hyperlink{classReel}{Reel}} $\ast$set\+Read\+From)
 \begin{DoxyCompactList}\small\item\em Constructor takes \mbox{\hyperlink{classReel}{Reel}} object as argument and assigns read\+From \mbox{\hyperlink{classReel}{Reel}} to this value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{Self\+Push}} ()
 \begin{DoxyCompactList}\small\item\em Public member function. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -51,11 +51,11 @@ Definition at line \mbox{\hyperlink{CNNProcessor_8h_source_l00013}{13}} of file 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}\label{classCNNProcessor_a33b1e3c86fd3ba29204a3b467b4eade9}} 
+\mbox{\Hypertarget{classCNNProcessor_ad575cfb86c280fa6b55a360ff2a7848c}\label{classCNNProcessor_ad575cfb86c280fa6b55a360ff2a7848c}} 
 \index{CNNProcessor@{CNNProcessor}!CNNProcessor@{CNNProcessor}}
 \index{CNNProcessor@{CNNProcessor}!CNNProcessor@{CNNProcessor}}
 \doxysubsubsection{\texorpdfstring{CNNProcessor()}{CNNProcessor()}}
-{\footnotesize\ttfamily CNNProcessor\+::\+CNNProcessor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReel}{Reel}}}]{set\+Read\+From }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CNNProcessor\+::\+CNNProcessor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReel}{Reel}} $\ast$}]{set\+Read\+From }\end{DoxyParamCaption})}
 
 
 
@@ -72,8 +72,8 @@ Definition at line \mbox{\hyperlink{CNNProcessor_8cpp_source_l00006}{6}} of file
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00006                                           \{}
-\DoxyCodeLine{00007     readFrom = setReadFrom;}
+\DoxyCodeLine{00006                                            \{}
+\DoxyCodeLine{00007  readFrom = setReadFrom;}
 \DoxyCodeLine{00008 \}}
 
 \end{DoxyCode}
@@ -121,8 +121,8 @@ Definition at line \mbox{\hyperlink{CNNProcessor_8cpp_source_l00017}{17}} of fil
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00017                             \{}
-\DoxyCodeLine{00018     \mbox{\hyperlink{structScene}{Scene}} frame = readFrom.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
-\DoxyCodeLine{00019     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.push(frame);}
+\DoxyCodeLine{00018     \mbox{\hyperlink{structScene}{Scene}} frame = readFrom-\/>\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{00019     \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{sceneQueue}}.\mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{Push}}(frame);}
 \DoxyCodeLine{00020 \}}
 
 \end{DoxyCode}

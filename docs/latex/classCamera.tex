@@ -11,7 +11,8 @@
 
 
 
-Inheritance diagram for Camera\+:\nopagebreak
+Inheritance diagram for Camera\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +21,12 @@ Inheritance diagram for Camera\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Camera\+:\nopagebreak
+Collaboration diagram for Camera\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{classCamera__coll__graph}
+\includegraphics[height=550pt]{classCamera__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -93,21 +95,22 @@ Definition at line \mbox{\hyperlink{camera_8cpp_source_l00018}{18}} of file \mbo
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00018                      \{}
-\DoxyCodeLine{00019     cv::Mat frame;}
-\DoxyCodeLine{00020     videoCapture.read(frame);}
+\DoxyCodeLine{00019     cv::Mat temp;}
+\DoxyCodeLine{00020     videoCapture.read(temp);}
 \DoxyCodeLine{00021     \textcolor{comment}{// check if we succeeded}}
-\DoxyCodeLine{00022     \textcolor{keywordflow}{if} (frame.empty()) \{}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{if} (temp.empty()) \{}
 \DoxyCodeLine{00023         std::cerr << \textcolor{stringliteral}{"{}ERROR! blank frame grabbed\(\backslash\)n"{}};}
 \DoxyCodeLine{00024     \}}
-\DoxyCodeLine{00025 }
-\DoxyCodeLine{00026     \mbox{\hyperlink{structScene}{Scene}} s = \mbox{\hyperlink{structScene}{Scene}}\{}
-\DoxyCodeLine{00027             .\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}=frame,}
-\DoxyCodeLine{00028             .timestamp = 1,}
-\DoxyCodeLine{00029             .task = currentTask,}
-\DoxyCodeLine{00030             .result = \{\}}
-\DoxyCodeLine{00031     \};}
-\DoxyCodeLine{00032     \mbox{\hyperlink{classReel_aa100638257af83ba627461df9cd390cb}{frameQueue}}.push(s);}
-\DoxyCodeLine{00033 \}}
+\DoxyCodeLine{00025     cv::Mat frame;}
+\DoxyCodeLine{00026     cv::flip(temp, frame, 1);}
+\DoxyCodeLine{00027     \mbox{\hyperlink{structScene}{Scene}} s = \mbox{\hyperlink{structScene}{Scene}}\{}
+\DoxyCodeLine{00028             .\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}=frame,}
+\DoxyCodeLine{00029             .timestamp = 1,}
+\DoxyCodeLine{00030             .task = currentTask,}
+\DoxyCodeLine{00031             .result = \{\}}
+\DoxyCodeLine{00032     \};}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classReel_ab654833c0e44abe46de6c4d963b84039}{sceneQueue}}.\mbox{\hyperlink{classBlockingQueue_a6b320feb628e94e01d51975ec93af656}{Push}}(s);}
+\DoxyCodeLine{00034 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCamera_a174e83dcf98aebe1057b773e0f8aa204}\label{classCamera_a174e83dcf98aebe1057b773e0f8aa204}} 
@@ -122,13 +125,13 @@ Member function for setting new signing task.
 
 Updates current\+Task with new\+\_\+task 
 
-Definition at line \mbox{\hyperlink{camera_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00045                                           \{}
-\DoxyCodeLine{00046     currentTask = new\_task;}
-\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00046                                           \{}
+\DoxyCodeLine{00047     currentTask = new\_task;}
+\DoxyCodeLine{00048 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCamera_a2012959e6725f234584948c98954b0ff}\label{classCamera_a2012959e6725f234584948c98954b0ff}} 
@@ -143,13 +146,13 @@ Member function for starting video capturing thread.
 
 Starts \char`\"{}\+Stream\char`\"{} private member function as a thread. 
 
-Definition at line \mbox{\hyperlink{camera_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
+Definition at line \mbox{\hyperlink{camera_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{camera_8cpp_source}{camera.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035                          \{}
-\DoxyCodeLine{00036     cameraThread = std::thread(\&Camera::Stream, \textcolor{keyword}{this});}
-\DoxyCodeLine{00037 \}}
+\DoxyCodeLine{00036                          \{}
+\DoxyCodeLine{00037     cameraThread = std::thread(\&Camera::Stream, \textcolor{keyword}{this});}
+\DoxyCodeLine{00038 \}}
 
 \end{DoxyCode}
 

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['camera_0',['Camera',['../classCamera.html',1,'']]],
-  ['cnnprocessor_1',['CNNProcessor',['../classCNNProcessor.html',1,'']]]
+  ['blockingqueue_0',['BlockingQueue',['../classBlockingQueue.html',1,'']]],
+  ['blockingqueue_3c_20scene_20_3e_1',['BlockingQueue&lt; Scene &gt;',['../classBlockingQueue.html',1,'']]]
 ];
