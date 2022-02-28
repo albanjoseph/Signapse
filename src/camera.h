@@ -36,7 +36,7 @@ public:
     void start_thread();
     //! Member function for setting a new bounding box.
     /*!
-        Updates boundingBox variable with a new set of coordinates
+        Updates boundingBox variable with a new set of coordinates.
      */
     void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
 
