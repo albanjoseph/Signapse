@@ -11,8 +11,9 @@
 </div>
 <p align="center">
 
-  
-  <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
+  <img src="https://github.com/albanjoseph/Signapse/blob/dev/images/logo.png" alt="Signapse Logo" width="400" div al ign=center/>
+
+ 
   <h1 align="center">Signapse</h1>
 
   <p align="center">
