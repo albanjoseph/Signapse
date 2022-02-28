@@ -1,5 +1,5 @@
 //
-// Created by adam on 09/02/2022.
+// Created by Adam on 09/02/2022.
 //
 
 #ifndef SIGNAPSE_CAMERA_H
