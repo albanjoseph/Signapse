@@ -15,7 +15,7 @@ Collaboration diagram for Scene\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=320pt]{structScene__coll__graph}
+\includegraphics[width=344pt]{structScene__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Attributes}
@@ -28,6 +28,8 @@ int \mbox{\hyperlink{structScene_afedee5782f87b66770de78421b832ccc}{timestamp}}
 char \mbox{\hyperlink{structScene_a4bc9453a9dee2e37f0708f179739a9b0}{task}}
 \begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structResult}{Result}} \mbox{\hyperlink{structScene_a2a39d94aa09118312caac0c551e85ca0}{result}} \mbox{[}10\mbox{]}
+\begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}{region\+Of\+Interest}} \mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em Member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -54,6 +56,20 @@ Member variable.
 Open\+CV n-\/dimensional dense array object. 
 
 Definition at line \mbox{\hyperlink{scene_8h_source_l00032}{32}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}\label{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}} 
+\index{Scene@{Scene}!regionOfInterest@{regionOfInterest}}
+\index{regionOfInterest@{regionOfInterest}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{regionOfInterest}{regionOfInterest}}
+{\footnotesize\ttfamily int Scene\+::region\+Of\+Interest\mbox{[}4\mbox{]}}
+
+
+
+Member variable. 
+
+Region of the frame which frames the user\textquotesingle{}s hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-\/left bounding box coord with the second two representing lower-\/right. Coordinates are in (column,row) format, units are in pixels. 
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00052}{52}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
 
 \mbox{\Hypertarget{structScene_a2a39d94aa09118312caac0c551e85ca0}\label{structScene_a2a39d94aa09118312caac0c551e85ca0}} 
 \index{Scene@{Scene}!result@{result}}

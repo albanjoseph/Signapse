@@ -3,14 +3,14 @@
 {\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
 {\ttfamily \#include $<$opencv2/videoio.\+hpp$>$}\newline
 {\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$queue$>$}\newline
 {\ttfamily \#include \char`\"{}reel.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}camera.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}CNNProcessor.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:
-\nopagebreak
+Include dependency graph for main.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +20,34 @@ Include dependency graph for main.\+cpp\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+cv\+::\+Mat \mbox{\hyperlink{main_8cpp_a6cf5c41742803e629926163f159fd6f3}{draw\+Box}} (cv\+::\+Mat img, int box\mbox{[}4\mbox{]})
+\item 
 int \mbox{\hyperlink{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (int, char $\ast$$\ast$)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a6cf5c41742803e629926163f159fd6f3}\label{main_8cpp_a6cf5c41742803e629926163f159fd6f3}} 
+\index{main.cpp@{main.cpp}!drawBox@{drawBox}}
+\index{drawBox@{drawBox}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawBox()}{drawBox()}}
+{\footnotesize\ttfamily cv\+::\+Mat draw\+Box (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{img,  }\item[{int}]{box\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014                                     \{}
+\DoxyCodeLine{00015     \textcolor{keywordtype}{int} x  = box[0]; \textcolor{keywordtype}{int} y = box[1];}
+\DoxyCodeLine{00016     \textcolor{keywordtype}{int} width = box[2] -\/ box[0]; \textcolor{keywordtype}{int} height = box[3] -\/ box[1];}
+\DoxyCodeLine{00017     cv::Rect rect(x, y, width, height);}
+\DoxyCodeLine{00018     cv::rectangle(img, rect, cv::Scalar(0, 255, 0));}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{return} img;}
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}\label{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
@@ -33,56 +56,60 @@ int \mbox{\hyperlink{main_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (int, c
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014 \{}
-\DoxyCodeLine{00015     \mbox{\hyperlink{classCamera}{Camera}} c = \mbox{\hyperlink{classCamera}{Camera}}();}
-\DoxyCodeLine{00016     c.\mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\_thread}}();}
-\DoxyCodeLine{00017     \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}} cnn = \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}}(\&c);}
-\DoxyCodeLine{00018 }
-\DoxyCodeLine{00019 \textcolor{comment}{//    BlockingQueue<int> bq;}}
-\DoxyCodeLine{00020 \textcolor{comment}{//    bq.Push(5);}}
-\DoxyCodeLine{00021 \textcolor{comment}{//    bq.Push(6);}}
-\DoxyCodeLine{00022 \textcolor{comment}{//    bq.Push(7);}}
-\DoxyCodeLine{00023 \textcolor{comment}{//    bq.Push(8);}}
-\DoxyCodeLine{00024 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
-\DoxyCodeLine{00025 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
-\DoxyCodeLine{00026 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
-\DoxyCodeLine{00027 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
-\DoxyCodeLine{00028 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
-\DoxyCodeLine{00029 }
-\DoxyCodeLine{00030     \textcolor{comment}{//Camera c = Camera();}}
-\DoxyCodeLine{00031     \textcolor{comment}{//c.Populate();}}
-\DoxyCodeLine{00032     \textcolor{comment}{//c.start\_thread();}}
-\DoxyCodeLine{00033 }
-\DoxyCodeLine{00034     \textcolor{comment}{/*}}
-\DoxyCodeLine{00035 \textcolor{comment}{    c.set\_current\_task('h');}}
-\DoxyCodeLine{00036 \textcolor{comment}{    c.Populate();}}
-\DoxyCodeLine{00037 \textcolor{comment}{    c.set\_current\_task('y');}}
-\DoxyCodeLine{00038 \textcolor{comment}{    c.Populate();}}
-\DoxyCodeLine{00039 \textcolor{comment}{    */}}
-\DoxyCodeLine{00040     \textcolor{comment}{//CNNProcessor p = CNNProcessor(c);}}
-\DoxyCodeLine{00041     \textcolor{comment}{//p.SelfPush();}}
-\DoxyCodeLine{00042     \textcolor{comment}{//p.SelfPush();}}
-\DoxyCodeLine{00043     \textcolor{comment}{//p.SelfPush();}}
-\DoxyCodeLine{00044     \textcolor{comment}{//c.Stream();}}
-\DoxyCodeLine{00045     \mbox{\hyperlink{structScene}{Scene}} val;}
-\DoxyCodeLine{00046     cout << val.\mbox{\hyperlink{structScene_a4bc9453a9dee2e37f0708f179739a9b0}{task}} << endl;}
-\DoxyCodeLine{00047     \textcolor{keywordflow}{while} (!(waitKey(5) >= 0))\{}
-\DoxyCodeLine{00048         cnn.\mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{SelfPush}}();}
-\DoxyCodeLine{00049         val = cnn.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
-\DoxyCodeLine{00050         cv::imshow(\textcolor{stringliteral}{"{}window"{}}, val.\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}});}
-\DoxyCodeLine{00051     \}}
-\DoxyCodeLine{00052 }
-\DoxyCodeLine{00053     \textcolor{comment}{//val = p.Pop();}}
-\DoxyCodeLine{00054     \textcolor{comment}{//val = c.Pop();}}
-\DoxyCodeLine{00055     \textcolor{comment}{//cout << val.task << endl;}}
-\DoxyCodeLine{00056     \textcolor{comment}{//val = p.Pop();}}
-\DoxyCodeLine{00057     \textcolor{comment}{//val = c.Pop();}}
-\DoxyCodeLine{00058     \textcolor{comment}{//cout << val.task << endl;}}
-\DoxyCodeLine{00059     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00060 \}}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \mbox{\hyperlink{classCamera}{Camera}} c = \mbox{\hyperlink{classCamera}{Camera}}();}
+\DoxyCodeLine{00025     c.\mbox{\hyperlink{classCamera_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9}{setBoundingBox}}(0.25, 0.25, 0.75, 0.75);}
+\DoxyCodeLine{00026     c.\mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\_thread}}();}
+\DoxyCodeLine{00027     \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}} cnn = \mbox{\hyperlink{classCNNProcessor}{CNNProcessor}}(\&c);}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029 \textcolor{comment}{//    BlockingQueue<int> bq;}}
+\DoxyCodeLine{00030 \textcolor{comment}{//    bq.Push(5);}}
+\DoxyCodeLine{00031 \textcolor{comment}{//    bq.Push(6);}}
+\DoxyCodeLine{00032 \textcolor{comment}{//    bq.Push(7);}}
+\DoxyCodeLine{00033 \textcolor{comment}{//    bq.Push(8);}}
+\DoxyCodeLine{00034 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00035 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00036 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00037 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00038 \textcolor{comment}{//    cout << bq.Pop() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{comment}{//Camera c = Camera();}}
+\DoxyCodeLine{00041     \textcolor{comment}{//c.Populate();}}
+\DoxyCodeLine{00042     \textcolor{comment}{//c.start\_thread();}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{comment}{/*}}
+\DoxyCodeLine{00045 \textcolor{comment}{    c.set\_current\_task('h');}}
+\DoxyCodeLine{00046 \textcolor{comment}{    c.Populate();}}
+\DoxyCodeLine{00047 \textcolor{comment}{    c.set\_current\_task('y');}}
+\DoxyCodeLine{00048 \textcolor{comment}{    c.Populate();}}
+\DoxyCodeLine{00049 \textcolor{comment}{    */}}
+\DoxyCodeLine{00050     \textcolor{comment}{//CNNProcessor p = CNNProcessor(c);}}
+\DoxyCodeLine{00051     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00052     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00053     \textcolor{comment}{//p.SelfPush();}}
+\DoxyCodeLine{00054     \textcolor{comment}{//c.Stream();}}
+\DoxyCodeLine{00055     \mbox{\hyperlink{structScene}{Scene}} val\_cnn;}
+\DoxyCodeLine{00056     \mbox{\hyperlink{structScene}{Scene}} val\_camera;}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{while} (!(waitKey(5) >= 0))\{}
+\DoxyCodeLine{00058         val\_camera = c.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{00059         cnn.\mbox{\hyperlink{classCNNProcessor_aa10698a841357d37e427518cafce63a1}{SelfPush}}();}
+\DoxyCodeLine{00060         val\_cnn = cnn.\mbox{\hyperlink{classReel_a399be7e1755b80d4794a6f19e8f7b80d}{Pop}}();}
+\DoxyCodeLine{00061         cv::imshow(\textcolor{stringliteral}{"{}window"{}}, val\_camera.\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}});}
+\DoxyCodeLine{00062         cv::Mat boxFrame = \mbox{\hyperlink{main_8cpp_a6cf5c41742803e629926163f159fd6f3}{drawBox}}(val\_cnn.\mbox{\hyperlink{structScene_a593c61450e51aff8f18da7e493c8f92e}{frame}}, val\_cnn.\mbox{\hyperlink{structScene_a8f05ebb1d0096f8fa783ebd50d999e3d}{regionOfInterest}});}
+\DoxyCodeLine{00063         cv::imshow(\textcolor{stringliteral}{"{}window2"{}}, boxFrame);}
+\DoxyCodeLine{00064     \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \textcolor{comment}{//val = p.Pop();}}
+\DoxyCodeLine{00067     \textcolor{comment}{//val = c.Pop();}}
+\DoxyCodeLine{00068     \textcolor{comment}{//cout << val.task << endl;}}
+\DoxyCodeLine{00069     \textcolor{comment}{//val = p.Pop();}}
+\DoxyCodeLine{00070     \textcolor{comment}{//val = c.Pop();}}
+\DoxyCodeLine{00071     \textcolor{comment}{//cout << val.task << endl;}}
+\DoxyCodeLine{00072     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00073 \}}
 
 \end{DoxyCode}

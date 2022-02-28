@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logoSmall.png"/></td>
   <td id="projectalign">
    <div id="projectname">Signapse
    </div>
@@ -90,30 +91,35 @@ $(function() {
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a174e83dcf98aebe1057b773e0f8aa204">set_current_task</a>(<span class="keywordtype">char</span> new_task);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a2012959e6725f234584948c98954b0ff">start_thread</a>();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> Stream();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9">setBoundingBox</a>(<span class="keywordtype">float</span> upperLeftX, <span class="keywordtype">float</span> upperLeftY, <span class="keywordtype">float</span> lowerRightX, <span class="keywordtype">float</span> lowerRightY);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">char</span> currentTask;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> Stream();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    cv::VideoCapture videoCapture;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">char</span> currentTask;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">int</span> deviceID = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">int</span> apiID = cv::CAP_ANY;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::thread cameraThread;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> isOn = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">//SIGNAPSE_CAMERA_H</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    cv::VideoCapture videoCapture;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">int</span> deviceID = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> apiID = cv::CAP_ANY;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::thread cameraThread;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">bool</span> isOn = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>     <span class="keywordtype">float</span> boundingBox[4];</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif </span><span class="comment">//SIGNAPSE_CAMERA_H</span></div>
 <div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdoc">Camera class which inherits from Reel.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00015">camera.h:15</a></div></div>
 <div class="ttc" id="aclassCamera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00013">camera.cpp:13</a></div></div>
-<div class="ttc" id="aclassCamera_html_a174e83dcf98aebe1057b773e0f8aa204"><div class="ttname"><a href="classCamera.html#a174e83dcf98aebe1057b773e0f8aa204">Camera::set_current_task</a></div><div class="ttdeci">void set_current_task(char new_task)</div><div class="ttdoc">Member function for setting new signing task.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00046">camera.cpp:46</a></div></div>
-<div class="ttc" id="aclassCamera_html_a2012959e6725f234584948c98954b0ff"><div class="ttname"><a href="classCamera.html#a2012959e6725f234584948c98954b0ff">Camera::start_thread</a></div><div class="ttdeci">void start_thread()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00036">camera.cpp:36</a></div></div>
+<div class="ttc" id="aclassCamera_html_a174e83dcf98aebe1057b773e0f8aa204"><div class="ttname"><a href="classCamera.html#a174e83dcf98aebe1057b773e0f8aa204">Camera::set_current_task</a></div><div class="ttdeci">void set_current_task(char new_task)</div><div class="ttdoc">Member function for setting new signing task.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00051">camera.cpp:51</a></div></div>
+<div class="ttc" id="aclassCamera_html_a2012959e6725f234584948c98954b0ff"><div class="ttname"><a href="classCamera.html#a2012959e6725f234584948c98954b0ff">Camera::start_thread</a></div><div class="ttdeci">void start_thread()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00041">camera.cpp:41</a></div></div>
 <div class="ttc" id="aclassCamera_html_aae2b41fd194a0dc3438280a0171dfa9e"><div class="ttname"><a href="classCamera.html#aae2b41fd194a0dc3438280a0171dfa9e">Camera::Populate</a></div><div class="ttdeci">void Populate()</div><div class="ttdoc">Member function.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00018">camera.cpp:18</a></div></div>
+<div class="ttc" id="aclassCamera_html_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9"><div class="ttname"><a href="classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9">Camera::setBoundingBox</a></div><div class="ttdeci">void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY)</div><div class="ttdoc">Member function for setting a new bounding box.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00055">camera.cpp:55</a></div></div>
 <div class="ttc" id="aclassReel_html"><div class="ttname"><a href="classReel.html">Reel</a></div><div class="ttdoc">Reel class.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8h_source.html#l00016">reel.h:16</a></div></div>
 <div class="ttc" id="areel_8h_html"><div class="ttname"><a href="reel_8h.html">reel.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -23,24 +23,28 @@
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00031}00031     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a174e83dcf98aebe1057b773e0f8aa204}{set\_current\_task}}(\textcolor{keywordtype}{char} new\_task);}
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00033}00033 }
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00036}00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a2012959e6725f234584948c98954b0ff}{start\_thread}}();}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00038}00038 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00040}00040 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00043}00043     \textcolor{keywordtype}{void} Stream();}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00041}00041     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9}{setBoundingBox}}(\textcolor{keywordtype}{float} upperLeftX, \textcolor{keywordtype}{float} upperLeftY, \textcolor{keywordtype}{float} lowerRightX, \textcolor{keywordtype}{float} lowerRightY);}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00043}00043 \textcolor{keyword}{private}:}
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00048}00048     \textcolor{keywordtype}{char} currentTask;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00048}00048     \textcolor{keywordtype}{void} Stream();}
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00050}00050 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00053}00053     cv::VideoCapture videoCapture;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00053}00053     \textcolor{keywordtype}{char} currentTask;}
 \DoxyCodeLine{\Hypertarget{camera_8h_source_l00055}00055 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00059}00059     \textcolor{keywordtype}{int} deviceID = 0;}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00064}00064     \textcolor{keywordtype}{int} apiID = cv::CAP\_ANY;}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00066}00066     std::thread cameraThread;}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00072}00072     \textcolor{keywordtype}{bool} isOn = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00073}00073 \};}
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00075}00075 }
-\DoxyCodeLine{\Hypertarget{camera_8h_source_l00076}00076 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SIGNAPSE\_CAMERA\_H}}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00058}00058     cv::VideoCapture videoCapture;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00064}00064     \textcolor{keywordtype}{int} deviceID = 0;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00069}00069     \textcolor{keywordtype}{int} apiID = cv::CAP\_ANY;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00071}00071     std::thread cameraThread;}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00077}00077     \textcolor{keywordtype}{bool} isOn = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00082}00082      \textcolor{keywordtype}{float} boundingBox[4];}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00083}00083 \};}
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{camera_8h_source_l00086}00086 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SIGNAPSE\_CAMERA\_H}}
 
 \end{DoxyCode}

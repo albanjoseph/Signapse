@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logoSmall.png"/></td>
   <td id="projectalign">
    <div id="projectname">Signapse
    </div>
@@ -78,11 +79,11 @@ Collaboration diagram for Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="structScene__coll__graph.png" border="0" usemap="#aScene_coll__map" alt="Collaboration graph"/></div>
 <map name="aScene_coll__map" id="aScene_coll__map">
-<area shape="rect" title="Struct Scene." alt="" coords="111,285,170,363"/>
+<area shape="rect" title="Struct Scene." alt="" coords="119,285,178,363"/>
 <area shape="rect" title=" " alt="" coords="5,145,49,223"/>
-<area shape="rect" title=" " alt="" coords="112,5,151,83"/>
-<area shape="rect" href="structResult.html" title="Struct Result." alt="" coords="196,145,256,223"/>
-<area shape="rect" title=" " alt="" coords="247,5,293,83"/>
+<area shape="rect" title=" " alt="" coords="113,5,152,83"/>
+<area shape="rect" href="structResult.html" title="Struct Result." alt="" coords="228,145,288,223"/>
+<area shape="rect" title=" " alt="" coords="279,5,325,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -100,6 +101,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2a39d94aa09118312caac0c551e85ca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structResult.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScene.html#a2a39d94aa09118312caac0c551e85ca0">result</a> [10]</td></tr>
 <tr class="memdesc:a2a39d94aa09118312caac0c551e85ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable.  <a href="structScene.html#a2a39d94aa09118312caac0c551e85ca0">More...</a><br /></td></tr>
 <tr class="separator:a2a39d94aa09118312caac0c551e85ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f05ebb1d0096f8fa783ebd50d999e3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d">regionOfInterest</a> [4]</td></tr>
+<tr class="memdesc:a8f05ebb1d0096f8fa783ebd50d999e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable.  <a href="structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d">More...</a><br /></td></tr>
+<tr class="separator:a8f05ebb1d0096f8fa783ebd50d999e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Struct <a class="el" href="structScene.html" title="Struct Scene.">Scene</a>. </p>
@@ -123,6 +127,25 @@ Public Attributes</h2></td></tr>
 <p >OpenCV n-dimensional dense array object. </p>
 
 <p class="definition">Definition at line <a class="el" href="scene_8h_source.html#l00032">32</a> of file <a class="el" href="scene_8h_source.html">scene.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f05ebb1d0096f8fa783ebd50d999e3d" name="a8f05ebb1d0096f8fa783ebd50d999e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f05ebb1d0096f8fa783ebd50d999e3d">&#9670;&nbsp;</a></span>regionOfInterest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Scene::regionOfInterest[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Member variable. </p>
+<p >Region of the frame which frames the user's hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (column,row) format, units are in pixels. </p>
+
+<p class="definition">Definition at line <a class="el" href="scene_8h_source.html#l00052">52</a> of file <a class="el" href="scene_8h_source.html">scene.h</a>.</p>
 
 </div>
 </div>

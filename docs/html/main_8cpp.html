@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logoSmall.png"/></td>
   <td id="projectalign">
    <div id="projectname">Signapse
    </div>
@@ -74,6 +75,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;opencv2/core.hpp&gt;</code><br />
 <code>#include &lt;opencv2/videoio.hpp&gt;</code><br />
 <code>#include &lt;opencv2/highgui.hpp&gt;</code><br />
+<code>#include &lt;opencv2/imgproc.hpp&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
@@ -85,23 +87,24 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="419,5,516,32"/>
-<area shape="rect" title=" " alt="" coords="351,453,477,480"/>
-<area shape="rect" title=" " alt="" coords="590,155,731,181"/>
-<area shape="rect" title=" " alt="" coords="175,80,317,107"/>
-<area shape="rect" title=" " alt="" coords="341,80,413,107"/>
-<area shape="rect" title=" " alt="" coords="437,80,498,107"/>
-<area shape="rect" title=" " alt="" coords="523,80,580,107"/>
-<area shape="rect" href="reel_8h.html" title=" " alt="" coords="223,155,277,181"/>
-<area shape="rect" href="camera_8h.html" title=" " alt="" coords="604,80,680,107"/>
-<area shape="rect" href="CNNProcessor_8h.html" title=" " alt="" coords="29,80,151,107"/>
-<area shape="rect" href="scene_8h.html" title=" " alt="" coords="187,379,255,405"/>
-<area shape="rect" href="BlockingQueue_8h.html" title=" " alt="" coords="309,304,431,331"/>
-<area shape="rect" href="BlockingQueue_8cpp.html" title=" " alt="" coords="251,229,385,256"/>
-<area shape="rect" title=" " alt="" coords="513,379,571,405"/>
-<area shape="rect" title=" " alt="" coords="279,379,338,405"/>
-<area shape="rect" title=" " alt="" coords="363,379,489,405"/>
-<area shape="rect" title=" " alt="" coords="507,155,566,181"/>
+<area shape="rect" title=" " alt="" coords="571,5,668,32"/>
+<area shape="rect" title=" " alt="" coords="743,453,869,480"/>
+<area shape="rect" title=" " alt="" coords="787,155,929,181"/>
+<area shape="rect" title=" " alt="" coords="202,80,343,107"/>
+<area shape="rect" title=" " alt="" coords="367,80,514,107"/>
+<area shape="rect" title=" " alt="" coords="538,80,610,107"/>
+<area shape="rect" title=" " alt="" coords="634,80,695,107"/>
+<area shape="rect" title=" " alt="" coords="720,80,777,107"/>
+<area shape="rect" href="reel_8h.html" title=" " alt="" coords="348,155,403,181"/>
+<area shape="rect" href="camera_8h.html" title=" " alt="" coords="801,80,877,107"/>
+<area shape="rect" href="CNNProcessor_8h.html" title=" " alt="" coords="5,80,127,107"/>
+<area shape="rect" href="scene_8h.html" title=" " alt="" coords="351,379,419,405"/>
+<area shape="rect" href="BlockingQueue_8h.html" title=" " alt="" coords="420,304,541,331"/>
+<area shape="rect" href="BlockingQueue_8cpp.html" title=" " alt="" coords="361,229,496,256"/>
+<area shape="rect" title=" " alt="" coords="677,379,735,405"/>
+<area shape="rect" title=" " alt="" coords="443,379,502,405"/>
+<area shape="rect" title=" " alt="" coords="527,379,653,405"/>
+<area shape="rect" title=" " alt="" coords="705,155,763,181"/>
 </map>
 </div>
 </div>
@@ -109,10 +112,49 @@ Include dependency graph for main.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a6cf5c41742803e629926163f159fd6f3"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6cf5c41742803e629926163f159fd6f3">drawBox</a> (cv::Mat img, int box[4])</td></tr>
+<tr class="separator:a6cf5c41742803e629926163f159fd6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3f6775325c30275d11c6abee2db6a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a> (int, char **)</td></tr>
 <tr class="separator:a2c3f6775325c30275d11c6abee2db6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a6cf5c41742803e629926163f159fd6f3" name="a6cf5c41742803e629926163f159fd6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf5c41742803e629926163f159fd6f3">&#9670;&nbsp;</a></span>drawBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat drawBox </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>box</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00014">14</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                    {</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">int</span> x  = box[0]; <span class="keywordtype">int</span> y = box[1];</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">int</span> width = box[2] - box[0]; <span class="keywordtype">int</span> height = box[3] - box[1];</div>
+<div class="line"><span class="lineno">   17</span>    cv::Rect rect(x, y, width, height);</div>
+<div class="line"><span class="lineno">   18</span>    cv::rectangle(img, rect, cv::Scalar(0, 255, 0));</div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">return</span> img;</div>
+<div class="line"><span class="lineno">   20</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2c3f6775325c30275d11c6abee2db6a0" name="a2c3f6775325c30275d11c6abee2db6a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c3f6775325c30275d11c6abee2db6a0">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -139,62 +181,68 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00013">13</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>{</div>
-<div class="line"><span class="lineno">   15</span>    <a class="code hl_class" href="classCamera.html">Camera</a> c = <a class="code hl_class" href="classCamera.html">Camera</a>();</div>
-<div class="line"><span class="lineno">   16</span>    c.<a class="code hl_function" href="classCamera.html#a2012959e6725f234584948c98954b0ff">start_thread</a>();</div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_class" href="classCNNProcessor.html">CNNProcessor</a> cnn = <a class="code hl_class" href="classCNNProcessor.html">CNNProcessor</a>(&amp;c);</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span><span class="comment">//    BlockingQueue&lt;int&gt; bq;</span></div>
-<div class="line"><span class="lineno">   20</span><span class="comment">//    bq.Push(5);</span></div>
-<div class="line"><span class="lineno">   21</span><span class="comment">//    bq.Push(6);</span></div>
-<div class="line"><span class="lineno">   22</span><span class="comment">//    bq.Push(7);</span></div>
-<div class="line"><span class="lineno">   23</span><span class="comment">//    bq.Push(8);</span></div>
-<div class="line"><span class="lineno">   24</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    <span class="comment">//Camera c = Camera();</span></div>
-<div class="line"><span class="lineno">   31</span>    <span class="comment">//c.Populate();</span></div>
-<div class="line"><span class="lineno">   32</span>    <span class="comment">//c.start_thread();</span></div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   35</span><span class="comment">    c.set_current_task(&#39;h&#39;);</span></div>
-<div class="line"><span class="lineno">   36</span><span class="comment">    c.Populate();</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">    c.set_current_task(&#39;y&#39;);</span></div>
-<div class="line"><span class="lineno">   38</span><span class="comment">    c.Populate();</span></div>
-<div class="line"><span class="lineno">   39</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">   40</span>    <span class="comment">//CNNProcessor p = CNNProcessor(c);</span></div>
-<div class="line"><span class="lineno">   41</span>    <span class="comment">//p.SelfPush();</span></div>
-<div class="line"><span class="lineno">   42</span>    <span class="comment">//p.SelfPush();</span></div>
-<div class="line"><span class="lineno">   43</span>    <span class="comment">//p.SelfPush();</span></div>
-<div class="line"><span class="lineno">   44</span>    <span class="comment">//c.Stream();</span></div>
-<div class="line"><span class="lineno">   45</span>    <a class="code hl_struct" href="structScene.html">Scene</a> val;</div>
-<div class="line"><span class="lineno">   46</span>    cout &lt;&lt; val.<a class="code hl_variable" href="structScene.html#a4bc9453a9dee2e37f0708f179739a9b0">task</a> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">while</span> (!(waitKey(5) &gt;= 0)){</div>
-<div class="line"><span class="lineno">   48</span>        cnn.<a class="code hl_function" href="classCNNProcessor.html#aa10698a841357d37e427518cafce63a1">SelfPush</a>();</div>
-<div class="line"><span class="lineno">   49</span>        val = cnn.<a class="code hl_function" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Pop</a>();</div>
-<div class="line"><span class="lineno">   50</span>        cv::imshow(<span class="stringliteral">&quot;window&quot;</span>, val.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>    <span class="comment">//val = p.Pop();</span></div>
-<div class="line"><span class="lineno">   54</span>    <span class="comment">//val = c.Pop();</span></div>
-<div class="line"><span class="lineno">   55</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
-<div class="line"><span class="lineno">   56</span>    <span class="comment">//val = p.Pop();</span></div>
-<div class="line"><span class="lineno">   57</span>    <span class="comment">//val = c.Pop();</span></div>
-<div class="line"><span class="lineno">   58</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   60</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00022">22</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_class" href="classCamera.html">Camera</a> c = <a class="code hl_class" href="classCamera.html">Camera</a>();</div>
+<div class="line"><span class="lineno">   25</span>    c.<a class="code hl_function" href="classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9">setBoundingBox</a>(0.25, 0.25, 0.75, 0.75);</div>
+<div class="line"><span class="lineno">   26</span>    c.<a class="code hl_function" href="classCamera.html#a2012959e6725f234584948c98954b0ff">start_thread</a>();</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_class" href="classCNNProcessor.html">CNNProcessor</a> cnn = <a class="code hl_class" href="classCNNProcessor.html">CNNProcessor</a>(&amp;c);</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span><span class="comment">//    BlockingQueue&lt;int&gt; bq;</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment">//    bq.Push(5);</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">//    bq.Push(6);</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment">//    bq.Push(7);</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment">//    bq.Push(8);</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment">//    cout &lt;&lt; bq.Pop() &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment">//Camera c = Camera();</span></div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">//c.Populate();</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">//c.start_thread();</span></div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   45</span><span class="comment">    c.set_current_task(&#39;h&#39;);</span></div>
+<div class="line"><span class="lineno">   46</span><span class="comment">    c.Populate();</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">    c.set_current_task(&#39;y&#39;);</span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">    c.Populate();</span></div>
+<div class="line"><span class="lineno">   49</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">//CNNProcessor p = CNNProcessor(c);</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment">//p.SelfPush();</span></div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment">//c.Stream();</span></div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_struct" href="structScene.html">Scene</a> val_cnn;</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_struct" href="structScene.html">Scene</a> val_camera;</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">while</span> (!(waitKey(5) &gt;= 0)){</div>
+<div class="line"><span class="lineno">   58</span>        val_camera = c.<a class="code hl_function" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Pop</a>();</div>
+<div class="line"><span class="lineno">   59</span>        cnn.<a class="code hl_function" href="classCNNProcessor.html#aa10698a841357d37e427518cafce63a1">SelfPush</a>();</div>
+<div class="line"><span class="lineno">   60</span>        val_cnn = cnn.<a class="code hl_function" href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Pop</a>();</div>
+<div class="line"><span class="lineno">   61</span>        cv::imshow(<span class="stringliteral">&quot;window&quot;</span>, val_camera.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>);</div>
+<div class="line"><span class="lineno">   62</span>        cv::Mat boxFrame = <a class="code hl_function" href="main_8cpp.html#a6cf5c41742803e629926163f159fd6f3">drawBox</a>(val_cnn.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>, val_cnn.<a class="code hl_variable" href="structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d">regionOfInterest</a>);</div>
+<div class="line"><span class="lineno">   63</span>        cv::imshow(<span class="stringliteral">&quot;window2&quot;</span>, boxFrame);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="comment">//val = p.Pop();</span></div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment">//val = c.Pop();</span></div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">//val = p.Pop();</span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">//val = c.Pop();</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">//cout &lt;&lt; val.task &lt;&lt; endl;</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
 <div class="ttc" id="aclassCNNProcessor_html"><div class="ttname"><a href="classCNNProcessor.html">CNNProcessor</a></div><div class="ttdoc">CNNProcessor class.</div><div class="ttdef"><b>Definition:</b> <a href="CNNProcessor_8h_source.html#l00013">CNNProcessor.h:13</a></div></div>
 <div class="ttc" id="aclassCNNProcessor_html_aa10698a841357d37e427518cafce63a1"><div class="ttname"><a href="classCNNProcessor.html#aa10698a841357d37e427518cafce63a1">CNNProcessor::SelfPush</a></div><div class="ttdeci">void SelfPush()</div><div class="ttdoc">Public member function.</div><div class="ttdef"><b>Definition:</b> <a href="CNNProcessor_8cpp_source.html#l00017">CNNProcessor.cpp:17</a></div></div>
 <div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdoc">Camera class which inherits from Reel.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00015">camera.h:15</a></div></div>
-<div class="ttc" id="aclassCamera_html_a2012959e6725f234584948c98954b0ff"><div class="ttname"><a href="classCamera.html#a2012959e6725f234584948c98954b0ff">Camera::start_thread</a></div><div class="ttdeci">void start_thread()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00036">camera.cpp:36</a></div></div>
+<div class="ttc" id="aclassCamera_html_a2012959e6725f234584948c98954b0ff"><div class="ttname"><a href="classCamera.html#a2012959e6725f234584948c98954b0ff">Camera::start_thread</a></div><div class="ttdeci">void start_thread()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00041">camera.cpp:41</a></div></div>
+<div class="ttc" id="aclassCamera_html_ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9"><div class="ttname"><a href="classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9">Camera::setBoundingBox</a></div><div class="ttdeci">void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY)</div><div class="ttdoc">Member function for setting a new bounding box.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8cpp_source.html#l00055">camera.cpp:55</a></div></div>
 <div class="ttc" id="aclassReel_html_a399be7e1755b80d4794a6f19e8f7b80d"><div class="ttname"><a href="classReel.html#a399be7e1755b80d4794a6f19e8f7b80d">Reel::Pop</a></div><div class="ttdeci">Scene Pop()</div><div class="ttdoc">Member function returns the next Scene in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8cpp_source.html#l00018">reel.cpp:18</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a6cf5c41742803e629926163f159fd6f3"><div class="ttname"><a href="main_8cpp.html#a6cf5c41742803e629926163f159fd6f3">drawBox</a></div><div class="ttdeci">cv::Mat drawBox(cv::Mat img, int box[4])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00014">main.cpp:14</a></div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00027">scene.h:27</a></div></div>
-<div class="ttc" id="astructScene_html_a4bc9453a9dee2e37f0708f179739a9b0"><div class="ttname"><a href="structScene.html#a4bc9453a9dee2e37f0708f179739a9b0">Scene::task</a></div><div class="ttdeci">char task</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00042">scene.h:42</a></div></div>
 <div class="ttc" id="astructScene_html_a593c61450e51aff8f18da7e493c8f92e"><div class="ttname"><a href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">Scene::frame</a></div><div class="ttdeci">cv::Mat frame</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00032">scene.h:32</a></div></div>
+<div class="ttc" id="astructScene_html_a8f05ebb1d0096f8fa783ebd50d999e3d"><div class="ttname"><a href="structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d">Scene::regionOfInterest</a></div><div class="ttdeci">int regionOfInterest[4]</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00052">scene.h:52</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
