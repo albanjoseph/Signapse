@@ -1,5 +1,5 @@
 <map id="Reel" name="Reel">
-<area shape="rect" id="node1" title="Reel class." alt="" coords="95,5,204,141"/>
-<area shape="rect" id="node2" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="5,204,136,311"/>
-<area shape="rect" id="node3" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="160,189,299,325"/>
+<area shape="rect" id="node1" title="Reel class." alt="" coords="95,5,203,141"/>
+<area shape="rect" id="node2" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="5,204,135,311"/>
+<area shape="rect" id="node3" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="159,189,298,325"/>
 </map>
