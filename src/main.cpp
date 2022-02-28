@@ -52,7 +52,7 @@ int main(int, char**)
     //p.SelfPush();
     //p.SelfPush();
     //c.Stream();
-    
+
     Scene val_cnn;
     Scene val_camera;
     while (!(waitKey(5) >= 0)){
@@ -61,7 +61,7 @@ int main(int, char**)
         val_cnn = cnn.Pop();
         cv::imshow("window", val_camera.frame);
         cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
-        cv::imshow("window2", boxFrame);
+        cv::imshow("window2", boxFrame)
     }
 
     //val = p.Pop();
