@@ -10,7 +10,7 @@
 
 //!  Camera class which inherits from Reel.
 /*!
-    Class for reading web cam data, and creating a reel of scenes.
+    Class for reading web cam data, and creating a Reel of scenes.
 */
 class Camera: public Reel{
 public:
