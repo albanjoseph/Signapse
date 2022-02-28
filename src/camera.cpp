@@ -24,11 +24,16 @@ void Camera::Populate(){
     }
     cv::Mat frame;
     cv::flip(temp, frame, 1);
+    cv::Size sz = frame.size();
     Scene s = Scene{
             .frame=frame,
             .timestamp = 1,
             .task = currentTask,
-            .result = {}
+            .result = {},
+            .regionOfInterest = {(int)(sz.width * boundingBox[0]),
+                                 (int)(sz.height * boundingBox[1]),
+                                 (int)(sz.width * boundingBox[2]),
+                                 (int)(sz.height * boundingBox[3])}
     };
     sceneQueue.Push(s);
 }
@@ -45,4 +50,11 @@ void Camera::Stream() {
 
 void Camera::set_current_task(char new_task){
     currentTask = new_task;
+}
+
+void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
+    boundingBox[0] = upperLeftX;
+    boundingBox[1] = upperLeftY;
+    boundingBox[2] = lowerRightX;
+    boundingBox[3] = lowerRightY;
 }

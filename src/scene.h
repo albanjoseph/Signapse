@@ -45,6 +45,11 @@ struct Scene{
         An array of Result corresponding with the top 10 confidence levels from the output of CNNProcessor.
     */
     Result result[10];
+    //! Member variable
+    /*!
+        Region of the frame which frames the user's hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (column,row) format, units are in pixels.
+     */
+     int regionOfInterest[4];
 };
 
 #endif //SIGNAPSE_SCENE_H
