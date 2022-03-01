@@ -7,7 +7,9 @@ add_subdirectory(test)
 
 enable_testing()
 add_test(taskmaster_unit_test taskmaster_test)
+add_test(camera_unit_test camera_test)
 
 set_target_properties(Signapse PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../bin/)
 set_target_properties(taskmaster_test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ..)
+set_target_properties(camera_test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ..)
 add_compile_options(-Wall)
