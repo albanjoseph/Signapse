@@ -10,7 +10,6 @@ Signapse.code-workspace
 lib/
 build/
 
-
 # Executables
 *.swf
 *.air
