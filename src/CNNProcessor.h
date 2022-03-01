@@ -35,12 +35,12 @@ public:
     */
     void SelfPush();
     Scene Inference(Scene scene);
+    cv::Mat MakeBlob(Scene scene);
 
 
 
 private:
     void LoadModel(std::string modelPath);
-    cv::Mat MakeBlob(Scene scene);
     Reel* readFrom;
     cv::dnn::Net net;
 };

@@ -59,6 +59,7 @@ int main(int, char**)
         val_camera = c.Pop();
         cnn.SelfPush();
         val_cnn = cnn.Pop();
+        cv::Mat blob = cnn.MakeBlob(val_cnn);
         cnn.Inference(val_cnn);
         cv::imshow("window", val_camera.frame);
         cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);

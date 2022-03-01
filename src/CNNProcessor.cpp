@@ -22,7 +22,10 @@ void CNNProcessor::Loop(){
 
 cv::Mat CNNProcessor::MakeBlob(Scene scene){
     //make blob
-    cv::Mat roi = scene.frame(cv::Range(scene.regionOfInterest[0], scene.regionOfInterest[1]), cv::Range(scene.regionOfInterest[2], scene.regionOfInterest[3]));
+    int x  = scene.regionOfInterest[0]; int y = scene.regionOfInterest[1];
+    int width = scene.regionOfInterest[2] - scene.regionOfInterest[0];
+    int height = scene.regionOfInterest[3] - scene.regionOfInterest[1];
+    cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
     cv::Mat grey;
     cv::cvtColor(roi, grey, cv::COLOR_BGR2GRAY);
     cv::Mat smallGrey;
@@ -40,6 +43,7 @@ Scene CNNProcessor::Inference(Scene scene){
     double confidence;
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
     int classId = classIdPoint.x;
+
     printf("%d \n",classId);
     return scene;
 }
