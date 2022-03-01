@@ -1,4 +1,4 @@
-name: CMake
+name: CMake build and test
 
 on:
   push:
@@ -25,5 +25,8 @@ jobs:
       
     - name: Build
       run: bash build.sh
+
+    - name: Test
+      run: bash test.sh
 
       
