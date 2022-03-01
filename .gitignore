@@ -8,6 +8,7 @@ bin-release/
 .settings/
 Signapse.code-workspace
 lib/
+build/
 
 
 # Executables
