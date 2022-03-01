@@ -6,6 +6,13 @@
 #define SIGNAPSE_CNNPROCESSOR_H
 
 #include "reel.h"
+#include <opencv2/dnn.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+#include <stdio.h>
+
 //!  CNNProcessor class.
 /*!
     Class for interfacing with convolutional neural network
@@ -21,15 +28,21 @@ public:
     /*!
         \param setReadFrom Reel to be copied to readFrom.
     */
-    CNNProcessor(Reel* setReadFrom);
+    CNNProcessor(Reel* setReadFrom, std::string modelPath);
     //!  Public member function.
     /*!
         Pops Scene from readFrom Reel and pushes to CNNProcessor own sceneQueue.
     */
     void SelfPush();
+    Scene Inference(Scene scene);
+
+
 
 private:
+    void LoadModel(std::string modelPath);
+    cv::Mat MakeBlob(Scene scene);
     Reel* readFrom;
+    cv::dnn::Net net;
 };
 
 #endif //SIGNAPSE_CNNPROCESSOR_H

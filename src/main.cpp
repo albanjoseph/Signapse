@@ -24,7 +24,7 @@ int main(int, char**)
     Camera c = Camera();
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.start_thread();
-    CNNProcessor cnn = CNNProcessor(&c);
+    CNNProcessor cnn = CNNProcessor(&c, "models/asl-classifier.pb");
 
 //    BlockingQueue<int> bq;
 //    bq.Push(5);
