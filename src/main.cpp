@@ -26,6 +26,7 @@ int main(int, char**)
     c.start_thread();
     CNNProcessor cnn = CNNProcessor(&c, "models/asl-classifier.pb");
 
+
 //    BlockingQueue<int> bq;
 //    bq.Push(5);
 //    bq.Push(6);
@@ -58,6 +59,7 @@ int main(int, char**)
         val_camera = c.Pop();
         cnn.SelfPush();
         val_cnn = cnn.Pop();
+        cnn.Inference(val_cnn);
         cv::imshow("window", val_camera.frame);
         cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
         cv::imshow("window2", boxFrame);

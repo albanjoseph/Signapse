@@ -23,9 +23,10 @@ void CNNProcessor::Loop(){
 cv::Mat CNNProcessor::MakeBlob(Scene scene){
     //make blob
     cv::Mat roi = scene.frame(cv::Range(scene.regionOfInterest[0], scene.regionOfInterest[1]), cv::Range(scene.regionOfInterest[2], scene.regionOfInterest[3]));
-    cv::Mat grey = cv::cvtColor(roi, grey, cv::COLOR_BGR2GRAY);
+    cv::Mat grey;
+    cv::cvtColor(roi, grey, cv::COLOR_BGR2GRAY);
     cv::Mat smallGrey;
-    grey = cv::resize(grey, smallGrey, cv::Size(28,28));
+    cv::resize(grey, smallGrey, cv::Size(28,28));
     cv::Mat blob;
     cv::dnn::blobFromImage(smallGrey, blob);
     return blob;
@@ -48,5 +49,6 @@ Scene CNNProcessor::Inference(Scene scene){
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom->Pop();
     sceneQueue.Push(frame);
+
 }
 
