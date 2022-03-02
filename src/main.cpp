@@ -24,7 +24,7 @@ int main(int, char**)
     Camera c = Camera();
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.start_thread();
-    CNNProcessor cnn = CNNProcessor(&c, "models/asl-classifier.pb");
+    CNNProcessor cnn = CNNProcessor(&c, "models/asl-classifier-20-epochs-mnist-model-2.pb");
 
 
 //    BlockingQueue<int> bq;
