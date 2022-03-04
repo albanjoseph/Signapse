@@ -21,12 +21,15 @@ cv::Mat drawBox(cv::Mat img, int box[4]){
 
 int main(int, char**)
 {
+    cout << "OpenCV version : " << CV_VERSION << endl;
+
     Camera c = Camera();
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.start_thread();
-    CNNProcessor cnn = CNNProcessor(&c, "models/asl-classifier-20-epochs-mnist-model-2.pb");
+    CNNProcessor cnn = CNNProcessor(&c, "models/asl-mobilenetv2.pb");
 
-
+    std::vector<std::string> results = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
+                                        "W", "X", "Y", "Z", "del", "space", "nothing"};
 //    BlockingQueue<int> bq;
 //    bq.Push(5);
 //    bq.Push(6);
