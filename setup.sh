@@ -1,9 +1,5 @@
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt install cmake
-sudo apt install gcc
-sudo apt install qtbase5-dev -y
-sudo apt install qtdeclarative5-dev -y
-
+sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev -y
 
 CV_VERSION="69357b1e88680658a07cffde7678a4d697469f03"
 
