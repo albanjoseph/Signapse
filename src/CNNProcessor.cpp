@@ -16,7 +16,6 @@ void CNNProcessor::Loop(){
     while(true){
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         SelfPush();
-
     }
 }
 
@@ -53,6 +52,5 @@ Scene CNNProcessor::Inference(Scene scene){
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom->Pop();
     sceneQueue.Push(frame);
-
 }
 
