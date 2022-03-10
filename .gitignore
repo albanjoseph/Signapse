@@ -9,6 +9,8 @@ bin-release/
 Signapse.code-workspace
 lib/
 build/
+opencv_build/
+opencv_src
 
 # Executables
 *.swf
@@ -21,6 +23,7 @@ build/
 # information for Eclipse / Flash Builder.
 
 *.pdf
+*.zip
 
 #CMake
 CMakeLists.txt.user
