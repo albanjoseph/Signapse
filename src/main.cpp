@@ -109,7 +109,7 @@ int main(int, char**)
                 int result = cnn.Inference(val_cnn);
                 if(result == task){
                     nr_correct++;
-                    progress = (nr_correct / threshold) * 100;
+                    progress = (nr_correct / THRES) * 100;
                 }
                 cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
                 cv::imshow("window2", boxFrame);
