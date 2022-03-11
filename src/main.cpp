@@ -14,10 +14,10 @@ using namespace std;
 
 #define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
 #define PBWIDTH 60
-#define THRES 20
+#define THRES 200
 
 void printProgress(double percentage) {
-    int val = (int) (percentage * 100);
+    int val = (int) percentage;
     int lpad = (int) (percentage * PBWIDTH);
     int rpad = PBWIDTH - lpad;
     printf("\r%3d%% [%.*s%*s]", val, lpad, PBSTR, rpad, "");
@@ -103,9 +103,11 @@ int main(int, char**)
             printf("\n Task confirmed. Progress...");
             double progress = 0.0;
             float nr_correct = 0;
-            while(progress < 100){
+            while ((!(waitKey(5) >= 0)) && (progress < 100)){
                 cnn.SelfPush();
+                val_cnn = cnn.Pop();
                 cv::Mat blob = cnn.MakeBlob(val_cnn);
+                
                 int result = cnn.Inference(val_cnn);
                 if(result == task){
                     nr_correct++;
@@ -114,29 +116,13 @@ int main(int, char**)
                 cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
                 cv::imshow("window2", boxFrame);
 
-                printProgress(0.0);
+                printProgress(progress);
             }
 
 
         }
 
     }
-
-    while (!(waitKey(5) >= 0)){
-        cnn.SelfPush();
-        val_cnn = cnn.Pop();
-        cv::Mat blob = cnn.MakeBlob(val_cnn);
-        cnn.Inference(val_cnn);
-        cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
-        cv::imshow("window2", boxFrame);
-    }
-
-    //val = p.Pop();
-    //val = c.Pop();
-    //cout << val.task << endl;
-    //val = p.Pop();
-    //val = c.Pop();
-    //cout << val.task << endl;
     return 0;
 }
 
