@@ -14,7 +14,7 @@ using namespace std;
 
 #define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
 #define PBWIDTH 60
-#define THRES 200
+#define THRES 20
 
 void printProgress(double percentage) {
     int val = (int) percentage;
@@ -91,15 +91,16 @@ int main(int, char**)
     {
         cout << '\n' << "Press any key to continue...";
     } while (cin.get() != '\n');
-
     int task;
     char key;
     while(key != 'q'){
+        c.on(false);
         task = makeTask();
         printf("Current task is: %d \n", task);
         printf("Enter \"y\" to confirm, \"q\" to quit, or any other key to change task... ");
         key = cin.get();
         if(key == 'y'){
+            c.on(true);
             printf("\n Task confirmed. Progress...");
             double progress = 0.0;
             float nr_correct = 0;
