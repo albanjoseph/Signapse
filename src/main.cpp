@@ -14,6 +14,7 @@ using namespace std;
 
 #define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
 #define PBWIDTH 60
+#define THRES 20
 
 void printProgress(double percentage) {
     int val = (int) (percentage * 100);
@@ -91,7 +92,35 @@ int main(int, char**)
         cout << '\n' << "Press any key to continue...";
     } while (cin.get() != '\n');
 
+    int task;
+    char key;
+    while(key != 'q'){
+        task = makeTask();
+        printf("Current task is: %d \n", task);
+        printf("Enter \"y\" to confirm, \"q\" to quit, or any other key to change task... ");
+        key = cin.get();
+        if(key == 'y'){
+            printf("\n Task confirmed. Progress...");
+            double progress = 0.0;
+            float nr_correct = 0;
+            while(progress < 100){
+                cnn.SelfPush();
+                cv::Mat blob = cnn.MakeBlob(val_cnn);
+                int result = cnn.Inference(val_cnn);
+                if(result == task){
+                    nr_correct++;
+                    progress = (nr_correct / threshold) * 100;
+                }
+                cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
+                cv::imshow("window2", boxFrame);
 
+                printProgress(0.0);
+            }
+
+
+        }
+
+    }
 
     while (!(waitKey(5) >= 0)){
         cnn.SelfPush();
