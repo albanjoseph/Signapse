@@ -8,8 +8,25 @@
 #include "reel.h"
 #include "camera.h"
 #include "CNNProcessor.h"
+#include "stdlib.h"
 using namespace cv;
 using namespace std;
+
+#define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+#define PBWIDTH 60
+
+void printProgress(double percentage) {
+    int val = (int) (percentage * 100);
+    int lpad = (int) (percentage * PBWIDTH);
+    int rpad = PBWIDTH - lpad;
+    printf("\r%3d%% [%.*s%*s]", val, lpad, PBSTR, rpad, "");
+    fflush(stdout);
+}
+
+//returns a random nr range [0-25]
+int makeTask(){
+    return rand() % 25;
+}
 
 cv::Mat drawBox(cv::Mat img, int box[4]){
     int x  = box[0]; int y = box[1];
@@ -19,9 +36,12 @@ cv::Mat drawBox(cv::Mat img, int box[4]){
     return img;
 }
 
+
+
 int main(int, char**)
 {
-    cout << "OpenCV version : " << CV_VERSION << endl;
+    //init rand seed
+    srand (time(NULL));
 
     Camera c = Camera();
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
@@ -58,14 +78,26 @@ int main(int, char**)
     //c.Stream();
 
     Scene val_cnn;
-    Scene val_camera;
+    printf("   _____ _                                  \n"
+           "  / ____(_)                                 \n"
+           " | (___  _  __ _ _ __   __ _ _ __  ___  ___ \n"
+           "  \\___ \\| |/ _` | '_ \\ / _` | '_ \\/ __|/ _ \\\n"
+           "  ____) | | (_| | | | | (_| | |_) \\__ \\  __/\n"
+           " |_____/|_|\\__, |_| |_|\\__,_| .__/|___/\\___|\n"
+           "            __/ |           | |             \n"
+           "           |___/            |_|    \n \nWelcome to Signapse, the tool for helping everyday people learn sign language for free!");
+    do
+    {
+        cout << '\n' << "Press any key to continue...";
+    } while (cin.get() != '\n');
+
+
+
     while (!(waitKey(5) >= 0)){
-        val_camera = c.Pop();
         cnn.SelfPush();
         val_cnn = cnn.Pop();
         cv::Mat blob = cnn.MakeBlob(val_cnn);
         cnn.Inference(val_cnn);
-        cv::imshow("window", val_camera.frame);
         cv::Mat boxFrame = drawBox(val_cnn.frame, val_cnn.regionOfInterest);
         cv::imshow("window2", boxFrame);
     }
