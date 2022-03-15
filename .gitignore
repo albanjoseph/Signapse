@@ -7,6 +7,13 @@ bin-release/
 # Other files and folders
 .settings/
 Signapse.code-workspace
+lib/
+build/
+opencv_build/
+opencv_src
+
+#VSCode 
+.vscode/
 
 # Executables
 *.swf
@@ -19,3 +26,19 @@ Signapse.code-workspace
 # information for Eclipse / Flash Builder.
 
 *.pdf
+*.zip
+
+#CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+
