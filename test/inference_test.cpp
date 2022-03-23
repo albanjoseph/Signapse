@@ -11,6 +11,7 @@ int main(){
     
     Camera c;
     CNNProcessor cnn = CNNProcessor(&c, "../models/asl-mobilenetv2.pb");
+    for(char letter ='a'; letter++; 'Z' )
     for(int i=0; i<26; i++)
     {
         char filepath[100];

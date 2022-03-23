@@ -50,8 +50,13 @@ int main(int argc, char* argv[])
     QMainWindow widget;
     Ui_MainWindow ui;
     ui.setupUi(&widget);
+    cv::Mat img;
+    img = imread("test/asl_alphabet_test/C_test.jpg");
+    cvtColor(img, img, cv::COLOR_BGR2RGB);
+    ui.label_2->setPixmap(QPixmap::fromImage(QImage(img.data, img.cols, img.rows, img.step, QImage::Format_RGB888)));
     widget.show();
     return app.exec();
+    printf("Test");
     srand (time(NULL));
 
     Camera c = Camera();
