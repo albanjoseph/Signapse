@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['reel_0',['Reel',['../classReel.html',1,'Reel'],['../classReel.html#a3656fa67f060d2808dc07f337030b537',1,'Reel::Reel()']]],
-  ['reel_2ecpp_1',['reel.cpp',['../reel_8cpp.html',1,'']]],
-  ['reel_2eh_2',['reel.h',['../reel_8h.html',1,'']]],
-  ['reelnr_3',['reelNr',['../classReel.html#a1aaed8e350c44a2992cfca253ca01a76',1,'Reel']]],
-  ['regionofinterest_4',['regionOfInterest',['../structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d',1,'Scene']]],
-  ['result_5',['Result',['../structResult.html',1,'']]],
-  ['result_6',['result',['../structScene.html#a2a39d94aa09118312caac0c551e85ca0',1,'Scene']]]
+  ['pop_0',['Pop',['../classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd',1,'BlockingQueue::Pop()'],['../classReel.html#a399be7e1755b80d4794a6f19e8f7b80d',1,'Reel::Pop()']]],
+  ['populate_1',['Populate',['../classCamera.html#aae2b41fd194a0dc3438280a0171dfa9e',1,'Camera']]],
+  ['printprogress_2',['printProgress',['../main_8cpp.html#a73ab177aa74aeabf4219d95371e90f76',1,'main.cpp']]],
+  ['push_3',['Push',['../classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656',1,'BlockingQueue']]],
+  ['pushbutton_4',['pushButton',['../classUi__MainWindow.html#ad332d93084584930878f1daf5f84cdbf',1,'Ui_MainWindow']]]
 ];

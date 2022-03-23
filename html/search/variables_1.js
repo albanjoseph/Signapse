@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['frame_0',['frame',['../structScene.html#a593c61450e51aff8f18da7e493c8f92e',1,'Scene']]]
+  ['centralwidget_0',['centralwidget',['../classUi__MainWindow.html#a356f1cf3ebda15f1fac59467ee081b74',1,'Ui_MainWindow']]],
+  ['conf_1',['conf',['../structResult.html#a19477908b7900d4cd813ef625e3e4942',1,'Result']]]
 ];

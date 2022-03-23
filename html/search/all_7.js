@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['makeblob_2',['MakeBlob',['../classCNNProcessor.html#ab18af7b848a81fe7fcfa4c3b8d26a390',1,'CNNProcessor']]],
-  ['maketask_3',['makeTask',['../main_8cpp.html#a17c4cbc7710803119395e2f2121f03b3',1,'main.cpp']]],
-  ['master_5ftask_4',['master_task',['../classTaskmaster.html#a7ab8ed96b9ebae34c588a6e624eafbaf',1,'Taskmaster']]]
+  ['label_0',['label',['../classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5',1,'Ui_MainWindow']]],
+  ['label_5f2_1',['label_2',['../classUi__MainWindow.html#a2e2516d755e4dd53fc905dabddf2738a',1,'Ui_MainWindow']]],
+  ['label_5f3_2',['label_3',['../classUi__MainWindow.html#a0376fd90247280e7c7957cc70628708c',1,'Ui_MainWindow']]],
+  ['listwidget_3',['listWidget',['../classUi__MainWindow.html#ae647a15635ba8a0e5d5aec475db99d8f',1,'Ui_MainWindow']]],
+  ['loop_4',['Loop',['../classCNNProcessor.html#a90c1b1e93588f81424fd04f8e0b39fc6',1,'CNNProcessor']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['task_0',['task',['../structScene.html#a4bc9453a9dee2e37f0708f179739a9b0',1,'Scene']]],
-  ['timestamp_1',['timestamp',['../structScene.html#afedee5782f87b66770de78421b832ccc',1,'Scene']]]
+  ['master_5ftask_0',['master_task',['../classTaskmaster.html#a7ab8ed96b9ebae34c588a6e624eafbaf',1,'Taskmaster']]],
+  ['menubar_1',['menubar',['../classUi__MainWindow.html#adf43d9a67adaec750aaa956b5e082f09',1,'Ui_MainWindow']]],
+  ['menumenu_2',['menuMenu',['../classUi__MainWindow.html#a6d7bbbef44e207ee15e5a623171033a2',1,'Ui_MainWindow']]]
 ];

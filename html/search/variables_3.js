@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['reelnr_0',['reelNr',['../classReel.html#a1aaed8e350c44a2992cfca253ca01a76',1,'Reel']]],
-  ['regionofinterest_1',['regionOfInterest',['../structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d',1,'Scene']]],
-  ['result_2',['result',['../structScene.html#a2a39d94aa09118312caac0c551e85ca0',1,'Scene']]]
+  ['gridlayout_0',['gridLayout',['../classUi__MainWindow.html#a525ed3c5fe0784ac502ee222fba4e205',1,'Ui_MainWindow']]],
+  ['gridlayout_5f3_1',['gridLayout_3',['../classUi__MainWindow.html#af42ea7d4c2e893181caad21e28166932',1,'Ui_MainWindow']]],
+  ['gridlayout_5f4_2',['gridLayout_4',['../classUi__MainWindow.html#a8ee86315639f324b17708efc7dbe8b19',1,'Ui_MainWindow']]]
 ];
