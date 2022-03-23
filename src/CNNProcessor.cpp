@@ -34,7 +34,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     return blob;
 }
 
-Scene CNNProcessor::Inference(Scene scene){
+int CNNProcessor::Inference(Scene scene){
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
@@ -43,8 +43,8 @@ Scene CNNProcessor::Inference(Scene scene){
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
     int classId = classIdPoint.x;
 
-    printf("%d \n",classId);
-    return scene;
+    //printf("%d \n",classId);
+    return classId;
 }
 
 

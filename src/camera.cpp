@@ -11,9 +11,13 @@
 
 
 Camera::Camera() {
-    isOn = true;
     videoCapture.open(deviceID, apiID);
 }
+
+void Camera::on(bool state){
+    isOn = state;
+}
+
 
 void Camera::Populate(){
     cv::Mat temp;
@@ -43,8 +47,10 @@ void Camera::start_thread(){
 }
 
 void Camera::Stream() {
-    while (isOn) {
-        Populate();
+    while (1) {
+        if(isOn){
+            Populate();
+        }
     }
 }
 

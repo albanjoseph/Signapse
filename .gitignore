@@ -12,6 +12,9 @@ build/
 opencv_build/
 opencv_src
 
+#VSCode 
+.vscode/
+
 # Executables
 *.swf
 *.air

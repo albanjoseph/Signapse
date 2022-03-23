@@ -19,6 +19,7 @@ public:
         Turns the camera object "ON" and configures the video capture.
     */
     Camera();
+    void on(bool state);
     //! Member function.
     /*!
         Reads webcam data, populates a Scene struct and pushes scene on to sceneQueue.
@@ -74,7 +75,7 @@ private:
         false = Camera is off.
         true = Camera is on.
     */
-    bool isOn = true;
+    bool isOn = false;
     //! Private member variable indicating the bounding box to set the region of interest to for each frame.
     /*!
         Box within the frame which bounds the user's hand or sign, used to allow cropping for further processing. Variable contains 4 floats, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (x,y) format and are defined as a fraction of the total frame width and height in range (0-1).

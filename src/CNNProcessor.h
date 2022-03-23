@@ -34,7 +34,7 @@ public:
         Pops Scene from readFrom Reel and pushes to CNNProcessor own sceneQueue.
     */
     void SelfPush();
-    Scene Inference(Scene scene);
+    int Inference(Scene scene);
     cv::Mat MakeBlob(Scene scene);
 
 
