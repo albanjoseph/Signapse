@@ -9,6 +9,7 @@
 #include "camera.h"
 #include "CNNProcessor.h"
 #include "stdlib.h"
+#include "taskMaster.h"
 using namespace cv;
 using namespace std;
 
@@ -42,9 +43,15 @@ cv::Mat drawBox(cv::Mat img, int box[4]){
 
 
 
-int main(int, char**)
+int main(int argc, char* argv[])
 {
     //init rand seed
+    QApplication app(argc, argv);
+    QMainWindow widget;
+    Ui_MainWindow ui;
+    ui.setupUi(&widget);
+    widget.show();
+    return app.exec();
     srand (time(NULL));
 
     Camera c = Camera();
