@@ -8,6 +8,11 @@
 #include <opencv2/videoio.hpp>
 #include <thread>
 
+class CameraCallback{
+public:
+    virtual void nextScene(Scene next) = 0;
+};
+
 //!  Camera class which inherits from Reel.
 /*!
     Class for reading web cam data, and creating a Reel of scenes.
@@ -19,7 +24,7 @@ public:
         Turns the camera object "ON" and configures the video capture.
     */
     Camera();
-    void on(bool state);
+    void setOn(bool state);
     //! Member function.
     /*!
         Reads webcam data, populates a Scene struct and pushes scene on to sceneQueue.
@@ -41,7 +46,15 @@ public:
      */
     void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
 
+    void registerCallback(CameraCallback* ccb);
+
+    void dataReady();
+
+    void Start();
+
 private:
+    void threadLoop();
+
     //! Private member function.
     /*!
         Calls "Populate" member function whilst the camera object is "ON"
@@ -81,6 +94,8 @@ private:
         Box within the frame which bounds the user's hand or sign, used to allow cropping for further processing. Variable contains 4 floats, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (x,y) format and are defined as a fraction of the total frame width and height in range (0-1).
      */
      float boundingBox[4];
+
+     CameraCallback* cameraCallback;
 };
 
 

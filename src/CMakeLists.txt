@@ -17,3 +17,6 @@ target_link_libraries(camera ${OpenCV_LIBS} reel)
 
 add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h)
 target_link_libraries(CNNProcessor ${OpenCV_LIBS})
+
+add_library(FrameEditor FrameEditor.cpp FrameEditor.h)
+target_link_libraries(FrameEditor ${OpenCV_LIBS})

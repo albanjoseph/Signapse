@@ -11,13 +11,44 @@
 
 
 Camera::Camera() {
-    videoCapture.open(deviceID, apiID);
+    isOn=true;
 }
 
-void Camera::on(bool state){
+
+void Camera::setOn(bool state){
     isOn = state;
 }
 
+void Camera::threadLoop(){
+    while(isOn){
+        printf("check \n");
+        dataReady();
+    }
+}
+
+void Camera::dataReady(){
+    if(!cameraCallback) return;
+    cv::Mat temp;
+    videoCapture.read(temp);
+    // check if we succeeded
+    if (temp.empty()) {
+        std::cerr << "ERROR! blank frame grabbed\n";
+    }
+    cv::Mat frame;
+    cv::flip(temp, frame, 1);
+    cv::Size sz = frame.size();
+    Scene s = Scene{
+            .frame=frame,
+            .timestamp = 1,
+            .task = currentTask,
+            .result = {},
+            .regionOfInterest = {(int)(sz.width * boundingBox[0]),
+                                 (int)(sz.height * boundingBox[1]),
+                                 (int)(sz.width * boundingBox[2]),
+                                 (int)(sz.height * boundingBox[3])}
+    };
+    cameraCallback->nextScene(s);
+}
 
 void Camera::Populate(){
     cv::Mat temp;
@@ -43,7 +74,9 @@ void Camera::Populate(){
 }
 
 void Camera::start_thread(){
-    cameraThread = std::thread(&Camera::Stream, this);
+    videoCapture.open(deviceID, apiID);
+    printf("starting camera threads \n");
+    cameraThread = std::thread(&Camera::threadLoop, this);
 }
 
 void Camera::Stream() {
@@ -63,4 +96,8 @@ void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRigh
     boundingBox[1] = upperLeftY;
     boundingBox[2] = lowerRightX;
     boundingBox[3] = lowerRightY;
+}
+
+void Camera::registerCallback(CameraCallback *ccb) {
+    cameraCallback = ccb;
 }

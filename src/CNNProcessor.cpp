@@ -7,8 +7,23 @@ void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
+
+
+
+void CNNProcessor::threadLoop() {
+    return;
+}
+
+void CNNProcessor::start_thread(){
+    cnnProcessorThread = std::thread(&CNNProcessor::threadLoop, this);
+}
+
 CNNProcessor::CNNProcessor(Reel* setReadFrom, std::string modelPath){
     readFrom = setReadFrom;
+    LoadModel(modelPath);
+}
+
+CNNProcessor::CNNProcessor(std::string modelPath) {
     LoadModel(modelPath);
 }
 
@@ -24,6 +39,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     int x  = scene.regionOfInterest[0]; int y = scene.regionOfInterest[1];
     int width = scene.regionOfInterest[2] - scene.regionOfInterest[0];
     int height = scene.regionOfInterest[3] - scene.regionOfInterest[1];
+
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
     cv::Mat rgb;
     cv::cvtColor(roi, rgb, cv::COLOR_BGR2RGB);
@@ -46,7 +62,11 @@ int CNNProcessor::Inference(Scene scene){
     //printf("%d \n",classId);
     return classId;
 }
-
+void CNNProcessor::nextScene(Scene next) {
+    printf("callback worked! \n");
+    int class_id = Inference(next);
+    printf(class_id);
+}
 
 
 void CNNProcessor::SelfPush() {

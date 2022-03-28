@@ -10,6 +10,6 @@
 class FrameEditor {
 public:
     static cv::Mat drawBox(cv::Mat img, int box[4]);
-
+};
 
 #endif //SIGNAPSE_FRAMEEDITOR_H
