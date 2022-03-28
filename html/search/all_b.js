@@ -5,7 +5,9 @@ var searchData=
   ['reel_2eh_2',['reel.h',['../reel_8h.html',1,'']]],
   ['reelnr_3',['reelNr',['../classReel.html#a1aaed8e350c44a2992cfca253ca01a76',1,'Reel']]],
   ['regionofinterest_4',['regionOfInterest',['../structScene.html#a8f05ebb1d0096f8fa783ebd50d999e3d',1,'Scene']]],
-  ['result_5',['Result',['../structResult.html',1,'']]],
-  ['result_6',['result',['../structScene.html#a2a39d94aa09118312caac0c551e85ca0',1,'Scene']]],
-  ['retranslateui_7',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]]
+  ['registercallback_5',['registerCallback',['../classCNNProcessor.html#abcfe661178bf59b68b6519ffec517701',1,'CNNProcessor']]],
+  ['registercnncallback_6',['registerCNNCallback',['../classCamera.html#a88f547b9d2f3e984b29d6005ce18f4a7',1,'Camera']]],
+  ['registerframecallback_7',['registerFrameCallback',['../classCamera.html#a3b41b6309a4da333e53fd37846d2aeef',1,'Camera']]],
+  ['result_8',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
+  ['retranslateui_9',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]]
 ];

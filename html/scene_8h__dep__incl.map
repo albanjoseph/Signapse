@@ -1,12 +1,15 @@
 <map id="src/scene.h" name="src/scene.h">
-<area shape="rect" id="node1" title=" " alt="" coords="295,5,384,32"/>
-<area shape="rect" id="node2" href="$BlockingQueue_8h.html" title=" " alt="" coords="268,80,411,107"/>
-<area shape="rect" id="node4" href="$reel_8h.html" title=" " alt="" coords="230,229,305,256"/>
-<area shape="rect" id="node6" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="5,379,161,405"/>
-<area shape="rect" id="node9" href="$camera_8cpp.html" title=" " alt="" coords="419,379,529,405"/>
-<area shape="rect" id="node10" href="$reel_8cpp.html" title=" " alt="" coords="427,304,516,331"/>
-<area shape="rect" id="node3" href="$BlockingQueue_8cpp.html" title=" " alt="" coords="291,155,447,181"/>
-<area shape="rect" id="node5" href="$CNNProcessor_8h.html" title=" " alt="" coords="87,304,229,331"/>
-<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="219,379,315,405"/>
-<area shape="rect" id="node8" href="$camera_8h.html" title=" " alt="" coords="305,304,403,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="344,5,433,32"/>
+<area shape="rect" id="node2" href="$BlockingQueue_8h.html" title=" " alt="" coords="201,80,344,107"/>
+<area shape="rect" id="node4" href="$reel_8h.html" title=" " alt="" coords="235,229,310,256"/>
+<area shape="rect" id="node6" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="5,453,161,480"/>
+<area shape="rect" id="node9" href="$camera_8cpp.html" title=" " alt="" coords="461,379,572,405"/>
+<area shape="rect" id="node10" href="$reel_8cpp.html" title=" " alt="" coords="333,304,423,331"/>
+<area shape="rect" id="node11" href="$FrameEditor_8h.html" title=" " alt="" coords="477,229,601,256"/>
+<area shape="rect" id="node13" href="$SceneCallback_8h.html" title=" " alt="" coords="53,229,194,256"/>
+<area shape="rect" id="node3" href="$BlockingQueue_8cpp.html" title=" " alt="" coords="195,155,351,181"/>
+<area shape="rect" id="node5" href="$CNNProcessor_8h.html" title=" " alt="" coords="53,379,196,405"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="219,453,315,480"/>
+<area shape="rect" id="node8" href="$camera_8h.html" title=" " alt="" coords="160,304,257,331"/>
+<area shape="rect" id="node12" href="$FrameEditor_8cpp.html" title=" " alt="" coords="447,304,586,331"/>
 </map>

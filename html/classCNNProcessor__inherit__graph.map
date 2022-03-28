@@ -1,4 +1,5 @@
 <map id="CNNProcessor" name="CNNProcessor">
-<area shape="rect" id="node1" title="CNNProcessor class." alt="" coords="5,189,135,325"/>
-<area shape="rect" id="node2" href="$classReel.html" title="Reel class." alt="" coords="16,5,124,141"/>
+<area shape="rect" id="node1" title="CNNProcessor class." alt="" coords="59,189,193,384"/>
+<area shape="rect" id="node2" href="$classReel.html" title="Reel class." alt="" coords="5,5,113,141"/>
+<area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="138,35,247,112"/>
 </map>
