@@ -7,11 +7,7 @@
 #include "reel.h"
 #include <opencv2/videoio.hpp>
 #include <thread>
-
-class CameraCallback{
-public:
-    virtual void nextScene(Scene next) = 0;
-};
+#include "SceneCallback.h"
 
 //!  Camera class which inherits from Reel.
 /*!
@@ -46,13 +42,18 @@ public:
      */
     void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
 
-    void registerCallback(CameraCallback* ccb);
+    void registerCNNCallback(SceneCallback* cnncb);
+
+    void registerFrameCallback(SceneCallback* fcb);
+
 
     void dataReady();
 
     void Start();
 
 private:
+    void postFrame(SceneCallback* callback);
+
     void threadLoop();
 
     //! Private member function.
@@ -95,7 +96,8 @@ private:
      */
      float boundingBox[4];
 
-     CameraCallback* cameraCallback;
+     SceneCallback* cnnCallback = nullptr;
+     SceneCallback* frameCallback = nullptr;
 };
 
 

@@ -6,6 +6,7 @@
 #include <scene.h>
 #include <CNNProcessor.h>
 #include <camera.h>
+#include "SignapseUtils.h"
 
 int main(){
     
@@ -25,12 +26,13 @@ int main(){
         cv::Mat flip_frame;
         cv::flip(test_frame, flip_frame, 1);
         test_scene.frame = flip_frame;
-
-        int result = cnn.Inference(test_scene);
-        if(result != i)
+        test_scene = cnn.ProcessScene(test_scene);
+        std::string result = test_scene.result;
+        std::string ground_truth_letter = SignapseUtils::getLetterFromDigit(i);
+        if(result != ground_truth_letter)
         {
             if(i == 21) break;
-            printf("image=%c result=%c\n\r", i+65, result+65);
+            printf("image=%c result=%s\n\r", i+65, result);
             return 1;
         }
     }

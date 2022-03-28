@@ -11,14 +11,15 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-
+#include "SceneCallback.h"
 #include <stdio.h>
+
 
 //!  CNNProcessor class.
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor: public Reel, public CameraCallback{
+class CNNProcessor: public Reel, public SceneCallback{
 public:
     virtual  void  nextScene(Scene next);
     //!  Public member function.
@@ -37,11 +38,10 @@ public:
         Pops Scene from readFrom Reel and pushes to CNNProcessor own sceneQueue.
     */
     void SelfPush();
-    int Inference(Scene scene);
+    Scene ProcessScene(Scene scene);
     cv::Mat MakeBlob(Scene scene);
     void start_thread();
-
-
+    void registerCallback(SceneCallback* scb);
 
 private:
     void threadLoop();
@@ -49,7 +49,7 @@ private:
     Reel* readFrom;
     cv::dnn::Net net;
     std::thread cnnProcessorThread;
-
+    SceneCallback* sceneCallback = nullptr;
 };
 
 #endif //SIGNAPSE_CNNPROCESSOR_H

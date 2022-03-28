@@ -4,22 +4,7 @@
 #include <opencv2/core.hpp>
 #ifndef SIGNAPSE_SCENE_H
 #define SIGNAPSE_SCENE_H
-//! Struct Result.
-/*!
-    Holds the values of a sign and its associated confidence level.
-*/
-struct Result{
-    //! Member variable.
-    /*!
-        Holds the value of the sign of the Result.
-    */
-    char sign;
-    //! Member variable.
-    /*!
-        Holds the value of the confidence of the Result.
-    */
-    int conf;
-};
+
 //! Struct Scene.
 /*!
     Holds the video frame data and additional Signapse metadata.
@@ -42,9 +27,9 @@ struct Scene{
     char task;
     //! Member variable.
     /*!
-        An array of Result corresponding with the top 10 confidence levels from the output of CNNProcessor.
+        A string representing the predicted output from processing with a CNN model.
     */
-    Result result[10];
+    std::string result;
     //! Member variable
     /*!
         Region of the frame which frames the user's hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (column,row) format, units are in pixels.

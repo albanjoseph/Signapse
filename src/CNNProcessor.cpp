@@ -2,17 +2,18 @@
 #include <chrono>
 #include <thread>
 #include "scene.h"
+#include "SignapseUtils.h"
+
 
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
-
-
-
 void CNNProcessor::threadLoop() {
     return;
 }
+
+
 
 void CNNProcessor::start_thread(){
     cnnProcessorThread = std::thread(&CNNProcessor::threadLoop, this);
@@ -50,7 +51,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     return blob;
 }
 
-int CNNProcessor::Inference(Scene scene){
+Scene CNNProcessor::ProcessScene(Scene scene){
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
@@ -58,16 +59,17 @@ int CNNProcessor::Inference(Scene scene){
     double confidence;
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
     int classId = classIdPoint.x;
-
-    //printf("%d \n",classId);
-    return classId;
+    scene.result = SignapseUtils::getLetterFromDigit(classId);
+    return scene;
 }
 void CNNProcessor::nextScene(Scene next) {
-    printf("callback worked! \n");
-    int class_id = Inference(next);
-    printf(class_id);
+    Scene updatedFrame = ProcessScene(next);
+    if(!sceneCallback) return;
+    sceneCallback->nextScene(updatedFrame);
 }
-
+void CNNProcessor::registerCallback(SceneCallback* scb){
+    sceneCallback = scb;
+}
 
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom->Pop();

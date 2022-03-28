@@ -8,6 +8,7 @@
 #include <opencv2/videoio.hpp>
 #include <iostream>
 #include <thread>
+#include "FrameEditor.cpp"
 
 
 Camera::Camera() {
@@ -21,13 +22,12 @@ void Camera::setOn(bool state){
 
 void Camera::threadLoop(){
     while(isOn){
-        printf("check \n");
         dataReady();
     }
 }
 
-void Camera::dataReady(){
-    if(!cameraCallback) return;
+void Camera::postFrame(SceneCallback* callback){
+    if(!callback) return;
     cv::Mat temp;
     videoCapture.read(temp);
     // check if we succeeded
@@ -37,6 +37,7 @@ void Camera::dataReady(){
     cv::Mat frame;
     cv::flip(temp, frame, 1);
     cv::Size sz = frame.size();
+
     Scene s = Scene{
             .frame=frame,
             .timestamp = 1,
@@ -47,7 +48,13 @@ void Camera::dataReady(){
                                  (int)(sz.width * boundingBox[2]),
                                  (int)(sz.height * boundingBox[3])}
     };
-    cameraCallback->nextScene(s);
+    s = FrameEditor::drawBox(s);
+    callback->nextScene(s);
+}
+
+void Camera::dataReady(){
+    postFrame(cnnCallback);
+    postFrame(frameCallback);
 }
 
 void Camera::Populate(){
@@ -98,6 +105,10 @@ void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRigh
     boundingBox[3] = lowerRightY;
 }
 
-void Camera::registerCallback(CameraCallback *ccb) {
-    cameraCallback = ccb;
+void Camera::registerCNNCallback(SceneCallback *cnncb) {
+    cnnCallback = cnncb;
+}
+
+void Camera::registerFrameCallback(SceneCallback *fcb) {
+    frameCallback = fcb;
 }
