@@ -82,7 +82,7 @@ For inference using OpenCV, the model must be converted into a format readable b
 python3 export.py
 ```
 
-###Testing
+### Testing
 
 The model can be tested within the OpenCV runtime and on a live camera feed by running our opencv test:
 ```asm
