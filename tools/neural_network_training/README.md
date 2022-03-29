@@ -85,6 +85,6 @@ python3 export.py
 ### Testing
 
 The model can be tested within the OpenCV runtime and on a live camera feed by running our opencv test:
-```asm
+```
 python3 test-opencv-feed.py
 ```
