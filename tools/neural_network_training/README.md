@@ -8,7 +8,7 @@ To configure the python environment, run `setup.sh` as shown:
 bash setup.sh
 ```
 
-This will generate and activate a virtual environment with the appropriate installed packages as listed in `requirememnts.txt`. FYI the following commands may be used to activate/deactivate this environment.
+This will generate and activate a virtual environment with the appropriate installed packages as listed in `requirements.txt`. FYI the following commands may be used to activate/deactivate this environment.
 
 ```asm
 source venv/bin/activate #activates venv
