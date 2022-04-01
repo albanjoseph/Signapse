@@ -20,3 +20,6 @@ target_link_libraries(CNNProcessor ${OpenCV_LIBS})
 
 add_library(FrameEditor FrameEditor.cpp FrameEditor.h)
 target_link_libraries(FrameEditor ${OpenCV_LIBS})
+
+add_library(Gui Gui.cpp Gui.h)
+target_link_libraries(Gui ${OpenCV_LIBS})
