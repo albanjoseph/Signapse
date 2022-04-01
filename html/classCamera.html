@@ -222,27 +222,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00060">60</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>                     {</div>
-<div class="line"><span class="lineno">   61</span>    cv::Mat temp;</div>
-<div class="line"><span class="lineno">   62</span>    videoCapture.read(temp);</div>
+<div class="line"><span class="lineno">   61</span>    cv::Mat frame;</div>
+<div class="line"><span class="lineno">   62</span>    videoCapture.read(frame);</div>
 <div class="line"><span class="lineno">   63</span>    <span class="comment">// check if we succeeded</span></div>
-<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> (temp.empty()) {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> (frame.empty()) {</div>
 <div class="line"><span class="lineno">   65</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;ERROR! blank frame grabbed\n&quot;</span>;</div>
 <div class="line"><span class="lineno">   66</span>    }</div>
-<div class="line"><span class="lineno">   67</span>    cv::Mat frame;</div>
-<div class="line"><span class="lineno">   68</span>    cv::flip(temp, frame, 1);</div>
-<div class="line"><span class="lineno">   69</span>    cv::Size sz = frame.size();</div>
-<div class="line"><span class="lineno">   70</span>    <a class="code hl_struct" href="structScene.html">Scene</a> s = <a class="code hl_struct" href="structScene.html">Scene</a>{</div>
-<div class="line"><span class="lineno">   71</span>            .<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>=frame,</div>
-<div class="line"><span class="lineno">   72</span>            .timestamp = 1,</div>
-<div class="line"><span class="lineno">   73</span>            .task = currentTask,</div>
-<div class="line"><span class="lineno">   74</span>            .result = {},</div>
-<div class="line"><span class="lineno">   75</span>            .regionOfInterest = {(int)(sz.width * boundingBox[0]),</div>
-<div class="line"><span class="lineno">   76</span>                                 (int)(sz.height * boundingBox[1]),</div>
-<div class="line"><span class="lineno">   77</span>                                 (int)(sz.width * boundingBox[2]),</div>
-<div class="line"><span class="lineno">   78</span>                                 (int)(sz.height * boundingBox[3])}</div>
-<div class="line"><span class="lineno">   79</span>    };</div>
-<div class="line"><span class="lineno">   80</span>    <a class="code hl_variable" href="classReel.html#ab654833c0e44abe46de6c4d963b84039">sceneQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(s);</div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<div class="line"><span class="lineno">   67</span>    cv::Size sz = frame.size();</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_struct" href="structScene.html">Scene</a> s = <a class="code hl_struct" href="structScene.html">Scene</a>{</div>
+<div class="line"><span class="lineno">   69</span>            .<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>=frame,</div>
+<div class="line"><span class="lineno">   70</span>            .timestamp = 1,</div>
+<div class="line"><span class="lineno">   71</span>            .task = currentTask,</div>
+<div class="line"><span class="lineno">   72</span>            .result = {},</div>
+<div class="line"><span class="lineno">   73</span>            .regionOfInterest = {(int)(sz.width * boundingBox[0]),</div>
+<div class="line"><span class="lineno">   74</span>                                 (int)(sz.height * boundingBox[1]),</div>
+<div class="line"><span class="lineno">   75</span>                                 (int)(sz.width * boundingBox[2]),</div>
+<div class="line"><span class="lineno">   76</span>                                 (int)(sz.height * boundingBox[3])}</div>
+<div class="line"><span class="lineno">   77</span>    };</div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_variable" href="classReel.html#ab654833c0e44abe46de6c4d963b84039">sceneQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(s);</div>
+<div class="line"><span class="lineno">   79</span>}</div>
 <div class="ttc" id="aclassBlockingQueue_html_a6b320feb628e94e01d51975ec93af656"><div class="ttname"><a href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">BlockingQueue::Push</a></div><div class="ttdeci">void Push(T toPush)</div><div class="ttdoc">Public member function.</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00021">BlockingQueue.cpp:21</a></div></div>
 <div class="ttc" id="aclassReel_html_ab654833c0e44abe46de6c4d963b84039"><div class="ttname"><a href="classReel.html#ab654833c0e44abe46de6c4d963b84039">Reel::sceneQueue</a></div><div class="ttdeci">BlockingQueue&lt; Scene &gt; sceneQueue</div><div class="ttdoc">Protected member variable.</div><div class="ttdef"><b>Definition:</b> <a href="reel_8h_source.html#l00046">reel.h:46</a></div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00012">scene.h:12</a></div></div>
@@ -266,10 +264,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00108">108</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>                                                     {</div>
-<div class="line"><span class="lineno">  109</span>    cnnCallback = cnncb;</div>
-<div class="line"><span class="lineno">  110</span>}</div>
+<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00106">106</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                     {</div>
+<div class="line"><span class="lineno">  107</span>    cnnCallback = cnncb;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -289,10 +287,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00112">112</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                     {</div>
-<div class="line"><span class="lineno">  113</span>    frameCallback = fcb;</div>
-<div class="line"><span class="lineno">  114</span>}</div>
+<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00110">110</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                     {</div>
+<div class="line"><span class="lineno">  111</span>    frameCallback = fcb;</div>
+<div class="line"><span class="lineno">  112</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -315,10 +313,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Member function for setting new signing task. </p>
 <p >Updates currentTask with new_task </p>
 
-<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00097">97</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                          {</div>
-<div class="line"><span class="lineno">   98</span>    currentTask = new_task;</div>
-<div class="line"><span class="lineno">   99</span>}</div>
+<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00095">95</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                          {</div>
+<div class="line"><span class="lineno">   96</span>    currentTask = new_task;</div>
+<div class="line"><span class="lineno">   97</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -363,13 +361,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Member function for setting a new bounding box. </p>
 <p >Updates boundingBox variable with a new set of coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00101">101</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  102</span>    boundingBox[0] = upperLeftX;</div>
-<div class="line"><span class="lineno">  103</span>    boundingBox[1] = upperLeftY;</div>
-<div class="line"><span class="lineno">  104</span>    boundingBox[2] = lowerRightX;</div>
-<div class="line"><span class="lineno">  105</span>    boundingBox[3] = lowerRightY;</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00099">99</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  100</span>    boundingBox[0] = upperLeftX;</div>
+<div class="line"><span class="lineno">  101</span>    boundingBox[1] = upperLeftY;</div>
+<div class="line"><span class="lineno">  102</span>    boundingBox[2] = lowerRightX;</div>
+<div class="line"><span class="lineno">  103</span>    boundingBox[3] = lowerRightY;</div>
+<div class="line"><span class="lineno">  104</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -431,12 +429,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Member function for starting video capturing thread. </p>
 <p >Starts "Stream" private member function as a thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00083">83</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                         {</div>
-<div class="line"><span class="lineno">   84</span>    videoCapture.open(deviceID, apiID);</div>
-<div class="line"><span class="lineno">   85</span>    printf(<span class="stringliteral">&quot;starting camera threads \n&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>    cameraThread = std::thread(&amp;Camera::threadLoop, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   87</span>}</div>
+<p class="definition">Definition at line <a class="el" href="camera_8cpp_source.html#l00081">81</a> of file <a class="el" href="camera_8cpp_source.html">camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                         {</div>
+<div class="line"><span class="lineno">   82</span>    videoCapture.open(deviceID, apiID);</div>
+<div class="line"><span class="lineno">   83</span>    printf(<span class="stringliteral">&quot;starting camera threads \n&quot;</span>);</div>
+<div class="line"><span class="lineno">   84</span>    cameraThread = std::thread(&amp;Camera::threadLoop, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
