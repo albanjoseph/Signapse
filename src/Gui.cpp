@@ -6,6 +6,8 @@
 
 Gui::Gui() {
     widget = new QMainWindow();
+    widget->setFixedSize(725, 448);
+
     ui = new Ui_MainWindow();
     ui->setupUi(widget);
 }
