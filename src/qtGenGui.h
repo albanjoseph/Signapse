@@ -59,17 +59,19 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setContentsMargins(0,0,0,0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         frame_2 = new QFrame(centralwidget);
         frame_2->setObjectName(QString::fromUtf8("frame_2"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(2);
+        sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
         frame_2->setSizePolicy(sizePolicy);
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         gridLayout_3 = new QGridLayout(frame_2);
+        gridLayout_3->setContentsMargins(0,0,0,0);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         pushButton = new QPushButton(frame_2);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
@@ -103,6 +105,7 @@ public:
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
         gridLayout_4->addWidget(listWidget, 0, 0, 1, 1);
+        gridLayout_4->setContentsMargins(0,0,0,0);
 
 
         gridLayout_3->addWidget(frame_3, 0, 0, 1, 1);
@@ -141,14 +144,20 @@ public:
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         label = new QLabel(frame);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(30, 40, 401, 321));
-        label->setFrameShape(QFrame::WinPanel);
+        label->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+        label->setContentsMargins(0,0,0,0);
+        label->setMaximumSize(10000,10000);
+        label->adjustSize();
+        label->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
+
+//        label->setObjectName(QString::fromUtf8("label"));
+//        label->setGeometry(QRect(30, 40, 401, 321));
+//        label->setFrameShape(QFrame::WinPanel);
         label_3 = new QLabel(frame);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(-60, -10, 211, 151));
-        label_3->setFrameShape(QFrame::NoFrame);
-        label_3->setPixmap(QPixmap(QString::fromUtf8("/images/logo.png")));
+//        label_3->setObjectName(QString::fromUtf8("label_3"));
+//        label_3->setGeometry(QRect(-60, -10, 211, 151));
+//        label_3->setFrameShape(QFrame::NoFrame);
+//        label_3->setPixmap(QPixmap(QString::fromUtf8("images/logo.png")));
 
         gridLayout->addWidget(frame, 0, 0, 1, 1);
 
@@ -170,6 +179,7 @@ public:
         retranslateUi(MainWindow);
 
         QMetaObject::connectSlotsByName(MainWindow);
+
     } // setupUi
 
     void retranslateUi(QMainWindow *MainWindow)

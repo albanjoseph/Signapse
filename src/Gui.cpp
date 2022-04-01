@@ -4,19 +4,29 @@
 
 #include "Gui.h"
 
-#define UI_WDH 725
-#define UI_HGT 448
+#define UI_WDH 1000
+#define UI_HGT 700
 
 Gui::Gui() {
     widget = new QMainWindow();
     widget->setFixedSize(UI_WDH, UI_HGT);
     ui = new Ui_MainWindow();
     ui->setupUi(widget);
+    SetTargetImage("A");
+    makeConnections();
+
+    //ui->frame->setStyleSheet("background-color: rgb(0,255,0)");
 }
 
-void Gui::MakeVisible() {
-    widget->setVisible(true);
-    makeConnections();
+void Gui::nextScene(Scene next) {
+    cv::Mat img = next.frame;
+    QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
+    ui->label->setPixmap(QPixmap::fromImage(imgIn));
+    ui->label->resize(ui->label->pixmap()->size());
+}
+
+void Gui::SetVisible(bool visible) {
+    widget->setVisible(visible);
 }
 
 
@@ -39,11 +49,11 @@ void Gui::makeConnections() {
     QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::ButtonPressed);
 }
 
-
-
-
 void Gui::setDemoImage(cv::Mat img) {
-    ui->label_2->setPixmap(QPixmap::fromImage(QImage(img.data, img.cols, img.rows, img.step, QImage::Format_RGB888)));
+    cv::Mat rgb;
+    cv::cvtColor(img, rgb, cv::COLOR_BGR2RGB);
+    ui->label_2->setPixmap(QPixmap::fromImage(QImage(rgb.data, rgb.cols, rgb.rows, rgb.step, QImage::Format_RGB888)));
+    ui->label_2->resize(ui->label_2->pixmap()->size());
 
 }
 

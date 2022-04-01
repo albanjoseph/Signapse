@@ -23,23 +23,17 @@ using namespace std;
 
 
 int main(int argc, char* argv[]){
-    //SignapseUtils::welcomeMessage();
-    //CNNProcessor cnn("models/asl-mobilenetv2.pb");
-    //Camera c;
-    //c.set_current_task('a');
-    //c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
-    //c.registerCNNCallback(&cnn);
-    //c.start_thread();
     QApplication app(argc, argv);
+    SignapseUtils::welcomeMessage();
     Gui gui;
-    gui.MakeVisible();
-    gui.SetTargetImage(4);
+    CNNProcessor cnn("models/asl-mobilenetv2.pb");
+    Camera c;
+    c.set_current_task('a');
+    c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
+    c.registerFrameCallback(&gui);
+    c.registerCNNCallback(&cnn);
+    c.start_thread();
+    gui.SetVisible(true);
     app.exec();
-
-
-
-
-    getchar();
-
 }
 

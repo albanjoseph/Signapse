@@ -80,7 +80,6 @@ void Camera::Populate(){
 
 void Camera::start_thread(){
     videoCapture.open(deviceID, apiID);
-    printf("starting camera threads \n");
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
 
