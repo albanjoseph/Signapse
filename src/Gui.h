@@ -19,18 +19,21 @@
 /*
  * A class to wrap the QT generated header file and handle GUI functionality
  */
-class Gui {
+class Gui : public QWidget {
 public:
     Gui();
     void MakeVisible();
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);
+    void ButtonPressed();
+
 
 private:
     QMainWindow *widget;
     Ui_MainWindow *ui;
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
+    void makeConnections();
 };
 
 

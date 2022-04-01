@@ -16,6 +16,7 @@ Gui::Gui() {
 
 void Gui::MakeVisible() {
     widget->setVisible(true);
+    makeConnections();
 }
 
 
@@ -29,8 +30,15 @@ void Gui::SetTargetImage(std::string letter) {
     cv::Mat img = cv::imread(impath);
     setDemoImage(img);
     setTaskText(letter);
-
 }
+void Gui::ButtonPressed(){
+    SetTargetImage(SignapseUtils::makeTask());
+}
+
+void Gui::makeConnections() {
+    QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::ButtonPressed);
+}
+
 
 
 
