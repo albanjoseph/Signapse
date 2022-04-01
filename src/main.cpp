@@ -9,7 +9,7 @@
 #include "camera.h"
 #include "CNNProcessor.h"
 #include "stdlib.h"
-#include "taskMaster.h"
+#include "gui.h"
 #include "FrameEditor.h"
 #include "SignapseUtils.h"
 
@@ -30,6 +30,8 @@ int main(int argc, char* argv[]){
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.registerCNNCallback(&cnn);
     c.start_thread();
+
+
 
 
     getchar();
