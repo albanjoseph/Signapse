@@ -4,10 +4,12 @@
 
 #include "Gui.h"
 
+#define UI_WDH 725
+#define UI_HGT 448
+
 Gui::Gui() {
     widget = new QMainWindow();
-    widget->setFixedSize(725, 448);
-
+    widget->setFixedSize(UI_WDH, UI_HGT);
     ui = new Ui_MainWindow();
     ui->setupUi(widget);
 }
