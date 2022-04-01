@@ -24,7 +24,7 @@ public:
     virtual  void  nextScene(Scene next);
     //!  Public member function.
     /*!
-        Loop.
+        Loop function.
     */
     void Loop();
     //!  Constructor takes Reel object as argument and assigns readFrom Reel to this value.

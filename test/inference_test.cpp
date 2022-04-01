@@ -32,7 +32,7 @@ int main(){
         if(result != ground_truth_letter)
         {
             if(i == 21) break;
-            printf("image=%c result=%s\n\r", i+65, result);
+            //printf("image=%c result=%s\n\r", i+65, result);
             return 1;
         }
     }
