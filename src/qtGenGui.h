@@ -148,7 +148,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(-60, -10, 211, 151));
         label_3->setFrameShape(QFrame::NoFrame);
-        label_3->setPixmap(QPixmap(QString::fromUtf8(":/logo/logoResize.png")));
+        label_3->setPixmap(QPixmap(QString::fromUtf8("/images/logo.png")));
 
         gridLayout->addWidget(frame, 0, 0, 1, 1);
 

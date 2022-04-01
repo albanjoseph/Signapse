@@ -4,10 +4,15 @@
 
 #ifndef SIGNAPSE_GUI_H
 #define SIGNAPSE_GUI_H
-
+#include <QCoreApplication>
 #include "qtGenGui.h"
 #include "stdlib.h"
+
 #include <opencv2/core.hpp>
+#include "opencv2/highgui/highgui.hpp"
+
+#include "SignapseUtils.h"
+
 
 #define testFolder "test/asl_alphabet_test/"
 
@@ -16,16 +21,16 @@
  */
 class Gui {
 public:
-    Gui(int argc, char **argv);
-    void Start();
+    Gui();
+    void MakeVisible();
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);
 
 private:
-    QApplication app;
-    QMainWindow widget;
-    Ui_MainWindow ui;
-    void setLabel_2(cv::Mat img);
+    QMainWindow *widget;
+    Ui_MainWindow *ui;
+    void setDemoImage(cv::Mat img);
+    void setTaskText(std::string letter);
 };
 
 

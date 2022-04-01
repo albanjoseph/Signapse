@@ -6,7 +6,7 @@ message("Including OpenCV build at directory: " ${OpenCV_INCLUDE_DIRS})
 
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Signapse main.cpp reel.cpp camera.cpp taskmaster.cpp CNNProcessor.cpp BlockingQueue.cpp)
+add_executable(Signapse main.cpp reel.cpp camera.cpp taskmaster.cpp CNNProcessor.cpp BlockingQueue.cpp Gui.cpp)
 target_link_libraries(Signapse ${OpenCV_LIBS} Qt5::Widgets)
 
 add_library(reel reel.cpp reel.h)
@@ -22,4 +22,4 @@ add_library(FrameEditor FrameEditor.cpp FrameEditor.h)
 target_link_libraries(FrameEditor ${OpenCV_LIBS})
 
 add_library(Gui Gui.cpp Gui.h)
-target_link_libraries(Gui ${OpenCV_LIBS})
+target_link_libraries(Gui ${OpenCV_LIBS} Qt5::Widgets)
