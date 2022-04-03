@@ -19,9 +19,9 @@
     Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
     <br />
     <br />
-    As featured on: 
+   📰 🤩 As featured on: 
     <a href="https://www.hackster.io/news/signapse-aims-to-turn-a-raspberry-pi-into-an-artificially-intelligent-tutor-for-sign-language-ec1a08d0fc36"> Hackster.io</a> and 
-    <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969!!</a>
+    <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969</a>!! 🤩 📰
     <br />
     <br />
     <a href="https://github.com/albanjoseph/Signapse/issues">Report Bug</a>
