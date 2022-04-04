@@ -11,6 +11,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
+#include "ProgressBar.h"
 
 
 #include "SignapseUtils.h"
@@ -34,6 +35,7 @@ public:
 private:
     QMainWindow *widget;
     Ui_MainWindow *ui;
+    ProgressBar progress_bar;
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
     void makeConnections();

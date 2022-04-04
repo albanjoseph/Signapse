@@ -23,6 +23,9 @@ void Gui::nextScene(Scene next) {
     QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(imgIn));
     ui->label->resize(ui->label->pixmap()->size());
+    int progress = progress_bar.get_progress(next);
+    ui->progressBar->setValue(progress);
+
 }
 
 void Gui::SetVisible(bool visible) {
@@ -43,6 +46,7 @@ void Gui::SetTargetImage(std::string letter) {
 }
 void Gui::ButtonPressed(){
     SetTargetImage(SignapseUtils::makeTask());
+    progress_bar.reset_progress();
 }
 
 void Gui::makeConnections() {
