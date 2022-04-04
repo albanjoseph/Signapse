@@ -16,7 +16,7 @@ jobs:
     - name: setup init_script
       shell: bash
       run: |
-        echo "#!/bin/bash
+        echo "#!/bin/bash"
         setup.sh 
         build.sh
 
