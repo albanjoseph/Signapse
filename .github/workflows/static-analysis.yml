@@ -1,0 +1,2 @@
+- name: Run static analysis for C++ project
+  uses: JacobDomagala/StaticAnalysis@v0.0.4
