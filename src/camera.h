@@ -26,11 +26,6 @@ public:
         Reads webcam data, populates a Scene struct and pushes scene on to sceneQueue.
     */
     void Populate();
-    //! Member function for setting new signing task.
-    /*!
-        Updates currentTask with new_task
-    */
-    void set_current_task(char new_task);
     //! Member function for starting video capturing thread.
     /*!
         Starts "Stream" private member function as a thread.
@@ -61,11 +56,6 @@ private:
         Calls "Populate" member function whilst the camera object is "ON"
     */
     void Stream();
-    //! Private member variable.
-    /*!
-        Holds the value of the current signing task.
-    */
-    char currentTask;
     //! Private member object.
     /*!
         OpenCV object for reading web cam data.

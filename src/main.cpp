@@ -28,10 +28,11 @@ int main(int argc, char* argv[]){
     Gui gui;
     CNNProcessor cnn("models/asl-mobilenetv2.pb");
     Camera c;
-    c.set_current_task('a');
+    gui.set_task('A');
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.registerFrameCallback(&gui);
     c.registerCNNCallback(&cnn);
+    cnn.registerCallback(&gui);
     c.start_thread();
     gui.SetVisible(true);
     app.exec();

@@ -7,6 +7,8 @@
 #define UI_WDH 1000
 #define UI_HGT 700
 
+//virtual Gui::~Gui() {};
+
 Gui::Gui() {
     widget = new QMainWindow();
     widget->setFixedSize(UI_WDH, UI_HGT);
@@ -14,8 +16,6 @@ Gui::Gui() {
     ui->setupUi(widget);
     SetTargetImage("A");
     makeConnections();
-
-    //ui->frame->setStyleSheet("background-color: rgb(0,255,0)");
 }
 
 void Gui::nextScene(Scene next) {
@@ -23,6 +23,8 @@ void Gui::nextScene(Scene next) {
     QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(imgIn));
     ui->label->resize(ui->label->pixmap()->size());
+    int progress = progress_bar.get_progress(next, current_task);
+    emit progressChanged(progress);
 }
 
 void Gui::SetVisible(bool visible) {
@@ -42,11 +44,15 @@ void Gui::SetTargetImage(std::string letter) {
     setTaskText(letter);
 }
 void Gui::ButtonPressed(){
-    SetTargetImage(SignapseUtils::makeTask());
+    std::string new_task = SignapseUtils::getLetterFromDigit(SignapseUtils::makeTask());
+    SetTargetImage(new_task);
+    current_task = *new_task.c_str();
+    progress_bar.reset_progress();
 }
 
 void Gui::makeConnections() {
     QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::ButtonPressed);
+    QObject::connect(this, &Gui::progressChanged, ui->progressBar, &QProgressBar::setValue);
 }
 
 void Gui::setDemoImage(cv::Mat img) {
@@ -59,4 +65,8 @@ void Gui::setDemoImage(cv::Mat img) {
 
 void Gui::setTaskText(std::string letter){
     ui->listWidget->item(2)->setText(QCoreApplication::translate("MainWindow", letter.c_str(), nullptr));
+}
+
+void Gui::set_task(char new_task){
+    current_task = new_task;
 }
