@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['reel_0',['Reel',['../classReel.html#a3656fa67f060d2808dc07f337030b537',1,'Reel']]],
-  ['registercallback_1',['registerCallback',['../classCNNProcessor.html#abcfe661178bf59b68b6519ffec517701',1,'CNNProcessor']]],
-  ['registercnncallback_2',['registerCNNCallback',['../classCamera.html#a88f547b9d2f3e984b29d6005ce18f4a7',1,'Camera']]],
-  ['registerframecallback_3',['registerFrameCallback',['../classCamera.html#a3b41b6309a4da333e53fd37846d2aeef',1,'Camera']]],
-  ['retranslateui_4',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]]
+  ['pop_0',['Pop',['../classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd',1,'BlockingQueue::Pop()'],['../classReel.html#a399be7e1755b80d4794a6f19e8f7b80d',1,'Reel::Pop()']]],
+  ['populate_1',['Populate',['../classCamera.html#aae2b41fd194a0dc3438280a0171dfa9e',1,'Camera']]],
+  ['printprogress_2',['printProgress',['../classSignapseUtils.html#aaed5b7a2c6b1082272a0a5b62f31f1d3',1,'SignapseUtils']]],
+  ['processscene_3',['ProcessScene',['../classCNNProcessor.html#a22dd3c8cb0988df56ee5c87589fdfb1f',1,'CNNProcessor']]],
+  ['push_4',['Push',['../classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656',1,'BlockingQueue']]]
 ];

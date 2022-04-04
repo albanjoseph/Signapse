@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['isempty_0',['IsEmpty',['../classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12',1,'BlockingQueue::IsEmpty()'],['../classReel.html#a35411e3a01cc5fce2b6f45a30668d5c0',1,'Reel::IsEmpty()']]]
+  ['getletterfromdigit_0',['getLetterFromDigit',['../classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d',1,'SignapseUtils']]],
+  ['getnumber_1',['GetNumber',['../classReel.html#ada98684d0365d5162990c3b6b98bf1f8',1,'Reel']]],
+  ['gui_2',['Gui',['../classGui.html#ab2655dbb6d3a91d7e90cb83dad6c0450',1,'Gui']]]
 ];
