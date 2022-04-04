@@ -17,8 +17,8 @@ jobs:
       shell: bash
       run: |
         echo "#!/bin/bash"
-        setup.sh 
-        build.sh
+        bash setup.sh 
+        bash build.sh
 
     - name: Run static analysis
       uses: JacobDomagala/StaticAnalysis@master
