@@ -19,12 +19,13 @@ Gui::Gui() {
 }
 
 void Gui::nextScene(Scene next) {
+    printf("%s \n", next.result.c_str());
     cv::Mat img = next.frame;
     QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(imgIn));
     ui->label->resize(ui->label->pixmap()->size());
-    int progress = progress_bar.get_progress(next);
-    ui->progressBar->setValue(progress);
+    //int progress = progress_bar.get_progress(next);
+    //ui->progressBar->setValue(progress);
 
 }
 

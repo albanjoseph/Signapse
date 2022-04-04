@@ -32,6 +32,7 @@ int main(int argc, char* argv[]){
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.registerFrameCallback(&gui);
     c.registerCNNCallback(&cnn);
+    cnn.registerCallback(&gui);
     c.start_thread();
     gui.SetVisible(true);
     app.exec();
