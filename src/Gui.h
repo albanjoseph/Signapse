@@ -14,6 +14,7 @@
 #include "ProgressBar.h"
 
 
+
 #include "SignapseUtils.h"
 #include "SceneCallback.h"
 
@@ -23,7 +24,9 @@
  * A class to wrap the QT generated header file and handle GUI functionality
  */
 class Gui : public QWidget, public SceneCallback{
+    Q_OBJECT
 public:
+    //Gui (QObject *_parent);
     virtual void nextScene(Scene next);
     Gui();
     void SetVisible(bool visible);
@@ -39,6 +42,8 @@ private:
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
     void makeConnections();
+signals:
+    void progressChanged(int progress);
 };
 
 

@@ -8,9 +8,10 @@ ProgressBar::ProgressBar(){
 }
 
 int ProgressBar::get_progress(Scene s){
-    //printf("%i\n\r",count);
-    if(s.task == *s.result.c_str()){
+    printf("task=%c result=%c\n\r",s.task-32,*s.result.c_str());
+    if(s.task-32 == *s.result.c_str()){
         count++;
+        printf("progress=%i\n\r", count);
     }
     int progress = 100*count/threshold;
     return progress;
