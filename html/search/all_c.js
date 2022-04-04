@@ -8,6 +8,7 @@ var searchData=
   ['registercallback_5',['registerCallback',['../classCNNProcessor.html#abcfe661178bf59b68b6519ffec517701',1,'CNNProcessor']]],
   ['registercnncallback_6',['registerCNNCallback',['../classCamera.html#a88f547b9d2f3e984b29d6005ce18f4a7',1,'Camera']]],
   ['registerframecallback_7',['registerFrameCallback',['../classCamera.html#a3b41b6309a4da333e53fd37846d2aeef',1,'Camera']]],
-  ['result_8',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
-  ['retranslateui_9',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)']]]
+  ['reset_5fprogress_8',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
+  ['result_9',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
+  ['retranslateui_10',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)']]]
 ];
