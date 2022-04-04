@@ -34,8 +34,10 @@ void Camera::postFrame(SceneCallback* callback){
     if (temp.empty()) {
         std::cerr << "ERROR! blank frame grabbed\n";
     }
+    cv::Mat frame_bgr;
     cv::Mat frame;
-    cv::flip(temp, frame, 1);
+    cv::flip(temp, frame_bgr, 1);
+    cv::cvtColor(frame_bgr, frame, cv::COLOR_BGR2RGB);
     cv::Size sz = frame.size();
 
     Scene s = Scene{
@@ -80,7 +82,6 @@ void Camera::Populate(){
 
 void Camera::start_thread(){
     videoCapture.open(deviceID, apiID);
-    printf("starting camera threads \n");
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
 

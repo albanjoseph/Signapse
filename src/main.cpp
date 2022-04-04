@@ -9,7 +9,7 @@
 #include "camera.h"
 #include "CNNProcessor.h"
 #include "stdlib.h"
-#include "taskMaster.h"
+#include "Gui.h"
 #include "FrameEditor.h"
 #include "SignapseUtils.h"
 
@@ -23,16 +23,17 @@ using namespace std;
 
 
 int main(int argc, char* argv[]){
+    QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
+    Gui gui;
     CNNProcessor cnn("models/asl-mobilenetv2.pb");
     Camera c;
     c.set_current_task('a');
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
+    c.registerFrameCallback(&gui);
     c.registerCNNCallback(&cnn);
     c.start_thread();
-
-
-    getchar();
-
+    gui.SetVisible(true);
+    app.exec();
 }
 
