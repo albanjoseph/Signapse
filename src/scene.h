@@ -22,11 +22,6 @@ struct Scene{
     int timestamp;
     //! Member variable.
     /*!
-        Holds the value of the signing task the Scene corresponds with.
-    */
-    char task;
-    //! Member variable.
-    /*!
         A string representing the predicted output from processing with a CNN model.
     */
     std::string result;

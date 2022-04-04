@@ -3,7 +3,7 @@
 class ProgressBar{
 public:
     ProgressBar();
-    int get_progress(Scene s);
+    int get_progress(Scene s, char task);
     void reset_progress();
 protected:
     int threshold;

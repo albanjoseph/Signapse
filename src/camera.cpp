@@ -43,7 +43,6 @@ void Camera::postFrame(SceneCallback* callback){
     Scene s = Scene{
             .frame=frame,
             .timestamp = 1,
-            .task = currentTask,
             .result = {},
             .regionOfInterest = {(int)(sz.width * boundingBox[0]),
                                  (int)(sz.height * boundingBox[1]),
@@ -70,7 +69,6 @@ void Camera::Populate(){
     Scene s = Scene{
             .frame=frame,
             .timestamp = 1,
-            .task = currentTask,
             .result = {},
             .regionOfInterest = {(int)(sz.width * boundingBox[0]),
                                  (int)(sz.height * boundingBox[1]),
@@ -91,10 +89,6 @@ void Camera::Stream() {
             Populate();
         }
     }
-}
-
-void Camera::set_current_task(char new_task){
-    currentTask = new_task;
 }
 
 void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {

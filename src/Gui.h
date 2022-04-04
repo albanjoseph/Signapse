@@ -33,6 +33,7 @@ public:
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);
     void ButtonPressed();
+    void set_task(char new_task);
 
 
 private:
@@ -42,6 +43,7 @@ private:
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
     void makeConnections();
+    char current_task;
 signals:
     void progressChanged(int progress);
 };
