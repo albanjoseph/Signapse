@@ -13,21 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: setup init_script
-      shell: bash
-      run: |
-        echo "#!/bin/bash"
-        bash setup.sh 
-        bash build.sh
-
     - name: Run static analysis
       uses: JacobDomagala/StaticAnalysis@master
       with:
-        # Exclude any issues found in ${Project_root_dir}/lib
-        exclude_dir: lib
-
         # (Optional) clang-tidy args
-        clang_tidy_args: -checks='*,fuchsia-*,google-*,zircon-*,abseil-*,modernize-use-trailing-return-type'
+        #clang_tidy_args: -checks='*,fuchsia-*,google-*,zircon-*,abseil-*,modernize-use-trailing-return-type'
 
         # (Optional) cppcheck args
-        cppcheck_args: --enable=all --suppress=missingInclude
+        cppcheck_args: --enable=all src/ test/
