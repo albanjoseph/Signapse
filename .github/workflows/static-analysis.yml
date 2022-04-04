@@ -26,9 +26,6 @@ jobs:
         # Exclude any issues found in ${Project_root_dir}/lib
         exclude_dir: lib
 
-        # Additional script that will be run (sourced) AFTER 'apt_pckgs' and before running Cmake
-        init_script: setup.sh
-
         # (Optional) clang-tidy args
         clang_tidy_args: -checks='*,fuchsia-*,google-*,zircon-*,abseil-*,modernize-use-trailing-return-type'
 
