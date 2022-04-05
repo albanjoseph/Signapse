@@ -26,7 +26,7 @@ int main(int argc, char* argv[]){
     QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
     Gui gui;
-    CNNProcessor cnn("models/asl-mobilenetv2.pb");
+    CNNProcessor cnn(SignapseUtils::getModelPath());
     Camera c;
     gui.set_task('A');
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);

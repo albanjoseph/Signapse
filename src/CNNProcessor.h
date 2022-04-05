@@ -19,9 +19,9 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor: public Reel, public SceneCallback{
+class CNNProcessor : public Reel, public SceneCallback {
 public:
-    virtual  void  nextScene(Scene next);
+    virtual void nextScene(Scene next);
     //!  Public member function.
     /*!
         Loop function.
@@ -31,25 +31,32 @@ public:
     /*!
         \param setReadFrom Reel to be copied to readFrom.
     */
-    CNNProcessor(Reel* setReadFrom, std::string modelPath);
+    CNNProcessor(Reel *setReadFrom, std::string modelPath);
+    
     CNNProcessor(std::string modelPath);
     //!  Public member function.
     /*!
         Pops Scene from readFrom Reel and pushes to CNNProcessor own sceneQueue.
     */
     void SelfPush();
+    
     Scene ProcessScene(Scene scene);
+    
     cv::Mat MakeBlob(Scene scene);
+    
     void start_thread();
-    void registerCallback(SceneCallback* scb);
+    
+    void registerCallback(SceneCallback *scb);
 
 private:
     void threadLoop();
+    
     void LoadModel(std::string modelPath);
-    Reel* readFrom;
+    
+    Reel *readFrom;
     cv::dnn::Net net;
     std::thread cnnProcessorThread;
-    SceneCallback* sceneCallback = nullptr;
+    SceneCallback *sceneCallback = nullptr;
 };
 
 #endif //SIGNAPSE_CNNPROCESSOR_H

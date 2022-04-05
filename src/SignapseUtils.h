@@ -9,6 +9,8 @@
 #include "iostream"
 #include "SignapseUtils.h"
 
+#define MODEL_PATH "../models/asl-mobilenetv2.pb"
+
 class SignapseUtils {
 public:
     static std::string getLetterFromDigit(int digit){
@@ -36,6 +38,10 @@ public:
 
     static int makeTask(){
         return rand() % 25;
+    }
+
+    static std::string getModelPath(){
+        return MODEL_PATH;
     }
 };
 
