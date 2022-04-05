@@ -213,7 +213,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Signapse", nullptr));
         actionClose->setText(QApplication::translate("MainWindow", "Close", nullptr));
         actionReload->setText(QApplication::translate("MainWindow", "Reload", nullptr));
         label->setText(QString());
