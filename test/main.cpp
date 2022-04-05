@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
-
+#include "gtest_camera.h"
+#include "gtest_cnnprocessor.h"
 
 
 int main(int argc, char **argv) {
