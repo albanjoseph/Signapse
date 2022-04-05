@@ -17,6 +17,13 @@ Scene MakeScene(std::string letter){
     test_scene.frame = flipped;
     return test_scene;
 }
+TEST(cnnprocessor_test, checkMakeBlob_dims){
+    CNNProcessor cnn(SignapseUtils::getModelPath());
+    Scene s = MakeScene("A");
+    cv::Mat frame = s.frame;
+    cv::Mat blob = cnn.MakeBlob(s);
+    EXPECT_NE(frame.dims, blob.dims);
+}
 
 TEST(cnnprocessor_test, checkResult_a){
     CNNProcessor cnn(SignapseUtils::getModelPath());
@@ -156,4 +163,7 @@ TEST(cnnprocessor_test, checkResult_z){
     Scene out = cnn.ProcessScene(MakeScene("Z"));
     EXPECT_EQ(out.result, "Z");
 }
+
+
+
 
