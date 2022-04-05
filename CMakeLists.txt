@@ -4,7 +4,6 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -pthread")
 
 add_subdirectory(src)
 add_subdirectory(test)
-add_subdirectory(lib/googletest)
 
 enable_testing()
 add_test(camera_unit_test camera_test)
