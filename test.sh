@@ -1,2 +1,2 @@
-cd build
-ctest
+cd test
+./main

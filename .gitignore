@@ -7,10 +7,12 @@ bin-release/
 # Other files and folders
 .settings/
 Signapse.code-workspace
-lib/
 build/
 opencv_build/
 opencv_src
+src/Signapse_autogen/
+*.a
+test/main
 
 #VSCode 
 .vscode/

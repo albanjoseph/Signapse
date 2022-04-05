@@ -1,13 +1,14 @@
-add_executable(camera_test camera_test.cpp)
-target_include_directories(camera_test PRIVATE ../src)
-target_link_libraries(camera_test camera)
+cmake_minimum_required(VERSION 3.0)
+project(Signapse)
 
 set(OpenCV_DIR "../opencv_build")
-message("Linking OpenCV build at directory: " ${OpenCV_DIR}$ )
 find_package(OpenCV REQUIRED)
-include_directories( ${OpenCV_INCLUDE_DIRS} )
-message("Including OpenCV build at directory: " ${OpenCV_INCLUDE_DIRS})
+find_package(Qt5Widgets REQUIRED)
+find_package(GTest REQUIRED)
 
-add_executable(inference_test inference_test.cpp)
-target_include_directories(inference_test PRIVATE ../src)
-target_link_libraries(inference_test ${OpenCV_LIBS} CNNProcessor camera)
+include_directories(../src)
+
+enable_testing()
+
+add_executable(main main.cpp)
+target_link_libraries(main ${OpenCV_LIBS} Qt5::Widgets gtest gtest_main camera CNNProcessor)
