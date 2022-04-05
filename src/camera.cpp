@@ -91,6 +91,10 @@ void Camera::Stream() {
     }
 }
 
+bool Camera::getOn() {
+    return isOn;
+}
+
 void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
     boundingBox[0] = upperLeftX;
     boundingBox[1] = upperLeftY;
