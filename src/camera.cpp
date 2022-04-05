@@ -91,6 +91,11 @@ void Camera::Stream() {
     }
 }
 
+float* Camera::getBoundingBox() {
+
+    return boundingBox;
+}
+
 bool Camera::getOn() {
     return isOn;
 }
@@ -100,6 +105,15 @@ void Camera ::setBoundingBox(float upperLeftX, float upperLeftY, float lowerRigh
     boundingBox[1] = upperLeftY;
     boundingBox[2] = lowerRightX;
     boundingBox[3] = lowerRightY;
+    for(int i = 0; i < 4; i++){
+        float val = boundingBox[i];
+        if(val > 1.0f){
+            boundingBox[i] = 1.0f;
+        }
+        else if (val < 0.0f){
+            boundingBox[i] = 0.0f;
+        }
+    }
 }
 
 void Camera::registerCNNCallback(SceneCallback *cnncb) {

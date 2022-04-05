@@ -4,6 +4,7 @@
 
 #ifndef SIGNAPSE_CAMERA_H
 #define SIGNAPSE_CAMERA_H
+#include <stdlib.h>
 #include "reel.h"
 #include <opencv2/videoio.hpp>
 #include <thread>
@@ -38,6 +39,8 @@ public:
         Updates boundingBox variable with a new set of coordinates.
      */
     void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
+
+    float* getBoundingBox();
 
     void registerCNNCallback(SceneCallback* cnncb);
 
