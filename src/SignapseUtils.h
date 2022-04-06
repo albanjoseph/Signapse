@@ -9,7 +9,7 @@
 #include "iostream"
 #include "SignapseUtils.h"
 
-#define MODEL_PATH "../models/asl-mobilenetv2.pb"
+#define MODEL_PATH "models/asl-mobilenetv2.pb"
 
 class SignapseUtils {
 public:
