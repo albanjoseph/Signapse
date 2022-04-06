@@ -6,7 +6,7 @@
 #include "SignapseUtils.h"
 
 Scene MakeScene(std::string letter){
-    std::string filepath = "asl_alphabet_test/" + letter + "_test.jpg";
+    std::string filepath = "test/asl_alphabet_test/" + letter + "_test.jpg";
     cv::Mat test_frame = cv::imread(filepath);
     cv::Mat flipped; cv::flip(test_frame, flipped, 1);
     Scene test_scene;
