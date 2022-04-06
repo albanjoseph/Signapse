@@ -7,9 +7,8 @@
 ![Issues](https://img.shields.io/github/issues-raw/albanjoseph/Signapse?style=for-the-badge)
 [![License](https://img.shields.io/github/license/albanjoseph/Signapse?style=for-the-badge)](https://github.com/albanjoseph/Signapse/blob/main/LICENSE)
 
-<!-- CONTACT -->
-</div>
-<p align="center">
+![Build & Test](https://github.com/albanjoseph/Signapse/actions/workflows/cmake_build.yml/badge.svg)
+![Docs](https://github.com/albanjoseph/Signapse/actions/workflows/docs.yml/badge.svg)
 
   
   <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
