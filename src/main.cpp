@@ -16,23 +16,18 @@
 using namespace cv;
 using namespace std;
 
-//#define THRES 100
-
-
-
-
-
 int main(int argc, char* argv[]){
     QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
     Gui gui;
-    CNNProcessor cnn(SignapseUtils::getModelPath());
+    CNNProcessorSettings cnnSettings;
+    CNNProcessor cnn(&cnnSettings);
     Camera c;
     gui.set_task('A');
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.registerFrameCallback(&gui);
     c.registerCNNCallback(&cnn);
-    cnn.registerCallback(&gui);
+    cnn.RegisterCallback(&gui);
     c.start_thread();
     gui.SetVisible(true);
     app.exec();

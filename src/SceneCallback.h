@@ -8,7 +8,7 @@
 
 class SceneCallback{
 public:
-    virtual void nextScene(Scene next) = 0;
+    virtual void NextScene(Scene next) = 0;
 };
 
 #endif //SIGNAPSE_SCENECALLBACK_H

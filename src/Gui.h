@@ -27,7 +27,7 @@ class Gui : public QWidget, public SceneCallback{
     Q_OBJECT
 public:
     //Gui (QObject *_parent);
-    virtual void nextScene(Scene next);
+    virtual void NextScene(Scene next);
     Gui();
     void SetVisible(bool visible);
     void SetTargetImage(int target);

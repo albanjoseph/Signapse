@@ -18,7 +18,7 @@ Gui::Gui() {
     makeConnections();
 }
 
-void Gui::nextScene(Scene next) {
+void Gui::NextScene(Scene next) {
     cv::Mat img = next.frame;
     QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(imgIn));

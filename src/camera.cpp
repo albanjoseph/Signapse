@@ -50,7 +50,7 @@ void Camera::postFrame(SceneCallback* callback){
                                  (int)(sz.height * boundingBox[3])}
     };
     s = FrameEditor::drawBox(s);
-    callback->nextScene(s);
+    callback->NextScene(s);
 }
 
 void Camera::dataReady(){
