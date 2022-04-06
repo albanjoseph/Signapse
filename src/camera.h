@@ -4,9 +4,11 @@
 
 #ifndef SIGNAPSE_CAMERA_H
 #define SIGNAPSE_CAMERA_H
+#include <stdlib.h>
 #include "reel.h"
 #include <opencv2/videoio.hpp>
 #include <thread>
+#include "SceneCallback.h"
 
 //!  Camera class which inherits from Reel.
 /*!
@@ -19,17 +21,14 @@ public:
         Turns the camera object "ON" and configures the video capture.
     */
     Camera();
-    void on(bool state);
+    bool getOn();
+
+    void setOn(bool state);
     //! Member function.
     /*!
         Reads webcam data, populates a Scene struct and pushes scene on to sceneQueue.
     */
     void Populate();
-    //! Member function for setting new signing task.
-    /*!
-        Updates currentTask with new_task
-    */
-    void set_current_task(char new_task);
     //! Member function for starting video capturing thread.
     /*!
         Starts "Stream" private member function as a thread.
@@ -41,17 +40,27 @@ public:
      */
     void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
 
+    float* getBoundingBox();
+
+    void registerCNNCallback(SceneCallback* cnncb);
+
+    void registerFrameCallback(SceneCallback* fcb);
+
+
+    void dataReady();
+
+    void Start();
+
 private:
+    void postFrame(SceneCallback* callback);
+
+    void threadLoop();
+
     //! Private member function.
     /*!
         Calls "Populate" member function whilst the camera object is "ON"
     */
     void Stream();
-    //! Private member variable.
-    /*!
-        Holds the value of the current signing task.
-    */
-    char currentTask;
     //! Private member object.
     /*!
         OpenCV object for reading web cam data.
@@ -81,6 +90,9 @@ private:
         Box within the frame which bounds the user's hand or sign, used to allow cropping for further processing. Variable contains 4 floats, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (x,y) format and are defined as a fraction of the total frame width and height in range (0-1).
      */
      float boundingBox[4];
+
+     SceneCallback* cnnCallback = nullptr;
+     SceneCallback* frameCallback = nullptr;
 };
 
 

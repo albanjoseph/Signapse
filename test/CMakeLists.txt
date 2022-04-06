@@ -1,7 +1,14 @@
-add_executable(taskmaster_test taskmaster_test.cpp)
-target_include_directories(taskmaster_test PRIVATE ../src)
-target_link_libraries(taskmaster_test taskmaster)
+cmake_minimum_required(VERSION 3.0)
+project(Signapse)
 
-add_executable(camera_test camera_test.cpp)
-target_include_directories(camera_test PRIVATE ../src)
-target_link_libraries(camera_test camera)
+set(OpenCV_DIR "../opencv_build")
+find_package(OpenCV REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+find_package(GTest REQUIRED)
+
+include_directories(../src)
+
+enable_testing()
+
+add_executable(main main.cpp)
+target_link_libraries(main ${OpenCV_LIBS} Qt5::Widgets gtest gtest_main camera CNNProcessor)

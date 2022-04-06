@@ -2,13 +2,29 @@
 #include <chrono>
 #include <thread>
 #include "scene.h"
+#include "SignapseUtils.h"
+
 
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
+void CNNProcessor::threadLoop() {
+    return;
+}
+
+
+
+void CNNProcessor::start_thread(){
+    cnnProcessorThread = std::thread(&CNNProcessor::threadLoop, this);
+}
+
 CNNProcessor::CNNProcessor(Reel* setReadFrom, std::string modelPath){
     readFrom = setReadFrom;
+    LoadModel(modelPath);
+}
+
+CNNProcessor::CNNProcessor(std::string modelPath) {
     LoadModel(modelPath);
 }
 
@@ -24,6 +40,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     int x  = scene.regionOfInterest[0]; int y = scene.regionOfInterest[1];
     int width = scene.regionOfInterest[2] - scene.regionOfInterest[0];
     int height = scene.regionOfInterest[3] - scene.regionOfInterest[1];
+
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
     cv::Mat rgb;
     cv::cvtColor(roi, rgb, cv::COLOR_BGR2RGB);
@@ -34,7 +51,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     return blob;
 }
 
-int CNNProcessor::Inference(Scene scene){
+Scene CNNProcessor::ProcessScene(Scene scene){
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
@@ -42,12 +59,17 @@ int CNNProcessor::Inference(Scene scene){
     double confidence;
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
     int classId = classIdPoint.x;
-
-    //printf("%d \n",classId);
-    return classId;
+    scene.result = SignapseUtils::getLetterFromDigit(classId);
+    return scene;
 }
-
-
+void CNNProcessor::nextScene(Scene next) {
+    Scene updatedFrame = ProcessScene(next);
+    if(!sceneCallback) return;
+    sceneCallback->nextScene(updatedFrame);
+}
+void CNNProcessor::registerCallback(SceneCallback* scb){
+    sceneCallback = scb;
+}
 
 void CNNProcessor::SelfPush() {
     Scene frame = readFrom->Pop();
