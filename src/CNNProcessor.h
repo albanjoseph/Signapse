@@ -4,7 +4,7 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include "SceneCallback.h"
-#include "SceneProcessor.h"
+#include "SceneLinker.h"
 #include "CNNProcessorSettings.h"
 #include <stdio.h>
 

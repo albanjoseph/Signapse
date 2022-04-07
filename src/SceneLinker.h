@@ -1,6 +1,6 @@
 #include "SceneCallback.h"
 
-class SceneProcessor : public SceneCallback{
+class SceneLinker : public SceneCallback{
 public:
     void RegisterCallback(SceneCallback* scb);
 

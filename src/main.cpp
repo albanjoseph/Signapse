@@ -10,7 +10,7 @@
 #include "CNNProcessor.h"
 #include "stdlib.h"
 #include "Gui.h"
-#include "FrameEditor.h"
+#include "SceneEditor.h"
 #include "SignapseUtils.h"
 
 using namespace cv;
@@ -20,9 +20,11 @@ int main(int argc, char* argv[]){
     QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
     Gui gui;
+    SceneEditorSettings sceneEditorSettings;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
     Camera c;
+    
     gui.set_task('A');
     c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
     c.registerFrameCallback(&gui);
