@@ -27,3 +27,14 @@ else
   printf " skipped\n"
 fi
 
+printf "Downloading cppTimer ..."
+if [ ! -d "cppTimer_src" ]; then
+  printf "\n"
+  git clone https://github.com/berndporr/cppTimer.git cppTimer_src || exit 1
+  cd cppTimer_src
+  cmake .
+  make
+  sudo make install
+  cd ..
+fi
+
