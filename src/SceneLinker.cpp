@@ -5,5 +5,6 @@ void SceneLinker::RegisterCallback(SceneCallback *scb) {
 }
 
 void SceneLinker::NextScene(Scene scene) {
+    if(!sceneCallback) return;
     sceneCallback->NextScene(scene);
 }

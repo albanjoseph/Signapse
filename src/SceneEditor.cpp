@@ -11,6 +11,7 @@ void SceneEditor::NextScene(Scene scene){
                                         (int)(sz.height * settings->relativeBoundingBox[3]));
    Scene out = switchRGB2BGR(scene);
    out = drawBox(scene);
+    if(!sceneCallback) return;
    sceneCallback->NextScene(out);
 }
 
