@@ -45,7 +45,7 @@
 # Social Media
 
 <p align="center">
-<a href="https://twitter.com/signapsegla" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="signups" height="150" width="100" /></a>·
+<a href="https://twitter.com/GU_Signapse" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="signups" height="150" width="100" /></a>·
 <a href="https://www.facebook.com/Signapse-125793226671815" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="signapse" height="150" width="100" /></a> ·
 <!-- <a href="https://instagram.com/insta" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="insta" height="30" width="40" /></a> -->
 <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="youtube" height="150" width="100"  /></a>·
