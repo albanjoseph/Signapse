@@ -1,7 +1,5 @@
 #include "camera.h"
 
-
-
 Camera::Camera() {
     isOn=true;
 }
@@ -23,6 +21,7 @@ void Camera::postFrame(){
     // check if we succeeded
     if (temp.empty()) {
         std::cerr << "ERROR! blank frame grabbed\n";
+        return;
     }
     Scene s;
     s.frame=temp;
