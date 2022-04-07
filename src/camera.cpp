@@ -10,7 +10,7 @@ void Camera::setOn(bool state){
 
 void Camera::threadLoop(){
     while(isOn){
-        dataReady();
+        postFrame();
     }
 }
 
@@ -28,15 +28,10 @@ void Camera::postFrame(){
     sceneCallback->NextScene(s);
 }
 
-void Camera::dataReady(){
-    postFrame();
-}
-
 void Camera::start_thread(){
     videoCapture.open(deviceID, apiID);
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
-
 
 bool Camera::getOn() {
     return isOn;

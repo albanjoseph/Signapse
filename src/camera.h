@@ -28,11 +28,7 @@ public:
         Starts "Stream" private member function as a thread.
     */
     void start_thread();
-    //! Member function for setting a new bounding box.
-    /*!
-        Updates boundingBox variable with a new set of coordinates.
-     */
-    void dataReady();
+    
     
     
 private:
