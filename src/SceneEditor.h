@@ -11,6 +11,7 @@ public:
     
 private:
     Scene drawBox(Scene s);
+    Scene switchRGB2BGR(Scene s);
     SceneEditorSettings* settings;
 };
 

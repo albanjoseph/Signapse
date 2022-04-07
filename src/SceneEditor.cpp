@@ -9,12 +9,19 @@ void SceneEditor::NextScene(Scene scene){
                                         (int)(sz.height * settings->relativeBoundingBox[1]),
                                         (int)(sz.width * settings->relativeBoundingBox[2]),
                                         (int)(sz.height * settings->relativeBoundingBox[3]));
-   Scene out = drawBox(scene);
-   sceneCallback->NextScene(scene);
+   Scene out = switchRGB2BGR(scene);
+   out = drawBox(scene);
+   sceneCallback->NextScene(out);
 }
 
 SceneEditor::SceneEditor(SceneEditorSettings* s) {
     settings = s;
+}
+
+Scene SceneEditor::switchRGB2BGR(Scene s) {
+    cv::Mat temp = s.frame;
+    cv::cvtColor(temp, s.frame, cv::COLOR_BGR2RGB);
+    return s;
 }
 
 Scene SceneEditor::drawBox(Scene s) {
