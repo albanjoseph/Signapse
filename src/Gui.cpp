@@ -7,8 +7,6 @@
 #define UI_WDH 1000
 #define UI_HGT 700
 
-//virtual Gui::~Gui() {};
-
 Gui::Gui() {
     widget = new QMainWindow();
     widget->setFixedSize(UI_WDH, UI_HGT);
@@ -30,7 +28,6 @@ void Gui::NextScene(Scene next) {
 void Gui::SetVisible(bool visible) {
     widget->setVisible(visible);
 }
-
 
 void Gui::SetTargetImage(int target) {
     std::string letter = SignapseUtils::getLetterFromDigit(target);
@@ -67,6 +64,6 @@ void Gui::setTaskText(std::string letter){
     ui->listWidget->item(2)->setText(QCoreApplication::translate("MainWindow", letter.c_str(), nullptr));
 }
 
-void Gui::set_task(char new_task){
-    current_task = new_task;
+void Gui::SetTask(std::string newTask){
+    currentTask = newTask;
 }

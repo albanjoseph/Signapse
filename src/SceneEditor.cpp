@@ -1,12 +1,7 @@
-//
-// Created by ross on 24/03/2022.
-//
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
+
 #include "SceneEditor.h"
-
-
-
 
 void SceneEditor::NextScene(Scene scene){
    cv::Size sz = scene.frame.size();

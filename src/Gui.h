@@ -22,15 +22,13 @@
 class Gui : public QWidget, public SceneCallback{
     Q_OBJECT
 public:
-    //Gui (QObject *_parent);
     virtual void NextScene(Scene next);
     Gui();
     void SetVisible(bool visible);
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);
     void ButtonPressed();
-    void set_task(char new_task);
-
+    void SetTask(std::string newTask);
 
 private:
     QMainWindow *widget;
@@ -39,7 +37,7 @@ private:
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
     void makeConnections();
-    char current_task;
+    std::string currentTask;
 signals:
     void progressChanged(int progress);
 };
