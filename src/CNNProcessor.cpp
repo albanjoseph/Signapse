@@ -14,12 +14,10 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     int width = scene.regionOfInterest.LowerRight.x - x;
     int height = scene.regionOfInterest.LowerRight.y - y;
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
-    cv::Mat rgb;
-    cv::cvtColor(roi, rgb, cv::COLOR_BGR2RGB);
-    cv::Mat smallRGB;
-    cv::resize(rgb, smallRGB, cv::Size(settings->InputDim_x,settings->InputDim_y));
+    cv::Mat small;
+    cv::resize(roi, small, cv::Size(settings->InputDim_x,settings->InputDim_y));
     cv::Mat blob;
-    cv::dnn::blobFromImage(smallRGB, blob, (1.0 / 255.0));
+    cv::dnn::blobFromImage(small, blob, (1.0 / 255.0));
     return blob;
 }
 

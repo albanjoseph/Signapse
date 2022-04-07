@@ -36,7 +36,7 @@ int main(int argc, char* argv[]){
     cnn.RegisterCallback(&gui);
     
     //start application
-    gui.set_task('A');
+    gui.SetTask("A");
     c.start_thread();
     gui.SetVisible(true);
     app.exec();
