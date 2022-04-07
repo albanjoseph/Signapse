@@ -1,9 +1,8 @@
-//
-// Created by adam on 09/02/2022.
-//
-#include <opencv2/core.hpp>
 #ifndef SIGNAPSE_SCENE_H
 #define SIGNAPSE_SCENE_H
+
+
+#include <opencv2/core.hpp>
 
 //! Struct Point
 /*!
@@ -24,6 +23,7 @@ struct Point
 struct BoundingBox{
     Point UpperLeft;
     Point LowerRight;
+    BoundingBox():UpperLeft(), LowerRight(){}
     BoundingBox(int upperLeftX, int upperLeftY, int lowerRightX, int lowerRightY): UpperLeft(upperLeftX, upperLeftY),
                                                                                    LowerRight(lowerRightX, lowerRightY) {}
     BoundingBox(Point upperLeft, Point lowerRight): UpperLeft(upperLeft), LowerRight(lowerRight) {}
@@ -34,6 +34,7 @@ struct BoundingBox{
     Holds the video frame data and additional Signapse metadata.
 */
 struct Scene{
+    Scene(){}
     //! Member variable.
     /*!
         OpenCV n-dimensional dense array object.
@@ -43,12 +44,12 @@ struct Scene{
     /*!
         Holds timestamp of when the Scene was created by Populate.
     */
-    int timestamp;
+    int timestamp = 0;
     //! Member variable.
     /*!
         A string representing the predicted output from processing with a CNN model.
     */
-    std::string result;
+    std::string result = "";
     //! Member variable
     /*!
         Region of the frame which frames the user's hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (column,row) format, units are in pixels.
@@ -56,4 +57,4 @@ struct Scene{
      BoundingBox regionOfInterest;
 };
 
-#endif //SIGNAPSE_SCENE_H
+#endif

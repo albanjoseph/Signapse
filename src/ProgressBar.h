@@ -1,3 +1,6 @@
+#ifndef SIGNAPSE_PROGRESSBAR_H
+#define SIGNAPSE_PROGRESSBAR_H
+
 #include "scene.h"
 
 class ProgressBar{
@@ -9,3 +12,5 @@ protected:
     int threshold;
     int count;
 };
+
+#endif

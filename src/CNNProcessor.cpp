@@ -1,9 +1,4 @@
 #include "CNNProcessor.h"
-#include <chrono>
-#include <thread>
-#include "scene.h"
-#include "SignapseUtils.h"
-
 
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
@@ -15,9 +10,9 @@ CNNProcessor::CNNProcessor(CNNProcessorSettings* s) {
 }
 
 cv::Mat CNNProcessor::MakeBlob(Scene scene){
-    int x  = scene.regionOfInterest[0]; int y = scene.regionOfInterest[1];
-    int width = scene.regionOfInterest[2] - scene.regionOfInterest[0];
-    int height = scene.regionOfInterest[3] - scene.regionOfInterest[1];
+    int x  = scene.regionOfInterest.UpperLeft.x; int y = scene.regionOfInterest.UpperLeft.y;
+    int width = scene.regionOfInterest.LowerRight.x - x;
+    int height = scene.regionOfInterest.LowerRight.y - y;
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
     cv::Mat rgb;
     cv::cvtColor(roi, rgb, cv::COLOR_BGR2RGB);

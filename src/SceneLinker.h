@@ -1,3 +1,6 @@
+#ifndef SIGNAPSE_SCENELINKER_H
+#define SIGNAPSE_SCENELINKER_H
+
 #include "SceneCallback.h"
 
 class SceneLinker : public SceneCallback{
@@ -9,3 +12,4 @@ protected:
     SceneCallback* sceneCallback = nullptr;
 };
 
+#endif

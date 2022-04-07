@@ -10,10 +10,10 @@ Scene MakeScene(std::string letter){
     cv::Mat test_frame = cv::imread(filepath);
     cv::Mat flipped; cv::flip(test_frame, flipped, 1);
     Scene test_scene;
-    test_scene.regionOfInterest[0] = 0;
-    test_scene.regionOfInterest[1] = 0;
-    test_scene.regionOfInterest[2] = flipped.rows;
-    test_scene.regionOfInterest[3] = flipped.cols;
+    test_scene.regionOfInterest.UpperLeft.x = 0;
+    test_scene.regionOfInterest.UpperLeft.y = 0;
+    test_scene.regionOfInterest.LowerRight.x = flipped.rows;
+    test_scene.regionOfInterest.LowerRight.y = flipped.cols;
     test_scene.frame = flipped;
     return test_scene;
 }

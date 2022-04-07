@@ -1,20 +1,18 @@
-//
-// Created by Adam on 09/02/2022.
-//
-
-#ifndef SIGNAPSE_CAMERA_H
-#define SIGNAPSE_CAMERA_H
-#include <stdlib.h>
-#include "reel.h"
+#include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
+
+#include <iostream>
+#include <stdlib.h>
 #include <thread>
-#include "SceneCallback.h"
+
+#include "SceneLinker.h"
+
 
 //!  Camera class which inherits from Reel.
 /*!
     Class for reading web cam data, and creating a Reel of scenes.
 */
-class Camera: public Reel{
+class Camera: public SceneLinker{
 public:
     //! Constructor.
     /*!
@@ -24,11 +22,7 @@ public:
     bool getOn();
 
     void setOn(bool state);
-    //! Member function.
-    /*!
-        Reads webcam data, populates a Scene struct and pushes scene on to sceneQueue.
-    */
-    void Populate();
+    
     //! Member function for starting video capturing thread.
     /*!
         Starts "Stream" private member function as a thread.
@@ -38,29 +32,14 @@ public:
     /*!
         Updates boundingBox variable with a new set of coordinates.
      */
-    void setBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
-
-    float* getBoundingBox();
-
-    void registerCNNCallback(SceneCallback* cnncb);
-
-    void registerFrameCallback(SceneCallback* fcb);
-
-
     void dataReady();
-
-    void Start();
-
+    
+    
 private:
-    void postFrame(SceneCallback* callback);
+    void postFrame();
 
     void threadLoop();
-
-    //! Private member function.
-    /*!
-        Calls "Populate" member function whilst the camera object is "ON"
-    */
-    void Stream();
+    
     //! Private member object.
     /*!
         OpenCV object for reading web cam data.
@@ -85,15 +64,4 @@ private:
         true = Camera is on.
     */
     bool isOn = false;
-    //! Private member variable indicating the bounding box to set the region of interest to for each frame.
-    /*!
-        Box within the frame which bounds the user's hand or sign, used to allow cropping for further processing. Variable contains 4 floats, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (x,y) format and are defined as a fraction of the total frame width and height in range (0-1).
-     */
-     float boundingBox[4];
-
-     SceneCallback* cnnCallback = nullptr;
-     SceneCallback* frameCallback = nullptr;
 };
-
-
-#endif //SIGNAPSE_CAMERA_H

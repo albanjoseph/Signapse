@@ -2,9 +2,11 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
+
 #include <iostream>
 #include <stdio.h>
 #include <queue>
+
 #include "reel.h"
 #include "camera.h"
 #include "CNNProcessor.h"
@@ -19,17 +21,22 @@ using namespace std;
 int main(int argc, char* argv[]){
     QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
-    Gui gui;
+    
+    //make pipeline components
     SceneEditorSettings sceneEditorSettings;
+    SceneEditor sceneEditor(&sceneEditorSettings);
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
     Camera c;
+    Gui gui;
     
-    gui.set_task('A');
-    c.setBoundingBox(0.25, 0.25, 0.75, 0.75);
-    c.registerFrameCallback(&gui);
-    c.registerCNNCallback(&cnn);
+    //register callbacks
+    c.RegisterCallback(&sceneEditor);
+    sceneEditor.RegisterCallback(&cnn);
     cnn.RegisterCallback(&gui);
+    
+    //start application
+    gui.set_task('A');
     c.start_thread();
     gui.SetVisible(true);
     app.exec();

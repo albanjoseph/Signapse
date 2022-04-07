@@ -1,9 +1,6 @@
-//
-// Created by ross on 01/04/2022.
-//
-
 #ifndef SIGNAPSE_GUI_H
 #define SIGNAPSE_GUI_H
+
 #include <QCoreApplication>
 #include "qtGenGui.h"
 #include "stdlib.h"
@@ -11,9 +8,8 @@
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
+
 #include "ProgressBar.h"
-
-
 
 #include "SignapseUtils.h"
 #include "SceneCallback.h"
@@ -48,5 +44,4 @@ signals:
     void progressChanged(int progress);
 };
 
-
-#endif //SIGNAPSE_GUI_H
+#endif
