@@ -21,14 +21,6 @@ void SceneEditor::NextScene(Scene scene){
 SceneEditor::SceneEditor(SceneEditorSettings* s) {
     settings = s;
 }
-//delete this
-cv::Mat SceneEditor::drawBox(cv::Mat img, int *box) {
-    int x  = box[0]; int y = box[1];
-    int width = box[2] - box[0]; int height = box[3] - box[1];
-    cv::Rect rect(x, y, width, height);
-    cv::rectangle(img, rect, cv::Scalar(0, 255, 0));
-    return img;
-}
 
 Scene SceneEditor::drawBox(Scene s) {
     cv::Mat temp = s.frame;
