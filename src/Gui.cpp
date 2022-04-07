@@ -1,7 +1,3 @@
-//
-// Created by ross on 01/04/2022.
-//
-
 #include "Gui.h"
 
 #define UI_WDH 1000
@@ -17,11 +13,13 @@ Gui::Gui() {
 }
 
 void Gui::NextScene(Scene next) {
-    cv::Mat img = next.frame;
-    QImage imgIn= QImage((uchar*) img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
+    //flip frame
+    cv::Mat temp = next.frame;
+    cv::flip(temp, next.frame, 1);
+    QImage imgIn= QImage((uchar*) next.frame.data, next.frame.cols, next.frame.rows, next.frame.step, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(imgIn));
     ui->label->resize(ui->label->pixmap()->size());
-    int progress = progress_bar.get_progress(next, current_task);
+    int progress = progress_bar.get_progress(next, currentTask);
     emit progressChanged(progress);
 }
 
@@ -43,7 +41,7 @@ void Gui::SetTargetImage(std::string letter) {
 void Gui::ButtonPressed(){
     std::string new_task = SignapseUtils::getLetterFromDigit(SignapseUtils::makeTask());
     SetTargetImage(new_task);
-    current_task = *new_task.c_str();
+    currentTask = new_task;
     progress_bar.reset_progress();
 }
 
