@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['scene_0',['Scene',['../structScene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene']]],
-  ['sceneeditor_1',['SceneEditor',['../classSceneEditor.html#a693d0c84e54a272a539e313b3ddd9b68',1,'SceneEditor']]],
-  ['sceneeditorsettings_2',['SceneEditorSettings',['../structSceneEditorSettings.html#a2f42e9011d6ad204af3cd61e99af9314',1,'SceneEditorSettings']]],
-  ['scenelinkscheduler_3',['SceneLinkScheduler',['../classSceneLinkScheduler.html#a777649a8f81dbb3ad46e502bb1427071',1,'SceneLinkScheduler']]],
-  ['set_5ftask_4',['set_task',['../classTaskmaster.html#a698980d21905a342fe5ab4a11b1a101a',1,'Taskmaster']]],
-  ['setboundingbox_5',['SetBoundingBox',['../classSceneEditor.html#a15737d9431278db13b87136b11fb3c58',1,'SceneEditor']]],
-  ['seton_6',['setOn',['../classCamera.html#acc5cea7c91c22b813050379eb2c43ecc',1,'Camera']]],
-  ['settargetimage_7',['SetTargetImage',['../classGui.html#a0a36847ab7eaf678ed178b9735001c62',1,'Gui::SetTargetImage(int target)'],['../classGui.html#abd40935fbc464cd0f5e456d43115ec39',1,'Gui::SetTargetImage(std::string target)']]],
-  ['settask_8',['SetTask',['../classGui.html#ad52cabd9e25e09e480e106a873e6ac3b',1,'Gui']]],
-  ['setupui_9',['setupUi',['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)']]],
-  ['setvisible_10',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
-  ['start_11',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableSceneLinker.html#a62ef3771ad6109d77989eb631be199b6',1,'SchedulableSceneLinker::Start()']]]
+  ['selfpush_0',['SelfPush',['../classCNNProcessor.html#aa10698a841357d37e427518cafce63a1',1,'CNNProcessor']]],
+  ['set_5ftask_1',['set_task',['../classGui.html#a6de184a1f69aabec6b810f918def1927',1,'Gui::set_task()'],['../classTaskmaster.html#a698980d21905a342fe5ab4a11b1a101a',1,'Taskmaster::set_task()']]],
+  ['setboundingbox_2',['setBoundingBox',['../classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9',1,'Camera']]],
+  ['seton_3',['setOn',['../classCamera.html#acc5cea7c91c22b813050379eb2c43ecc',1,'Camera']]],
+  ['settargetimage_4',['SetTargetImage',['../classGui.html#a0a36847ab7eaf678ed178b9735001c62',1,'Gui::SetTargetImage(int target)'],['../classGui.html#abd40935fbc464cd0f5e456d43115ec39',1,'Gui::SetTargetImage(std::string target)']]],
+  ['setupui_5',['setupUi',['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)']]],
+  ['setvisible_6',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
+  ['start_7',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera']]],
+  ['start_5fthread_8',['start_thread',['../classCamera.html#a2012959e6725f234584948c98954b0ff',1,'Camera::start_thread()'],['../classCNNProcessor.html#a81cc087d5a297a800b2c03d8912445d2',1,'CNNProcessor::start_thread()']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['boundingbox_0',['BoundingBox',['../structBoundingBox.html#a6e401c4da5839950f1f30c8b8c4d1208',1,'BoundingBox::BoundingBox()'],['../structBoundingBox.html#adb18c96cba2fe8b519860679a3f3d0d4',1,'BoundingBox::BoundingBox(int upperLeftX, int upperLeftY, int lowerRightX, int lowerRightY)'],['../structBoundingBox.html#a0d990a923a4aa96d1a68ce60b2d741d7',1,'BoundingBox::BoundingBox(Point upperLeft, Point lowerRight)']]],
-  ['buttonpressed_1',['ButtonPressed',['../classGui.html#a920cc9d83936271c57eacc3608836c30',1,'Gui']]]
+  ['camera_0',['Camera',['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera']]],
+  ['cnnprocessor_1',['CNNProcessor',['../classCNNProcessor.html#aa691bb7eb5b9dd871339d05b997e65a0',1,'CNNProcessor::CNNProcessor(Reel *setReadFrom, std::string modelPath)'],['../classCNNProcessor.html#adb39e4f374b2475527bc85a4a2b05eff',1,'CNNProcessor::CNNProcessor(std::string modelPath)']]]
 ];

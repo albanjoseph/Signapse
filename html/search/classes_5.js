@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qwidget_0',['QWidget',['../classQWidget.html',1,'']]]
+  ['progressbar_0',['ProgressBar',['../classProgressBar.html',1,'']]]
 ];

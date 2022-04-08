@@ -1,8 +1,6 @@
 <map id="Scene" name="Scene">
-<area shape="rect" id="node1" title="Struct Scene." alt="" coords="81,513,160,591"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,359,49,436"/>
-<area shape="rect" id="node3" title=" " alt="" coords="95,5,133,83"/>
-<area shape="rect" id="node6" href="$structPoint.html" title="Struct Point." alt="" coords="145,160,216,267"/>
-<area shape="rect" id="node4" title=" " alt="" coords="272,359,327,436"/>
-<area shape="rect" id="node5" href="$structBoundingBox.html" title="Struct BoundingBox." alt="" coords="130,344,247,451"/>
+<area shape="rect" id="node1" title="Struct Scene." alt="" coords="74,160,133,237"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,49,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="84,5,123,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="212,5,267,83"/>
 </map>

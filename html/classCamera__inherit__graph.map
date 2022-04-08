@@ -1,5 +1,4 @@
 <map id="Camera" name="Camera">
-<area shape="rect" id="node1" title="Camera class which inherits from Reel." alt="" coords="31,271,118,392"/>
-<area shape="rect" id="node2" href="$classSceneLinker.html" title=" " alt="" coords="5,131,144,223"/>
-<area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="20,5,129,83"/>
+<area shape="rect" id="node1" title="Camera class which inherits from Reel." alt="" coords="5,189,176,413"/>
+<area shape="rect" id="node2" href="$classReel.html" title="Reel class." alt="" coords="37,5,145,141"/>
 </map>

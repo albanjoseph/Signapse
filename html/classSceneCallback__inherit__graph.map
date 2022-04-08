@@ -1,10 +1,5 @@
 <map id="SceneCallback" name="SceneCallback">
-<area shape="rect" id="node1" title=" " alt="" coords="135,5,245,83"/>
-<area shape="rect" id="node2" href="$classGui.html" title=" " alt="" coords="43,131,177,296"/>
-<area shape="rect" id="node3" href="$classSceneLinker.html" title=" " alt="" coords="202,167,341,259"/>
-<area shape="rect" id="node4" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,351,92,473"/>
-<area shape="rect" id="node5" href="$classSceneEditor.html" title=" " alt="" coords="116,359,253,465"/>
-<area shape="rect" id="node6" href="$classSceneLinkScheduler.html" title=" " alt="" coords="277,359,439,465"/>
-<area shape="rect" id="node7" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="463,344,629,480"/>
-<area shape="rect" id="node8" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="481,528,611,635"/>
+<area shape="rect" id="node1" title=" " alt="" coords="97,5,206,83"/>
+<area shape="rect" id="node2" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="5,131,140,325"/>
+<area shape="rect" id="node3" href="$classGui.html" title=" " alt="" coords="164,145,299,311"/>
 </map>

@@ -1,6 +1,5 @@
 <map id="src/ProgressBar.h" name="src/ProgressBar.h">
-<area shape="rect" id="node1" title=" " alt="" coords="16,5,143,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,65,107"/>
-<area shape="rect" id="node3" href="$scene_8h.html" title=" " alt="" coords="90,80,157,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="61,155,185,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$scene_8h.html" title=" " alt="" coords="35,80,102,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="7,155,131,181"/>
 </map>

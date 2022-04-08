@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_0',['Gui',['../classGui.html',1,'']]]
+  ['frameeditor_0',['FrameEditor',['../classFrameEditor.html',1,'']]]
 ];
