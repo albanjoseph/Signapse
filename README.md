@@ -39,6 +39,8 @@
 
 - Signapse acts as a teacher, helping students progress their learning. Users will be able to score points, complete challenges and view their live signing in our custom GUI.
 
+- 🎥 Check out our product [demo video](https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA)!! 
+
 <p align="center"> 
 <img src="images/synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
 
