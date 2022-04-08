@@ -22,6 +22,8 @@
     <a href="https://www.hackster.io/news/signapse-aims-to-turn-a-raspberry-pi-into-an-artificially-intelligent-tutor-for-sign-language-ec1a08d0fc36"> Hackster.io</a> and 
     <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969</a>!! 🤩 📰
     <br />
+    🎥 Check out our product
+    <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> demo video</a>!!
     <br />
     <a href="https://github.com/albanjoseph/Signapse/issues">Report Bug</a>
     ·
@@ -39,7 +41,6 @@
 
 - Signapse acts as a teacher, helping students progress their learning. Users will be able to score points, complete challenges and view their live signing in our custom GUI.
 
-- 🎥 Check out our product [demo video](https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA)!! 
 
 <p align="center"> 
 <img src="images/synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
