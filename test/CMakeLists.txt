@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 project(Signapse)
-
 set(OpenCV_DIR "../opencv_build")
 find_package(OpenCV REQUIRED)
 find_package(Qt5Widgets REQUIRED)

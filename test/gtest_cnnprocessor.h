@@ -17,6 +17,7 @@ Scene MakeScene(std::string letter){
     test_scene.frame = flipped;
     return test_scene;
 }
+
 TEST(cnnprocessor_test, checkMakeBlob_dims){
     CNNProcessor cnn(SignapseUtils::getModelPath());
     Scene s = MakeScene("A");
