@@ -1,0 +1,9 @@
+<map id="SceneLinker" name="SceneLinker">
+<area shape="rect" id="node1" title=" " alt="" coords="202,131,341,223"/>
+<area shape="rect" id="node3" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,278,92,399"/>
+<area shape="rect" id="node4" href="$classSceneEditor.html" title=" " alt="" coords="116,285,253,392"/>
+<area shape="rect" id="node5" href="$classSceneLinkScheduler.html" title=" " alt="" coords="277,285,439,392"/>
+<area shape="rect" id="node6" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="463,271,629,407"/>
+<area shape="rect" id="node2" href="$classSceneCallback.html" title=" " alt="" coords="217,5,326,83"/>
+<area shape="rect" id="node7" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="481,455,611,561"/>
+</map>

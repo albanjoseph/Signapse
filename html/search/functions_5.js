@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loop_0',['Loop',['../classCNNProcessor.html#a90c1b1e93588f81424fd04f8e0b39fc6',1,'CNNProcessor']]]
+  ['isempty_0',['IsEmpty',['../classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12',1,'BlockingQueue::IsEmpty()'],['../classReel.html#a35411e3a01cc5fce2b6f45a30668d5c0',1,'Reel::IsEmpty()']]]
 ];
