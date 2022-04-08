@@ -1,7 +1,4 @@
-sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qt5-default libgtest-dev -y
-
-
 
 #Build or install OpenCV
 OS="$(uname -a)"
