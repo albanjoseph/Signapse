@@ -16,7 +16,7 @@ target_link_libraries(reel ${OpenCV_LIBS})
 add_library(camera camera.cpp camera.h)
 target_link_libraries(camera ${OpenCV_LIBS} reel)
 
-add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h SceneLinker.cpp)
+add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h SchedulableSceneLinker.cpp SceneLinker.cpp)
 target_link_libraries(CNNProcessor ${OpenCV_LIBS})
 
 add_library(SceneEditor SceneEditor.cpp SceneEditor.h)

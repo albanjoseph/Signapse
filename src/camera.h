@@ -27,7 +27,7 @@ public:
     /*!
         Starts "Stream" private member function as a thread.
     */
-    void start_thread();
+    void Start();
     
     
     

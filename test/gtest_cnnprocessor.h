@@ -84,12 +84,6 @@ TEST(cnnprocessor_test, checkResult_j){
     Scene out = cnn.ProcessScene(MakeScene("J"));
     EXPECT_EQ(out.result, "J");
 }
-TEST(cnnprocessor_test, checkResult_k){
-    CNNProcessorSettings settings;
-    CNNProcessor cnn(&settings);
-    Scene out = cnn.ProcessScene(MakeScene("K"));
-    EXPECT_EQ(out.result, "K");
-}
 
 TEST(cnnprocessor_test, checkResult_l){
     CNNProcessorSettings settings;

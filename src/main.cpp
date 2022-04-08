@@ -30,19 +30,16 @@ int main(int argc, char* argv[]){
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
     
-    Camera c;
+    Camera camera;
     Gui gui;
     
-    //register callbacks
-    c.RegisterCallback(&sceneEditor);
+    camera.RegisterCallback(&sceneEditor);
     sceneEditor.RegisterCallback(&cnn);
     cnn.RegisterCallback(&gui);
-    SceneLinkScheduler scheduler(&cnn, 15.0);
-    scheduler.RegisterCallback(&gui);
+    
+    camera.Start();
     cnn.Start();
-    c.start_thread();
-//
-//    //start application
+
     gui.SetTask("A");
     gui.SetVisible(true);
     app.exec();

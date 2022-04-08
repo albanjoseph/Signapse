@@ -18,11 +18,9 @@
 */
 class CNNProcessor : public SchedulableSceneLinker{
 public:
-    void NextScene(Scene scene);
+    Scene ProcessScene(Scene s);
     
     CNNProcessor(CNNProcessorSettings* s);
-    
-    Scene ProcessScene(Scene scene);
     
     cv::Mat MakeBlob(Scene scene);
     

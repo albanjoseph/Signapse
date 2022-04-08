@@ -28,7 +28,7 @@ void Camera::postFrame(){
     sceneCallback->NextScene(s);
 }
 
-void Camera::start_thread(){
+void Camera::Start(){
     videoCapture.open(deviceID, apiID);
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
