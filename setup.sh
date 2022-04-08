@@ -10,7 +10,7 @@ case $OS  in
         ;;
     *"x86"*)
         wget "https://github.com/albanjoseph/Signapse/releases/download/v2.0-beta/OpenCV-016a578-x86_64-dev.deb"
-        sudo apt install ../OpenCV-016a578-x86_64-dev.deb
+        sudo apt install ./OpenCV-016a578-x86_64-dev.deb
         ;;
           *)
         printf "Can't download built version, Building OpenCV from source ..."
