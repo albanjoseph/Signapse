@@ -1,19 +1,19 @@
 #include "SceneLinkScheduler.h"
 
 SceneLinkScheduler::SceneLinkScheduler(SceneLinker *toSchedule, float throughput_fps) {
-    sceneCallback = outputLink;
-    toSchedule->RegisterCallback(outputLink);
     targetThroughput_fps = throughput_fps;
 }
 
 void SceneLinkScheduler::RegisterCallback(SceneCallback *scb) {
-    outputLink->RegisterCallback(scb);
+    sceneCallback = scb;
 }
 
 void SceneLinkScheduler::NextScene(Scene s) {
-
-}
-
-void SceneLinkScheduler::NotifyFinished(){
-
+    if(toSchedule->Available()){
+        toSchedule->Enqueue(s);
+    }
+    else{
+        sceneCallback->NextScene(s);
+    }
+    
 }

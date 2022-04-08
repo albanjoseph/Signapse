@@ -1,13 +1,24 @@
 #ifndef SIGNAPSE_SCHEDULABLESCENELINKER_H
 #define SIGNAPSE_SCHEDULABLESCENELINKER_H
 
-#include "SceneLinkScheduler.h"
+#include <thread>
+
 #include "SceneLinker.h"
+#include "BlockingQueue.h"
+
+
 
 class SchedulableSceneLinker : public SceneLinker{
-    void RegisterScheduler(SceneLinkScheduler* sls);
+public:
+    void Start();
+    void Enqueue(Scene s);
+    bool Available();
 private:
-    SceneLinkScheduler* informWhenFinished;
+    void Process();
+    BlockingQueue<Scene> scheduleQueue;
+    bool isOn = true;
+    std::thread scheduleWorker;
+    
 };
 
 

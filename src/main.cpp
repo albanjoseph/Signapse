@@ -13,6 +13,7 @@
 #include "stdlib.h"
 #include "Gui.h"
 #include "SceneEditor.h"
+#include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
 
 using namespace cv;
@@ -25,8 +26,10 @@ int main(int argc, char* argv[]){
     //make pipeline components
     SceneEditorSettings sceneEditorSettings;
     SceneEditor sceneEditor(&sceneEditorSettings);
+    
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
+    
     Camera c;
     Gui gui;
     
@@ -34,11 +37,15 @@ int main(int argc, char* argv[]){
     c.RegisterCallback(&sceneEditor);
     sceneEditor.RegisterCallback(&cnn);
     cnn.RegisterCallback(&gui);
-    
-    //start application
-    gui.SetTask("A");
+    SceneLinkScheduler scheduler(&cnn, 15.0);
+    scheduler.RegisterCallback(&gui);
+    cnn.Start();
     c.start_thread();
+//
+//    //start application
+    gui.SetTask("A");
     gui.SetVisible(true);
     app.exec();
+    cin.get();
 }
 
