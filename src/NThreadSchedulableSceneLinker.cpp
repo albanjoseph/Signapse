@@ -10,6 +10,7 @@ NThreadSchedulableSceneLinker::NThreadSchedulableSceneLinker(int nrThreads) {
     for (int i = 0; i < nrThreads; i++){
         threads.push_back(std::thread(&NThreadSchedulableSceneLinker::Run, this));
     }
+    time(&start);
 }
 
 NThreadSchedulableSceneLinker::~NThreadSchedulableSceneLinker() {
@@ -20,11 +21,18 @@ NThreadSchedulableSceneLinker::~NThreadSchedulableSceneLinker() {
 }
 
 void NThreadSchedulableSceneLinker::NextScene(Scene scene) {
+    std::time_t current_time;
+    time(&current_time);
     if(scheduleQueue.Size() < threads.size()) {
+        nrAllocated++;
         scheduleQueue.Push(scene);
     }
     else{
         if(!sceneCallback) return;
         sceneCallback->NextScene(scene);
     }
+    float elapsed_seconds = current_time-start;
+    float throughput = (double)nrAllocated / elapsed_seconds;
+    printf("\r Throughput = %f", throughput);
+    
 }
