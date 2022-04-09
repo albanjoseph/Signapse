@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #include "iostream"
 #include "SignapseUtils.h"
 
@@ -35,6 +36,7 @@ public:
     }
 
     static int makeTask(){
+        srand( (unsigned)time( NULL ) );
         return rand() % 25;
     }
 

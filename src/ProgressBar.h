@@ -8,7 +8,7 @@
 class ProgressBar{
 public:
     ProgressBar();
-    int get_progress(Scene s, std::string task);
+    int get_progress(std::string s, std::string task);
     void reset_progress();
 protected:
     int threshold;

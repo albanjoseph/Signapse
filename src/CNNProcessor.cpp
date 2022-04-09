@@ -7,7 +7,6 @@ void CNNProcessor::LoadModel(std::string modelPath){
 CNNProcessor::CNNProcessor(CNNProcessorSettings* s) : NThreadSchedulableSceneLinker(1) {
     settings = s;
     LoadModel(settings->ModelPath);
-    
 }
 
 CNNProcessor::CNNProcessor(CNNProcessorSettings *s, int nrThreads) : NThreadSchedulableSceneLinker(nrThreads){
@@ -31,9 +30,6 @@ Scene CNNProcessor::ProcessScene(Scene scene){
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
-    //for(int i = 0; i < 100; i++){
-    //    net.forward();
-    //}
     cv::Point classIdPoint;
     double confidence;
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);

@@ -28,19 +28,19 @@ int main(int argc, char* argv[]){
     SceneEditor sceneEditor(&sceneEditorSettings);
     DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
-    CNNProcessor cnn(&cnnSettings, 4);
+    CNNProcessor cnn(&cnnSettings, 10);
     
     Camera camera;
     Gui gui;
     
     camera.RegisterCallback(&sceneEditor);
     sceneEditor.RegisterCallback(&doubleLink);
-    doubleLink.RegisterCallback(&gui);
-    doubleLink.RegisterSecondaryCallback(&cnn);
+    doubleLink.RegisterCallback(&cnn);
+    doubleLink.RegisterSecondaryCallback(&gui);
     cnn.RegisterCallback(&gui);
     
-    camera.Start();
     cnn.Start();
+    camera.Start();
 
     gui.SetTask("A");
     gui.SetVisible(true);

@@ -7,8 +7,8 @@ ProgressBar::ProgressBar(){
     threshold = 100;
 }
 
-int ProgressBar::get_progress(Scene s, std::string task){
-    if(task == s.result){
+int ProgressBar::get_progress(std::string result, std::string task){
+    if(task == result){
         count++;
     }
     int progress = 100*count/threshold;

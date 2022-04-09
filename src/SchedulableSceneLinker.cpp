@@ -29,8 +29,4 @@ void SchedulableSceneLinker::NextScene(Scene scene) {
     if(scheduleQueue.IsEmpty()) { //singly threaded for now
         scheduleQueue.Push(scene);
     }
-    else{
-        if(!sceneCallback) return;
-        sceneCallback->NextScene(scene);
-    }
 }

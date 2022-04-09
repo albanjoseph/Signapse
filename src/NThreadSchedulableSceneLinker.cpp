@@ -23,8 +23,4 @@ void NThreadSchedulableSceneLinker::NextScene(Scene scene) {
     if(scheduleQueue.Size() < threads.size()) {
         scheduleQueue.Push(scene);
     }
-    else{
-        if(!sceneCallback) return;
-        sceneCallback->NextScene(scene);
-    }
 }
