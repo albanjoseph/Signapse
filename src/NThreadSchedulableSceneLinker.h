@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 #include <thread>
+#include <chrono>
+#include <ctime>
 
 #include "SchedulableSceneLinker.h"
 
@@ -13,6 +15,8 @@ public:
     ~NThreadSchedulableSceneLinker();
 
 private:
+    std::time_t start;
+    int nrAllocated = 0;
     std::vector<std::thread> threads;
 };
 
