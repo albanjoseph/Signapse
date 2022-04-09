@@ -15,10 +15,11 @@ public:
     void Start();
     void Enqueue(Scene s);
     bool Available();
-private:
+protected:
     void Run();
     BlockingQueue<Scene> scheduleQueue;
     bool isOn = true;
+private:
     std::thread scheduleWorker;
     
 };

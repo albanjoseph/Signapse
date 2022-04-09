@@ -24,7 +24,7 @@ public:
     void Push(T toPush);
     T Pop();
     bool IsEmpty();
-
+    int Size();
 private:
     std::deque<T> internalQueue;
     std::mutex mutex;

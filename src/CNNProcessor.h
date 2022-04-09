@@ -6,7 +6,7 @@
 #include <chrono>
 #include <thread>
 
-#include "SchedulableSceneLinker.h"
+#include "NThreadSchedulableSceneLinker.h"
 #include "CNNProcessorSettings.h"
 #include "SignapseUtils.h"
 
@@ -15,11 +15,13 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor : public SchedulableSceneLinker{
+class CNNProcessor : public NThreadSchedulableSceneLinker{
 public:
     Scene ProcessScene(Scene s);
     
     CNNProcessor(CNNProcessorSettings* s);
+    
+    CNNProcessor(CNNProcessorSettings* s, int nrThreads);
     
     cv::Mat MakeBlob(Scene scene);
     

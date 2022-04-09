@@ -18,6 +18,11 @@ bool BlockingQueue<T>::IsEmpty(){
 }
 
 template <typename T>
+int BlockingQueue<T>::Size(){
+    return internalQueue.size();
+}
+
+template <typename T>
 void BlockingQueue<T>::Push(T toPush) {
     {
         std::unique_lock <std::mutex> lock(mutex);

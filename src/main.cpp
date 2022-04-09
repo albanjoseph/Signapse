@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     SceneEditor sceneEditor(&sceneEditorSettings);
     
     CNNProcessorSettings cnnSettings;
-    CNNProcessor cnn(&cnnSettings);
+    CNNProcessor cnn(&cnnSettings, 4);
     
     Camera camera;
     Gui gui;
