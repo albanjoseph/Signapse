@@ -43,8 +43,8 @@ int main(int argc, char* argv[]){
     camera.Start();
 
     gui.SetTask("A");
-    gui.SetVisible(true);
-    app.exec();
+    gui.SetVisible(false);
+    //app.exec();
     cin.get();
 }
 
