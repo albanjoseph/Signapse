@@ -15,15 +15,15 @@ Gui::Gui() {
 void Gui::NextScene(Scene next) {
     //flip frame
     if(next.result == "") {
-        cv::Mat temp = next.frame;
-        cv::flip(temp, next.frame, 1);
-        QImage imgIn = QImage((uchar *) next.frame.data, next.frame.cols, next.frame.rows, next.frame.step,
+        cv::Mat temp;
+        cv::flip(next.frame, temp, 1);
+        QImage imgIn = QImage((uchar *) temp.data, temp.cols, temp.rows, temp.step,
                               QImage::Format_RGB888);
         ui->label->setPixmap(QPixmap::fromImage(imgIn));
         ui->label->resize(ui->label->pixmap()->size());
     }
     else{
-        int progress = progress_bar.get_progress(next, currentTask);
+        int progress = progress_bar.get_progress(next.result, currentTask);
         emit progressChanged(progress);
     }
     

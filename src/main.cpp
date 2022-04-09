@@ -14,6 +14,7 @@
 #include "SceneEditor.h"
 #include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
+#include "DoubleSceneLinker.h"
 
 using namespace cv;
 using namespace std;
@@ -25,19 +26,21 @@ int main(int argc, char* argv[]){
     //make pipeline components
     SceneEditorSettings sceneEditorSettings;
     SceneEditor sceneEditor(&sceneEditorSettings);
-    
+    DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
-    CNNProcessor cnn(&cnnSettings, 4);
+    CNNProcessor cnn(&cnnSettings, 10);
     
     Camera camera;
     Gui gui;
     
     camera.RegisterCallback(&sceneEditor);
-    sceneEditor.RegisterCallback(&cnn);
+    sceneEditor.RegisterCallback(&doubleLink);
+    doubleLink.RegisterCallback(&cnn);
+    doubleLink.RegisterSecondaryCallback(&gui);
     cnn.RegisterCallback(&gui);
     
-    camera.Start();
     cnn.Start();
+    camera.Start();
 
     gui.SetTask("A");
     gui.SetVisible(true);
