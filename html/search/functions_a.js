@@ -11,5 +11,6 @@ var searchData=
   ['settask_8',['SetTask',['../classGui.html#ad52cabd9e25e09e480e106a873e6ac3b',1,'Gui']]],
   ['setupui_9',['setupUi',['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)']]],
   ['setvisible_10',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
-  ['start_11',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableSceneLinker.html#a62ef3771ad6109d77989eb631be199b6',1,'SchedulableSceneLinker::Start()']]]
+  ['size_11',['Size',['../classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279',1,'BlockingQueue']]],
+  ['start_12',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableSceneLinker.html#a62ef3771ad6109d77989eb631be199b6',1,'SchedulableSceneLinker::Start()']]]
 ];

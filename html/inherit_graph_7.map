@@ -7,5 +7,6 @@
 <area shape="rect" id="node6" href="$classSceneEditor.html" title=" " alt="" coords="343,56,435,83"/>
 <area shape="rect" id="node7" href="$classSceneLinkScheduler.html" title=" " alt="" coords="317,107,460,133"/>
 <area shape="rect" id="node8" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="305,157,472,184"/>
-<area shape="rect" id="node9" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="520,157,631,184"/>
+<area shape="rect" id="node9" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="520,157,736,184"/>
+<area shape="rect" id="node10" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="784,157,895,184"/>
 </map>
