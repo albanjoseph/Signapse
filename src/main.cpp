@@ -19,7 +19,7 @@ using namespace cv;
 using namespace std;
 
 int main(int argc, char* argv[]){
-    QApplication app(argc, argv);
+    //QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
     
     //make pipeline components
@@ -28,20 +28,23 @@ int main(int argc, char* argv[]){
     
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings, 2);
+    SceneLinker endpoint;
+    
     
     Camera camera;
-    Gui gui;
+    //Gui gui;
     
     camera.RegisterCallback(&sceneEditor);
     sceneEditor.RegisterCallback(&cnn);
-    cnn.RegisterCallback(&gui);
+    cnn.RegisterCallback(&endpoint);
+    //cnn.RegisterCallback(&gui);
     
     camera.Start();
     cnn.Start();
 
-    gui.SetTask("A");
-    gui.SetVisible(true);
-    app.exec();
+    //gui.SetTask("A");
+    //gui.SetVisible(true);
+    //app.exec();
     cin.get();
 }
 
