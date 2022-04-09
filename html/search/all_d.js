@@ -1,21 +1,13 @@
 var searchData=
 [
-  ['scene_0',['Scene',['../structScene.html',1,'']]],
-  ['scene_2eh_1',['scene.h',['../scene_8h.html',1,'']]],
-  ['scenecallback_2',['SceneCallback',['../classSceneCallback.html',1,'']]],
-  ['scenecallback_2eh_3',['SceneCallback.h',['../SceneCallback_8h.html',1,'']]],
-  ['scenequeue_4',['sceneQueue',['../classReel.html#ab654833c0e44abe46de6c4d963b84039',1,'Reel']]],
-  ['selfpush_5',['SelfPush',['../classCNNProcessor.html#aa10698a841357d37e427518cafce63a1',1,'CNNProcessor']]],
-  ['set_5ftask_6',['set_task',['../classGui.html#a6de184a1f69aabec6b810f918def1927',1,'Gui::set_task()'],['../classTaskmaster.html#a698980d21905a342fe5ab4a11b1a101a',1,'Taskmaster::set_task()']]],
-  ['setboundingbox_7',['setBoundingBox',['../classCamera.html#ac2eba1ee8bc4c3d3635d8d6fdbd7ebd9',1,'Camera']]],
-  ['seton_8',['setOn',['../classCamera.html#acc5cea7c91c22b813050379eb2c43ecc',1,'Camera']]],
-  ['settargetimage_9',['SetTargetImage',['../classGui.html#a0a36847ab7eaf678ed178b9735001c62',1,'Gui::SetTargetImage(int target)'],['../classGui.html#abd40935fbc464cd0f5e456d43115ec39',1,'Gui::SetTargetImage(std::string target)']]],
-  ['setupui_10',['setupUi',['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi(QMainWindow *MainWindow)']]],
-  ['setvisible_11',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
-  ['signapseutils_12',['SignapseUtils',['../classSignapseUtils.html',1,'']]],
-  ['signapseutils_2eh_13',['SignapseUtils.h',['../SignapseUtils_8h.html',1,'']]],
-  ['splitter_14',['splitter',['../classUi__MainWindow.html#abfba98fab6f5677d35fa69dd46ef8ffb',1,'Ui_MainWindow']]],
-  ['start_15',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera']]],
-  ['start_5fthread_16',['start_thread',['../classCamera.html#a2012959e6725f234584948c98954b0ff',1,'Camera::start_thread()'],['../classCNNProcessor.html#a81cc087d5a297a800b2c03d8912445d2',1,'CNNProcessor::start_thread()']]],
-  ['statusbar_17',['statusbar',['../classUi__MainWindow.html#a07519bbb9a350befd6feb4e84ef299fd',1,'Ui_MainWindow']]]
+  ['reel_0',['Reel',['../classReel.html',1,'Reel'],['../classReel.html#a3656fa67f060d2808dc07f337030b537',1,'Reel::Reel()']]],
+  ['reel_2ecpp_1',['reel.cpp',['../reel_8cpp.html',1,'']]],
+  ['reel_2eh_2',['reel.h',['../reel_8h.html',1,'']]],
+  ['reelnr_3',['reelNr',['../classReel.html#a1aaed8e350c44a2992cfca253ca01a76',1,'Reel']]],
+  ['regionofinterest_4',['regionOfInterest',['../structScene.html#aa8d52169e6edf1ae705de6ed533dd488',1,'Scene']]],
+  ['registercallback_5',['RegisterCallback',['../classSceneLinker.html#ae929ae66f3e7d1056ad91698d3f59e47',1,'SceneLinker::RegisterCallback()'],['../classSceneLinkScheduler.html#a043da9b96f0f6becf192a02d5521b7f1',1,'SceneLinkScheduler::RegisterCallback()']]],
+  ['relativeboundingbox_6',['relativeBoundingBox',['../structSceneEditorSettings.html#ada4098c9ed47ea5a32b8917674bdeec1',1,'SceneEditorSettings']]],
+  ['reset_5fprogress_7',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
+  ['result_8',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
+  ['retranslateui_9',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)']]]
 ];

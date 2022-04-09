@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_2',['MainWindow',['../classUi_1_1MainWindow.html',1,'Ui']]],
-  ['makeblob_3',['MakeBlob',['../classCNNProcessor.html#ab18af7b848a81fe7fcfa4c3b8d26a390',1,'CNNProcessor']]],
-  ['maketask_4',['makeTask',['../classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797',1,'SignapseUtils']]],
-  ['master_5ftask_5',['master_task',['../classTaskmaster.html#a7ab8ed96b9ebae34c588a6e624eafbaf',1,'Taskmaster']]],
-  ['menubar_6',['menubar',['../classUi__MainWindow.html#a734b1d3bb71c1b8e1ea01b7fa4344fce',1,'Ui_MainWindow']]],
-  ['menumenu_7',['menuMenu',['../classUi__MainWindow.html#a260179a86d33bea0c85c5a1424e40beb',1,'Ui_MainWindow']]],
-  ['model_5fpath_8',['MODEL_PATH',['../SignapseUtils_8h.html#aaaa253a12856f3bb8c463ce490dfcd4e',1,'SignapseUtils.h']]]
+  ['label_0',['label',['../classUi__MainWindow.html#a78edcdd12ea78c06d7e80f322c8882f9',1,'Ui_MainWindow']]],
+  ['label_5f2_1',['label_2',['../classUi__MainWindow.html#a2f5576686ce98bcc41bd1b1eca07e56a',1,'Ui_MainWindow']]],
+  ['label_5f3_2',['label_3',['../classUi__MainWindow.html#a253fbc5b44941384321b7c58cf96cc65',1,'Ui_MainWindow']]],
+  ['label_5f4_3',['label_4',['../classUi__MainWindow.html#a78c7e10730b43c6700cd7216911ed76a',1,'Ui_MainWindow']]],
+  ['listwidget_4',['listWidget',['../classUi__MainWindow.html#a89e0ee00764ef40b900ae0f190644540',1,'Ui_MainWindow']]],
+  ['lowerright_5',['LowerRight',['../structBoundingBox.html#a359023ce91805e8e3e3f3996b2703efb',1,'BoundingBox']]]
 ];

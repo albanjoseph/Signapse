@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['taskmaster_0',['Taskmaster',['../classTaskmaster.html',1,'']]]
+  ['ui_5fmainwindow_0',['Ui_MainWindow',['../classUi__MainWindow.html',1,'']]]
 ];
