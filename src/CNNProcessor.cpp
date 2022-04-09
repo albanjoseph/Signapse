@@ -1,4 +1,5 @@
 #include "CNNProcessor.h"
+#include <chrono>
 
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
@@ -31,6 +32,10 @@ Scene CNNProcessor::ProcessScene(Scene scene){
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
+    for(int i = 0; i < 100; i++) {
+        net.forward();
+    }
+    //std::this_thread::sleep_until(std::chrono::system_clock::now() + std::chrono::seconds(3));
     cv::Point classIdPoint;
     double confidence;
     minMaxLoc(prob.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
