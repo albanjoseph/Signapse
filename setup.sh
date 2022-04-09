@@ -1,4 +1,3 @@
-sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qt5-default libgtest-dev -y
 
 CV_VERSION="69357b1e88680658a07cffde7678a4d697469f03"
@@ -25,5 +24,16 @@ if [ ! -d "opencv_build" ]; then
   cd ..
 else
   printf " skipped\n"
+fi
+
+printf "Downloading cppTimer ..."
+if [ ! -d "cppTimer_src" ]; then
+  printf "\n"
+  git clone https://github.com/berndporr/cppTimer.git cppTimer_src || exit 1
+  cd cppTimer_src
+  cmake .
+  make
+  sudo make install
+  cd ..
 fi
 

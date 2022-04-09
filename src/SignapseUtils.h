@@ -1,15 +1,13 @@
-//
-// Created by ross on 28/03/2022.
-//
-
 #ifndef SIGNAPSE_SIGNAPSEUTILS_H
 #define SIGNAPSE_SIGNAPSEUTILS_H
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "iostream"
 #include "SignapseUtils.h"
 
 #define MODEL_PATH "models/asl-mobilenetv2.pb"
+
 
 class SignapseUtils {
 public:
@@ -46,4 +44,4 @@ public:
 };
 
 
-#endif //SIGNAPSE_SIGNAPSEUTILS_H
+#endif
