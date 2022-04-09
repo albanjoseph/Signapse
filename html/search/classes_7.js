@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reel_0',['Reel',['../classReel.html',1,'']]]
+  ['qwidget_0',['QWidget',['../classQWidget.html',1,'']]]
 ];

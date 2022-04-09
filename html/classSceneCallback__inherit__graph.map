@@ -1,11 +1,12 @@
 <map id="SceneCallback" name="SceneCallback">
-<area shape="rect" id="node1" title=" " alt="" coords="135,5,245,83"/>
-<area shape="rect" id="node2" href="$classGui.html" title=" " alt="" coords="43,131,177,296"/>
-<area shape="rect" id="node3" href="$classSceneLinker.html" title=" " alt="" coords="202,167,341,259"/>
+<area shape="rect" id="node1" title=" " alt="" coords="273,5,382,83"/>
+<area shape="rect" id="node2" href="$classGui.html" title=" " alt="" coords="180,131,315,296"/>
+<area shape="rect" id="node3" href="$classSceneLinker.html" title=" " alt="" coords="339,167,478,259"/>
 <area shape="rect" id="node4" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,366,92,487"/>
-<area shape="rect" id="node5" href="$classSceneEditor.html" title=" " alt="" coords="116,373,253,480"/>
-<area shape="rect" id="node6" href="$classSceneLinkScheduler.html" title=" " alt="" coords="277,373,439,480"/>
-<area shape="rect" id="node7" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="463,344,629,509"/>
-<area shape="rect" id="node8" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="429,557,663,679"/>
-<area shape="rect" id="node9" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="481,727,611,848"/>
+<area shape="rect" id="node5" href="$classDoubleSceneLinker.html" title=" " alt="" coords="115,381,315,473"/>
+<area shape="rect" id="node6" href="$classSceneEditor.html" title=" " alt="" coords="340,373,477,480"/>
+<area shape="rect" id="node7" href="$classSceneLinkScheduler.html" title=" " alt="" coords="501,373,663,480"/>
+<area shape="rect" id="node8" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="687,344,853,509"/>
+<area shape="rect" id="node9" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="653,557,887,679"/>
+<area shape="rect" id="node10" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="705,727,835,848"/>
 </map>

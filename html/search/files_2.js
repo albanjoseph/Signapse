@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gui_2ecpp_0',['Gui.cpp',['../Gui_8cpp.html',1,'']]],
-  ['gui_2eh_1',['Gui.h',['../Gui_8h.html',1,'']]]
+  ['doublescenelinker_2ecpp_0',['DoubleSceneLinker.cpp',['../DoubleSceneLinker_8cpp.html',1,'']]],
+  ['doublescenelinker_2eh_1',['DoubleSceneLinker.h',['../DoubleSceneLinker_8h.html',1,'']]]
 ];

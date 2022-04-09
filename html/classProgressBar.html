@@ -87,8 +87,8 @@ Collaboration diagram for ProgressBar:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aabdebc9823af01c7567e7546d9f0016f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#aabdebc9823af01c7567e7546d9f0016f">ProgressBar</a> ()</td></tr>
 <tr class="separator:aabdebc9823af01c7567e7546d9f0016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab37f4b20a4295f36754badb81d17f0f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#ab37f4b20a4295f36754badb81d17f0f7">get_progress</a> (<a class="el" href="structScene.html">Scene</a> s, std::string task)</td></tr>
-<tr class="separator:ab37f4b20a4295f36754badb81d17f0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de51951eee94c59f04e57ef5ea1f840"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">get_progress</a> (std::string s, std::string task)</td></tr>
+<tr class="separator:a5de51951eee94c59f04e57ef5ea1f840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127eeaa90ae4362ad2fed359be6c339c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a> ()</td></tr>
 <tr class="separator:a127eeaa90ae4362ad2fed359be6c339c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -129,8 +129,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab37f4b20a4295f36754badb81d17f0f7" name="ab37f4b20a4295f36754badb81d17f0f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab37f4b20a4295f36754badb81d17f0f7">&#9670;&nbsp;</a></span>get_progress()</h2>
+<a id="a5de51951eee94c59f04e57ef5ea1f840" name="a5de51951eee94c59f04e57ef5ea1f840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de51951eee94c59f04e57ef5ea1f840">&#9670;&nbsp;</a></span>get_progress()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +138,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">int ProgressBar::get_progress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structScene.html">Scene</a>&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
@@ -156,14 +156,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00010">10</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                    {</div>
-<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">if</span>(task == s.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a>){</div>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                             {</div>
+<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">if</span>(task == result){</div>
 <div class="line"><span class="lineno">   12</span>        <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>++;</div>
 <div class="line"><span class="lineno">   13</span>    }</div>
 <div class="line"><span class="lineno">   14</span>    <span class="keywordtype">int</span> progress = 100*<a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>/<a class="code hl_variable" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a>;</div>
 <div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> progress;</div>
 <div class="line"><span class="lineno">   16</span>}</div>
-<div class="ttc" id="astructScene_html_a24677f9974c9db6db4b88592531b6440"><div class="ttname"><a href="structScene.html#a24677f9974c9db6db4b88592531b6440">Scene::result</a></div><div class="ttdeci">std::string result</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00052">scene.h:52</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

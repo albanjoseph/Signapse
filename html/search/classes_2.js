@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_0',['Gui',['../classGui.html',1,'']]]
+  ['doublescenelinker_0',['DoubleSceneLinker',['../classDoubleSceneLinker.html',1,'']]]
 ];
