@@ -14,13 +14,19 @@ Gui::Gui() {
 
 void Gui::NextScene(Scene next) {
     //flip frame
-    cv::Mat temp = next.frame;
-    cv::flip(temp, next.frame, 1);
-    QImage imgIn= QImage((uchar*) next.frame.data, next.frame.cols, next.frame.rows, next.frame.step, QImage::Format_RGB888);
-    ui->label->setPixmap(QPixmap::fromImage(imgIn));
-    ui->label->resize(ui->label->pixmap()->size());
-    int progress = progress_bar.get_progress(next, currentTask);
-    emit progressChanged(progress);
+    if(next.result == "") {
+        cv::Mat temp = next.frame;
+        cv::flip(temp, next.frame, 1);
+        QImage imgIn = QImage((uchar *) next.frame.data, next.frame.cols, next.frame.rows, next.frame.step,
+                              QImage::Format_RGB888);
+        ui->label->setPixmap(QPixmap::fromImage(imgIn));
+        ui->label->resize(ui->label->pixmap()->size());
+    }
+    else{
+        int progress = progress_bar.get_progress(next, currentTask);
+        emit progressChanged(progress);
+    }
+    
 }
 
 void Gui::SetVisible(bool visible) {
