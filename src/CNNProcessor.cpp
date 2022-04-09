@@ -1,53 +1,23 @@
 #include "CNNProcessor.h"
-#include <chrono>
-#include <thread>
-#include "scene.h"
-#include "SignapseUtils.h"
-
 
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
-void CNNProcessor::threadLoop() {
-    return;
-}
-
-
-
-void CNNProcessor::start_thread(){
-    cnnProcessorThread = std::thread(&CNNProcessor::threadLoop, this);
-}
-
-CNNProcessor::CNNProcessor(Reel* setReadFrom, std::string modelPath){
-    readFrom = setReadFrom;
-    LoadModel(modelPath);
-}
-
-CNNProcessor::CNNProcessor(std::string modelPath) {
-    LoadModel(modelPath);
-}
-
-void CNNProcessor::Loop(){
-    while(true){
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        SelfPush();
-    }
+CNNProcessor::CNNProcessor(CNNProcessorSettings* s) {
+    settings = s;
+    LoadModel(settings->ModelPath);
 }
 
 cv::Mat CNNProcessor::MakeBlob(Scene scene){
-    //make blob
-    int x  = scene.regionOfInterest[0]; int y = scene.regionOfInterest[1];
-    int width = scene.regionOfInterest[2] - scene.regionOfInterest[0];
-    int height = scene.regionOfInterest[3] - scene.regionOfInterest[1];
-
+    int x  = scene.regionOfInterest.UpperLeft.x; int y = scene.regionOfInterest.UpperLeft.y;
+    int width = scene.regionOfInterest.LowerRight.x - x;
+    int height = scene.regionOfInterest.LowerRight.y - y;
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
-    cv::Mat rgb;
-    cv::cvtColor(roi, rgb, cv::COLOR_BGR2RGB);
-    cv::Mat smallRGB;
-    cv::resize(rgb, smallRGB, cv::Size(224,224));
+    cv::Mat small;
+    cv::resize(roi, small, cv::Size(settings->InputDim_x,settings->InputDim_y));
     cv::Mat blob;
-    cv::dnn::blobFromImage(smallRGB, blob, (1.0 / 255.0));
+    cv::dnn::blobFromImage(small, blob, (1.0 / 255.0));
     return blob;
 }
 
@@ -62,17 +32,12 @@ Scene CNNProcessor::ProcessScene(Scene scene){
     scene.result = SignapseUtils::getLetterFromDigit(classId);
     return scene;
 }
-void CNNProcessor::nextScene(Scene next) {
-    Scene updatedFrame = ProcessScene(next);
-    if(!sceneCallback) return;
-    sceneCallback->nextScene(updatedFrame);
-}
-void CNNProcessor::registerCallback(SceneCallback* scb){
-    sceneCallback = scb;
-}
 
-void CNNProcessor::SelfPush() {
-    Scene frame = readFrom->Pop();
-    sceneQueue.Push(frame);
-}
+//void CNNProcessor::NextScene(Scene next) {
+//    Scene updatedFrame = ProcessScene(next);
+//    if(!sceneCallback) return;
+//    sceneCallback->NextScene(updatedFrame);
+//}
+
+
 
