@@ -2,6 +2,8 @@
 #define SIGNAPSE_SCHEDULABLESCENELINKER_H
 
 #include <thread>
+#include <chrono>
+#include <ctime>
 
 #include "SceneLinker.h"
 #include "BlockingQueue.h"

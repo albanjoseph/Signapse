@@ -31,8 +31,9 @@ protected:
     void threadLoop();
     
     void LoadModel(std::string modelPath);
-private:
     cv::dnn::Net net;
+
+private:
     std::thread cnnProcessorThread;
 };
 

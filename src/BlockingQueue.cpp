@@ -25,7 +25,6 @@ int BlockingQueue<T>::Size(){
 template <typename T>
 void BlockingQueue<T>::Push(T toPush) {
     {
-        std::unique_lock <std::mutex> lock(mutex);
         internalQueue.push_front(toPush);
     }
     condition.notify_all();

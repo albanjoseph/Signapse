@@ -16,6 +16,7 @@
 #include "SignapseUtils.h"
 #include "DoubleSceneLinker.h"
 #include "NThreadedCNNProcessor.h"
+#include "BatchCNNProcessor.h"
 
 using namespace cv;
 using namespace std;
@@ -29,7 +30,8 @@ int main(int argc, char* argv[]){
     SceneEditor sceneEditor(&sceneEditorSettings);
     DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
-    NThreadedCNNProcessor cnn(&cnnSettings, 40);
+    BatchCNNProcessor cnn(&cnnSettings, 1);
+    //NThreadedCNNProcessor cnn(&cnnSettings, 4);
     
     Camera camera;
     Gui gui;

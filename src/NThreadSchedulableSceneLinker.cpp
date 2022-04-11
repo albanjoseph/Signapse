@@ -23,7 +23,7 @@ NThreadSchedulableSceneLinker::~NThreadSchedulableSceneLinker() {
 void NThreadSchedulableSceneLinker::NextScene(Scene scene) {
     std::time_t current_time;
     time(&current_time);
-    if(scheduleQueue.Size() < threads.size()) {
+    if(scheduleQueue.Size() < threads.size() * 2) {
         nrAllocated++;
         scheduleQueue.Push(scene);
     }
