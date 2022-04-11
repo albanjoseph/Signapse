@@ -3,6 +3,7 @@
 
 NThreadedCNNProcessor::NThreadedCNNProcessor(CNNProcessorSettings* settings, int nrThreads) : CNNProcessor(settings),
                                                                                              NThreadSchedulableSceneLinker(nrThreads) {
+    LoadModel(settings->ModelPath);
 }
 
 void NThreadedCNNProcessor::LoadModel(std::string filename) {
