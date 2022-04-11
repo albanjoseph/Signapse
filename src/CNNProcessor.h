@@ -1,3 +1,6 @@
+#ifndef SIGNAPSE_CNNPROCESSOR_H
+#define SIGNAPSE_CNNPROCESSOR_H
+
 #include <opencv2/dnn.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -6,7 +9,7 @@
 #include <chrono>
 #include <thread>
 
-#include "NThreadSchedulableSceneLinker.h"
+#include "SchedulableSceneLinker.h"
 #include "CNNProcessorSettings.h"
 #include "SignapseUtils.h"
 
@@ -15,23 +18,22 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor : public NThreadSchedulableSceneLinker{
+class CNNProcessor : virtual public SchedulableSceneLinker{
 public:
     Scene ProcessScene(Scene s);
     
     CNNProcessor(CNNProcessorSettings* s);
     
-    CNNProcessor(CNNProcessorSettings* s, int nrThreads);
-    
     cv::Mat MakeBlob(Scene scene);
-    
-private:
+
+protected:
+    CNNProcessorSettings* settings;
     void threadLoop();
     
     void LoadModel(std::string modelPath);
-    
+private:
     cv::dnn::Net net;
-    CNNProcessorSettings* settings;
     std::thread cnnProcessorThread;
 };
 
+#endif

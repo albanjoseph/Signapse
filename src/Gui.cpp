@@ -36,6 +36,7 @@ void Gui::SetVisible(bool visible) {
 void Gui::SetTargetImage(int target) {
     std::string letter = SignapseUtils::getLetterFromDigit(target);
     SetTargetImage(letter);
+    progressChanged(0);
 }
 
 void Gui::SetTargetImage(std::string letter) {

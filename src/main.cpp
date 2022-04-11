@@ -15,6 +15,7 @@
 #include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
 #include "DoubleSceneLinker.h"
+#include "NThreadedCNNProcessor.h"
 
 using namespace cv;
 using namespace std;
@@ -28,7 +29,7 @@ int main(int argc, char* argv[]){
     SceneEditor sceneEditor(&sceneEditorSettings);
     DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
-    CNNProcessor cnn(&cnnSettings, 10);
+    NThreadedCNNProcessor cnn(&cnnSettings, 40);
     
     Camera camera;
     Gui gui;
@@ -43,8 +44,8 @@ int main(int argc, char* argv[]){
     camera.Start();
 
     gui.SetTask("A");
-    gui.SetVisible(false);
-    //app.exec();
+    gui.SetVisible(true);
+    app.exec();
     cin.get();
 }
 

@@ -20,7 +20,6 @@ NThreadSchedulableSceneLinker::~NThreadSchedulableSceneLinker() {
     }
 }
 
-
 void NThreadSchedulableSceneLinker::NextScene(Scene scene) {
     std::time_t current_time;
     time(&current_time);
