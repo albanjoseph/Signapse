@@ -8,13 +8,13 @@
 
 #include "SchedulableSceneLinker.h"
 
-class NThreadSchedulableSceneLinker : public SchedulableSceneLinker {
+class NThreadSchedulableSceneLinker : virtual public SchedulableSceneLinker {
 public:
     NThreadSchedulableSceneLinker(int nrThreads);
     void NextScene(Scene scene);
     ~NThreadSchedulableSceneLinker();
 
-private:
+protected:
     std::time_t start;
     int nrAllocated = 0;
     std::vector<std::thread> threads;
