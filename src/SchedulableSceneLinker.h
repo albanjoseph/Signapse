@@ -21,7 +21,6 @@ protected:
     void Run();
     BlockingQueue<Scene> scheduleQueue;
     bool isOn = true;
-private:
     std::thread scheduleWorker;
     
 };

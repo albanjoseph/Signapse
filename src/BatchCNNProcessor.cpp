@@ -3,6 +3,7 @@
 BatchCNNProcessor::BatchCNNProcessor(CNNProcessorSettings* settings, int batchSz) : CNNProcessor(settings){
     batchSize = batchSz;
     time(&start);
+    isOn = true;
     
 }
 
@@ -33,6 +34,10 @@ void BatchCNNProcessor::NextScene(Scene scene) {
     float throughput = (double)nrAllocated / elapsed_seconds;
     printf("\r Throughput = %f", throughput);
     
+}
+
+void BatchCNNProcessor::Start(){
+        scheduleWorker = std::thread(&BatchCNNProcessor::Run, this);
 }
 
 std::vector<Scene> BatchCNNProcessor::ProcessScenes(std::vector<Scene> scenes){

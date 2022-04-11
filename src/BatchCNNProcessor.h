@@ -13,6 +13,8 @@ public:
     std::string PostProcess(cv::Mat out);
     void NextScene(Scene s);
     void Run();
+    void Start();
+    
 private:
     int batchSize = 0;
     std::time_t start;

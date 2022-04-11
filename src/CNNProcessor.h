@@ -18,7 +18,7 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor : virtual public SchedulableSceneLinker{
+class CNNProcessor : public SchedulableSceneLinker{
 public:
     Scene ProcessScene(Scene s);
     
