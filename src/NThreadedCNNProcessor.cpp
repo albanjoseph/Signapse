@@ -2,7 +2,7 @@
 #include "BlockingQueue.cpp"
 
 NThreadedCNNProcessor::NThreadedCNNProcessor(CNNProcessorSettings* settings, int nrThreads) : CNNProcessor(settings),
-                                                                                             NThreadSchedulableSceneLinker(nrThreads) {
+                                                                                              MultiThreadedSchedulableLink(nrThreads) {
     LoadModel(settings->ModelPath);
 }
 

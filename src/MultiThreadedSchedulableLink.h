@@ -8,11 +8,11 @@
 
 #include "SchedulableLink.h"
 
-class NThreadSchedulableSceneLinker : virtual public SchedulableLink {
+class MultiThreadedSchedulableLink : virtual public SchedulableLink {
 public:
-    NThreadSchedulableSceneLinker(int nrThreads);
+    MultiThreadedSchedulableLink(int nrThreads);
     void NextScene(Scene scene);
-    ~NThreadSchedulableSceneLinker();
+    ~MultiThreadedSchedulableLink();
 
 protected:
     std::time_t start;
