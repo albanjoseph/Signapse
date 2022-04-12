@@ -30,8 +30,7 @@ int main(int argc, char* argv[]){
     SceneEditor sceneEditor(&sceneEditorSettings);
     DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
-    BatchCNNProcessor cnn(&cnnSettings, 4);
-    //NThreadedCNNProcessor cnn(&cnnSettings, 4);
+    CNNProcessor cnn(&cnnSettings);
     
     Camera camera;
     Gui gui;
