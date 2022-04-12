@@ -6,7 +6,7 @@ message("Including OpenCV build at directory: " ${OpenCV_INCLUDE_DIRS})
 
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Signapse main.cpp reel.cpp camera.cpp taskmaster.cpp CNNProcessor.cpp SceneLinker.cpp SceneLinkScheduler.cpp DoubleSceneLinker.cpp NThreadedCNNProcessor.cpp SchedulableSceneLinker.cpp NThreadSchedulableSceneLinker.cpp BatchCNNProcessor.cpp SceneEditor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp )
+add_executable(Signapse main.cpp reel.cpp camera.cpp taskmaster.cpp CNNProcessor.cpp SceneLinker.cpp SceneLinkScheduler.cpp DoubleSceneLinker.cpp NThreadedCNNProcessor.cpp SchedulableSceneLinker.cpp NThreadSchedulableSceneLinker.cpp BatchCNNProcessor.cpp PreProcessor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp )
 target_link_libraries(Signapse ${OpenCV_LIBS} Qt5::Widgets)
 
 
@@ -19,7 +19,7 @@ target_link_libraries(camera ${OpenCV_LIBS} reel)
 add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h NThreadSchedulableSceneLinker.cpp SchedulableSceneLinker.cpp SceneLinker.cpp)
 target_link_libraries(CNNProcessor ${OpenCV_LIBS})
 
-add_library(SceneEditor SceneEditor.cpp SceneEditor.h)
+add_library(PreProcessor PreProcessor.cpp PreProcessor.h)
 target_link_libraries(SceneEditor ${OpenCV_LIBS})
 
 add_library(Gui Gui.cpp Gui.h)
