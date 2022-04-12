@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <queue>
 
-#include "reel.h"
 #include "Camera.h"
 #include "CNNProcessor.h"
 #include "stdlib.h"
