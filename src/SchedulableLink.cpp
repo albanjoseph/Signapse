@@ -2,6 +2,11 @@
 #include "BlockingQueue.cpp"
 
 
+SchedulableLink::~SchedulableLink() {
+    isOn = false;
+    scheduleWorker.join();
+}
+
 void SchedulableLink::Run(){
     //waits for scenes to appear on the scheduleQueue,
     while(isOn){
@@ -29,5 +34,5 @@ void SchedulableLink::NextScene(Scene scene) {
     if(scheduleQueue.IsEmpty()) { //singly threaded for now
         scheduleQueue.Push(scene);
     }
-    
 }
+

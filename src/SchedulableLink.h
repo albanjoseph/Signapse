@@ -17,6 +17,7 @@ public:
     void Start();
     void Enqueue(Scene s);
     bool Available();
+    SchedulableLink::~SchedulableLink();
 protected:
     void Run();
     BlockingQueue<Scene> scheduleQueue;

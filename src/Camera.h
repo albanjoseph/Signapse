@@ -19,6 +19,7 @@ public:
         Turns the camera object "ON" and configures the video capture.
     */
     Camera();
+    ~Camera();
     bool getOn();
 
     void setOn(bool state);

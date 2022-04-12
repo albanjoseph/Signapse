@@ -36,3 +36,8 @@ void Camera::Start(){
 bool Camera::getOn() {
     return isOn;
 }
+
+Camera::~Camera() {
+    isOn=false;
+    cameraThread.join();
+}
