@@ -2,7 +2,7 @@
 #define SIGNAPSE_GUI_H
 
 #include <QCoreApplication>
-#include "qtGenGui.h"
+#include "QtGeneratedGui.h"
 #include "stdlib.h"
 
 #include <opencv2/core.hpp>
