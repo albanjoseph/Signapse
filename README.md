@@ -52,7 +52,7 @@
 <a href="https://www.facebook.com/Signapse-125793226671815" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="signapse" height="150" width="100" /></a> ·
 <!-- <a href="https://instagram.com/insta" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="insta" height="30" width="40" /></a> -->
 <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="youtube" height="150" width="100"  /></a>·
-<a href="https://www.tiktok.com/@signapse.glasgow" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="tiktok" height="150" width="150" /></a>
+<a href="https://www.tiktok.com/GU_signapse" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="tiktok" height="150" width="150" /></a>
 </p>
 
 # Technologies
