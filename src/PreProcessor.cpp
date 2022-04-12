@@ -15,7 +15,7 @@ void PreProcessor::NextScene(Scene scene){
    sceneCallback->NextScene(out);
 }
 
-PreProcessor::SceneEditor(SceneEditorSettings* s) {
+PreProcessor::PreProcessor(SceneEditorSettings* s) {
     settings = s;
 }
 

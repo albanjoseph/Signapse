@@ -7,11 +7,11 @@
 #include <queue>
 
 #include "reel.h"
-#include "camera.h"
+#include "Camera.h"
 #include "CNNProcessor.h"
 #include "stdlib.h"
 #include "Gui.h"
-#include "SceneEditor.h"
+#include "PreProcessor.h"
 #include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
 #include "DoubleSceneLinker.h"
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     
     //make pipeline components
     SceneEditorSettings sceneEditorSettings;
-    SceneEditor sceneEditor(&sceneEditorSettings);
+    PreProcessor preProcessor(&sceneEditorSettings);
     DoubleSceneLinker doubleLink;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
@@ -35,8 +35,8 @@ int main(int argc, char* argv[]){
     Camera camera;
     Gui gui;
     
-    camera.RegisterCallback(&sceneEditor);
-    sceneEditor.RegisterCallback(&doubleLink);
+    camera.RegisterCallback(&preProcessor);
+    preProcessor.RegisterCallback(&doubleLink);
     doubleLink.RegisterCallback(&cnn);
     doubleLink.RegisterSecondaryCallback(&gui);
     cnn.RegisterCallback(&gui);

@@ -14,13 +14,13 @@ add_library(reel reel.cpp reel.h)
 target_link_libraries(reel ${OpenCV_LIBS})
 
 add_library(Camera Camera.cpp Camera.h)
-target_link_libraries(camera ${OpenCV_LIBS} reel)
+target_link_libraries(Camera ${OpenCV_LIBS} reel)
 
 add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h NThreadSchedulableSceneLinker.cpp SchedulableSceneLinker.cpp SceneLinker.cpp)
 target_link_libraries(CNNProcessor ${OpenCV_LIBS})
 
 add_library(PreProcessor PreProcessor.cpp PreProcessor.h)
-target_link_libraries(SceneEditor ${OpenCV_LIBS})
+target_link_libraries(PreProcessor ${OpenCV_LIBS})
 
 add_library(Gui Gui.cpp Gui.h)
 target_link_libraries(Gui ${OpenCV_LIBS} Qt5::Widgets)
