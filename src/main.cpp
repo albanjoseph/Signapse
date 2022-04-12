@@ -14,7 +14,7 @@
 #include "PreProcessor.h"
 #include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
-#include "DoubleSceneLinker.h"
+#include "LinkSplitter.h"
 #include "NThreadedCNNProcessor.h"
 #include "BatchCNNProcessor.h"
 
@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
     //make pipeline components
     SceneEditorSettings sceneEditorSettings;
     PreProcessor preProcessor(&sceneEditorSettings);
-    DoubleSceneLinker doubleLink;
+    LinkSplitter linkSplitter;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
     
@@ -36,9 +36,9 @@ int main(int argc, char* argv[]){
     Gui gui;
     
     camera.RegisterCallback(&preProcessor);
-    preProcessor.RegisterCallback(&doubleLink);
-    doubleLink.RegisterCallback(&cnn);
-    doubleLink.RegisterSecondaryCallback(&gui);
+    preProcessor.RegisterCallback(&linkSplitter);
+    linkSplitter.RegisterCallback(&cnn);
+    linkSplitter.RegisterSecondaryCallback(&gui);
     cnn.RegisterCallback(&gui);
     
     cnn.Start();

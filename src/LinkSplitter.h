@@ -3,7 +3,7 @@
 
 #include "PipelineLink.h"
 
-class DoubleSceneLinker : public PipelineLink{
+class LinkSplitter : public PipelineLink{
 public:
     void NextScene(Scene s);
     void RegisterSecondaryCallback(SceneCallback* scb);

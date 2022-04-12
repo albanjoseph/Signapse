@@ -2,14 +2,14 @@
 // Created by ross on 09/04/2022.
 //
 
-#include "DoubleSceneLinker.h"
+#include "LinkSplitter.h"
 
 
-void DoubleSceneLinker::NextScene(Scene s) {
+void LinkSplitter::NextScene(Scene s) {
     if(sceneCallback) sceneCallback->NextScene(s);
     if(secondarySceneCallback) secondarySceneCallback->NextScene(s);
 }
 
-void DoubleSceneLinker::RegisterSecondaryCallback(SceneCallback *scb) {
+void LinkSplitter::RegisterSecondaryCallback(SceneCallback *scb) {
     secondarySceneCallback = scb;
 }
