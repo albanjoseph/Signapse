@@ -1,9 +1,13 @@
 <map id="src/SignapseUtils.h" name="src/SignapseUtils.h">
-<area shape="rect" id="node1" title=" " alt="" coords="119,6,253,33"/>
-<area shape="rect" id="node2" href="$CNNProcessor_8h.html" title=" " alt="" coords="44,156,187,182"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="210,230,306,257"/>
-<area shape="rect" id="node5" href="$CNNProcessorSettings_8h.html" title=" " alt="" coords="24,81,215,108"/>
-<area shape="rect" id="node6" href="$Gui_8h.html" title=" " alt="" coords="290,81,365,108"/>
-<area shape="rect" id="node3" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="29,230,185,257"/>
-<area shape="rect" id="node7" href="$Gui_8cpp.html" title=" " alt="" coords="341,156,429,182"/>
+<area shape="rect" id="node1" title=" " alt="" coords="561,6,696,33"/>
+<area shape="rect" id="node2" href="$CNNProcessor_8h.html" title=" " alt="" coords="407,156,549,182"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="597,305,693,332"/>
+<area shape="rect" id="node9" href="$CNNProcessorSettings_8h.html" title=" " alt="" coords="467,81,657,108"/>
+<area shape="rect" id="node10" href="$Gui_8h.html" title=" " alt="" coords="733,81,807,108"/>
+<area shape="rect" id="node3" href="$BatchCNNProcessor_8h.html" title=" " alt="" coords="19,230,195,257"/>
+<area shape="rect" id="node6" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="451,230,607,257"/>
+<area shape="rect" id="node7" href="$NThreadedCNNProcessor_8h.html" title=" " alt="" coords="220,230,427,257"/>
+<area shape="rect" id="node4" href="$BatchCNNProcessor_8cpp.html" title=" " alt="" coords="5,305,196,332"/>
+<area shape="rect" id="node8" href="$NThreadedCNNProcessor_8cpp.html" title=" " alt="" coords="220,305,440,332"/>
+<area shape="rect" id="node11" href="$Gui_8cpp.html" title=" " alt="" coords="783,156,871,182"/>
 </map>

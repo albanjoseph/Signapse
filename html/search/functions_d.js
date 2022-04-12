@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7enthreadschedulablescenelinker_0',['~NThreadSchedulableSceneLinker',['../classNThreadSchedulableSceneLinker.html#ad2f013b2df7674bb711e7837f9cf1cd8',1,'NThreadSchedulableSceneLinker']]]
+  ['welcomemessage_0',['welcomeMessage',['../classSignapseUtils.html#a2aed985f49d9b7e870cd8933b5b947d4',1,'SignapseUtils']]]
 ];

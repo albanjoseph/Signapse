@@ -11,5 +11,5 @@ var searchData=
   ['reset_5fprogress_8',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
   ['result_9',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
   ['retranslateui_10',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)']]],
-  ['run_11',['Run',['../classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb',1,'SchedulableSceneLinker']]]
+  ['run_11',['Run',['../classBatchCNNProcessor.html#ad32b30b5a112b54fc8bdb45c505d4107',1,'BatchCNNProcessor::Run()'],['../classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb',1,'SchedulableSceneLinker::Run()']]]
 ];

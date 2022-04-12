@@ -170,13 +170,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00047">47</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                       {</div>
-<div class="line"><span class="lineno">   48</span>    std::string new_task = <a class="code hl_function" href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a>(<a class="code hl_function" href="classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797">SignapseUtils::makeTask</a>());</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(new_task);</div>
-<div class="line"><span class="lineno">   50</span>    currentTask = new_task;</div>
-<div class="line"><span class="lineno">   51</span>    progress_bar.<a class="code hl_function" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a>();</div>
-<div class="line"><span class="lineno">   52</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00048">48</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                       {</div>
+<div class="line"><span class="lineno">   49</span>    std::string new_task = <a class="code hl_function" href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a>(<a class="code hl_function" href="classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797">SignapseUtils::makeTask</a>());</div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(new_task);</div>
+<div class="line"><span class="lineno">   51</span>    currentTask = new_task;</div>
+<div class="line"><span class="lineno">   52</span>    progress_bar.<a class="code hl_function" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a>();</div>
+<div class="line"><span class="lineno">   53</span>}</div>
 <div class="ttc" id="aclassProgressBar_html_a127eeaa90ae4362ad2fed359be6c339c"><div class="ttname"><a href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">ProgressBar::reset_progress</a></div><div class="ttdeci">void reset_progress()</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8cpp_source.html#l00018">ProgressBar.cpp:18</a></div></div>
 <div class="ttc" id="aclassSignapseUtils_html_a1a957a29563a73836631ea7dde6ea65d"><div class="ttname"><a href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a></div><div class="ttdeci">static std::string getLetterFromDigit(int digit)</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00015">SignapseUtils.h:15</a></div></div>
 <div class="ttc" id="aclassSignapseUtils_html_ac78322126e22592d4d0fb4597c445797"><div class="ttname"><a href="classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797">SignapseUtils::makeTask</a></div><div class="ttdeci">static int makeTask()</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00038">SignapseUtils.h:38</a></div></div>
@@ -280,7 +280,8 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>                                   {</div>
 <div class="line"><span class="lineno">   37</span>    std::string letter = <a class="code hl_function" href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a>(target);</div>
 <div class="line"><span class="lineno">   38</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(letter);</div>
-<div class="line"><span class="lineno">   39</span>}</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(0);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,13 +301,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00041">41</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                         {</div>
-<div class="line"><span class="lineno">   42</span>    std::string impath = <a class="code hl_define" href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a> + letter + <span class="stringliteral">&quot;_test.jpg&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>    cv::Mat img = cv::imread(impath);</div>
-<div class="line"><span class="lineno">   44</span>    setDemoImage(img);</div>
-<div class="line"><span class="lineno">   45</span>    setTaskText(letter);</div>
-<div class="line"><span class="lineno">   46</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00042">42</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                         {</div>
+<div class="line"><span class="lineno">   43</span>    std::string impath = <a class="code hl_define" href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a> + letter + <span class="stringliteral">&quot;_test.jpg&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>    cv::Mat img = cv::imread(impath);</div>
+<div class="line"><span class="lineno">   45</span>    setDemoImage(img);</div>
+<div class="line"><span class="lineno">   46</span>    setTaskText(letter);</div>
+<div class="line"><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aGui_8h_html_a22367a48f379f6a4837b282aa6155ddc"><div class="ttname"><a href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a></div><div class="ttdeci">#define testFolder</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8h_source.html#l00016">Gui.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -327,10 +328,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00071">71</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                  {</div>
-<div class="line"><span class="lineno">   72</span>    currentTask = newTask;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00072">72</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                  {</div>
+<div class="line"><span class="lineno">   73</span>    currentTask = newTask;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

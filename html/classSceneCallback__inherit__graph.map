@@ -2,11 +2,13 @@
 <area shape="rect" id="node1" title=" " alt="" coords="273,5,382,83"/>
 <area shape="rect" id="node2" href="$classGui.html" title=" " alt="" coords="180,131,315,296"/>
 <area shape="rect" id="node3" href="$classSceneLinker.html" title=" " alt="" coords="339,167,478,259"/>
-<area shape="rect" id="node4" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,366,92,487"/>
-<area shape="rect" id="node5" href="$classDoubleSceneLinker.html" title=" " alt="" coords="115,381,315,473"/>
-<area shape="rect" id="node6" href="$classSceneEditor.html" title=" " alt="" coords="340,373,477,480"/>
-<area shape="rect" id="node7" href="$classSceneLinkScheduler.html" title=" " alt="" coords="501,373,663,480"/>
-<area shape="rect" id="node8" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="687,344,853,509"/>
-<area shape="rect" id="node9" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="653,557,887,679"/>
-<area shape="rect" id="node10" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="705,727,835,848"/>
+<area shape="rect" id="node4" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,373,92,495"/>
+<area shape="rect" id="node5" href="$classDoubleSceneLinker.html" title=" " alt="" coords="115,388,315,480"/>
+<area shape="rect" id="node6" href="$classSceneEditor.html" title=" " alt="" coords="340,381,477,487"/>
+<area shape="rect" id="node7" href="$classSceneLinkScheduler.html" title=" " alt="" coords="501,381,663,487"/>
+<area shape="rect" id="node8" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="687,344,853,524"/>
+<area shape="rect" id="node9" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="603,572,732,723"/>
+<area shape="rect" id="node12" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="755,572,990,723"/>
+<area shape="rect" id="node10" href="$classBatchCNNProcessor.html" title=" " alt="" coords="586,771,749,921"/>
+<area shape="rect" id="node11" href="$classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="775,800,968,892"/>
 </map>

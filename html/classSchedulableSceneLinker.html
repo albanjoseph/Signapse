@@ -79,11 +79,13 @@ Inheritance diagram for SchedulableSceneLinker:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSchedulableSceneLinker__inherit__graph.png" border="0" usemap="#aSchedulableSceneLinker_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSchedulableSceneLinker_inherit__map" id="aSchedulableSceneLinker_inherit__map">
-<area shape="rect" title=" " alt="" coords="39,271,206,436"/>
-<area shape="rect" href="classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="5,484,240,605"/>
-<area shape="rect" href="classSceneLinker.html" title=" " alt="" coords="53,131,192,223"/>
-<area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="68,5,177,83"/>
-<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="58,653,187,775"/>
+<area shape="rect" title=" " alt="" coords="106,271,273,451"/>
+<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="22,499,151,649"/>
+<area shape="rect" href="classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="175,499,409,649"/>
+<area shape="rect" href="classSceneLinker.html" title=" " alt="" coords="120,131,259,223"/>
+<area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="135,5,244,83"/>
+<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="5,697,168,848"/>
+<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="194,727,387,819"/>
 </map>
 </div>
 <div class="dynheader">
@@ -91,12 +93,13 @@ Collaboration diagram for SchedulableSceneLinker:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSchedulableSceneLinker__coll__graph.png" border="0" usemap="#aSchedulableSceneLinker_coll__map" alt="Collaboration graph"/></div>
 <map name="aSchedulableSceneLinker_coll__map" id="aSchedulableSceneLinker_coll__map">
-<area shape="rect" title=" " alt="" coords="170,373,337,524"/>
+<area shape="rect" title=" " alt="" coords="235,373,402,524"/>
 <area shape="rect" href="classSceneLinker.html" title=" " alt="" coords="5,204,144,296"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="32,27,141,105"/>
 <area shape="rect" href="classBlockingQueue.html" title=" " alt="" coords="169,189,338,311"/>
 <area shape="rect" href="classBlockingQueue.html" title="BlockingQueue Class." alt="" coords="183,5,323,127"/>
 <area shape="rect" title=" " alt="" coords="362,211,409,289"/>
+<area shape="rect" title=" " alt="" coords="433,211,492,289"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -131,13 +134,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9876974b1ebe506a0e389ae12c707601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b86beba92ed77490b0bb5f01c82cf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableSceneLinker.html#a31b86beba92ed77490b0bb5f01c82cf8">isOn</a> = true</td></tr>
 <tr class="separator:a31b86beba92ed77490b0bb5f01c82cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85be25cc0274b375645e1562286fe035"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableSceneLinker.html#a85be25cc0274b375645e1562286fe035">scheduleWorker</a></td></tr>
+<tr class="separator:a85be25cc0274b375645e1562286fe035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classSceneLinker"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classSceneLinker')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classSceneLinker.html">SceneLinker</a></td></tr>
 <tr class="memitem:a2e6a3c6f7f62112a5415889fd394b12c inherit pro_attribs_classSceneLinker"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSceneCallback.html">SceneCallback</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneLinker.html#a2e6a3c6f7f62112a5415889fd394b12c">sceneCallback</a> = nullptr</td></tr>
 <tr class="separator:a2e6a3c6f7f62112a5415889fd394b12c inherit pro_attribs_classSceneLinker"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00011">11</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00013">13</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5781d7e741836d92b286acbe7b1fe17f" name="a5781d7e741836d92b286acbe7b1fe17f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5781d7e741836d92b286acbe7b1fe17f">&#9670;&nbsp;</a></span>Available()</h2>
@@ -159,7 +164,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classSchedulableSceneLinker.html#a9876974b1ebe506a0e389ae12c707601">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>(); <span class="comment">//singly threaded for now</span></div>
 <div class="line"><span class="lineno">   21</span>}</div>
 <div class="ttc" id="aclassBlockingQueue_html_ab144302dd6dbdd50fc994f3432581d12"><div class="ttname"><a href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">BlockingQueue::IsEmpty</a></div><div class="ttdeci">bool IsEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00016">BlockingQueue.cpp:16</a></div></div>
-<div class="ttc" id="aclassSchedulableSceneLinker_html_a9876974b1ebe506a0e389ae12c707601"><div class="ttname"><a href="classSchedulableSceneLinker.html#a9876974b1ebe506a0e389ae12c707601">SchedulableSceneLinker::scheduleQueue</a></div><div class="ttdeci">BlockingQueue&lt; Scene &gt; scheduleQueue</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8h_source.html#l00020">SchedulableSceneLinker.h:20</a></div></div>
+<div class="ttc" id="aclassSchedulableSceneLinker_html_a9876974b1ebe506a0e389ae12c707601"><div class="ttname"><a href="classSchedulableSceneLinker.html#a9876974b1ebe506a0e389ae12c707601">SchedulableSceneLinker::scheduleQueue</a></div><div class="ttdeci">BlockingQueue&lt; Scene &gt; scheduleQueue</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8h_source.html#l00022">SchedulableSceneLinker.h:22</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -219,7 +224,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableSceneLinker.html#a9876974b1ebe506a0e389ae12c707601">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>()) { <span class="comment">//singly threaded for now</span></div>
 <div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classSchedulableSceneLinker.html#a9876974b1ebe506a0e389ae12c707601">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(scene);</div>
 <div class="line"><span class="lineno">   31</span>    }</div>
-<div class="line"><span class="lineno">   32</span>}</div>
+<div class="line"><span class="lineno">   32</span>    </div>
+<div class="line"><span class="lineno">   33</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -247,7 +253,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classCNNProcessor.html#a63f98b78cede32d8a32c79306485503a">CNNProcessor</a>.</p>
+<p>Implemented in <a class="el" href="classCNNProcessor.html#a63f98b78cede32d8a32c79306485503a">CNNProcessor</a>, and <a class="el" href="classNThreadedCNNProcessor.html#a53902cf2a5d4f1c58c51b6fb82fa50ea">NThreadedCNNProcessor</a>.</p>
 
 </div>
 </div>
@@ -287,7 +293,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclassBlockingQueue_html_aadf9ce8df034b29537feb5fd492819fd"><div class="ttname"><a href="classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd">BlockingQueue::Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00007">BlockingQueue.cpp:7</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html_a865518063f18d963fdfd475cfaee1c9d"><div class="ttname"><a href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)=0</div></div>
 <div class="ttc" id="aclassSceneLinker_html_a2e6a3c6f7f62112a5415889fd394b12c"><div class="ttname"><a href="classSceneLinker.html#a2e6a3c6f7f62112a5415889fd394b12c">SceneLinker::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="SceneLinker_8h_source.html#l00012">SceneLinker.h:12</a></div></div>
-<div class="ttc" id="aclassSchedulableSceneLinker_html_a31b86beba92ed77490b0bb5f01c82cf8"><div class="ttname"><a href="classSchedulableSceneLinker.html#a31b86beba92ed77490b0bb5f01c82cf8">SchedulableSceneLinker::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8h_source.html#l00021">SchedulableSceneLinker.h:21</a></div></div>
+<div class="ttc" id="aclassSchedulableSceneLinker_html_a31b86beba92ed77490b0bb5f01c82cf8"><div class="ttname"><a href="classSchedulableSceneLinker.html#a31b86beba92ed77490b0bb5f01c82cf8">SchedulableSceneLinker::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8h_source.html#l00023">SchedulableSceneLinker.h:23</a></div></div>
 <div class="ttc" id="aclassSchedulableSceneLinker_html_a6ec22c5eaad83766a99e43477b13d0da"><div class="ttname"><a href="classSchedulableSceneLinker.html#a6ec22c5eaad83766a99e43477b13d0da">SchedulableSceneLinker::ProcessScene</a></div><div class="ttdeci">virtual Scene ProcessScene(Scene s)=0</div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="scene_8h_source.html#l00036">scene.h:36</a></div></div>
 </div><!-- fragment -->
@@ -310,8 +316,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8cpp_source.html#l00023">23</a> of file <a class="el" href="SchedulableSceneLinker_8cpp_source.html">SchedulableSceneLinker.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>                                   {</div>
-<div class="line"><span class="lineno">   24</span>    scheduleWorker = std::thread(&amp;<a class="code hl_function" href="classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb">SchedulableSceneLinker::Run</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_variable" href="classSchedulableSceneLinker.html#a85be25cc0274b375645e1562286fe035">scheduleWorker</a> = std::thread(&amp;<a class="code hl_function" href="classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb">SchedulableSceneLinker::Run</a>, <span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">   25</span>}</div>
+<div class="ttc" id="aclassSchedulableSceneLinker_html_a85be25cc0274b375645e1562286fe035"><div class="ttname"><a href="classSchedulableSceneLinker.html#a85be25cc0274b375645e1562286fe035">SchedulableSceneLinker::scheduleWorker</a></div><div class="ttdeci">std::thread scheduleWorker</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8h_source.html#l00024">SchedulableSceneLinker.h:24</a></div></div>
 <div class="ttc" id="aclassSchedulableSceneLinker_html_a8676af6668088dc8f7f784482172c7eb"><div class="ttname"><a href="classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb">SchedulableSceneLinker::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableSceneLinker_8cpp_source.html#l00005">SchedulableSceneLinker.cpp:5</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -337,7 +344,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00021">21</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00023">23</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
 
 </div>
 </div>
@@ -361,7 +368,31 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00020">20</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00022">22</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
+
+</div>
+</div>
+<a id="a85be25cc0274b375645e1562286fe035" name="a85be25cc0274b375645e1562286fe035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85be25cc0274b375645e1562286fe035">&#9670;&nbsp;</a></span>scheduleWorker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread SchedulableSceneLinker::scheduleWorker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SchedulableSceneLinker_8h_source.html#l00024">24</a> of file <a class="el" href="SchedulableSceneLinker_8h_source.html">SchedulableSceneLinker.h</a>.</p>
 
 </div>
 </div>

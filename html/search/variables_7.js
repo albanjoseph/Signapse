@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['progressbar_0',['progressBar',['../classUi__MainWindow.html#a21cff38a2f7c1fbae6334c65bc92dd65',1,'Ui_MainWindow']]],
-  ['pushbutton_1',['pushButton',['../classUi__MainWindow.html#aa2f2c48d459c5b5eda62071b8d750fed',1,'Ui_MainWindow']]]
+  ['net_0',['net',['../classCNNProcessor.html#a31176aaa3008494149f0485b1d277260',1,'CNNProcessor']]],
+  ['nrallocated_1',['nrAllocated',['../classNThreadSchedulableSceneLinker.html#aa0c54e4788bad323bf6043d42d31c090',1,'NThreadSchedulableSceneLinker']]]
 ];

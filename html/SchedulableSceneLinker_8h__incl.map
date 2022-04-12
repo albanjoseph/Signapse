@@ -1,12 +1,14 @@
 <map id="src/SchedulableSceneLinker.h" name="src/SchedulableSceneLinker.h">
-<area shape="rect" id="node1" title=" " alt="" coords="41,5,239,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="102,5,301,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" href="$SceneLinker_8h.html" title=" " alt="" coords="87,80,193,107"/>
-<area shape="rect" id="node7" href="$BlockingQueue_8h.html" title=" " alt="" coords="231,80,351,107"/>
-<area shape="rect" id="node4" href="$SceneCallback_8h.html" title=" " alt="" coords="67,155,186,181"/>
-<area shape="rect" id="node5" href="$scene_8h.html" title=" " alt="" coords="141,229,208,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="113,304,237,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="262,155,319,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="343,155,401,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="425,155,551,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="88,80,149,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="174,80,229,107"/>
+<area shape="rect" id="node5" href="$SceneLinker_8h.html" title=" " alt="" coords="253,80,358,107"/>
+<area shape="rect" id="node9" href="$BlockingQueue_8h.html" title=" " alt="" coords="396,80,516,107"/>
+<area shape="rect" id="node6" href="$SceneCallback_8h.html" title=" " alt="" coords="233,155,351,181"/>
+<area shape="rect" id="node7" href="$scene_8h.html" title=" " alt="" coords="307,229,373,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="278,304,402,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="427,155,485,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="509,155,566,181"/>
+<area shape="rect" id="node12" title=" " alt="" coords="590,155,717,181"/>
 </map>

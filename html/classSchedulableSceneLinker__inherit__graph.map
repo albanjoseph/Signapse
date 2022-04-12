@@ -1,7 +1,9 @@
 <map id="SchedulableSceneLinker" name="SchedulableSceneLinker">
-<area shape="rect" id="node1" title=" " alt="" coords="39,271,206,436"/>
-<area shape="rect" id="node4" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="5,484,240,605"/>
-<area shape="rect" id="node2" href="$classSceneLinker.html" title=" " alt="" coords="53,131,192,223"/>
-<area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="68,5,177,83"/>
-<area shape="rect" id="node5" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="58,653,187,775"/>
+<area shape="rect" id="node1" title=" " alt="" coords="106,271,273,451"/>
+<area shape="rect" id="node4" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="22,499,151,649"/>
+<area shape="rect" id="node7" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="175,499,409,649"/>
+<area shape="rect" id="node2" href="$classSceneLinker.html" title=" " alt="" coords="120,131,259,223"/>
+<area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="135,5,244,83"/>
+<area shape="rect" id="node5" href="$classBatchCNNProcessor.html" title=" " alt="" coords="5,697,168,848"/>
+<area shape="rect" id="node6" href="$classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="194,727,387,819"/>
 </map>

@@ -98,11 +98,10 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd">   25</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">BlockingQueue&lt;T&gt;::Push</a>(T toPush) {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279">   27</a></span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        std::unique_lock &lt;std::mutex&gt; lock(mutex);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        internalQueue.push_front(toPush);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    condition.notify_all();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        internalQueue.push_front(toPush);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    condition.notify_all();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 <div class="ttc" id="aBlockingQueue_8h_html"><div class="ttname"><a href="BlockingQueue_8h.html">BlockingQueue.h</a></div></div>
 <div class="ttc" id="aclassBlockingQueue_html_a6b320feb628e94e01d51975ec93af656"><div class="ttname"><a href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">BlockingQueue::Push</a></div><div class="ttdeci">void Push(T toPush)</div><div class="ttdoc">Public member function.</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00026">BlockingQueue.cpp:26</a></div></div>
 <div class="ttc" id="aclassBlockingQueue_html_aab57e39ee47d79c2f8c604a0a0239279"><div class="ttname"><a href="classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279">BlockingQueue::Size</a></div><div class="ttdeci">int Size()</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00021">BlockingQueue.cpp:21</a></div></div>
