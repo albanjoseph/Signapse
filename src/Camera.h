@@ -29,6 +29,7 @@ public:
         Starts "Stream" private member function as a thread.
     */
     void Start();
+    void Stop();
     
     
     

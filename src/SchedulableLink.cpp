@@ -2,10 +2,6 @@
 #include "BlockingQueue.cpp"
 
 
-SchedulableLink::~SchedulableLink() {
-    isOn = false;
-    scheduleWorker.join();
-}
 
 void SchedulableLink::Run(){
     //waits for scenes to appear on the scheduleQueue,
@@ -29,10 +25,21 @@ void SchedulableLink::Start() {
     scheduleWorker = std::thread(&SchedulableLink::Run, this);
 }
 
+void SchedulableLink::Stop(){
+    isOn = false;
+    if(scheduleWorker.joinable()){
+        scheduleWorker.join();
+    }
+}
+
 void SchedulableLink::NextScene(Scene scene) {
     //if space on schedule queue, add this scene; otherwise pass the scene through
     if(scheduleQueue.IsEmpty()) { //singly threaded for now
         scheduleQueue.Push(scene);
     }
+}
+
+SchedulableLink::~SchedulableLink() {
+    Stop();
 }
 

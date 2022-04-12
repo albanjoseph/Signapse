@@ -17,10 +17,6 @@ template <typename T>
 */
 class BlockingQueue {
 public:
-    //!  Public member function
-    /*!
-        
-    */
     void Push(T toPush);
     T Pop();
     bool IsEmpty();

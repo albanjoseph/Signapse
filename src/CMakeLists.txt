@@ -18,5 +18,7 @@ target_link_libraries(CNNProcessor ${OpenCV_LIBS})
 add_library(PreProcessor PreProcessor.cpp PreProcessor.h)
 target_link_libraries(PreProcessor ${OpenCV_LIBS})
 
+add_library(BlockingQueue BlockingQueue.cpp BlockingQueue.h)
+
 add_library(Gui Gui.cpp Gui.h)
 target_link_libraries(Gui ${OpenCV_LIBS} Qt5::Widgets)
