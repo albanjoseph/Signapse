@@ -33,11 +33,17 @@ void Camera::Start(){
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
 
+void Camera::Stop(){
+    isOn=false;
+    if(cameraThread.joinable()){
+        cameraThread.join();
+    }
+}
+
 bool Camera::getOn() {
     return isOn;
 }
 
 Camera::~Camera() {
-    isOn=false;
-    cameraThread.join();
+    Stop();
 }

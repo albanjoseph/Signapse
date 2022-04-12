@@ -15,6 +15,7 @@ public:
     void NextScene(Scene s);
     virtual Scene ProcessScene(Scene s) = 0;
     void Start();
+    void Stop();
     void Enqueue(Scene s);
     bool Available();
     ~SchedulableLink();
