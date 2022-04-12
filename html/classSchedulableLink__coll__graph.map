@@ -1,5 +1,5 @@
 <map id="SchedulableLink" name="SchedulableLink">
-<area shape="rect" id="node1" title=" " alt="" coords="247,373,391,539"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,373,391,553"/>
 <area shape="rect" id="node2" href="$classPipelineLink.html" title=" " alt="" coords="5,204,144,296"/>
 <area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="32,27,141,105"/>
 <area shape="rect" id="node4" href="$classBlockingQueue.html" title=" " alt="" coords="169,189,338,311"/>

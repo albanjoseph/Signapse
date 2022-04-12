@@ -27,5 +27,6 @@ var searchData=
   ['splitter_24',['splitter',['../classUi__MainWindow.html#abfba98fab6f5677d35fa69dd46ef8ffb',1,'Ui_MainWindow']]],
   ['start_25',['start',['../classMultiThreadedSchedulableLink.html#ada253a8760dcf2359ec84984b39988f6',1,'MultiThreadedSchedulableLink']]],
   ['start_26',['Start',['../classBatchCNNProcessor.html#a8353deeb765515b5cb2dd75a4e41420e',1,'BatchCNNProcessor::Start()'],['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableLink.html#a8310129e5f23602a040ffba539d80677',1,'SchedulableLink::Start()']]],
-  ['statusbar_27',['statusbar',['../classUi__MainWindow.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]]
+  ['statusbar_27',['statusbar',['../classUi__MainWindow.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]],
+  ['stop_28',['Stop',['../classCamera.html#aba5fb6404d7d0876d428fc79b918d019',1,'Camera::Stop()'],['../classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7',1,'SchedulableLink::Stop()']]]
 ];

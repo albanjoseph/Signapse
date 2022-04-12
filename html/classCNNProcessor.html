@@ -82,10 +82,10 @@ Inheritance diagram for CNNProcessor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCNNProcessor__inherit__graph.png" border="0" usemap="#aCNNProcessor_inherit__map" alt="Inheritance graph"/></div>
 <map name="aCNNProcessor_inherit__map" id="aCNNProcessor_inherit__map">
-<area shape="rect" title="CNNProcessor class." alt="" coords="123,513,253,664"/>
-<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="5,712,168,863"/>
-<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="193,741,386,833"/>
-<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="116,271,260,465"/>
+<area shape="rect" title="CNNProcessor class." alt="" coords="123,528,253,679"/>
+<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="5,727,168,877"/>
+<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="193,756,386,848"/>
+<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="116,271,260,480"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="119,131,257,223"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="133,5,243,83"/>
 </map>
@@ -95,18 +95,18 @@ Collaboration diagram for CNNProcessor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCNNProcessor__coll__graph.png" border="0" usemap="#aCNNProcessor_coll__map" alt="Collaboration graph"/></div>
 <map name="aCNNProcessor_coll__map" id="aCNNProcessor_coll__map">
-<area shape="rect" title="CNNProcessor class." alt="" coords="527,616,657,752"/>
-<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="313,388,457,553"/>
+<area shape="rect" title="CNNProcessor class." alt="" coords="527,631,657,767"/>
+<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="313,388,457,568"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="5,204,144,296"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="32,27,141,105"/>
 <area shape="rect" href="classBlockingQueue.html" title=" " alt="" coords="169,189,338,311"/>
 <area shape="rect" href="classBlockingQueue.html" title="BlockingQueue Class." alt="" coords="183,5,323,127"/>
 <area shape="rect" title=" " alt="" coords="362,211,409,289"/>
 <area shape="rect" title=" " alt="" coords="433,211,492,289"/>
-<area shape="rect" href="structCNNProcessorSettings.html" title=" " alt="" coords="503,432,681,509"/>
+<area shape="rect" href="structCNNProcessorSettings.html" title=" " alt="" coords="503,439,681,517"/>
 <area shape="rect" title=" " alt="" coords="565,211,619,289"/>
 <area shape="rect" title=" " alt="" coords="677,211,715,289"/>
-<area shape="rect" title=" " alt="" coords="705,432,748,509"/>
+<area shape="rect" title=" " alt="" coords="705,439,748,517"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3bf45c290cba5a66fb00b27b034030bc inherit pub_methods_classSchedulableLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8310129e5f23602a040ffba539d80677 inherit pub_methods_classSchedulableLink"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a8310129e5f23602a040ffba539d80677">Start</a> ()</td></tr>
 <tr class="separator:a8310129e5f23602a040ffba539d80677 inherit pub_methods_classSchedulableLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a1d2881a802c8e8cd5f180291771a7 inherit pub_methods_classSchedulableLink"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">Stop</a> ()</td></tr>
+<tr class="separator:a59a1d2881a802c8e8cd5f180291771a7 inherit pub_methods_classSchedulableLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1008b2e79c2659351ef827b0012a1ac1 inherit pub_methods_classSchedulableLink"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a1008b2e79c2659351ef827b0012a1ac1">Enqueue</a> (<a class="el" href="structScene.html">Scene</a> s)</td></tr>
 <tr class="separator:a1008b2e79c2659351ef827b0012a1ac1 inherit pub_methods_classSchedulableLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e580d31893170aad00ee921991eddd9 inherit pub_methods_classSchedulableLink"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a9e580d31893170aad00ee921991eddd9">Available</a> ()</td></tr>
@@ -312,7 +314,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> scene;</div>
 <div class="line"><span class="lineno">   34</span>}</div>
 <div class="ttc" id="aclassCNNProcessor_html_ab18af7b848a81fe7fcfa4c3b8d26a390"><div class="ttname"><a href="classCNNProcessor.html#ab18af7b848a81fe7fcfa4c3b8d26a390">CNNProcessor::MakeBlob</a></div><div class="ttdeci">cv::Mat MakeBlob(Scene scene)</div><div class="ttdef"><b>Definition:</b> <a href="CNNProcessor_8cpp_source.html#l00012">CNNProcessor.cpp:12</a></div></div>
-<div class="ttc" id="aclassSignapseUtils_html_a1a957a29563a73836631ea7dde6ea65d"><div class="ttname"><a href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a></div><div class="ttdeci">static std::string getLetterFromDigit(int digit)</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00015">SignapseUtils.h:15</a></div></div>
+<div class="ttc" id="aclassSignapseUtils_html_a1a957a29563a73836631ea7dde6ea65d"><div class="ttname"><a href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a></div><div class="ttdeci">static std::string getLetterFromDigit(int digit)</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00016">SignapseUtils.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

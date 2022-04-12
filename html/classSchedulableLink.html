@@ -79,13 +79,13 @@ Inheritance diagram for SchedulableLink:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSchedulableLink__inherit__graph.png" border="0" usemap="#aSchedulableLink_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSchedulableLink_inherit__map" id="aSchedulableLink_inherit__map">
-<area shape="rect" title=" " alt="" coords="123,271,267,465"/>
-<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,521,166,671"/>
-<area shape="rect" href="classMultiThreadedSchedulableLink.html" title=" " alt="" coords="189,513,389,679"/>
+<area shape="rect" title=" " alt="" coords="123,271,267,480"/>
+<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,535,166,686"/>
+<area shape="rect" href="classMultiThreadedSchedulableLink.html" title=" " alt="" coords="189,528,389,693"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="125,131,264,223"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="140,5,249,83"/>
-<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="5,727,168,877"/>
-<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="193,756,386,848"/>
+<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="5,741,168,892"/>
+<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="193,771,386,863"/>
 </map>
 </div>
 <div class="dynheader">
@@ -93,7 +93,7 @@ Collaboration diagram for SchedulableLink:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSchedulableLink__coll__graph.png" border="0" usemap="#aSchedulableLink_coll__map" alt="Collaboration graph"/></div>
 <map name="aSchedulableLink_coll__map" id="aSchedulableLink_coll__map">
-<area shape="rect" title=" " alt="" coords="247,373,391,539"/>
+<area shape="rect" title=" " alt="" coords="247,373,391,553"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="5,204,144,296"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="32,27,141,105"/>
 <area shape="rect" href="classBlockingQueue.html" title=" " alt="" coords="169,189,338,311"/>
@@ -111,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3bf45c290cba5a66fb00b27b034030bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8310129e5f23602a040ffba539d80677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a8310129e5f23602a040ffba539d80677">Start</a> ()</td></tr>
 <tr class="separator:a8310129e5f23602a040ffba539d80677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a1d2881a802c8e8cd5f180291771a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">Stop</a> ()</td></tr>
+<tr class="separator:a59a1d2881a802c8e8cd5f180291771a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1008b2e79c2659351ef827b0012a1ac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a1008b2e79c2659351ef827b0012a1ac1">Enqueue</a> (<a class="el" href="structScene.html">Scene</a> s)</td></tr>
 <tr class="separator:a1008b2e79c2659351ef827b0012a1ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e580d31893170aad00ee921991eddd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSchedulableLink.html#a9e580d31893170aad00ee921991eddd9">Available</a> ()</td></tr>
@@ -161,13 +163,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00005">5</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    5</span>                                  {</div>
-<div class="line"><span class="lineno">    6</span>    <a class="code hl_variable" href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">isOn</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">    7</span>    <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.join();</div>
-<div class="line"><span class="lineno">    8</span>}</div>
-<div class="ttc" id="aclassSchedulableLink_html_a78387422061ce34cf01f0076c506ef40"><div class="ttname"><a href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">SchedulableLink::scheduleWorker</a></div><div class="ttdeci">std::thread scheduleWorker</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00025">SchedulableLink.h:25</a></div></div>
-<div class="ttc" id="aclassSchedulableLink_html_abb5941fb4cd42cd854195130e8ae64f0"><div class="ttname"><a href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">SchedulableLink::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00024">SchedulableLink.h:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00042">42</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                  {</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_function" href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">Stop</a>();</div>
+<div class="line"><span class="lineno">   44</span>}</div>
+<div class="ttc" id="aclassSchedulableLink_html_a59a1d2881a802c8e8cd5f180291771a7"><div class="ttname"><a href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">SchedulableLink::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8cpp_source.html#l00028">SchedulableLink.cpp:28</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -187,12 +187,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00024">24</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                {</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>(); <span class="comment">//singly threaded for now</span></div>
-<div class="line"><span class="lineno">   26</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00020">20</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                {</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>(); <span class="comment">//singly threaded for now</span></div>
+<div class="line"><span class="lineno">   22</span>}</div>
 <div class="ttc" id="aclassBlockingQueue_html_ab144302dd6dbdd50fc994f3432581d12"><div class="ttname"><a href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">BlockingQueue::IsEmpty</a></div><div class="ttdeci">bool IsEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00016">BlockingQueue.cpp:16</a></div></div>
-<div class="ttc" id="aclassSchedulableLink_html_aeba8fd5dfe77d351f4f429bd1b258191"><div class="ttname"><a href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">SchedulableLink::scheduleQueue</a></div><div class="ttdeci">BlockingQueue&lt; Scene &gt; scheduleQueue</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00023">SchedulableLink.h:23</a></div></div>
+<div class="ttc" id="aclassSchedulableLink_html_aeba8fd5dfe77d351f4f429bd1b258191"><div class="ttname"><a href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">SchedulableLink::scheduleQueue</a></div><div class="ttdeci">BlockingQueue&lt; Scene &gt; scheduleQueue</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00024">SchedulableLink.h:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -212,11 +212,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00020">20</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                     {</div>
-<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(s);</div>
-<div class="line"><span class="lineno">   22</span>}</div>
-<div class="ttc" id="aclassBlockingQueue_html_a6b320feb628e94e01d51975ec93af656"><div class="ttname"><a href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">BlockingQueue::Push</a></div><div class="ttdeci">void Push(T toPush)</div><div class="ttdoc">Public member function.</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00026">BlockingQueue.cpp:26</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00016">16</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                                     {</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(s);</div>
+<div class="line"><span class="lineno">   18</span>}</div>
+<div class="ttc" id="aclassBlockingQueue_html_a6b320feb628e94e01d51975ec93af656"><div class="ttname"><a href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">BlockingQueue::Push</a></div><div class="ttdeci">void Push(T toPush)</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00026">BlockingQueue.cpp:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,13 +246,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classPipelineLink.html#a59fa1422f1b6657e5ba7d1736b2cc1c5">PipelineLink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00032">32</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                           {</div>
-<div class="line"><span class="lineno">   33</span>    <span class="comment">//if space on schedule queue, add this scene; otherwise pass the scene through</span></div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>()) { <span class="comment">//singly threaded for now</span></div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(scene);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00035">35</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                           {</div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment">//if space on schedule queue, add this scene; otherwise pass the scene through</span></div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>()) { <span class="comment">//singly threaded for now</span></div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(scene);</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -307,20 +307,21 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00010">10</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                         {</div>
-<div class="line"><span class="lineno">   11</span>    <span class="comment">//waits for scenes to appear on the scheduleQueue,</span></div>
-<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">isOn</a>){</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_struct" href="structScene.html">Scene</a> s = <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd">Pop</a>(); <span class="comment">//Blocking Queue Sleeps Execution Until Scene arrives</span></div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_struct" href="structScene.html">Scene</a> out = <a class="code hl_function" href="classSchedulableLink.html#a3bf45c290cba5a66fb00b27b034030bc">ProcessScene</a>(s);</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(out);</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-<div class="line"><span class="lineno">   18</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00006">6</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>                         {</div>
+<div class="line"><span class="lineno">    7</span>    <span class="comment">//waits for scenes to appear on the scheduleQueue,</span></div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">isOn</a>){</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_struct" href="structScene.html">Scene</a> s = <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd">Pop</a>(); <span class="comment">//Blocking Queue Sleeps Execution Until Scene arrives</span></div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_struct" href="structScene.html">Scene</a> out = <a class="code hl_function" href="classSchedulableLink.html#a3bf45c290cba5a66fb00b27b034030bc">ProcessScene</a>(s);</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   12</span>        <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(out);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="line"><span class="lineno">   14</span>}</div>
 <div class="ttc" id="aclassBlockingQueue_html_aadf9ce8df034b29537feb5fd492819fd"><div class="ttname"><a href="classBlockingQueue.html#aadf9ce8df034b29537feb5fd492819fd">BlockingQueue::Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8cpp_source.html#l00007">BlockingQueue.cpp:7</a></div></div>
 <div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00012">PipelineLink.h:12</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html_a865518063f18d963fdfd475cfaee1c9d"><div class="ttname"><a href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)=0</div></div>
 <div class="ttc" id="aclassSchedulableLink_html_a3bf45c290cba5a66fb00b27b034030bc"><div class="ttname"><a href="classSchedulableLink.html#a3bf45c290cba5a66fb00b27b034030bc">SchedulableLink::ProcessScene</a></div><div class="ttdeci">virtual Scene ProcessScene(Scene s)=0</div></div>
+<div class="ttc" id="aclassSchedulableLink_html_abb5941fb4cd42cd854195130e8ae64f0"><div class="ttname"><a href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">SchedulableLink::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00025">SchedulableLink.h:25</a></div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00036">Scene.h:36</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -340,11 +341,37 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00024">24</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                            {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a> = std::thread(&amp;<a class="code hl_function" href="classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4">SchedulableLink::Run</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   26</span>}</div>
+<div class="ttc" id="aclassSchedulableLink_html_a2fb3c3ef2a06b2b8c65a2fa55dd66ec4"><div class="ttname"><a href="classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4">SchedulableLink::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8cpp_source.html#l00006">SchedulableLink.cpp:6</a></div></div>
+<div class="ttc" id="aclassSchedulableLink_html_a78387422061ce34cf01f0076c506ef40"><div class="ttname"><a href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">SchedulableLink::scheduleWorker</a></div><div class="ttdeci">std::thread scheduleWorker</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8h_source.html#l00026">SchedulableLink.h:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a59a1d2881a802c8e8cd5f180291771a7" name="a59a1d2881a802c8e8cd5f180291771a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a1d2881a802c8e8cd5f180291771a7">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchedulableLink::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00028">28</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                            {</div>
-<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a> = std::thread(&amp;<a class="code hl_function" href="classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4">SchedulableLink::Run</a>, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   30</span>}</div>
-<div class="ttc" id="aclassSchedulableLink_html_a2fb3c3ef2a06b2b8c65a2fa55dd66ec4"><div class="ttname"><a href="classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4">SchedulableLink::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8cpp_source.html#l00010">SchedulableLink.cpp:10</a></div></div>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                          {</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">isOn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.joinable()){</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.join();</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -369,7 +396,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00024">24</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00025">25</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +420,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00023">23</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00024">24</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +444,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00025">25</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8h_source.html#l00026">26</a> of file <a class="el" href="SchedulableLink_8h_source.html">SchedulableLink.h</a>.</p>
 
 </div>
 </div>
