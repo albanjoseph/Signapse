@@ -1,18 +1,18 @@
 <map id="NThreadedCNNProcessor" name="NThreadedCNNProcessor">
-<area shape="rect" id="node1" title="CNNProcessor class." alt="" coords="560,787,753,879"/>
-<area shape="rect" id="node2" href="$classNThreadSchedulableSceneLinker.html" title=" " alt="" coords="438,609,673,730"/>
-<area shape="rect" id="node3" href="$classSchedulableSceneLinker.html" title=" " alt="" coords="177,388,344,539"/>
-<area shape="rect" id="node13" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="696,601,825,737"/>
-<area shape="rect" id="node4" href="$classSceneLinker.html" title=" " alt="" coords="354,204,493,296"/>
+<area shape="rect" id="node1" title="CNNProcessor class." alt="" coords="543,801,736,893"/>
+<area shape="rect" id="node2" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="446,616,646,752"/>
+<area shape="rect" id="node3" href="$classSchedulableLink.html" title=" " alt="" coords="189,388,333,553"/>
+<area shape="rect" id="node13" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="677,616,807,752"/>
+<area shape="rect" id="node4" href="$classPipelineLink.html" title=" " alt="" coords="354,204,493,296"/>
 <area shape="rect" id="node5" href="$classSceneCallback.html" title=" " alt="" coords="367,27,477,105"/>
 <area shape="rect" id="node6" href="$classBlockingQueue.html" title=" " alt="" coords="5,189,175,311"/>
 <area shape="rect" id="node7" href="$classBlockingQueue.html" title="BlockingQueue Class." alt="" coords="20,5,160,127"/>
 <area shape="rect" id="node8" title=" " alt="" coords="199,211,245,289"/>
 <area shape="rect" id="node9" title=" " alt="" coords="270,211,329,289"/>
-<area shape="rect" id="node10" title=" " alt="" coords="657,425,715,502"/>
-<area shape="rect" id="node11" title=" " alt="" coords="607,211,645,289"/>
-<area shape="rect" id="node14" href="$structCNNProcessorSettings.html" title=" " alt="" coords="807,425,984,502"/>
-<area shape="rect" id="node12" title=" " alt="" coords="368,425,508,502"/>
-<area shape="rect" id="node15" title=" " alt="" coords="868,211,923,289"/>
-<area shape="rect" id="node16" title=" " alt="" coords="739,425,782,502"/>
+<area shape="rect" id="node10" title=" " alt="" coords="646,432,705,509"/>
+<area shape="rect" id="node11" title=" " alt="" coords="596,211,635,289"/>
+<area shape="rect" id="node14" href="$structCNNProcessorSettings.html" title=" " alt="" coords="796,432,973,509"/>
+<area shape="rect" id="node12" title=" " alt="" coords="357,432,497,509"/>
+<area shape="rect" id="node15" title=" " alt="" coords="857,211,912,289"/>
+<area shape="rect" id="node16" title=" " alt="" coords="729,432,771,509"/>
 </map>

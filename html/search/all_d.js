@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['reel_0',['Reel',['../classReel.html',1,'Reel'],['../classReel.html#a3656fa67f060d2808dc07f337030b537',1,'Reel::Reel()']]],
-  ['reel_2ecpp_1',['reel.cpp',['../reel_8cpp.html',1,'']]],
-  ['reel_2eh_2',['reel.h',['../reel_8h.html',1,'']]],
-  ['reelnr_3',['reelNr',['../classReel.html#a1aaed8e350c44a2992cfca253ca01a76',1,'Reel']]],
-  ['regionofinterest_4',['regionOfInterest',['../structScene.html#aa8d52169e6edf1ae705de6ed533dd488',1,'Scene']]],
-  ['registercallback_5',['RegisterCallback',['../classSceneLinker.html#ae929ae66f3e7d1056ad91698d3f59e47',1,'SceneLinker::RegisterCallback()'],['../classSceneLinkScheduler.html#a043da9b96f0f6becf192a02d5521b7f1',1,'SceneLinkScheduler::RegisterCallback()']]],
-  ['registersecondarycallback_6',['RegisterSecondaryCallback',['../classDoubleSceneLinker.html#aba4adab488d0a7590eec13898ca3009a',1,'DoubleSceneLinker']]],
-  ['relativeboundingbox_7',['relativeBoundingBox',['../structSceneEditorSettings.html#ada4098c9ed47ea5a32b8917674bdeec1',1,'SceneEditorSettings']]],
-  ['reset_5fprogress_8',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
-  ['result_9',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
-  ['retranslateui_10',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)'],['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi(QMainWindow *MainWindow)']]],
-  ['run_11',['Run',['../classBatchCNNProcessor.html#ad32b30b5a112b54fc8bdb45c505d4107',1,'BatchCNNProcessor::Run()'],['../classSchedulableSceneLinker.html#a8676af6668088dc8f7f784482172c7eb',1,'SchedulableSceneLinker::Run()']]]
+  ['regionofinterest_0',['regionOfInterest',['../structScene.html#aa8d52169e6edf1ae705de6ed533dd488',1,'Scene']]],
+  ['registercallback_1',['RegisterCallback',['../classPipelineLink.html#ac92d19e26202916992949573bc3577a3',1,'PipelineLink::RegisterCallback()'],['../classSceneLinkScheduler.html#a043da9b96f0f6becf192a02d5521b7f1',1,'SceneLinkScheduler::RegisterCallback()']]],
+  ['registersecondarycallback_2',['RegisterSecondaryCallback',['../classLinkSplitter.html#a209d340b9f32d2abfef1fec944c05786',1,'LinkSplitter']]],
+  ['relativeboundingbox_3',['relativeBoundingBox',['../structPreProcessorSettings.html#afbce6c32092c50d8a89f4a2fcbb8147f',1,'PreProcessorSettings']]],
+  ['reset_5fprogress_4',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
+  ['result_5',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
+  ['retranslateui_6',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]],
+  ['run_7',['Run',['../classBatchCNNProcessor.html#ad32b30b5a112b54fc8bdb45c505d4107',1,'BatchCNNProcessor::Run()'],['../classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4',1,'SchedulableLink::Run()']]]
 ];

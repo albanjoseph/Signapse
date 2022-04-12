@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qtgengui_2eh_0',['qtGenGui.h',['../qtGenGui_8h.html',1,'']]]
+  ['qtgeneratedgui_2eh_0',['QtGeneratedGui.h',['../QtGeneratedGui_8h.html',1,'']]]
 ];

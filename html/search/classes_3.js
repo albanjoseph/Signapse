@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_0',['Gui',['../classGui.html',1,'']]]
+  ['linksplitter_0',['LinkSplitter',['../classLinkSplitter.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 <map id="src/Gui.h" name="src/Gui.h">
 <area shape="rect" id="node1" title=" " alt="" coords="2825,5,2899,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="1314,80,1437,107"/>
-<area shape="rect" id="node3" href="$qtGenGui_8h.html" title=" " alt="" coords="1461,80,1548,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="1294,80,1417,107"/>
+<area shape="rect" id="node3" href="$QtGeneratedGui_8h.html" title=" " alt="" coords="1441,80,1568,107"/>
 <area shape="rect" id="node19" title=" " alt="" coords="2580,155,2643,181"/>
 <area shape="rect" id="node20" title=" " alt="" coords="2984,229,3108,256"/>
 <area shape="rect" id="node21" title=" " alt="" coords="3133,80,3279,107"/>
@@ -25,7 +25,7 @@
 <area shape="rect" id="node17" title=" " alt="" coords="1257,155,1411,181"/>
 <area shape="rect" id="node18" title=" " alt="" coords="1436,155,1573,181"/>
 <area shape="rect" id="node24" title=" " alt="" coords="2845,155,2905,181"/>
-<area shape="rect" id="node25" href="$scene_8h.html" title=" " alt="" coords="2965,155,3031,181"/>
+<area shape="rect" id="node25" href="$Scene_8h.html" title=" " alt="" coords="2963,155,3033,181"/>
 <area shape="rect" id="node27" title=" " alt="" coords="2764,155,2821,181"/>
 <area shape="rect" id="node28" title=" " alt="" coords="2667,155,2739,181"/>
 </map>
