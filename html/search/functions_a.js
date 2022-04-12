@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registercallback_0',['RegisterCallback',['../classPipelineLink.html#ac92d19e26202916992949573bc3577a3',1,'PipelineLink::RegisterCallback()'],['../classSceneLinkScheduler.html#a043da9b96f0f6becf192a02d5521b7f1',1,'SceneLinkScheduler::RegisterCallback()']]],
+  ['registercallback_0',['RegisterCallback',['../classPipelineLink.html#ac92d19e26202916992949573bc3577a3',1,'PipelineLink']]],
   ['registersecondarycallback_1',['RegisterSecondaryCallback',['../classLinkSplitter.html#a209d340b9f32d2abfef1fec944c05786',1,'LinkSplitter']]],
   ['reset_5fprogress_2',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
   ['retranslateui_3',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]],

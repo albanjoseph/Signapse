@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ui_5fhgt_0',['UI_HGT',['../Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d',1,'Gui.cpp']]],
-  ['ui_5fwdh_1',['UI_WDH',['../Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14',1,'Gui.cpp']]]
+  ['x0_0',['X0',['../PreProcessorSettings_8h.html#a8476f4a8de2c191433342c9ce896986a',1,'PreProcessorSettings.h']]],
+  ['x1_1',['X1',['../PreProcessorSettings_8h.html#a1964818ccd90a6173ea48cecb652feeb',1,'PreProcessorSettings.h']]]
 ];
