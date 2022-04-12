@@ -2,6 +2,8 @@
 #define SIGNAPSE_SCHEDULABLESCENELINKER_H
 
 #include <thread>
+#include <chrono>
+#include <ctime>
 
 #include "SceneLinker.h"
 #include "BlockingQueue.h"
@@ -19,7 +21,6 @@ protected:
     void Run();
     BlockingQueue<Scene> scheduleQueue;
     bool isOn = true;
-private:
     std::thread scheduleWorker;
     
 };

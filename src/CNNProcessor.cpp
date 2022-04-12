@@ -4,12 +4,7 @@ void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
-CNNProcessor::CNNProcessor(CNNProcessorSettings* s) : NThreadSchedulableSceneLinker(1) {
-    settings = s;
-    LoadModel(settings->ModelPath);
-}
-
-CNNProcessor::CNNProcessor(CNNProcessorSettings *s, int nrThreads) : NThreadSchedulableSceneLinker(nrThreads){
+CNNProcessor::CNNProcessor(CNNProcessorSettings* s) {
     settings = s;
     LoadModel(settings->ModelPath);
 }
