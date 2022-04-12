@@ -1,9 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
 
-#include "SceneEditor.h"
+#include "PreProcessor.h"
 
-void SceneEditor::NextScene(Scene scene){
+void PreProcessor::NextScene(Scene scene){
    cv::Size sz = scene.frame.size();
    scene.regionOfInterest = BoundingBox((int)(sz.width * settings->relativeBoundingBox[0]),
                                         (int)(sz.height * settings->relativeBoundingBox[1]),
@@ -15,17 +15,17 @@ void SceneEditor::NextScene(Scene scene){
    sceneCallback->NextScene(out);
 }
 
-SceneEditor::SceneEditor(SceneEditorSettings* s) {
+PreProcessor::PreProcessor(PreProcessorSettings* s) {
     settings = s;
 }
 
-Scene SceneEditor::switchRGB2BGR(Scene s) {
+Scene PreProcessor::switchRGB2BGR(Scene s) {
     cv::Mat temp = s.frame;
     cv::cvtColor(temp, s.frame, cv::COLOR_BGR2RGB);
     return s;
 }
 
-Scene SceneEditor::drawBox(Scene s) {
+Scene PreProcessor::drawBox(Scene s) {
     cv::Mat temp = s.frame;
     int x  = s.regionOfInterest.UpperLeft.x; int y = s.regionOfInterest.UpperLeft.y;
     int width = s.regionOfInterest.LowerRight.x - x;
@@ -37,7 +37,7 @@ Scene SceneEditor::drawBox(Scene s) {
     return s;
 }
 
-void SceneEditor::SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
+void PreProcessor::SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
     settings->relativeBoundingBox[0] = upperLeftX;
     settings->relativeBoundingBox[1] = upperLeftY;
     settings->relativeBoundingBox[2] = lowerRightX;

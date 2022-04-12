@@ -1,7 +1,7 @@
 #ifndef SIGNAPSE_SCENECALLBACK_H
 #define SIGNAPSE_SCENECALLBACK_H
 
-#include "scene.h"
+#include "Scene.h"
 
 class SceneCallback{
 public:

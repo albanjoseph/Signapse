@@ -1,8 +1,13 @@
-#include "SchedulableSceneLinker.h"
+#include "SchedulableLink.h"
 #include "BlockingQueue.cpp"
 
 
-void SchedulableSceneLinker::Run(){
+SchedulableLink::~SchedulableLink() {
+    isOn = false;
+    scheduleWorker.join();
+}
+
+void SchedulableLink::Run(){
     //waits for scenes to appear on the scheduleQueue,
     while(isOn){
         Scene s = scheduleQueue.Pop(); //Blocking Queue Sleeps Execution Until Scene arrives
@@ -12,22 +17,22 @@ void SchedulableSceneLinker::Run(){
     }
 }
 
-void SchedulableSceneLinker::Enqueue(Scene s) {
+void SchedulableLink::Enqueue(Scene s) {
     scheduleQueue.Push(s);
 }
 
-bool SchedulableSceneLinker::Available() {
+bool SchedulableLink::Available() {
     return scheduleQueue.IsEmpty(); //singly threaded for now
 }
 
-void SchedulableSceneLinker::Start() {
-    scheduleWorker = std::thread(&SchedulableSceneLinker::Run, this);
+void SchedulableLink::Start() {
+    scheduleWorker = std::thread(&SchedulableLink::Run, this);
 }
 
-void SchedulableSceneLinker::NextScene(Scene scene) {
+void SchedulableLink::NextScene(Scene scene) {
     //if space on schedule queue, add this scene; otherwise pass the scene through
     if(scheduleQueue.IsEmpty()) { //singly threaded for now
         scheduleQueue.Push(scene);
     }
-    
 }
+

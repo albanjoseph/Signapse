@@ -5,24 +5,24 @@
 #include <chrono>
 #include <ctime>
 
-#include "SceneLinker.h"
+#include "PipelineLink.h"
 #include "BlockingQueue.h"
 
 
 
-class SchedulableSceneLinker : public SceneLinker{
+class SchedulableLink : public PipelineLink{
 public:
     void NextScene(Scene s);
     virtual Scene ProcessScene(Scene s) = 0;
     void Start();
     void Enqueue(Scene s);
     bool Available();
+    SchedulableLink::~SchedulableLink();
 protected:
     void Run();
     BlockingQueue<Scene> scheduleQueue;
     bool isOn = true;
     std::thread scheduleWorker;
-    
 };
 
 

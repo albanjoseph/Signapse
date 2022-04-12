@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#include "scene.h"
+#include "Scene.h"
 
 class ProgressBar{
 public:

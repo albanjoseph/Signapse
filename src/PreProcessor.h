@@ -1,17 +1,17 @@
 #include <opencv2/core.hpp>
-#include "scene.h"
-#include "SceneLinker.h"
-#include "SceneEditorSettings.h"
+#include "Scene.h"
+#include "PipelineLink.h"
+#include "PreProcessorSettings.h"
 
-class SceneEditor : public SceneLinker{
+class PreProcessor : public PipelineLink{
 public:
-    SceneEditor(SceneEditorSettings* settings);
+    PreProcessor(PreProcessorSettings* settings);
     void NextScene(Scene scene);
     void SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
     
 private:
     Scene drawBox(Scene s);
     Scene switchRGB2BGR(Scene s);
-    SceneEditorSettings* settings;
+    PreProcessorSettings* settings;
 };
 

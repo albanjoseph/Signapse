@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "camera.h"
+#include "Camera.h"
 
 
 TEST(camera_test, checkIsOn_init){

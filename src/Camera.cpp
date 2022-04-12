@@ -1,4 +1,4 @@
-#include "camera.h"
+#include "Camera.h"
 
 Camera::Camera() {
     isOn=true;
@@ -35,4 +35,9 @@ void Camera::Start(){
 
 bool Camera::getOn() {
     return isOn;
+}
+
+Camera::~Camera() {
+    isOn=false;
+    cameraThread.join();
 }

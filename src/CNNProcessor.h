@@ -9,7 +9,7 @@
 #include <chrono>
 #include <thread>
 
-#include "SchedulableSceneLinker.h"
+#include "SchedulableLink.h"
 #include "CNNProcessorSettings.h"
 #include "SignapseUtils.h"
 
@@ -18,7 +18,7 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class CNNProcessor : public SchedulableSceneLinker{
+class CNNProcessor : public SchedulableLink{
 public:
     Scene ProcessScene(Scene s);
     

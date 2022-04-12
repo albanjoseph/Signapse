@@ -8,7 +8,7 @@
 #include <chrono>
 #include <thread>
 
-#include "NThreadSchedulableSceneLinker.h"
+#include "MultiThreadedSchedulableLink.h"
 #include "CNNProcessor.h"
 
 
@@ -16,7 +16,7 @@
 /*!
     Class for interfacing with convolutional neural network
 */
-class NThreadedCNNProcessor : public virtual NThreadSchedulableSceneLinker, public CNNProcessor{
+class NThreadedCNNProcessor : public virtual MultiThreadedSchedulableLink, public CNNProcessor{
 public:
     NThreadedCNNProcessor(CNNProcessorSettings* settings, int nrThreads);
     Scene ProcessScene(Scene s);

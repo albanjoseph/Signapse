@@ -5,20 +5,21 @@
 #include <stdlib.h>
 #include <thread>
 
-#include "SceneLinker.h"
+#include "PipelineLink.h"
 
 
 //!  Camera class which inherits from Reel.
 /*!
     Class for reading web cam data, and creating a Reel of scenes.
 */
-class Camera: public SceneLinker{
+class Camera: public PipelineLink{
 public:
     //! Constructor.
     /*!
         Turns the camera object "ON" and configures the video capture.
     */
     Camera();
+    ~Camera();
     bool getOn();
 
     void setOn(bool state);
