@@ -6,7 +6,7 @@ message("Including OpenCV build at directory: " ${OpenCV_INCLUDE_DIRS})
 
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Signapse main.cpp Camera.cpp CNNProcessor.cpp PipelineLink.cpp SceneLinkScheduler.cpp LinkSplitter.cpp NThreadedCNNProcessor.cpp SchedulableLink.cpp MultiThreadedSchedulableLink.cpp BatchCNNProcessor.cpp PreProcessor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp )
+add_executable(Signapse main.cpp Camera.cpp CNNProcessor.cpp PipelineLink.cpp LinkSplitter.cpp NThreadedCNNProcessor.cpp SchedulableLink.cpp MultiThreadedSchedulableLink.cpp BatchCNNProcessor.cpp PreProcessor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp )
 target_link_libraries(Signapse ${OpenCV_LIBS} Qt5::Widgets)
 
 add_library(Camera Camera.cpp Camera.h)
