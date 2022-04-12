@@ -26,8 +26,8 @@ int main(int argc, char* argv[]){
     SignapseUtils::welcomeMessage();
     
     //make pipeline components
-    SceneEditorSettings sceneEditorSettings;
-    PreProcessor preProcessor(&sceneEditorSettings);
+    PreProcessorSettings preProcessorSettings;
+    PreProcessor preProcessor(&preProcessorSettings);
     LinkSplitter linkSplitter;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
