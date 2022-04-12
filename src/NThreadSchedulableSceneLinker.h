@@ -6,9 +6,9 @@
 #include <chrono>
 #include <ctime>
 
-#include "SchedulableSceneLinker.h"
+#include "SchedulableLink.h"
 
-class NThreadSchedulableSceneLinker : virtual public SchedulableSceneLinker {
+class NThreadSchedulableSceneLinker : virtual public SchedulableLink {
 public:
     NThreadSchedulableSceneLinker(int nrThreads);
     void NextScene(Scene scene);

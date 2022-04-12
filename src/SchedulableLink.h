@@ -10,7 +10,7 @@
 
 
 
-class SchedulableSceneLinker : public PipelineLink{
+class SchedulableLink : public PipelineLink{
 public:
     void NextScene(Scene s);
     virtual Scene ProcessScene(Scene s) = 0;
@@ -22,7 +22,6 @@ protected:
     BlockingQueue<Scene> scheduleQueue;
     bool isOn = true;
     std::thread scheduleWorker;
-    
 };
 
 
