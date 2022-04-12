@@ -2,6 +2,8 @@
 #include "gtest_camera.h"
 #include "gtest_cnnprocessor.h"
 #include "gtest_blockingqueue.h"
+#include "gtest_preprocessor.h"
+#include "gtest_signapseutils.h"
 
 
 int main(int argc, char **argv) {

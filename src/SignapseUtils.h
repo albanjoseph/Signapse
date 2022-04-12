@@ -8,6 +8,7 @@
 #include "SignapseUtils.h"
 
 #define MODEL_PATH "models/asl-mobilenetv2.pb"
+#define NR_TASKS 26
 
 
 class SignapseUtils {
@@ -37,7 +38,7 @@ public:
 
     static int makeTask(){
         srand( (unsigned)time( NULL ) );
-        return rand() % 25;
+        return rand() % NR_TASKS;
     }
 
     static std::string getModelPath(){
