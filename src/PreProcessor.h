@@ -1,5 +1,5 @@
 #include <opencv2/core.hpp>
-#include "scene.h"
+#include "Scene.h"
 #include "SceneLinker.h"
 #include "SceneEditorSettings.h"
 

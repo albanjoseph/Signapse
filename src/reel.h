@@ -4,7 +4,7 @@
 
 #ifndef SIGNAPSE_REEL_H
 #define SIGNAPSE_REEL_H
-#include "scene.h"
+#include "Scene.h"
 #include "BlockingQueue.h"
 #include "BlockingQueue.cpp"
 

@@ -7,7 +7,7 @@
 #include <deque>
 #include <mutex>
 #include <condition_variable>
-#include "scene.h"
+#include "Scene.h"
 
 
 template <typename T>

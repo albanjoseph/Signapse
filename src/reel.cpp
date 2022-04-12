@@ -3,7 +3,7 @@
 //
 
 #include "reel.h"
-#include "scene.h"
+#include "Scene.h"
 using namespace std;
 
 

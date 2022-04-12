@@ -2,7 +2,7 @@
 #define SIGNAPSE_SCENELINKSCHEDULER_H
 
 #include "SchedulableSceneLinker.h"
-#include "scene.h"
+#include "Scene.h"
 
 #define DEFAULT_TARGET_FPS 15.0f
 
