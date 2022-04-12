@@ -6,10 +6,10 @@
 
 #define DEFAULT_TARGET_FPS 15.0f
 
-class SceneLinkScheduler : public SceneLinker{
+class SceneLinkScheduler : public PipelineLink{
 public:
     void NextScene(Scene s);
-    SceneLinkScheduler(SceneLinker* toSchedule, float throughput_fps=DEFAULT_TARGET_FPS);
+    SceneLinkScheduler(PipelineLink* toSchedule, float throughput_fps=DEFAULT_TARGET_FPS);
     void RegisterCallback(SceneCallback* scb);
 private:
     SchedulableSceneLinker* toSchedule;

@@ -3,7 +3,7 @@
 
 #include "SceneCallback.h"
 
-class SceneLinker : public SceneCallback{
+class PipelineLink : public SceneCallback{
 public:
     void RegisterCallback(SceneCallback* scb);
 

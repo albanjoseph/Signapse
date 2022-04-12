@@ -1,6 +1,6 @@
 #include "SceneLinkScheduler.h"
 
-SceneLinkScheduler::SceneLinkScheduler(SceneLinker *toSchedule, float throughput_fps) {
+SceneLinkScheduler::SceneLinkScheduler(PipelineLink *toSchedule, float throughput_fps) {
     targetThroughput_fps = throughput_fps;
 }
 

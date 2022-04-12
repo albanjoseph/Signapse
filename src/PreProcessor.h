@@ -1,9 +1,9 @@
 #include <opencv2/core.hpp>
 #include "Scene.h"
-#include "SceneLinker.h"
+#include "PipelineLink.h"
 #include "SceneEditorSettings.h"
 
-class PreProcessor : public SceneLinker{
+class PreProcessor : public PipelineLink{
 public:
     PreProcessor(SceneEditorSettings* settings);
     void NextScene(Scene scene);

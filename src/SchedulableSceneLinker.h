@@ -5,12 +5,12 @@
 #include <chrono>
 #include <ctime>
 
-#include "SceneLinker.h"
+#include "PipelineLink.h"
 #include "BlockingQueue.h"
 
 
 
-class SchedulableSceneLinker : public SceneLinker{
+class SchedulableSceneLinker : public PipelineLink{
 public:
     void NextScene(Scene s);
     virtual Scene ProcessScene(Scene s) = 0;

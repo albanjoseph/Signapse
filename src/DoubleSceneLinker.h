@@ -1,9 +1,9 @@
 #ifndef SIGNAPSE_DOUBLESCENELINKER_H
 #define SIGNAPSE_DOUBLESCENELINKER_H
 
-#include "SceneLinker.h"
+#include "PipelineLink.h"
 
-class DoubleSceneLinker : public SceneLinker{
+class DoubleSceneLinker : public PipelineLink{
 public:
     void NextScene(Scene s);
     void RegisterSecondaryCallback(SceneCallback* scb);
