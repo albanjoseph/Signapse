@@ -6,7 +6,7 @@
 <area shape="rect" id="node5" href="$classLinkSplitter.html" title=" " alt="" coords="123,403,323,495"/>
 <area shape="rect" id="node6" href="$classPreProcessor.html" title=" " alt="" coords="347,395,485,502"/>
 <area shape="rect" id="node7" href="$classSchedulableLink.html" title=" " alt="" coords="509,344,653,553"/>
-<area shape="rect" id="node8" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="422,609,551,759"/>
+<area shape="rect" id="node8" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="422,616,551,752"/>
 <area shape="rect" id="node11" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="575,601,775,767"/>
 <area shape="rect" id="node9" href="$classBatchCNNProcessor.html" title=" " alt="" coords="391,815,553,965"/>
 <area shape="rect" id="node10" href="$classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="578,844,771,936"/>

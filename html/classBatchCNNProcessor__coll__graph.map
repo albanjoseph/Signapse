@@ -1,6 +1,6 @@
 <map id="BatchCNNProcessor" name="BatchCNNProcessor">
-<area shape="rect" id="node1" title=" " alt="" coords="511,816,673,967"/>
-<area shape="rect" id="node2" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="527,631,657,767"/>
+<area shape="rect" id="node1" title=" " alt="" coords="511,801,673,952"/>
+<area shape="rect" id="node2" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="527,631,657,752"/>
 <area shape="rect" id="node3" href="$classSchedulableLink.html" title=" " alt="" coords="313,388,457,568"/>
 <area shape="rect" id="node4" href="$classPipelineLink.html" title=" " alt="" coords="5,204,144,296"/>
 <area shape="rect" id="node5" href="$classSceneCallback.html" title=" " alt="" coords="32,27,141,105"/>

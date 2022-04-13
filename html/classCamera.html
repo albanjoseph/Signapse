@@ -173,11 +173,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00047">47</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                {</div>
-<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Stop</a>();</div>
-<div class="line"><span class="lineno">   49</span>}</div>
-<div class="ttc" id="aclassCamera_html_aba5fb6404d7d0876d428fc79b918d019"><div class="ttname"><a href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Camera::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00036">Camera.cpp:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00046">46</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment">//Stop();</span></div>
+<div class="line"><span class="lineno">   48</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,10 +196,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00043">43</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                   {</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> isOn;</div>
-<div class="line"><span class="lineno">   45</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00042">42</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                   {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> isOn;</div>
+<div class="line"><span class="lineno">   44</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,10 +270,9 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00036">36</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>                 {</div>
 <div class="line"><span class="lineno">   37</span>    isOn=<span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span>(cameraThread.joinable()){</div>
-<div class="line"><span class="lineno">   39</span>        cameraThread.join();</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="line"><span class="lineno">   41</span>}</div>
+<div class="line"><span class="lineno">   38</span>    cameraThread.join();</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

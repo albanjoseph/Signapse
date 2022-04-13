@@ -1,6 +1,6 @@
 <map id="SchedulableLink" name="SchedulableLink">
 <area shape="rect" id="node1" title=" " alt="" coords="123,271,267,480"/>
-<area shape="rect" id="node4" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,535,166,686"/>
+<area shape="rect" id="node4" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,543,166,679"/>
 <area shape="rect" id="node7" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="189,528,389,693"/>
 <area shape="rect" id="node2" href="$classPipelineLink.html" title=" " alt="" coords="125,131,264,223"/>
 <area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="140,5,249,83"/>

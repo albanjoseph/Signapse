@@ -89,15 +89,15 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> Camera::postFrame(){</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    cv::Mat temp;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    videoCapture.read(temp);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    cv::Mat cap;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    videoCapture.read(cap);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// check if we succeeded</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (temp.empty()) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (cap.empty()) {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;ERROR! blank frame grabbed\n&quot;</span>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_struct" href="structScene.html">Scene</a> s;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    s.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>=temp;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    s.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>=cap;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(s);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -108,25 +108,24 @@ $(function() {
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Camera::Stop</a>(){</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    isOn=<span class="keyword">false</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span>(cameraThread.joinable()){</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        cameraThread.join();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">   43</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a>() {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> isOn;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classCamera.html#ad1897942d0ccf91052386388a497349f">   47</a></span><a class="code hl_function" href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a>() {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Stop</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    cameraThread.join();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">   42</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> isOn;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classCamera.html#ad1897942d0ccf91052386388a497349f">   46</a></span><a class="code hl_function" href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a>() {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//Stop();</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
 <div class="ttc" id="aCamera_8h_html"><div class="ttname"><a href="Camera_8h.html">Camera.h</a></div></div>
 <div class="ttc" id="aclassCamera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00003">Camera.cpp:3</a></div></div>
-<div class="ttc" id="aclassCamera_html_a3eefea2d6ea67dd7d86b94a0e3a5efc4"><div class="ttname"><a href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a></div><div class="ttdeci">bool getOn()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00043">Camera.cpp:43</a></div></div>
+<div class="ttc" id="aclassCamera_html_a3eefea2d6ea67dd7d86b94a0e3a5efc4"><div class="ttname"><a href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a></div><div class="ttdeci">bool getOn()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00042">Camera.cpp:42</a></div></div>
 <div class="ttc" id="aclassCamera_html_a758234ad0415d4072c69820c8e0f15a8"><div class="ttname"><a href="classCamera.html#a758234ad0415d4072c69820c8e0f15a8">Camera::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Member function for starting video capturing thread.</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00031">Camera.cpp:31</a></div></div>
 <div class="ttc" id="aclassCamera_html_aba5fb6404d7d0876d428fc79b918d019"><div class="ttname"><a href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Camera::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00036">Camera.cpp:36</a></div></div>
 <div class="ttc" id="aclassCamera_html_acc5cea7c91c22b813050379eb2c43ecc"><div class="ttname"><a href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">Camera::setOn</a></div><div class="ttdeci">void setOn(bool state)</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00007">Camera.cpp:7</a></div></div>
-<div class="ttc" id="aclassCamera_html_ad1897942d0ccf91052386388a497349f"><div class="ttname"><a href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a></div><div class="ttdeci">~Camera()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00047">Camera.cpp:47</a></div></div>
+<div class="ttc" id="aclassCamera_html_ad1897942d0ccf91052386388a497349f"><div class="ttname"><a href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a></div><div class="ttdeci">~Camera()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00046">Camera.cpp:46</a></div></div>
 <div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00012">PipelineLink.h:12</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html_a865518063f18d963fdfd475cfaee1c9d"><div class="ttname"><a href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)=0</div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00036">Scene.h:36</a></div></div>

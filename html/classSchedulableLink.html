@@ -80,7 +80,7 @@ Inheritance diagram for SchedulableLink:</div>
 <div class="center"><img src="classSchedulableLink__inherit__graph.png" border="0" usemap="#aSchedulableLink_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSchedulableLink_inherit__map" id="aSchedulableLink_inherit__map">
 <area shape="rect" title=" " alt="" coords="123,271,267,480"/>
-<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,535,166,686"/>
+<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="37,543,166,679"/>
 <area shape="rect" href="classMultiThreadedSchedulableLink.html" title=" " alt="" coords="189,528,389,693"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="125,131,264,223"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="140,5,249,83"/>
@@ -163,11 +163,10 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00042">42</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                  {</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_function" href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">Stop</a>();</div>
-<div class="line"><span class="lineno">   44</span>}</div>
-<div class="ttc" id="aclassSchedulableLink_html_a59a1d2881a802c8e8cd5f180291771a7"><div class="ttname"><a href="classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7">SchedulableLink::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="SchedulableLink_8cpp_source.html#l00028">SchedulableLink.cpp:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00040">40</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                  {</div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">//Stop();</span></div>
+<div class="line"><span class="lineno">   42</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,13 +245,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classPipelineLink.html#a59fa1422f1b6657e5ba7d1736b2cc1c5">PipelineLink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00035">35</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                           {</div>
-<div class="line"><span class="lineno">   36</span>    <span class="comment">//if space on schedule queue, add this scene; otherwise pass the scene through</span></div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>()) { <span class="comment">//singly threaded for now</span></div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(scene);</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="line"><span class="lineno">   40</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00033">33</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                           {</div>
+<div class="line"><span class="lineno">   34</span>    <span class="comment">//if space on schedule queue, add this scene; otherwise pass the scene through</span></div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12">IsEmpty</a>()) { <span class="comment">//singly threaded for now</span></div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classSchedulableLink.html#aeba8fd5dfe77d351f4f429bd1b258191">scheduleQueue</a>.<a class="code hl_function" href="classBlockingQueue.html#a6b320feb628e94e01d51975ec93af656">Push</a>(scene);</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,10 +367,8 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SchedulableLink_8cpp_source.html#l00028">28</a> of file <a class="el" href="SchedulableLink_8cpp_source.html">SchedulableLink.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>                          {</div>
 <div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0">isOn</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.joinable()){</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.join();</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="line"><span class="lineno">   33</span>}</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_variable" href="classSchedulableLink.html#a78387422061ce34cf01f0076c506ef40">scheduleWorker</a>.join();</div>
+<div class="line"><span class="lineno">   31</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

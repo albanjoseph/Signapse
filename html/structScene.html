@@ -81,12 +81,12 @@ Collaboration diagram for Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="structScene__coll__graph.png" border="0" usemap="#aScene_coll__map" alt="Collaboration graph"/></div>
 <map name="aScene_coll__map" id="aScene_coll__map">
-<area shape="rect" title="Struct Scene." alt="" coords="81,513,160,591"/>
+<area shape="rect" title="Struct Scene." alt="" coords="64,513,143,591"/>
 <area shape="rect" title=" " alt="" coords="5,359,49,436"/>
-<area shape="rect" title=" " alt="" coords="95,5,133,83"/>
-<area shape="rect" href="structPoint.html" title="Struct Point." alt="" coords="145,160,216,267"/>
-<area shape="rect" title=" " alt="" coords="272,359,327,436"/>
-<area shape="rect" href="structBoundingBox.html" title="Struct BoundingBox." alt="" coords="130,344,247,451"/>
+<area shape="rect" title=" " alt="" coords="76,359,131,436"/>
+<area shape="rect" href="structBoundingBox.html" title="Struct BoundingBox." alt="" coords="155,344,273,451"/>
+<area shape="rect" href="structPoint.html" title="Struct Point." alt="" coords="179,160,249,267"/>
+<area shape="rect" title=" " alt="" coords="195,5,233,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -100,9 +100,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a593c61450e51aff8f18da7e493c8f92e"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a></td></tr>
 <tr class="memdesc:a593c61450e51aff8f18da7e493c8f92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable.  <a href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">More...</a><br /></td></tr>
 <tr class="separator:a593c61450e51aff8f18da7e493c8f92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afedee5782f87b66770de78421b832ccc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScene.html#afedee5782f87b66770de78421b832ccc">timestamp</a> = 0</td></tr>
-<tr class="memdesc:afedee5782f87b66770de78421b832ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable.  <a href="structScene.html#afedee5782f87b66770de78421b832ccc">More...</a><br /></td></tr>
-<tr class="separator:afedee5782f87b66770de78421b832ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24677f9974c9db6db4b88592531b6440"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a> = &quot;&quot;</td></tr>
 <tr class="memdesc:a24677f9974c9db6db4b88592531b6440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable.  <a href="structScene.html#a24677f9974c9db6db4b88592531b6440">More...</a><br /></td></tr>
 <tr class="separator:a24677f9974c9db6db4b88592531b6440"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +176,7 @@ Public Attributes</h2></td></tr>
 <p>Member variable. </p>
 <p >Region of the frame which frames the user's hand or sign, used to allow cropping for further processing. Variable contains 4 integers, the first two represent the upper-left bounding box coord with the second two representing lower-right. Coordinates are in (column,row) format, units are in pixels. </p>
 
-<p class="definition">Definition at line <a class="el" href="Scene_8h_source.html#l00057">57</a> of file <a class="el" href="Scene_8h_source.html">Scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Scene_8h_source.html#l00052">52</a> of file <a class="el" href="Scene_8h_source.html">Scene.h</a>.</p>
 
 </div>
 </div>
@@ -197,25 +194,6 @@ Public Attributes</h2></td></tr>
 
 <p>Member variable. </p>
 <p >A string representing the predicted output from processing with a CNN model. </p>
-
-<p class="definition">Definition at line <a class="el" href="Scene_8h_source.html#l00052">52</a> of file <a class="el" href="Scene_8h_source.html">Scene.h</a>.</p>
-
-</div>
-</div>
-<a id="afedee5782f87b66770de78421b832ccc" name="afedee5782f87b66770de78421b832ccc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afedee5782f87b66770de78421b832ccc">&#9670;&nbsp;</a></span>timestamp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Scene::timestamp = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Member variable. </p>
-<p >Holds timestamp of when the <a class="el" href="structScene.html" title="Struct Scene.">Scene</a> was created by Populate. </p>
 
 <p class="definition">Definition at line <a class="el" href="Scene_8h_source.html#l00047">47</a> of file <a class="el" href="Scene_8h_source.html">Scene.h</a>.</p>
 
