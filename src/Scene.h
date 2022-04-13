@@ -42,11 +42,6 @@ struct Scene{
     cv::Mat frame;
     //! Member variable.
     /*!
-        Holds timestamp of when the Scene was created by Populate.
-    */
-    int timestamp = 0;
-    //! Member variable.
-    /*!
         A string representing the predicted output from processing with a CNN model.
     */
     std::string result = "";
