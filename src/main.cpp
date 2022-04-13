@@ -11,7 +11,6 @@
 #include "stdlib.h"
 #include "Gui.h"
 #include "PreProcessor.h"
-#include "SceneLinkScheduler.h"
 #include "SignapseUtils.h"
 #include "LinkSplitter.h"
 #include "NThreadedCNNProcessor.h"
