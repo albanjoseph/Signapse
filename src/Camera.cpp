@@ -35,9 +35,8 @@ void Camera::Start(){
 
 void Camera::Stop(){
     isOn=false;
-    if(cameraThread.joinable()){
-        cameraThread.join();
-    }
+    cameraThread.join();
+
 }
 
 bool Camera::getOn() {
@@ -45,5 +44,5 @@ bool Camera::getOn() {
 }
 
 Camera::~Camera() {
-    Stop();
+    //Stop();
 }

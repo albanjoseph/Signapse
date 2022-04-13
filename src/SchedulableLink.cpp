@@ -27,9 +27,7 @@ void SchedulableLink::Start() {
 
 void SchedulableLink::Stop(){
     isOn = false;
-    if(scheduleWorker.joinable()){
-        scheduleWorker.join();
-    }
+    scheduleWorker.join();
 }
 
 void SchedulableLink::NextScene(Scene scene) {
@@ -40,6 +38,6 @@ void SchedulableLink::NextScene(Scene scene) {
 }
 
 SchedulableLink::~SchedulableLink() {
-    Stop();
+    //Stop();
 }
 

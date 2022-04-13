@@ -22,7 +22,7 @@ class Gui : public QWidget, public SceneCallback{
     Q_OBJECT
 public:
     virtual void NextScene(Scene next);
-    Gui();
+    Gui(QMainWindow* win, Ui_MainWindow* ui_win);
     void SetVisible(bool visible);
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);

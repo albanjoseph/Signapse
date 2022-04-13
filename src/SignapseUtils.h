@@ -26,7 +26,7 @@ public:
                "  ____) | | (_| | | | | (_| | |_) \\__ \\  __/\n"
                " |_____/|_|\\__, |_| |_|\\__,_| .__/|___/\\___|\n"
                "            __/ |           | |             \n"
-               "           |___/            |_|    \n \nWelcome to Signapse, the tool for helping everyday people learn sign language for free!");
+               "           |___/            |_|    \n \nWelcome to Signapse, the tool for helping everyday people learn sign language for free!\n");
     }
 
 

@@ -3,12 +3,12 @@
 #define UI_WDH 1000
 #define UI_HGT 700
 
-Gui::Gui() {
-    widget = new QMainWindow();
+Gui::Gui(QMainWindow* win, Ui_MainWindow* ui_win) {
+    widget = win;
     widget->setFixedSize(UI_WDH, UI_HGT);
-    ui = new Ui_MainWindow();
+    ui = ui_win;
     ui->setupUi(widget);
-    SetTargetImage("A");
+    SetTask("A");
     makeConnections();
 }
 
@@ -71,4 +71,5 @@ void Gui::setTaskText(std::string letter){
 
 void Gui::SetTask(std::string newTask){
     currentTask = newTask;
+    SetTargetImage("A");
 }
