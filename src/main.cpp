@@ -20,31 +20,42 @@ using namespace cv;
 using namespace std;
 
 int main(int argc, char* argv[]){
-    QApplication app(argc, argv);
     SignapseUtils::welcomeMessage();
     
+    //init Qt and Ui
+    QApplication app(argc, argv);
+    QMainWindow window;
+    Ui_MainWindow ui;
+    
     //make pipeline components
+    Camera camera;
     PreProcessorSettings preProcessorSettings;
     PreProcessor preProcessor(&preProcessorSettings);
     LinkSplitter linkSplitter;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);
+    Gui gui(&window, &ui);
     
-    Camera camera;
-    Gui gui;
-    
+    //register callbacks (link pipeline)
     camera.RegisterCallback(&preProcessor);
     preProcessor.RegisterCallback(&linkSplitter);
     linkSplitter.RegisterCallback(&cnn);
     linkSplitter.RegisterSecondaryCallback(&gui);
     cnn.RegisterCallback(&gui);
     
+    //start camera and cnn
     cnn.Start();
     camera.Start();
-
-    gui.SetTask("A");
+    
+    //start gui
     gui.SetVisible(true);
-    app.exec();
-    cin.get();
+    app.exec(); //loops main thread
+    
+    //stop camera and cnn
+    camera.Stop();
+    cnn.Stop();
+    
+    //exit
+    return 0;
 }
 

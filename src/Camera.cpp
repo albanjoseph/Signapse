@@ -16,15 +16,15 @@ void Camera::threadLoop(){
 
 void Camera::postFrame(){
     if(!sceneCallback) return;
-    cv::Mat temp;
-    videoCapture.read(temp);
+    cv::Mat cap;
+    videoCapture.read(cap);
     // check if we succeeded
-    if (temp.empty()) {
+    if (cap.empty()) {
         std::cerr << "ERROR! blank frame grabbed\n";
         return;
     }
     Scene s;
-    s.frame=temp;
+    s.frame=cap;
     sceneCallback->NextScene(s);
 }
 
@@ -35,9 +35,8 @@ void Camera::Start(){
 
 void Camera::Stop(){
     isOn=false;
-    if(cameraThread.joinable()){
-        cameraThread.join();
-    }
+    cameraThread.join();
+
 }
 
 bool Camera::getOn() {
@@ -45,5 +44,5 @@ bool Camera::getOn() {
 }
 
 Camera::~Camera() {
-    Stop();
+    //Stop();
 }

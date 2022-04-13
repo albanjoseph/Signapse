@@ -21,20 +21,13 @@
 class CNNProcessor : public SchedulableLink{
 public:
     Scene ProcessScene(Scene s);
-    
     CNNProcessor(CNNProcessorSettings* s);
-    
     cv::Mat MakeBlob(Scene scene);
-
+    
 protected:
     CNNProcessorSettings* settings;
-    void threadLoop();
-    
     void LoadModel(std::string modelPath);
     cv::dnn::Net net;
-
-private:
-    std::thread cnnProcessorThread;
 };
 
 #endif

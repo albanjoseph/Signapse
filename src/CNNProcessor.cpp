@@ -22,6 +22,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
 }
 
 Scene CNNProcessor::ProcessScene(Scene scene){
+    if(scene.frame.empty()) return scene;
     cv::Mat blob = MakeBlob(scene);
     net.setInput(blob);
     cv::Mat prob = net.forward();
