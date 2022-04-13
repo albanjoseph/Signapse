@@ -6,7 +6,12 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/albanjoseph/Signapse?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues-raw/albanjoseph/Signapse?style=for-the-badge)
 [![License](https://img.shields.io/github/license/albanjoseph/Signapse?style=for-the-badge)](https://github.com/albanjoseph/Signapse/blob/main/LICENSE)
-
+ <br />
+    <a href="https://github.com/albanjoseph/Signapse/issues">Report Bug</a>
+    .
+    <a href="https://github.com/albanjoseph/Signapse/issues">Request Feature</a>
+ <br />
+ 
 ![Build & Test](https://github.com/albanjoseph/Signapse/actions/workflows/cmake_build.yml/badge.svg)
 ![Docs](https://github.com/albanjoseph/Signapse/actions/workflows/docs.yml/badge.svg)
 
@@ -25,9 +30,9 @@
     🎥 Check out our product
     <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> demo video</a>!!
     <br />
-    <a href="https://github.com/albanjoseph/Signapse/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/albanjoseph/Signapse/issues">Request Feature</a>
+    📜 Explore our 
+    <a href="https://github.com/albanjoseph/Signapse/wiki"> Wiki</a> to learn more!!
+    <br />
   </p>
 </p>
 
