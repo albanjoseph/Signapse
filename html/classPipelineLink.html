@@ -80,15 +80,15 @@ Inheritance diagram for PipelineLink:</div>
 <div class="center"><img src="classPipelineLink__inherit__graph.png" border="0" usemap="#aPipelineLink_inherit__map" alt="Inheritance graph"/></div>
 <map name="aPipelineLink_inherit__map" id="aPipelineLink_inherit__map">
 <area shape="rect" title=" " alt="" coords="249,131,388,223"/>
-<area shape="rect" href="classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,300,99,451"/>
-<area shape="rect" href="classLinkSplitter.html" title=" " alt="" coords="123,329,323,421"/>
-<area shape="rect" href="classPreProcessor.html" title=" " alt="" coords="347,322,485,429"/>
-<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="509,271,653,480"/>
+<area shape="rect" href="classCamera.html" title=" " alt="" coords="5,293,99,443"/>
+<area shape="rect" href="classLinkSplitter.html" title=" " alt="" coords="123,322,323,414"/>
+<area shape="rect" href="classPreProcessor.html" title=" " alt="" coords="347,315,485,421"/>
+<area shape="rect" href="classSchedulableLink.html" title=" " alt="" coords="509,271,635,465"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="264,5,373,83"/>
-<area shape="rect" href="classCNNProcessor.html" title="CNNProcessor class." alt="" coords="423,543,553,679"/>
-<area shape="rect" href="classMultiThreadedSchedulableLink.html" title=" " alt="" coords="576,528,776,693"/>
-<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="392,741,555,892"/>
-<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="579,771,773,863"/>
+<area shape="rect" href="classCNNProcessor.html" title=" " alt="" coords="414,528,543,664"/>
+<area shape="rect" href="classMultiThreadedSchedulableLink.html" title=" " alt="" coords="567,513,767,679"/>
+<area shape="rect" href="classBatchCNNProcessor.html" title=" " alt="" coords="383,727,545,877"/>
+<area shape="rect" href="classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="570,756,763,848"/>
 </map>
 </div>
 <div class="dynheader">
@@ -119,8 +119,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aa836c431f5d8ba46e7b090c1fe67eac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PipelineLink_8h_source.html#l00006">6</a> of file <a class="el" href="PipelineLink_8h_source.html">PipelineLink.h</a>.</p>
+<div class="textblock"><p >A simple class which extends <a class="el" href="classSceneCallback.html">SceneCallback</a> to add a RegisterCallback method. Also implements a default NextScene function. This class forms the basis for pipeline elements in the Signapse video processing architecture. </p>
+
+<p class="definition">Definition at line <a class="el" href="PipelineLink_8h_source.html#l00010">10</a> of file <a class="el" href="PipelineLink_8h_source.html">PipelineLink.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a59fa1422f1b6657e5ba7d1736b2cc1c5" name="a59fa1422f1b6657e5ba7d1736b2cc1c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59fa1422f1b6657e5ba7d1736b2cc1c5">&#9670;&nbsp;</a></span>NextScene()</h2>
@@ -145,17 +146,23 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Default NextScene implementation, simply passes the scene on to the registered callback </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classSchedulableLink.html#a1048433830df513f478e089ef984cf87">SchedulableLink</a>, and <a class="el" href="classPreProcessor.html#aa7fd42a0820488ca294f2176adb83862">PreProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PipelineLink_8cpp_source.html#l00007">7</a> of file <a class="el" href="PipelineLink_8cpp_source.html">PipelineLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                                        {</div>
-<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(scene);</div>
-<div class="line"><span class="lineno">   10</span>}</div>
-<div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00012">PipelineLink.h:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PipelineLink_8cpp_source.html#l00014">14</a> of file <a class="el" href="PipelineLink_8cpp_source.html">PipelineLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                        {</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(scene);</div>
+<div class="line"><span class="lineno">   17</span>}</div>
+<div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00016">PipelineLink.h:16</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html_a865518063f18d963fdfd475cfaee1c9d"><div class="ttname"><a href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)=0</div></div>
 </div><!-- fragment -->
 </div>
@@ -175,11 +182,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Used to register the next pipeline element. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scb</td><td>reference to the next pipeline element </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PipelineLink_8cpp_source.html#l00003">3</a> of file <a class="el" href="PipelineLink_8cpp_source.html">PipelineLink.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    3</span>                                                      {</div>
-<div class="line"><span class="lineno">    4</span>    <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a> = scb;</div>
-<div class="line"><span class="lineno">    5</span>}</div>
+<p class="definition">Definition at line <a class="el" href="PipelineLink_8cpp_source.html#l00007">7</a> of file <a class="el" href="PipelineLink_8cpp_source.html">PipelineLink.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                                      {</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a> = scb;</div>
+<div class="line"><span class="lineno">    9</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,7 +217,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PipelineLink_8h_source.html#l00012">12</a> of file <a class="el" href="PipelineLink_8h_source.html">PipelineLink.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PipelineLink_8h_source.html#l00016">16</a> of file <a class="el" href="PipelineLink_8h_source.html">PipelineLink.h</a>.</p>
 
 </div>
 </div>

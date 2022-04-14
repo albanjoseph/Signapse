@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Gui_8h_source.html#l00021">21</a> of file <a class="el" href="Gui_8h_source.html">Gui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Gui_8h_source.html#l00022">22</a> of file <a class="el" href="Gui_8h_source.html">Gui.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ada7f4f3d768f6aaff6d697040256befc" name="ada7f4f3d768f6aaff6d697040256befc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada7f4f3d768f6aaff6d697040256befc">&#9670;&nbsp;</a></span>Gui()</h2>
@@ -147,20 +147,27 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Constructor sets up GUI, makes signal connections </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>points to QMainWindow from main thread </td></tr>
+    <tr><td class="paramname">ui_win</td><td>points to <a class="el" href="classUi__MainWindow.html">Ui_MainWindow</a> from main thread </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00006">6</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                                                {</div>
-<div class="line"><span class="lineno">    7</span>    widget = win;</div>
-<div class="line"><span class="lineno">    8</span>    widget-&gt;setFixedSize(<a class="code hl_define" href="Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14">UI_WDH</a>, <a class="code hl_define" href="Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d">UI_HGT</a>);</div>
-<div class="line"><span class="lineno">    9</span>    ui = ui_win;</div>
-<div class="line"><span class="lineno">   10</span>    ui-&gt;<a class="code hl_function" href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">setupUi</a>(widget);</div>
-<div class="line"><span class="lineno">   11</span>    <a class="code hl_function" href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">SetTask</a>(<span class="stringliteral">&quot;A&quot;</span>);</div>
-<div class="line"><span class="lineno">   12</span>    makeConnections();</div>
-<div class="line"><span class="lineno">   13</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00011">11</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                {</div>
+<div class="line"><span class="lineno">   12</span>    widget = win;</div>
+<div class="line"><span class="lineno">   13</span>    widget-&gt;setFixedSize(<a class="code hl_define" href="Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14">UI_WDH</a>, <a class="code hl_define" href="Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d">UI_HGT</a>);</div>
+<div class="line"><span class="lineno">   14</span>    ui = ui_win;</div>
+<div class="line"><span class="lineno">   15</span>    ui-&gt;<a class="code hl_function" href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">setupUi</a>(widget);</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">SetTask</a>(<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line"><span class="lineno">   17</span>    makeConnections();</div>
+<div class="line"><span class="lineno">   18</span>}</div>
 <div class="ttc" id="aGui_8cpp_html_a13a4fd6d056c40e25d14773b4a677f14"><div class="ttname"><a href="Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14">UI_WDH</a></div><div class="ttdeci">#define UI_WDH</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00003">Gui.cpp:3</a></div></div>
 <div class="ttc" id="aGui_8cpp_html_a3135725991631085fc8157f2f2964b1d"><div class="ttname"><a href="Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d">UI_HGT</a></div><div class="ttdeci">#define UI_HGT</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00004">Gui.cpp:4</a></div></div>
-<div class="ttc" id="aclassGui_html_ad52cabd9e25e09e480e106a873e6ac3b"><div class="ttname"><a href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">Gui::SetTask</a></div><div class="ttdeci">void SetTask(std::string newTask)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00072">Gui.cpp:72</a></div></div>
-<div class="ttc" id="aclassUi__MainWindow_html_acf4a0872c4c77d8f43a2ec66ed849b58"><div class="ttname"><a href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">Ui_MainWindow::setupUi</a></div><div class="ttdeci">void setupUi(QMainWindow *MainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00057">QtGeneratedGui.h:57</a></div></div>
+<div class="ttc" id="aclassGui_html_ad52cabd9e25e09e480e106a873e6ac3b"><div class="ttname"><a href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">Gui::SetTask</a></div><div class="ttdeci">void SetTask(std::string newTask)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00086">Gui.cpp:86</a></div></div>
+<div class="ttc" id="aclassUi__MainWindow_html_acf4a0872c4c77d8f43a2ec66ed849b58"><div class="ttname"><a href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">Ui_MainWindow::setupUi</a></div><div class="ttdeci">void setupUi(QMainWindow *MainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00059">QtGeneratedGui.h:59</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,18 +186,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Method handler for when the next task button is pressed, sets new task and resets the progress bar. </p>
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00048">48</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                       {</div>
-<div class="line"><span class="lineno">   49</span>    std::string new_task = <a class="code hl_function" href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a>(<a class="code hl_function" href="classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797">SignapseUtils::makeTask</a>());</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(new_task);</div>
-<div class="line"><span class="lineno">   51</span>    currentTask = new_task;</div>
-<div class="line"><span class="lineno">   52</span>    progress_bar.<a class="code hl_function" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a>();</div>
-<div class="line"><span class="lineno">   53</span>}</div>
-<div class="ttc" id="aclassGui_html_a0a36847ab7eaf678ed178b9735001c62"><div class="ttname"><a href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">Gui::SetTargetImage</a></div><div class="ttdeci">void SetTargetImage(int target)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00036">Gui.cpp:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00059">59</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                       {</div>
+<div class="line"><span class="lineno">   60</span>    std::string new_task = SignapseUtils::makeTask();</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(new_task);</div>
+<div class="line"><span class="lineno">   62</span>    currentTask = new_task;</div>
+<div class="line"><span class="lineno">   63</span>    progress_bar.<a class="code hl_function" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a>();</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="aclassGui_html_a0a36847ab7eaf678ed178b9735001c62"><div class="ttname"><a href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">Gui::SetTargetImage</a></div><div class="ttdeci">void SetTargetImage(int target)</div></div>
 <div class="ttc" id="aclassProgressBar_html_a127eeaa90ae4362ad2fed359be6c339c"><div class="ttname"><a href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">ProgressBar::reset_progress</a></div><div class="ttdeci">void reset_progress()</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8cpp_source.html#l00018">ProgressBar.cpp:18</a></div></div>
-<div class="ttc" id="aclassSignapseUtils_html_a1a957a29563a73836631ea7dde6ea65d"><div class="ttname"><a href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a></div><div class="ttdeci">static std::string getLetterFromDigit(int digit)</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00016">SignapseUtils.h:16</a></div></div>
-<div class="ttc" id="aclassSignapseUtils_html_ac78322126e22592d4d0fb4597c445797"><div class="ttname"><a href="classSignapseUtils.html#ac78322126e22592d4d0fb4597c445797">SignapseUtils::makeTask</a></div><div class="ttdeci">static int makeTask()</div><div class="ttdef"><b>Definition:</b> <a href="SignapseUtils_8h_source.html#l00039">SignapseUtils.h:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -217,29 +223,35 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Handles the next scene from the video processing pipeline. If the result is empty, the viewing pane is updated, otherwise, the progress bar is updated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">next</td><td>The <a class="el" href="structScene.html" title="Struct Scene.">Scene</a> to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00015">15</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                              {</div>
-<div class="line"><span class="lineno">   16</span>    <span class="comment">//flip frame</span></div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span>(next.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a> == <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><span class="lineno">   18</span>        cv::Mat temp;</div>
-<div class="line"><span class="lineno">   19</span>        cv::flip(next.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>, temp, 1);</div>
-<div class="line"><span class="lineno">   20</span>        QImage imgIn = QImage((uchar *) temp.data, temp.cols, temp.rows, temp.step,</div>
-<div class="line"><span class="lineno">   21</span>                              QImage::Format_RGB888);</div>
-<div class="line"><span class="lineno">   22</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;setPixmap(QPixmap::fromImage(imgIn));</div>
-<div class="line"><span class="lineno">   23</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;resize(ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;pixmap()-&gt;size());</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">int</span> progress = progress_bar.<a class="code hl_function" href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">get_progress</a>(next.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a>, currentTask);</div>
-<div class="line"><span class="lineno">   27</span>        emit <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(progress);</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="line"><span class="lineno">   29</span>    </div>
-<div class="line"><span class="lineno">   30</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00023">23</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                              {</div>
+<div class="line"><span class="lineno">   24</span>    <span class="comment">//flip frame</span></div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span>(next.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a> == <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><span class="lineno">   26</span>        cv::Mat temp;</div>
+<div class="line"><span class="lineno">   27</span>        cv::flip(next.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>, temp, 1);</div>
+<div class="line"><span class="lineno">   28</span>        QImage imgIn = QImage((uchar *) temp.data, temp.cols, temp.rows, temp.step,</div>
+<div class="line"><span class="lineno">   29</span>                              QImage::Format_RGB888);</div>
+<div class="line"><span class="lineno">   30</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;setPixmap(QPixmap::fromImage(imgIn));</div>
+<div class="line"><span class="lineno">   31</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;resize(ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;pixmap()-&gt;size());</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> progress = progress_bar.<a class="code hl_function" href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">get_progress</a>(next.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a>, currentTask);</div>
+<div class="line"><span class="lineno">   35</span>        emit <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(progress);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="line"><span class="lineno">   37</span>    </div>
+<div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclassGui_html_aebf0df50c8d102f1abe49b406978c788"><div class="ttname"><a href="classGui.html#aebf0df50c8d102f1abe49b406978c788">Gui::progressChanged</a></div><div class="ttdeci">void progressChanged(int progress)</div></div>
 <div class="ttc" id="aclassProgressBar_html_a5de51951eee94c59f04e57ef5ea1f840"><div class="ttname"><a href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">ProgressBar::get_progress</a></div><div class="ttdeci">int get_progress(std::string s, std::string task)</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8cpp_source.html#l00010">ProgressBar.cpp:10</a></div></div>
-<div class="ttc" id="aclassUi__MainWindow_html_ad9c89133780f28e6efa2ec17ceb9cff5"><div class="ttname"><a href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">Ui_MainWindow::label</a></div><div class="ttdeci">QLabel * label</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00038">QtGeneratedGui.h:38</a></div></div>
+<div class="ttc" id="aclassUi__MainWindow_html_ad9c89133780f28e6efa2ec17ceb9cff5"><div class="ttname"><a href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">Ui_MainWindow::label</a></div><div class="ttdeci">QLabel * label</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00040">QtGeneratedGui.h:40</a></div></div>
 <div class="ttc" id="astructScene_html_a24677f9974c9db6db4b88592531b6440"><div class="ttname"><a href="structScene.html#a24677f9974c9db6db4b88592531b6440">Scene::result</a></div><div class="ttdeci">std::string result</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00047">Scene.h:47</a></div></div>
 <div class="ttc" id="astructScene_html_a593c61450e51aff8f18da7e493c8f92e"><div class="ttname"><a href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">Scene::frame</a></div><div class="ttdeci">cv::Mat frame</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00042">Scene.h:42</a></div></div>
 </div><!-- fragment -->
@@ -287,13 +299,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00036">36</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                   {</div>
-<div class="line"><span class="lineno">   37</span>    std::string letter = <a class="code hl_function" href="classSignapseUtils.html#a1a957a29563a73836631ea7dde6ea65d">SignapseUtils::getLetterFromDigit</a>(target);</div>
-<div class="line"><span class="lineno">   38</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(letter);</div>
-<div class="line"><span class="lineno">   39</span>    <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(0);</div>
-<div class="line"><span class="lineno">   40</span>}</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="abd40935fbc464cd0f5e456d43115ec39" name="abd40935fbc464cd0f5e456d43115ec39"></a>
@@ -306,19 +311,25 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Gui::SetTargetImage </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>target</em></td><td>)</td>
+          <td class="paramname"><em>letter</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Sets the target to match with user sign </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">letter</td><td>string represenation of the target sign </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00042">42</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                         {</div>
-<div class="line"><span class="lineno">   43</span>    std::string impath = <a class="code hl_define" href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a> + letter + <span class="stringliteral">&quot;_test.jpg&quot;</span>;</div>
-<div class="line"><span class="lineno">   44</span>    cv::Mat img = cv::imread(impath);</div>
-<div class="line"><span class="lineno">   45</span>    setDemoImage(img);</div>
-<div class="line"><span class="lineno">   46</span>    setTaskText(letter);</div>
-<div class="line"><span class="lineno">   47</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00050">50</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                         {</div>
+<div class="line"><span class="lineno">   51</span>    std::string impath = <a class="code hl_define" href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a> + letter + <span class="stringliteral">&quot;_test.jpg&quot;</span>;</div>
+<div class="line"><span class="lineno">   52</span>    cv::Mat img = cv::imread(impath);</div>
+<div class="line"><span class="lineno">   53</span>    setDemoImage(img);</div>
+<div class="line"><span class="lineno">   54</span>    setTaskText(letter);</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="aGui_8h_html_a22367a48f379f6a4837b282aa6155ddc"><div class="ttname"><a href="Gui_8h.html#a22367a48f379f6a4837b282aa6155ddc">testFolder</a></div><div class="ttdeci">#define testFolder</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8h_source.html#l00016">Gui.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -339,11 +350,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00072">72</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                  {</div>
-<div class="line"><span class="lineno">   73</span>    currentTask = newTask;</div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(<span class="stringliteral">&quot;A&quot;</span>);</div>
-<div class="line"><span class="lineno">   75</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00086">86</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>                                  {</div>
+<div class="line"><span class="lineno">   87</span>    currentTask = newTask;</div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -362,11 +373,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Sets underlying widget visibility. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visible</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00032">32</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                 {</div>
-<div class="line"><span class="lineno">   33</span>    widget-&gt;setVisible(visible);</div>
-<div class="line"><span class="lineno">   34</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Gui_8cpp_source.html#l00043">43</a> of file <a class="el" href="Gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                 {</div>
+<div class="line"><span class="lineno">   44</span>    widget-&gt;setVisible(visible);</div>
+<div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -2,12 +2,12 @@
 <area shape="rect" id="node1" title=" " alt="" coords="183,5,292,83"/>
 <area shape="rect" id="node2" href="$classGui.html" title=" " alt="" coords="90,131,225,296"/>
 <area shape="rect" id="node3" href="$classPipelineLink.html" title=" " alt="" coords="249,167,388,259"/>
-<area shape="rect" id="node4" href="$classCamera.html" title="Camera class which inherits from Reel." alt="" coords="5,373,99,524"/>
-<area shape="rect" id="node5" href="$classLinkSplitter.html" title=" " alt="" coords="123,403,323,495"/>
-<area shape="rect" id="node6" href="$classPreProcessor.html" title=" " alt="" coords="347,395,485,502"/>
-<area shape="rect" id="node7" href="$classSchedulableLink.html" title=" " alt="" coords="509,344,653,553"/>
-<area shape="rect" id="node8" href="$classCNNProcessor.html" title="CNNProcessor class." alt="" coords="422,616,551,752"/>
-<area shape="rect" id="node11" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="575,601,775,767"/>
-<area shape="rect" id="node9" href="$classBatchCNNProcessor.html" title=" " alt="" coords="391,815,553,965"/>
-<area shape="rect" id="node10" href="$classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="578,844,771,936"/>
+<area shape="rect" id="node4" href="$classCamera.html" title=" " alt="" coords="5,366,99,517"/>
+<area shape="rect" id="node5" href="$classLinkSplitter.html" title=" " alt="" coords="123,395,323,487"/>
+<area shape="rect" id="node6" href="$classPreProcessor.html" title=" " alt="" coords="347,388,485,495"/>
+<area shape="rect" id="node7" href="$classSchedulableLink.html" title=" " alt="" coords="509,344,635,539"/>
+<area shape="rect" id="node8" href="$classCNNProcessor.html" title=" " alt="" coords="413,601,542,737"/>
+<area shape="rect" id="node11" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="565,587,765,752"/>
+<area shape="rect" id="node9" href="$classBatchCNNProcessor.html" title=" " alt="" coords="381,800,544,951"/>
+<area shape="rect" id="node10" href="$classNThreadedCNNProcessor.html" title="CNNProcessor class." alt="" coords="569,829,762,921"/>
 </map>

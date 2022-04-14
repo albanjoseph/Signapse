@@ -121,8 +121,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa836c431f5d8ba46e7b090c1fe67eac7 inherit pro_attribs_classPipelineLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LinkSplitter_8h_source.html#l00006">6</a> of file <a class="el" href="LinkSplitter_8h_source.html">LinkSplitter.h</a>.</p>
+<div class="textblock"><p >A pipeline element which extends <a class="el" href="classPipelineLink.html">PipelineLink</a> to add a secondary callback. The NextScene function is overridden to pass on the scene reference to both registered callbacks. N.B. this does not duplicate the scene, merely copies the reference to another element. No extra memory is allocated! </p>
+
+<p class="definition">Definition at line <a class="el" href="LinkSplitter_8h_source.html#l00010">10</a> of file <a class="el" href="LinkSplitter_8h_source.html">LinkSplitter.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8a3f85b11773e6e7cf3167cbb5671d8b" name="a8a3f85b11773e6e7cf3167cbb5671d8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a3f85b11773e6e7cf3167cbb5671d8b">&#9670;&nbsp;</a></span>NextScene()</h2>
@@ -147,16 +148,22 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Override of NextScene to pass scene reference to a maximum of two registered callbacks </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>scene </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LinkSplitter_8cpp_source.html#l00004">4</a> of file <a class="el" href="LinkSplitter_8cpp_source.html">LinkSplitter.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    4</span>                                    {</div>
-<div class="line"><span class="lineno">    5</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(s);</div>
-<div class="line"><span class="lineno">    6</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a>) <a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(s);</div>
-<div class="line"><span class="lineno">    7</span>}</div>
-<div class="ttc" id="aclassLinkSplitter_html_a4e08b9f28ce17b189c338c27a30f961b"><div class="ttname"><a href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">LinkSplitter::secondarySceneCallback</a></div><div class="ttdeci">SceneCallback * secondarySceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="LinkSplitter_8h_source.html#l00011">LinkSplitter.h:11</a></div></div>
-<div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00012">PipelineLink.h:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LinkSplitter_8cpp_source.html#l00007">7</a> of file <a class="el" href="LinkSplitter_8cpp_source.html">LinkSplitter.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                    {</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>) <a class="code hl_variable" href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">sceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(s);</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a>) <a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a>-&gt;<a class="code hl_function" href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">NextScene</a>(s);</div>
+<div class="line"><span class="lineno">   10</span>}</div>
+<div class="ttc" id="aclassLinkSplitter_html_a4e08b9f28ce17b189c338c27a30f961b"><div class="ttname"><a href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">LinkSplitter::secondarySceneCallback</a></div><div class="ttdeci">SceneCallback * secondarySceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="LinkSplitter_8h_source.html#l00015">LinkSplitter.h:15</a></div></div>
+<div class="ttc" id="aclassPipelineLink_html_aa836c431f5d8ba46e7b090c1fe67eac7"><div class="ttname"><a href="classPipelineLink.html#aa836c431f5d8ba46e7b090c1fe67eac7">PipelineLink::sceneCallback</a></div><div class="ttdeci">SceneCallback * sceneCallback</div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00016">PipelineLink.h:16</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html_a865518063f18d963fdfd475cfaee1c9d"><div class="ttname"><a href="classSceneCallback.html#a865518063f18d963fdfd475cfaee1c9d">SceneCallback::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)=0</div></div>
 </div><!-- fragment -->
 </div>
@@ -176,11 +183,17 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Used to register a secondary callback. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scb</td><td>callback to register. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="LinkSplitter_8cpp_source.html#l00009">9</a> of file <a class="el" href="LinkSplitter_8cpp_source.html">LinkSplitter.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                                                               {</div>
-<div class="line"><span class="lineno">   10</span>    <a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a> = scb;</div>
-<div class="line"><span class="lineno">   11</span>}</div>
+<p class="definition">Definition at line <a class="el" href="LinkSplitter_8cpp_source.html#l00015">15</a> of file <a class="el" href="LinkSplitter_8cpp_source.html">LinkSplitter.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                               {</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_variable" href="classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b">secondarySceneCallback</a> = scb;</div>
+<div class="line"><span class="lineno">   17</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,7 +210,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LinkSplitter_8h_source.html#l00011">11</a> of file <a class="el" href="LinkSplitter_8h_source.html">LinkSplitter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LinkSplitter_8h_source.html#l00015">15</a> of file <a class="el" href="LinkSplitter_8h_source.html">LinkSplitter.h</a>.</p>
 
 </div>
 </div>
