@@ -3,7 +3,7 @@
 #include "PipelineLink.h"
 #include "PreProcessorSettings.h"
 /*!
- * A pipeline element to perform pre-processing required for exection with neural network
+ * A pipeline element to perform pre-processing required for Signapse. Adds region of interest, bounding box rectangle and switches pixel format for neural network.
  */
 class PreProcessor : public PipelineLink{
 public:
