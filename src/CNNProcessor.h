@@ -14,10 +14,9 @@
 #include "SignapseUtils.h"
 
 
-//!  CNNProcessor class.
 /*!
-    Class for interfacing with convolutional neural network
-*/
+ * Schedulable Pipeline Link which performs network inference on each Scene, populating the results field.
+ */
 class CNNProcessor : public SchedulableLink{
 public:
     Scene ProcessScene(Scene s);

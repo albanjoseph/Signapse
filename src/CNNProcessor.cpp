@@ -1,5 +1,9 @@
 #include "CNNProcessor.h"
 
+/*!
+ * Loads neural network from location on disk
+ * @param modelPath
+ */
 void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
@@ -9,6 +13,11 @@ CNNProcessor::CNNProcessor(CNNProcessorSettings* s) {
     LoadModel(settings->ModelPath);
 }
 
+/*!
+ * Makes OpenCV image "blob" from the region of interest in the frame. Blob format is required for inference.
+ * @param scene
+ * @return matrix image blob, ready for inference
+ */
 cv::Mat CNNProcessor::MakeBlob(Scene scene){
     int x  = scene.regionOfInterest.UpperLeft.x; int y = scene.regionOfInterest.UpperLeft.y;
     int width = scene.regionOfInterest.LowerRight.x - x;
@@ -21,6 +30,11 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     return blob;
 }
 
+/*!
+ * Executed network inference on given scene, populates the scene with results.
+ * @param scene input scene
+ * @return output processed scene
+ */
 Scene CNNProcessor::ProcessScene(Scene scene){
     if(scene.frame.empty()) return scene;
     cv::Mat blob = MakeBlob(scene);
