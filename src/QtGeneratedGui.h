@@ -26,7 +26,9 @@
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
-
+/*!
+ * Auto-generated class, created from parsing our .ui file (gui/TaskMaster.ui) from QtDesigner. As auto-generated elements are not in best code-style, this is wrapped up within the Gui class
+ */
 class Ui_MainWindow
 {
 public:
