@@ -70,6 +70,7 @@ Signapse is built using:
 - [OpenCV](https://opencv.org/)
 - [Google Test](https://github.com/google/googletest)
 - [Doxygen](https://www.doxygen.nl/index.html)
+- [Qt](https://www.qt.io/)
 
 <!-- LICENSE -->
 
