@@ -2,7 +2,7 @@
 <br />
 <div align="center">
    <h1 align="center">Signapse</h1>
- <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
+ <img src="https://github.com/albanjoseph/Signapse/blob/dev/images/logo.png" alt="logo" width="400" div al ign=center />
  </br>
  Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
  </br>
@@ -43,13 +43,13 @@
 
 # About Signapse
 
-- Signapse is an open source software tool for helping everyday people learn sign language for free!​
+**Signapse is an open source software tool that helps everyday people learn sign language for free!​**
 
-- Signapse acts as a teacher, helping students progress their learning. Users will be able to score points, complete challenges and view their live signing in our custom GUI.
+For more information check out our <a href="https://github.com/albanjoseph/Signapse/wiki">Wiki</a> where you can find our <a href="https://github.com/albanjoseph/Signapse/wiki/Installation-Guide">installation guide</a>, <a href="https://albanjoseph.github.io/Signapse/html/annotated.html">developer documentation</a> and more. Or to get started quickly simply watch our install guide and demo video below.
 
 
-<p align="center"> 
-<img src="images/synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
+https://user-images.githubusercontent.com/33161910/163428318-66b07cc5-5431-41e9-8261-a6f18a6c4551.mp4
+
 
 # Social Media
 
