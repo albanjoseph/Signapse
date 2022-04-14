@@ -16,7 +16,8 @@
 #define testFolder "test/asl_alphabet_test/"
 
 /*
- * A class to wrap the QT generated header file and handle GUI functionality
+ * A class to wrap the QT generated header file and handle GUI functionality.
+ * Inherits from QWidget and SceneCallback
  */
 class Gui : public QWidget, public SceneCallback{
     Q_OBJECT

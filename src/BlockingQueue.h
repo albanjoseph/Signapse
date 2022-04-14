@@ -15,6 +15,11 @@ template <typename T>
 /*!
     
 */
+
+/*!
+ * Class to wrap around std::deque and block thread execution when no data is available at the output.
+ * @tparam T Type of elements in the queue
+ */
 class BlockingQueue {
 public:
     void Push(T toPush);

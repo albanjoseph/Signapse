@@ -5,6 +5,9 @@
 #define MOBNET_V2_INPUT_DIM_Y 224
 #define MOBNET_V2_PATH "models/asl-mobilenetv2.pb"
 
+/*!
+ * A simple struct to store default configurations for CNNProcessor settings.
+ */
 struct CNNProcessorSettings {
     CNNProcessorSettings(std::string network = "mobnetv2"){
         if(network == "mobnetv2") {

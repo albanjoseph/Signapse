@@ -8,46 +8,22 @@
 #include "PipelineLink.h"
 
 
-//!  Camera class which inherits from Reel.
 /*!
-    Class for reading web cam data, and creating a Reel of scenes.
-*/
+ * Simple Pipeline element which integrates frame acquisition from the camera feed.
+ */
 class Camera: public PipelineLink{
 public:
-    //! Constructor.
-    /*!
-        Turns the camera object "ON" and configures the video capture.
-    */
     Camera();
     ~Camera();
     bool getOn();
-
     void setOn(bool state);
-    
-    //! Member function for starting video capturing thread.
-    /*!
-        Starts "Stream" private member function as a thread.
-    */
     void Start();
     void Stop();
     
-    
-    
 private:
     void postFrame();
-
     void threadLoop();
-    
-    //! Private member object.
-    /*!
-        OpenCV object for reading web cam data.
-    */
     cv::VideoCapture videoCapture;
-    //! Private member variable containing web cam device ID.
-    /*!
-        0 = open default camera
-        
-    */
     int deviceID = 0;
     //! Private member variable containing web cam API ID.
     /*!

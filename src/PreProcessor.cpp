@@ -3,6 +3,10 @@
 
 #include "PreProcessor.h"
 
+/*!
+ * Handles processing the given scene and calling back to next pipeline element
+ * @param scene
+ */
 void PreProcessor::NextScene(Scene scene){
    cv::Size sz = scene.frame.size();
    scene.regionOfInterest = BoundingBox((int)(sz.width * settings->relativeBoundingBox[0]),
@@ -14,17 +18,31 @@ void PreProcessor::NextScene(Scene scene){
     if(!sceneCallback) return;
    sceneCallback->NextScene(out);
 }
-
+/*!
+ *
+ * @param PreProcessorSettings for initialisation
+ */
 PreProcessor::PreProcessor(PreProcessorSettings* s) {
     settings = s;
 }
 
+/*!
+ * Processing method to switch the pixel format of the internal frame. Performed with standard OpenCV functions
+ * @param s scene
+ * @return scene with pixel format rearranged
+ */
 Scene PreProcessor::switchRGB2BGR(Scene s) {
     cv::Mat temp = s.frame;
     cv::cvtColor(temp, s.frame, cv::COLOR_BGR2RGB);
     return s;
 }
 
+
+/*!
+ * Adds a green rectangle into the internal scene frame, highlighting the region of interest. This shows the user where to put their hand sign to interface with the neural network.
+ * @param s scene for processing
+ * @return the processed scene
+ */
 Scene PreProcessor::drawBox(Scene s) {
     cv::Mat temp = s.frame;
     int x  = s.regionOfInterest.UpperLeft.x; int y = s.regionOfInterest.UpperLeft.y;
@@ -37,6 +55,13 @@ Scene PreProcessor::drawBox(Scene s) {
     return s;
 }
 
+/*!
+ * Used to set the bounding box each scene is marked with. Set as float values in range [0-1] indicating fractional coordinates in the image frame.
+ * @param upperLeftX
+ * @param upperLeftY
+ * @param lowerRightX
+ * @param lowerRightY
+ */
 void PreProcessor::SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
     settings->relativeBoundingBox[0] = upperLeftX;
     settings->relativeBoundingBox[1] = upperLeftY;

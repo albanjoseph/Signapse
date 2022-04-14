@@ -7,7 +7,7 @@ TEST(signapseutils_test, checkModelPath_ret){
 }
 
 TEST(signapseutils_test, checkMakeTask_int){
-    int task = SignapseUtils::makeTask();
-    EXPECT_LE(task, NR_TASKS);
+    int size = SignapseUtils::results.size();
+    EXPECT_LE(NR_TASKS, size);
 }
 

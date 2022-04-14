@@ -3,7 +3,9 @@
 #define Y0 0.25f
 #define X1 0.75f
 #define Y1 0.75f
-
+/*!
+ * A simple struct to add some default settings for PreProcessor
+ */
 struct PreProcessorSettings{
     PreProcessorSettings(){
         relativeBoundingBox[0] = X0;
