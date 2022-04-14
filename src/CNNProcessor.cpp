@@ -34,11 +34,4 @@ Scene CNNProcessor::ProcessScene(Scene scene){
     return scene;
 }
 
-//void CNNProcessor::NextScene(Scene next) {
-//    Scene updatedFrame = ProcessScene(next);
-//    if(!sceneCallback) return;
-//    sceneCallback->NextScene(updatedFrame);
-//}
-
-
 
