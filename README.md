@@ -28,11 +28,13 @@
     <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969</a>!! 🤩 📰
     <br />
     🎥 Check out our product
-    <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> demo video</a>!!
+    <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> Demo Video</a>!!
     <br />
     📜 Explore our 
     <a href="https://github.com/albanjoseph/Signapse/wiki"> Wiki</a> to learn more!!
     <br />
+    🖇️ Explore the 
+    <a href="https://albanjoseph.github.io/Signapse/html/annotated.html"> Developer Documentation</a>!! 
   </p>
 </p>
 
