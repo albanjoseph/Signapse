@@ -84,7 +84,9 @@ void Gui::makeConnections() {
 void Gui::setDemoImage(cv::Mat img) {
     cv::Mat rgb;
     cv::cvtColor(img, rgb, cv::COLOR_BGR2RGB);
-    ui->label_2->setPixmap(QPixmap::fromImage(QImage(rgb.data, rgb.cols, rgb.rows, rgb.step, QImage::Format_RGB888)));
+    cv::Mat flip;
+    cv::flip(rgb, flip, 1);
+    ui->label_2->setPixmap(QPixmap::fromImage(QImage(flip.data, flip.cols, flip.rows, flip.step, QImage::Format_RGB888)));
     ui->label_2->resize(ui->label_2->pixmap()->size());
 
 }
