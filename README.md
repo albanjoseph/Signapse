@@ -1,6 +1,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+   <h1 align="center">Signapse</h1>
+ <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
+ </br>
+ Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
+ </br>
+ 📰 🤩 As featured on: 
+    <a href="https://www.hackster.io/news/signapse-aims-to-turn-a-raspberry-pi-into-an-artificially-intelligent-tutor-for-sign-language-ec1a08d0fc36"> Hackster.io</a> and 
+    <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969</a>!! 🤩 📰
+ </br>
+ </br>
  
 ![Contributors](https://img.shields.io/github/contributors/albanjoseph/Signapse?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/albanjoseph/Signapse?style=for-the-badge)
@@ -15,18 +25,7 @@
 ![Build & Test](https://github.com/albanjoseph/Signapse/actions/workflows/cmake_build.yml/badge.svg)
 ![Docs](https://github.com/albanjoseph/Signapse/actions/workflows/docs.yml/badge.svg)
 
-  
-  <img src="images/Signapse.jpg" alt="logo" width="300" div al ign=center />
-  <h1 align="center">Signapse</h1>
-
   <p align="center">
-    Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
-    <br />
-    <br />
-   📰 🤩 As featured on: 
-    <a href="https://www.hackster.io/news/signapse-aims-to-turn-a-raspberry-pi-into-an-artificially-intelligent-tutor-for-sign-language-ec1a08d0fc36"> Hackster.io</a> and 
-    <a href="https://channel969.com/signapse-goals-to-flip-a-raspberry-pi-into-an-artificially-clever-tutor-for-signal-language/"> Channel 969</a>!! 🤩 📰
-    <br />
     🎥 Check out our product
     <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> Demo Video</a>!!
     <br />
@@ -37,8 +36,8 @@
     <a href="https://albanjoseph.github.io/Signapse/html/annotated.html"> Developer Documentation</a>!! 
   </p>
 </p>
-
-<h3 align="center"></h3>
+</div>
+<h3 align="left"></h3>
 
 
 
@@ -63,9 +62,14 @@
 </p>
 
 # Technologies
-<p align="center"> </a> <a href="https://isocpp.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="100" height="150"/> </a> </a> 
-<a href="https://www.raspberrypi.org/" > <img src="https://elinux.org/images/c/cb/Raspberry_Pi_Logo.svg" alt="rpi" width="84" height="105" /> </a> 
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="100" height="150"/> </a> 
+Signapse is built using:
+- [C++ Programming Language](https://www.cplusplus.com/)
+- [Debian/Ubuntu Linux](https://www.linux.org/)
+- [Raspberry Pi](https://www.raspberrypi.org)
+- [Tensorflow](https://www.tensorflow.org/)
+- [OpenCV](https://opencv.org/)
+- [Google Test](https://github.com/google/googletest)
+- [Doxygen](https://www.doxygen.nl/index.html)
 
 <!-- LICENSE -->
 
@@ -76,7 +80,6 @@ Distributed under the GPL-3.0 License. See [`LICENSE`](https://github.com/albanj
 
 # Contact Us
 - 🔭This project is being completed by a team of students at the University of Glasgow :
-
   * [Adam Frew](https://github.com/Saweenbarra) 
   * [Alban Joseph](https://github.com/albanjoseph)
   * [Lewis Russell](https://github.com/charger4241)
