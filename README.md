@@ -16,8 +16,6 @@
   <h1 align="center">Signapse</h1>
 
   <p align="center">
-    Signapse is here to help you learn and practice sign language on an embedded device you can take anywhere!
-    <br />
     <br />
    📰 🤩 As featured on: 
     <a href="https://www.hackster.io/news/signapse-aims-to-turn-a-raspberry-pi-into-an-artificially-intelligent-tutor-for-sign-language-ec1a08d0fc36"> Hackster.io</a> and 
@@ -36,15 +34,16 @@
 
 # About Signapse
 
-- Signapse is an open source software tool for helping everyday people learn sign language for free!​
+**Signapse is an open source software tool that helps everyday people learn sign language for free!​**
 
-- Signapse acts as a teacher, helping students progress their learning. Users will be able to score points, complete challenges and view their live signing in our custom GUI.
+For more information check out our <a href="https://github.com/albanjoseph/Signapse/wiki">Wiki</a> where you can find our <a href="https://github.com/albanjoseph/Signapse/wiki/Installation-Guide">installation guide</a>, <a href="https://albanjoseph.github.io/Signapse/html/annotated.html">developer documentation</a> and more. Or to get started quickly simply watch our install guide and demo video below.
 
-<p align="center"> 
-<img src="images/synapseOperation.gif" alt="logo" width="300" div al ign=center /> </p>
+ <iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=I-UpxTHhook&ab_channel=Signapse">
+</iframe> 
 
 # Social Media
-
+Keep up to speed with all of the Signapse news!
 <p align="center">
 <a href="https://twitter.com/GU_Signapse" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="signups" height="150" width="100" /></a>·
 <a href="https://www.facebook.com/Signapse-125793226671815" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="signapse" height="150" width="100" /></a> ·
