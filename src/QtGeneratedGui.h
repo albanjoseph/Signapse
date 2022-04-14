@@ -132,6 +132,7 @@ public:
         
         spinBox = new QSpinBox(splitter);
         spinBox->setMaximum(100);
+        spinBox->setMinimum(1);
         spinBox->setValue(100);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
         splitter->addWidget(spinBox);
