@@ -10,8 +10,5 @@ var searchData=
   ['mobnet_5fv2_5finput_5fdim_5fy_7',['MOBNET_V2_INPUT_DIM_Y',['../CNNProcessorSettings_8h.html#ab06770e92556df6328a8ab74bf91cccb',1,'CNNProcessorSettings.h']]],
   ['mobnet_5fv2_5fpath_8',['MOBNET_V2_PATH',['../CNNProcessorSettings_8h.html#a35d4a01a40f68bd5853e730ca71f5626',1,'CNNProcessorSettings.h']]],
   ['model_5fpath_9',['MODEL_PATH',['../SignapseUtils_8h.html#aaaa253a12856f3bb8c463ce490dfcd4e',1,'SignapseUtils.h']]],
-  ['modelpath_10',['ModelPath',['../structCNNProcessorSettings.html#a1139682231d0075e3b4ccc76f26de8cc',1,'CNNProcessorSettings']]],
-  ['multithreadedschedulablelink_11',['MultiThreadedSchedulableLink',['../classMultiThreadedSchedulableLink.html',1,'MultiThreadedSchedulableLink'],['../classMultiThreadedSchedulableLink.html#a8cd8fa67afbd5e9adcdcce481ead6cc4',1,'MultiThreadedSchedulableLink::MultiThreadedSchedulableLink()']]],
-  ['multithreadedschedulablelink_2ecpp_12',['MultiThreadedSchedulableLink.cpp',['../MultiThreadedSchedulableLink_8cpp.html',1,'']]],
-  ['multithreadedschedulablelink_2eh_13',['MultiThreadedSchedulableLink.h',['../MultiThreadedSchedulableLink_8h.html',1,'']]]
+  ['modelpath_10',['ModelPath',['../structCNNProcessorSettings.html#a1139682231d0075e3b4ccc76f26de8cc',1,'CNNProcessorSettings']]]
 ];

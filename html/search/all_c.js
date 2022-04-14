@@ -7,5 +7,5 @@ var searchData=
   ['reset_5fprogress_4',['reset_progress',['../classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c',1,'ProgressBar']]],
   ['result_5',['result',['../structScene.html#a24677f9974c9db6db4b88592531b6440',1,'Scene']]],
   ['retranslateui_6',['retranslateUi',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow']]],
-  ['run_7',['Run',['../classBatchCNNProcessor.html#ad32b30b5a112b54fc8bdb45c505d4107',1,'BatchCNNProcessor::Run()'],['../classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4',1,'SchedulableLink::Run()']]]
+  ['run_7',['Run',['../classSchedulableLink.html#a2fb3c3ef2a06b2b8c65a2fa55dd66ec4',1,'SchedulableLink']]]
 ];

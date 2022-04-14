@@ -6,6 +6,5 @@ var searchData=
   ['secondaryscenecallback_3',['secondarySceneCallback',['../classLinkSplitter.html#a4e08b9f28ce17b189c338c27a30f961b',1,'LinkSplitter']]],
   ['settings_4',['settings',['../classCNNProcessor.html#a5239daf3f9fe549ed83f160fc43a5015',1,'CNNProcessor']]],
   ['splitter_5',['splitter',['../classUi__MainWindow.html#abfba98fab6f5677d35fa69dd46ef8ffb',1,'Ui_MainWindow']]],
-  ['start_6',['start',['../classMultiThreadedSchedulableLink.html#ada253a8760dcf2359ec84984b39988f6',1,'MultiThreadedSchedulableLink']]],
-  ['statusbar_7',['statusbar',['../classUi__MainWindow.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]]
+  ['statusbar_6',['statusbar',['../classUi__MainWindow.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]]
 ];

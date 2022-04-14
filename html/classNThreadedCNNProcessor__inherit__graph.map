@@ -1,8 +1,0 @@
-<map id="NThreadedCNNProcessor" name="NThreadedCNNProcessor">
-<area shape="rect" id="node1" title="CNNProcessor class." alt="" coords="102,727,295,819"/>
-<area shape="rect" id="node2" href="$classMultiThreadedSchedulableLink.html" title=" " alt="" coords="5,513,205,679"/>
-<area shape="rect" id="node3" href="$classSchedulableLink.html" title=" " alt="" coords="135,271,262,465"/>
-<area shape="rect" id="node6" href="$classCNNProcessor.html" title=" " alt="" coords="229,528,358,664"/>
-<area shape="rect" id="node4" href="$classPipelineLink.html" title=" " alt="" coords="129,131,268,223"/>
-<area shape="rect" id="node5" href="$classSceneCallback.html" title=" " alt="" coords="144,5,253,83"/>
-</map>

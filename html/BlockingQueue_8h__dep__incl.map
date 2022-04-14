@@ -1,15 +1,9 @@
 <map id="src/BlockingQueue.h" name="src/BlockingQueue.h">
-<area shape="rect" id="node1" title=" " alt="" coords="118,5,261,32"/>
-<area shape="rect" id="node2" href="$BlockingQueue_8cpp.html" title=" " alt="" coords="24,80,180,107"/>
-<area shape="rect" id="node6" href="$SchedulableLink_8h.html" title=" " alt="" coords="248,80,398,107"/>
-<area shape="rect" id="node3" href="$MultiThreadedSchedulableLink_8cpp.html" title=" " alt="" coords="30,244,227,285"/>
-<area shape="rect" id="node4" href="$NThreadedCNNProcessor_8cpp.html" title=" " alt="" coords="64,333,284,360"/>
-<area shape="rect" id="node5" href="$SchedulableLink_8cpp.html" title=" " alt="" coords="80,162,244,189"/>
-<area shape="rect" id="node7" href="$CNNProcessor_8h.html" title=" " alt="" coords="490,162,633,189"/>
-<area shape="rect" id="node13" href="$MultiThreadedSchedulableLink_8h.html" title=" " alt="" coords="268,155,466,196"/>
-<area shape="rect" id="node8" href="$BatchCNNProcessor_8h.html" title=" " alt="" coords="714,251,890,278"/>
-<area shape="rect" id="node10" href="$main_8cpp.html" title=" " alt="" coords="607,333,703,360"/>
-<area shape="rect" id="node11" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="482,251,638,278"/>
-<area shape="rect" id="node12" href="$NThreadedCNNProcessor_8h.html" title=" " alt="" coords="252,251,458,278"/>
-<area shape="rect" id="node9" href="$BatchCNNProcessor_8cpp.html" title=" " alt="" coords="728,333,918,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="104,5,247,32"/>
+<area shape="rect" id="node2" href="$BlockingQueue_8cpp.html" title=" " alt="" coords="9,80,165,107"/>
+<area shape="rect" id="node4" href="$SchedulableLink_8h.html" title=" " alt="" coords="189,80,340,107"/>
+<area shape="rect" id="node3" href="$SchedulableLink_8cpp.html" title=" " alt="" coords="5,155,169,181"/>
+<area shape="rect" id="node5" href="$CNNProcessor_8h.html" title=" " alt="" coords="193,155,336,181"/>
+<area shape="rect" id="node6" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="111,229,267,256"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="291,229,387,256"/>
 </map>

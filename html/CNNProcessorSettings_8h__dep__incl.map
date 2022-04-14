@@ -1,10 +1,6 @@
 <map id="src/CNNProcessorSettings.h" name="src/CNNProcessorSettings.h">
-<area shape="rect" id="node1" title=" " alt="" coords="209,5,400,32"/>
-<area shape="rect" id="node2" href="$CNNProcessor_8h.html" title=" " alt="" coords="233,80,376,107"/>
-<area shape="rect" id="node3" href="$BatchCNNProcessor_8h.html" title=" " alt="" coords="34,155,210,181"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="221,229,317,256"/>
-<area shape="rect" id="node6" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="285,155,441,181"/>
-<area shape="rect" id="node7" href="$NThreadedCNNProcessor_8h.html" title=" " alt="" coords="465,155,672,181"/>
-<area shape="rect" id="node4" href="$BatchCNNProcessor_8cpp.html" title=" " alt="" coords="5,229,196,256"/>
-<area shape="rect" id="node8" href="$NThreadedCNNProcessor_8cpp.html" title=" " alt="" coords="459,229,679,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="63,5,253,32"/>
+<area shape="rect" id="node2" href="$CNNProcessor_8h.html" title=" " alt="" coords="87,80,229,107"/>
+<area shape="rect" id="node3" href="$CNNProcessor_8cpp.html" title=" " alt="" coords="5,155,161,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="186,155,282,181"/>
 </map>
