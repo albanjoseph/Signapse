@@ -16,12 +16,9 @@ var searchData=
   ['settargetimage_13',['SetTargetImage',['../classGui.html#a0a36847ab7eaf678ed178b9735001c62',1,'Gui::SetTargetImage(int target)'],['../classGui.html#abd40935fbc464cd0f5e456d43115ec39',1,'Gui::SetTargetImage(std::string target)']]],
   ['settask_14',['SetTask',['../classGui.html#ad52cabd9e25e09e480e106a873e6ac3b',1,'Gui']]],
   ['settings_15',['settings',['../classCNNProcessor.html#a5239daf3f9fe549ed83f160fc43a5015',1,'CNNProcessor']]],
-  ['setupui_16',['setupUi',['../classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow']]],
-  ['setvisible_17',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
-  ['signapseutils_2eh_18',['SignapseUtils.h',['../SignapseUtils_8h.html',1,'']]],
-  ['size_19',['Size',['../classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279',1,'BlockingQueue']]],
-  ['splitter_20',['splitter',['../classUi__MainWindow.html#abfba98fab6f5677d35fa69dd46ef8ffb',1,'Ui_MainWindow']]],
-  ['start_21',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableLink.html#a8310129e5f23602a040ffba539d80677',1,'SchedulableLink::Start()']]],
-  ['statusbar_22',['statusbar',['../classUi__MainWindow.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]],
-  ['stop_23',['Stop',['../classCamera.html#aba5fb6404d7d0876d428fc79b918d019',1,'Camera::Stop()'],['../classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7',1,'SchedulableLink::Stop()']]]
+  ['setvisible_16',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
+  ['signapseutils_2eh_17',['SignapseUtils.h',['../SignapseUtils_8h.html',1,'']]],
+  ['size_18',['Size',['../classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279',1,'BlockingQueue']]],
+  ['start_19',['Start',['../classCamera.html#a758234ad0415d4072c69820c8e0f15a8',1,'Camera::Start()'],['../classSchedulableLink.html#a8310129e5f23602a040ffba539d80677',1,'SchedulableLink::Start()']]],
+  ['stop_20',['Stop',['../classCamera.html#aba5fb6404d7d0876d428fc79b918d019',1,'Camera::Stop()'],['../classSchedulableLink.html#a59a1d2881a802c8e8cd5f180291771a7',1,'SchedulableLink::Stop()']]]
 ];

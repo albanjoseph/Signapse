@@ -103,7 +103,7 @@ Signals</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa30ec3c367a788a076c6d4b4c94fff78"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGui.html#aa30ec3c367a788a076c6d4b4c94fff78">NextScene</a> (<a class="el" href="structScene.html">Scene</a> next)</td></tr>
 <tr class="separator:aa30ec3c367a788a076c6d4b4c94fff78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7f4f3d768f6aaff6d697040256befc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGui.html#ada7f4f3d768f6aaff6d697040256befc">Gui</a> (QMainWindow *win, <a class="el" href="classUi__MainWindow.html">Ui_MainWindow</a> *ui_win)</td></tr>
+<tr class="memitem:ada7f4f3d768f6aaff6d697040256befc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGui.html#ada7f4f3d768f6aaff6d697040256befc">Gui</a> (QMainWindow *win, Ui_MainWindow *ui_win)</td></tr>
 <tr class="separator:ada7f4f3d768f6aaff6d697040256befc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac76a8210e18720a6bd248c0f1425a738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGui.html#ac76a8210e18720a6bd248c0f1425a738">SetVisible</a> (bool visible)</td></tr>
 <tr class="separator:ac76a8210e18720a6bd248c0f1425a738"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,7 +137,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classUi__MainWindow.html">Ui_MainWindow</a> *&#160;</td>
+          <td class="paramtype">Ui_MainWindow *&#160;</td>
           <td class="paramname"><em>ui_win</em>&#160;</td>
         </tr>
         <tr>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <p >Constructor sets up GUI, makes signal connections </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">win</td><td>points to QMainWindow from main thread </td></tr>
-    <tr><td class="paramname">ui_win</td><td>points to <a class="el" href="classUi__MainWindow.html">Ui_MainWindow</a> from main thread </td></tr>
+    <tr><td class="paramname">ui_win</td><td>points to Ui_MainWindow from main thread </td></tr>
   </table>
   </dd>
 </dl>
@@ -160,14 +160,13 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   12</span>    widget = win;</div>
 <div class="line"><span class="lineno">   13</span>    widget-&gt;setFixedSize(<a class="code hl_define" href="Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14">UI_WDH</a>, <a class="code hl_define" href="Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d">UI_HGT</a>);</div>
 <div class="line"><span class="lineno">   14</span>    ui = ui_win;</div>
-<div class="line"><span class="lineno">   15</span>    ui-&gt;<a class="code hl_function" href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">setupUi</a>(widget);</div>
+<div class="line"><span class="lineno">   15</span>    ui-&gt;setupUi(widget);</div>
 <div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">SetTask</a>(<span class="stringliteral">&quot;A&quot;</span>);</div>
 <div class="line"><span class="lineno">   17</span>    makeConnections();</div>
 <div class="line"><span class="lineno">   18</span>}</div>
 <div class="ttc" id="aGui_8cpp_html_a13a4fd6d056c40e25d14773b4a677f14"><div class="ttname"><a href="Gui_8cpp.html#a13a4fd6d056c40e25d14773b4a677f14">UI_WDH</a></div><div class="ttdeci">#define UI_WDH</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00003">Gui.cpp:3</a></div></div>
 <div class="ttc" id="aGui_8cpp_html_a3135725991631085fc8157f2f2964b1d"><div class="ttname"><a href="Gui_8cpp.html#a3135725991631085fc8157f2f2964b1d">UI_HGT</a></div><div class="ttdeci">#define UI_HGT</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00004">Gui.cpp:4</a></div></div>
 <div class="ttc" id="aclassGui_html_ad52cabd9e25e09e480e106a873e6ac3b"><div class="ttname"><a href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">Gui::SetTask</a></div><div class="ttdeci">void SetTask(std::string newTask)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00086">Gui.cpp:86</a></div></div>
-<div class="ttc" id="aclassUi__MainWindow_html_acf4a0872c4c77d8f43a2ec66ed849b58"><div class="ttname"><a href="classUi__MainWindow.html#acf4a0872c4c77d8f43a2ec66ed849b58">Ui_MainWindow::setupUi</a></div><div class="ttdeci">void setupUi(QMainWindow *MainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00059">QtGeneratedGui.h:59</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -240,8 +239,8 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   27</span>        cv::flip(next.<a class="code hl_variable" href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">frame</a>, temp, 1);</div>
 <div class="line"><span class="lineno">   28</span>        QImage imgIn = QImage((uchar *) temp.data, temp.cols, temp.rows, temp.step,</div>
 <div class="line"><span class="lineno">   29</span>                              QImage::Format_RGB888);</div>
-<div class="line"><span class="lineno">   30</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;setPixmap(QPixmap::fromImage(imgIn));</div>
-<div class="line"><span class="lineno">   31</span>        ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;resize(ui-&gt;<a class="code hl_variable" href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">label</a>-&gt;pixmap()-&gt;size());</div>
+<div class="line"><span class="lineno">   30</span>        ui-&gt;label-&gt;setPixmap(QPixmap::fromImage(imgIn));</div>
+<div class="line"><span class="lineno">   31</span>        ui-&gt;label-&gt;resize(ui-&gt;label-&gt;pixmap()-&gt;size());</div>
 <div class="line"><span class="lineno">   32</span>    }</div>
 <div class="line"><span class="lineno">   33</span>    <span class="keywordflow">else</span>{</div>
 <div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> progress = progress_bar.<a class="code hl_function" href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">get_progress</a>(next.<a class="code hl_variable" href="structScene.html#a24677f9974c9db6db4b88592531b6440">result</a>, currentTask);</div>
@@ -251,7 +250,6 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclassGui_html_aebf0df50c8d102f1abe49b406978c788"><div class="ttname"><a href="classGui.html#aebf0df50c8d102f1abe49b406978c788">Gui::progressChanged</a></div><div class="ttdeci">void progressChanged(int progress)</div></div>
 <div class="ttc" id="aclassProgressBar_html_a5de51951eee94c59f04e57ef5ea1f840"><div class="ttname"><a href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">ProgressBar::get_progress</a></div><div class="ttdeci">int get_progress(std::string s, std::string task)</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8cpp_source.html#l00010">ProgressBar.cpp:10</a></div></div>
-<div class="ttc" id="aclassUi__MainWindow_html_ad9c89133780f28e6efa2ec17ceb9cff5"><div class="ttname"><a href="classUi__MainWindow.html#ad9c89133780f28e6efa2ec17ceb9cff5">Ui_MainWindow::label</a></div><div class="ttdeci">QLabel * label</div><div class="ttdef"><b>Definition:</b> <a href="QtGeneratedGui_8h_source.html#l00040">QtGeneratedGui.h:40</a></div></div>
 <div class="ttc" id="astructScene_html_a24677f9974c9db6db4b88592531b6440"><div class="ttname"><a href="structScene.html#a24677f9974c9db6db4b88592531b6440">Scene::result</a></div><div class="ttdeci">std::string result</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00047">Scene.h:47</a></div></div>
 <div class="ttc" id="astructScene_html_a593c61450e51aff8f18da7e493c8f92e"><div class="ttname"><a href="structScene.html#a593c61450e51aff8f18da7e493c8f92e">Scene::frame</a></div><div class="ttdeci">cv::Mat frame</div><div class="ttdoc">Member variable.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00042">Scene.h:42</a></div></div>
 </div><!-- fragment -->
