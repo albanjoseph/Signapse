@@ -27,19 +27,22 @@ public:
     void SetVisible(bool visible);
     void SetTargetImage(int target);
     void SetTargetImage(std::string target);
-    void ButtonPressed();
     void SetTask(std::string newTask);
+    void buttonPressed();
+    void updateThreshold();
+
 
 private:
     QMainWindow *widget;
     Ui_MainWindow *ui;
-    ProgressBar progress_bar;
+    ProgressBar progressBar;
     void setDemoImage(cv::Mat img);
     void setTaskText(std::string letter);
     void makeConnections();
     std::string currentTask;
 signals:
     void progressChanged(int progress);
+    
 };
 
 #endif

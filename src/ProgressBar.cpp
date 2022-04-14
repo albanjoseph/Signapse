@@ -3,11 +3,10 @@
 #include "iostream"
 
 ProgressBar::ProgressBar(){
-    count = 0;
-    threshold = 100;
+    SetThreshold(100);
 }
 
-int ProgressBar::get_progress(std::string result, std::string task){
+int ProgressBar::GetProgress(std::string result, std::string task){
     if(task == result){
         count++;
     }
@@ -15,6 +14,10 @@ int ProgressBar::get_progress(std::string result, std::string task){
     return progress;
 }
 
-void ProgressBar::reset_progress(){
+void ProgressBar::ResetProgress(){
     count = 0;
+}
+
+void ProgressBar::SetThreshold(int thres) {
+    threshold = thres;
 }

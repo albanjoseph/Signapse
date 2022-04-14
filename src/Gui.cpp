@@ -31,8 +31,11 @@ void Gui::NextScene(Scene next) {
         ui->label->resize(ui->label->pixmap()->size());
     }
     else{
-        int progress = progress_bar.get_progress(next.result, currentTask);
+        int progress = progressBar.GetProgress(next.result, currentTask);
         emit progressChanged(progress);
+        if(progress >= 100){
+            buttonPressed();
+        }
     }
     
 }
@@ -56,20 +59,27 @@ void Gui::SetTargetImage(std::string letter) {
 /*!
  * Method handler for when the next task button is pressed, sets new task and resets the progress bar.
  */
-void Gui::ButtonPressed(){
+void Gui::buttonPressed(){
     std::string new_task = SignapseUtils::makeTask();
     SetTargetImage(new_task);
     currentTask = new_task;
-    progress_bar.reset_progress();
+    progressBar.ResetProgress();
+}
+
+void Gui::updateThreshold(){
+    progressBar.SetThreshold(ui->spinBox->value());
+    progressBar.ResetProgress();
 }
 
 /*!
  * Makes signal connections for the GUI interrupts.
  */
 void Gui::makeConnections() {
-    QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::ButtonPressed);
+    QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::buttonPressed);
     QObject::connect(this, &Gui::progressChanged, ui->progressBar, &QProgressBar::setValue);
+    QObject::connect(ui->spinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &Gui::updateThreshold);
 }
+
 
 void Gui::setDemoImage(cv::Mat img) {
     cv::Mat rgb;

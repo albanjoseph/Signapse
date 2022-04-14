@@ -24,6 +24,7 @@
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
+#include <QtWidgets/QSpinBox>
 
 QT_BEGIN_NAMESPACE
 /*!
@@ -43,6 +44,7 @@ public:
     QGridLayout *gridLayout_2;
     QSplitter *splitter;
     QLabel *label_4;
+    QLabel *label_threshold;
     QProgressBar *progressBar;
     QFrame *frame_2;
     QGridLayout *gridLayout_3;
@@ -55,6 +57,7 @@ public:
     QMenuBar *menubar;
     QMenu *menuMenu;
     QStatusBar *statusbar;
+    QSpinBox *spinBox;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -106,16 +109,34 @@ public:
         splitter->setOrientation(Qt::Horizontal);
         label_4 = new QLabel(splitter);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setAlignment(Qt::AlignRight);
         splitter->addWidget(label_4);
+        
+    
         progressBar = new QProgressBar(splitter);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(2);
         sizePolicy2.setHeightForWidth(progressBar->sizePolicy().hasHeightForWidth());
         progressBar->setSizePolicy(sizePolicy2);
-        progressBar->setValue(24);
+        progressBar->setValue(0);
         splitter->addWidget(progressBar);
+    
+    
+        label_threshold = new QLabel(splitter);
+        label_threshold->setObjectName(QString::fromUtf8("label_threshold"));
+        label_threshold->setAlignment(Qt::AlignRight);
+        splitter->addWidget(label_threshold);
+        
+        spinBox = new QSpinBox(splitter);
+        spinBox->setMaximum(100);
+        spinBox->setValue(100);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        splitter->addWidget(spinBox);
+        
+        
 
         gridLayout_2->addWidget(splitter, 0, 0, 1, 1);
 
@@ -221,6 +242,7 @@ public:
         label->setText(QString());
         label_3->setText(QString());
         label_4->setText(QApplication::translate("MainWindow", "Progress:", nullptr));
+        label_threshold->setText(QApplication::translate("MainWindow", "Threshold:", nullptr));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
