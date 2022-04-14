@@ -78,7 +78,7 @@ Collaboration diagram for ProgressBar:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProgressBar__coll__graph.png" border="0" usemap="#aProgressBar_coll__map" alt="Collaboration graph"/></div>
 <map name="aProgressBar_coll__map" id="aProgressBar_coll__map">
-<area shape="rect" title=" " alt="" coords="5,160,132,267"/>
+<area shape="rect" title=" " alt="" coords="5,160,132,281"/>
 <area shape="rect" title=" " alt="" coords="49,5,88,83"/>
 </map>
 </div>
@@ -87,21 +87,24 @@ Collaboration diagram for ProgressBar:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aabdebc9823af01c7567e7546d9f0016f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#aabdebc9823af01c7567e7546d9f0016f">ProgressBar</a> ()</td></tr>
 <tr class="separator:aabdebc9823af01c7567e7546d9f0016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5de51951eee94c59f04e57ef5ea1f840"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a5de51951eee94c59f04e57ef5ea1f840">get_progress</a> (std::string s, std::string task)</td></tr>
-<tr class="separator:a5de51951eee94c59f04e57ef5ea1f840"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127eeaa90ae4362ad2fed359be6c339c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a127eeaa90ae4362ad2fed359be6c339c">reset_progress</a> ()</td></tr>
-<tr class="separator:a127eeaa90ae4362ad2fed359be6c339c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9741f4e72806c3045ac357ace2345767"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a9741f4e72806c3045ac357ace2345767">GetProgress</a> (std::string s, std::string task)</td></tr>
+<tr class="separator:a9741f4e72806c3045ac357ace2345767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5eaec997b18f5f93cfe47d62ae4b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a8c5eaec997b18f5f93cfe47d62ae4b80">ResetProgress</a> ()</td></tr>
+<tr class="separator:a8c5eaec997b18f5f93cfe47d62ae4b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6341e8b03f3c46472d51eb4c41a5eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#ae6341e8b03f3c46472d51eb4c41a5eb8">SetThreshold</a> (int thres)</td></tr>
+<tr class="separator:ae6341e8b03f3c46472d51eb4c41a5eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a02af5a8cdef96e30b77a4fce6b67888b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a></td></tr>
 <tr class="separator:a02af5a8cdef96e30b77a4fce6b67888b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a309717f93a78f90a21739f42bc008857"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a></td></tr>
+<tr class="memitem:a309717f93a78f90a21739f42bc008857"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a> = 0</td></tr>
 <tr class="separator:a309717f93a78f90a21739f42bc008857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00008">8</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
+<div class="textblock"><p >Simple class for keeping track of progress in learning a sign </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00010">10</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aabdebc9823af01c7567e7546d9f0016f" name="aabdebc9823af01c7567e7546d9f0016f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabdebc9823af01c7567e7546d9f0016f">&#9670;&nbsp;</a></span>ProgressBar()</h2>
@@ -120,23 +123,21 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00005">5</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    5</span>                        {</div>
-<div class="line"><span class="lineno">    6</span>    <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a> = 0;</div>
-<div class="line"><span class="lineno">    7</span>    <a class="code hl_variable" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a> = 100;</div>
-<div class="line"><span class="lineno">    8</span>}</div>
-<div class="ttc" id="aclassProgressBar_html_a02af5a8cdef96e30b77a4fce6b67888b"><div class="ttname"><a href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">ProgressBar::threshold</a></div><div class="ttdeci">int threshold</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00014">ProgressBar.h:14</a></div></div>
-<div class="ttc" id="aclassProgressBar_html_a309717f93a78f90a21739f42bc008857"><div class="ttname"><a href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">ProgressBar::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00015">ProgressBar.h:15</a></div></div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_function" href="classProgressBar.html#ae6341e8b03f3c46472d51eb4c41a5eb8">SetThreshold</a>(100);</div>
+<div class="line"><span class="lineno">    7</span>}</div>
+<div class="ttc" id="aclassProgressBar_html_ae6341e8b03f3c46472d51eb4c41a5eb8"><div class="ttname"><a href="classProgressBar.html#ae6341e8b03f3c46472d51eb4c41a5eb8">ProgressBar::SetThreshold</a></div><div class="ttdeci">void SetThreshold(int thres)</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8cpp_source.html#l00021">ProgressBar.cpp:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5de51951eee94c59f04e57ef5ea1f840" name="a5de51951eee94c59f04e57ef5ea1f840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5de51951eee94c59f04e57ef5ea1f840">&#9670;&nbsp;</a></span>get_progress()</h2>
+<a id="a9741f4e72806c3045ac357ace2345767" name="a9741f4e72806c3045ac357ace2345767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9741f4e72806c3045ac357ace2345767">&#9670;&nbsp;</a></span>GetProgress()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ProgressBar::get_progress </td>
+          <td class="memname">int ProgressBar::GetProgress </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -155,25 +156,27 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00010">10</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                             {</div>
-<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">if</span>(task == result){</div>
-<div class="line"><span class="lineno">   12</span>        <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>++;</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">int</span> progress = 100*<a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>/<a class="code hl_variable" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a>;</div>
-<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> progress;</div>
-<div class="line"><span class="lineno">   16</span>}</div>
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00009">9</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>                                                            {</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span>(task == result){</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>++;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordtype">int</span> progress = 100*<a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a>/<a class="code hl_variable" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a>;</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">return</span> progress;</div>
+<div class="line"><span class="lineno">   15</span>}</div>
+<div class="ttc" id="aclassProgressBar_html_a02af5a8cdef96e30b77a4fce6b67888b"><div class="ttname"><a href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">ProgressBar::threshold</a></div><div class="ttdeci">int threshold</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00017">ProgressBar.h:17</a></div></div>
+<div class="ttc" id="aclassProgressBar_html_a309717f93a78f90a21739f42bc008857"><div class="ttname"><a href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">ProgressBar::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00018">ProgressBar.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a127eeaa90ae4362ad2fed359be6c339c" name="a127eeaa90ae4362ad2fed359be6c339c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127eeaa90ae4362ad2fed359be6c339c">&#9670;&nbsp;</a></span>reset_progress()</h2>
+<a id="a8c5eaec997b18f5f93cfe47d62ae4b80" name="a8c5eaec997b18f5f93cfe47d62ae4b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c5eaec997b18f5f93cfe47d62ae4b80">&#9670;&nbsp;</a></span>ResetProgress()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ProgressBar::reset_progress </td>
+          <td class="memname">void ProgressBar::ResetProgress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -181,10 +184,33 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00018">18</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                {</div>
-<div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a> = 0;</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00017">17</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                               {</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="classProgressBar.html#a309717f93a78f90a21739f42bc008857">count</a> = 0;</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae6341e8b03f3c46472d51eb4c41a5eb8" name="ae6341e8b03f3c46472d51eb4c41a5eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6341e8b03f3c46472d51eb4c41a5eb8">&#9670;&nbsp;</a></span>SetThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProgressBar::SetThreshold </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>thres</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8cpp_source.html#l00021">21</a> of file <a class="el" href="ProgressBar_8cpp_source.html">ProgressBar.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                        {</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_variable" href="classProgressBar.html#a02af5a8cdef96e30b77a4fce6b67888b">threshold</a> = thres;</div>
+<div class="line"><span class="lineno">   23</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,7 +225,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ProgressBar::count</td>
+          <td class="memname">int ProgressBar::count = 0</td>
         </tr>
       </table>
   </td>
@@ -209,7 +235,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00015">15</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00018">18</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
 
 </div>
 </div>
@@ -233,7 +259,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00014">14</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ProgressBar_8h_source.html#l00017">17</a> of file <a class="el" href="ProgressBar_8h_source.html">ProgressBar.h</a>.</p>
 
 </div>
 </div>

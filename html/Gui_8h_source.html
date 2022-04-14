@@ -100,34 +100,38 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#ac76a8210e18720a6bd248c0f1425a738">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(<span class="keywordtype">int</span> target);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">SetTargetImage</a>(std::string target);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#a920cc9d83936271c57eacc3608836c30">ButtonPressed</a>();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">SetTask</a>(std::string newTask);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    QMainWindow *widget;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Ui_MainWindow *ui;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="classProgressBar.html">ProgressBar</a> progress_bar;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> setDemoImage(cv::Mat img);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> setTaskText(std::string letter);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> makeConnections();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::string currentTask;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>signals:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(<span class="keywordtype">int</span> progress);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">SetTask</a>(std::string newTask);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#a012766edbe7b63bb0a334d0dc0a20acf">buttonPressed</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGui.html#a082d398d97da7d062946f9bcbd207dbc">updateThreshold</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    QMainWindow *widget;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Ui_MainWindow *ui;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="classProgressBar.html">ProgressBar</a> progressBar;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> setDemoImage(cv::Mat img);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> setTaskText(std::string letter);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> makeConnections();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::string currentTask;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>signals:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classGui.html#aebf0df50c8d102f1abe49b406978c788">progressChanged</a>(<span class="keywordtype">int</span> progress);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aProgressBar_8h_html"><div class="ttname"><a href="ProgressBar_8h.html">ProgressBar.h</a></div></div>
 <div class="ttc" id="aSceneCallback_8h_html"><div class="ttname"><a href="SceneCallback_8h.html">SceneCallback.h</a></div></div>
 <div class="ttc" id="aSignapseUtils_8h_html"><div class="ttname"><a href="SignapseUtils_8h.html">SignapseUtils.h</a></div></div>
 <div class="ttc" id="aclassGui_html"><div class="ttname"><a href="classGui.html">Gui</a></div><div class="ttdef"><b>Definition:</b> <a href="Gui_8h_source.html#l00022">Gui.h:22</a></div></div>
+<div class="ttc" id="aclassGui_html_a012766edbe7b63bb0a334d0dc0a20acf"><div class="ttname"><a href="classGui.html#a012766edbe7b63bb0a334d0dc0a20acf">Gui::buttonPressed</a></div><div class="ttdeci">void buttonPressed()</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00062">Gui.cpp:62</a></div></div>
+<div class="ttc" id="aclassGui_html_a082d398d97da7d062946f9bcbd207dbc"><div class="ttname"><a href="classGui.html#a082d398d97da7d062946f9bcbd207dbc">Gui::updateThreshold</a></div><div class="ttdeci">void updateThreshold()</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00069">Gui.cpp:69</a></div></div>
 <div class="ttc" id="aclassGui_html_a0a36847ab7eaf678ed178b9735001c62"><div class="ttname"><a href="classGui.html#a0a36847ab7eaf678ed178b9735001c62">Gui::SetTargetImage</a></div><div class="ttdeci">void SetTargetImage(int target)</div></div>
-<div class="ttc" id="aclassGui_html_a920cc9d83936271c57eacc3608836c30"><div class="ttname"><a href="classGui.html#a920cc9d83936271c57eacc3608836c30">Gui::ButtonPressed</a></div><div class="ttdeci">void ButtonPressed()</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00059">Gui.cpp:59</a></div></div>
 <div class="ttc" id="aclassGui_html_aa30ec3c367a788a076c6d4b4c94fff78"><div class="ttname"><a href="classGui.html#aa30ec3c367a788a076c6d4b4c94fff78">Gui::NextScene</a></div><div class="ttdeci">virtual void NextScene(Scene next)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00023">Gui.cpp:23</a></div></div>
-<div class="ttc" id="aclassGui_html_ac76a8210e18720a6bd248c0f1425a738"><div class="ttname"><a href="classGui.html#ac76a8210e18720a6bd248c0f1425a738">Gui::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00043">Gui.cpp:43</a></div></div>
-<div class="ttc" id="aclassGui_html_ad52cabd9e25e09e480e106a873e6ac3b"><div class="ttname"><a href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">Gui::SetTask</a></div><div class="ttdeci">void SetTask(std::string newTask)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00086">Gui.cpp:86</a></div></div>
+<div class="ttc" id="aclassGui_html_ac76a8210e18720a6bd248c0f1425a738"><div class="ttname"><a href="classGui.html#ac76a8210e18720a6bd248c0f1425a738">Gui::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00046">Gui.cpp:46</a></div></div>
+<div class="ttc" id="aclassGui_html_ad52cabd9e25e09e480e106a873e6ac3b"><div class="ttname"><a href="classGui.html#ad52cabd9e25e09e480e106a873e6ac3b">Gui::SetTask</a></div><div class="ttdeci">void SetTask(std::string newTask)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00096">Gui.cpp:96</a></div></div>
 <div class="ttc" id="aclassGui_html_ada7f4f3d768f6aaff6d697040256befc"><div class="ttname"><a href="classGui.html#ada7f4f3d768f6aaff6d697040256befc">Gui::Gui</a></div><div class="ttdeci">Gui(QMainWindow *win, Ui_MainWindow *ui_win)</div><div class="ttdef"><b>Definition:</b> <a href="Gui_8cpp_source.html#l00011">Gui.cpp:11</a></div></div>
 <div class="ttc" id="aclassGui_html_aebf0df50c8d102f1abe49b406978c788"><div class="ttname"><a href="classGui.html#aebf0df50c8d102f1abe49b406978c788">Gui::progressChanged</a></div><div class="ttdeci">void progressChanged(int progress)</div></div>
-<div class="ttc" id="aclassProgressBar_html"><div class="ttname"><a href="classProgressBar.html">ProgressBar</a></div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00008">ProgressBar.h:8</a></div></div>
+<div class="ttc" id="aclassProgressBar_html"><div class="ttname"><a href="classProgressBar.html">ProgressBar</a></div><div class="ttdef"><b>Definition:</b> <a href="ProgressBar_8h_source.html#l00010">ProgressBar.h:10</a></div></div>
 <div class="ttc" id="aclassQWidget_html"><div class="ttname"><a href="classQWidget.html">QWidget</a></div></div>
 <div class="ttc" id="aclassSceneCallback_html"><div class="ttname"><a href="classSceneCallback.html">SceneCallback</a></div><div class="ttdef"><b>Definition:</b> <a href="SceneCallback_8h_source.html#l00008">SceneCallback.h:8</a></div></div>
 <div class="ttc" id="astructScene_html"><div class="ttname"><a href="structScene.html">Scene</a></div><div class="ttdoc">Struct Scene.</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00036">Scene.h:36</a></div></div>

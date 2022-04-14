@@ -1,5 +1,5 @@
 <map id="Gui" name="Gui">
-<area shape="rect" id="node1" title=" " alt="" coords="31,131,166,296"/>
+<area shape="rect" id="node1" title=" " alt="" coords="30,131,167,311"/>
 <area shape="rect" id="node2" href="$classQWidget.html" title=" " alt="" coords="5,5,77,83"/>
 <area shape="rect" id="node3" href="$classSceneCallback.html" title=" " alt="" coords="101,5,211,83"/>
 </map>

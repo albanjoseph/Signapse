@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ecamera_0',['~Camera',['../classCamera.html#ad1897942d0ccf91052386388a497349f',1,'Camera']]]
+  ['updatethreshold_0',['updateThreshold',['../classGui.html#a082d398d97da7d062946f9bcbd207dbc',1,'Gui']]]
 ];
