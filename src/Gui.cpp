@@ -3,6 +3,11 @@
 #define UI_WDH 1000
 #define UI_HGT 700
 
+/*!
+ * Constructor sets up GUI, makes signal connections
+ * @param win points to QMainWindow from main thread
+ * @param ui_win points to Ui_MainWindow from main thread
+ */
 Gui::Gui(QMainWindow* win, Ui_MainWindow* ui_win) {
     widget = win;
     widget->setFixedSize(UI_WDH, UI_HGT);
@@ -11,7 +16,10 @@ Gui::Gui(QMainWindow* win, Ui_MainWindow* ui_win) {
     SetTask("A");
     makeConnections();
 }
-
+/*!
+ * Handles the next scene from the video processing pipeline. If the result is empty, the viewing pane is updated, otherwise, the progress bar is updated.
+ * @param next The Scene to be processed
+ */
 void Gui::NextScene(Scene next) {
     //flip frame
     if(next.result == "") {
@@ -28,23 +36,26 @@ void Gui::NextScene(Scene next) {
     }
     
 }
-
+/*!
+ * Sets underlying widget visibility.
+ * @param visible
+ */
 void Gui::SetVisible(bool visible) {
     widget->setVisible(visible);
 }
-
-void Gui::SetTargetImage(int target) {
-    std::string letter = SignapseUtils::getLetterFromDigit(target);
-    SetTargetImage(letter);
-    progressChanged(0);
-}
-
+/*!
+ * Sets the target to match with user sign
+ * @param letter string represenation of the target sign
+ */
 void Gui::SetTargetImage(std::string letter) {
     std::string impath = testFolder + letter + "_test.jpg";
     cv::Mat img = cv::imread(impath);
     setDemoImage(img);
     setTaskText(letter);
 }
+/*!
+ * Method handler for when the next task button is pressed, sets new task and resets the progress bar.
+ */
 void Gui::ButtonPressed(){
     std::string new_task = SignapseUtils::getLetterFromDigit(SignapseUtils::makeTask());
     SetTargetImage(new_task);
@@ -52,6 +63,9 @@ void Gui::ButtonPressed(){
     progress_bar.reset_progress();
 }
 
+/*!
+ * Makes signal connections for the GUI interrupts.
+ */
 void Gui::makeConnections() {
     QObject::connect(ui->pushButton, &QPushButton::released, this, &Gui::ButtonPressed);
     QObject::connect(this, &Gui::progressChanged, ui->progressBar, &QProgressBar::setValue);
