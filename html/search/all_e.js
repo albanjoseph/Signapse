@@ -16,7 +16,7 @@ var searchData=
   ['settargetimage_13',['SetTargetImage',['../classGui.html#a0a36847ab7eaf678ed178b9735001c62',1,'Gui::SetTargetImage(int target)'],['../classGui.html#abd40935fbc464cd0f5e456d43115ec39',1,'Gui::SetTargetImage(std::string target)']]],
   ['settask_14',['SetTask',['../classGui.html#ad52cabd9e25e09e480e106a873e6ac3b',1,'Gui']]],
   ['setthreshold_15',['SetThreshold',['../classProgressBar.html#ae6341e8b03f3c46472d51eb4c41a5eb8',1,'ProgressBar']]],
-  ['settings_16',['settings',['../classCNNProcessor.html#a5239daf3f9fe549ed83f160fc43a5015',1,'CNNProcessor']]],
+  ['settings_16',['settings',['../classCNNProcessor.html#a65272847302bc91a5878c8cb76f3fcfb',1,'CNNProcessor']]],
   ['setvisible_17',['SetVisible',['../classGui.html#ac76a8210e18720a6bd248c0f1425a738',1,'Gui']]],
   ['signapseutils_2eh_18',['SignapseUtils.h',['../SignapseUtils_8h.html',1,'']]],
   ['size_19',['Size',['../classBlockingQueue.html#aab57e39ee47d79c2f8c604a0a0239279',1,'BlockingQueue']]],

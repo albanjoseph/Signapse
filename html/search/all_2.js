@@ -5,10 +5,10 @@ var searchData=
   ['camera_2eh_2',['Camera.h',['../Camera_8h.html',1,'']]],
   ['camerasettings_3',['CameraSettings',['../structCameraSettings.html',1,'CameraSettings'],['../structCameraSettings.html#a98496a42625d2eced9688063873e8bd1',1,'CameraSettings::CameraSettings(const CameraSettings &amp;cpy)'],['../structCameraSettings.html#a32b174472db7b9cfee4acc3d27e1b838',1,'CameraSettings::CameraSettings(int dID=0)']]],
   ['camerasettings_2eh_4',['CameraSettings.h',['../CameraSettings_8h.html',1,'']]],
-  ['cnnprocessor_5',['CNNProcessor',['../classCNNProcessor.html',1,'CNNProcessor'],['../classCNNProcessor.html#a3ce649f0bc54153c07ac6b13ebe75f74',1,'CNNProcessor::CNNProcessor()']]],
+  ['cnnprocessor_5',['CNNProcessor',['../classCNNProcessor.html',1,'CNNProcessor'],['../classCNNProcessor.html#a4019e70deb15333fb2c83007fa7b910e',1,'CNNProcessor::CNNProcessor()']]],
   ['cnnprocessor_2ecpp_6',['CNNProcessor.cpp',['../CNNProcessor_8cpp.html',1,'']]],
   ['cnnprocessor_2eh_7',['CNNProcessor.h',['../CNNProcessor_8h.html',1,'']]],
-  ['cnnprocessorsettings_8',['CNNProcessorSettings',['../structCNNProcessorSettings.html',1,'CNNProcessorSettings'],['../structCNNProcessorSettings.html#abee4ceaf44364223e64aad69a88729ed',1,'CNNProcessorSettings::CNNProcessorSettings()']]],
+  ['cnnprocessorsettings_8',['CNNProcessorSettings',['../structCNNProcessorSettings.html',1,'CNNProcessorSettings'],['../structCNNProcessorSettings.html#abee4ceaf44364223e64aad69a88729ed',1,'CNNProcessorSettings::CNNProcessorSettings(std::string network=&quot;mobnetv2&quot;)'],['../structCNNProcessorSettings.html#a771fc384e087a9b4926d7becee830292',1,'CNNProcessorSettings::CNNProcessorSettings(const CNNProcessorSettings &amp;cpy)']]],
   ['cnnprocessorsettings_2eh_9',['CNNProcessorSettings.h',['../CNNProcessorSettings_8h.html',1,'']]],
   ['count_10',['count',['../classProgressBar.html#a309717f93a78f90a21739f42bc008857',1,'ProgressBar']]]
 ];
