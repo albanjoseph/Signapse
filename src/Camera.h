@@ -6,6 +6,7 @@
 #include <thread>
 
 #include "PipelineLink.h"
+#include "CameraSettings.h"
 
 
 /*!
@@ -14,7 +15,7 @@
 class Camera: public PipelineLink{
 public:
     Camera();
-    ~Camera();
+    Camera(CameraSettings settings);
     bool getOn();
     void setOn(bool state);
     void Start();
@@ -24,12 +25,7 @@ private:
     void postFrame();
     void threadLoop();
     cv::VideoCapture videoCapture;
-    int deviceID = 0;
-    //! Private member variable containing web cam API ID.
-    /*!
-        0 = autodetect default API
-    */
-    int apiID = cv::CAP_ANY;
+    CameraSettings cameraSettings;
     //! Private member thread
     std::thread cameraThread;
     //! Private member variable containing camera object status.

@@ -28,7 +28,8 @@ int main(int argc, char* argv[]){
     Ui_MainWindow ui;
     
     //make pipeline components
-    Camera camera;
+    CameraSettings cameraSettings;
+    Camera camera(cameraSettings);
     PreProcessorSettings preProcessorSettings;
     PreProcessor preProcessor(&preProcessorSettings);
     LinkSplitter linkSplitter;

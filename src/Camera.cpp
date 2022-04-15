@@ -1,10 +1,16 @@
 #include "Camera.h"
 
 /*!
- * Camera constructor, sets isOn to true.
+ * Camera default constructor, inits settings, sets isOn to true.
  */
-Camera::Camera() {
+Camera::Camera() : cameraSettings() {
     isOn=true;
+}
+/*!
+ * Camera constructor from settings, sets isOn to true.
+ */
+Camera::Camera(CameraSettings settings) : cameraSettings(settings){
+    isOn = true;
 }
 
 /*!
@@ -45,7 +51,7 @@ void Camera::postFrame(){
  * Starts the worker thread recording
  */
 void Camera::Start(){
-    videoCapture.open(deviceID, apiID);
+    videoCapture.open(cameraSettings.deviceID, cameraSettings.apiID);
     cameraThread = std::thread(&Camera::threadLoop, this);
 }
 
@@ -64,8 +70,4 @@ void Camera::Stop(){
  */
 bool Camera::getOn() {
     return isOn;
-}
-
-Camera::~Camera() {
-    //Stop();
 }
