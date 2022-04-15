@@ -8,7 +8,7 @@
 TEST(preprocessor_test, checkBBox_set){
     EndpointTester endpoint;
     PreProcessorSettings settings;
-    PreProcessor pp(&settings);
+    PreProcessor pp(settings);
     pp.SetBoundingBox(0.0f, 0.0f, 1.0f, 1.0f);
     Scene s = MakeScene("A");
     pp.RegisterCallback(&endpoint);
