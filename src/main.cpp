@@ -34,7 +34,7 @@ int main(int argc, char* argv[]){
     PreProcessor preProcessor(preProcessorSettings);
     LinkSplitter linkSplitter;
     CNNProcessorSettings cnnSettings;
-    CNNProcessor cnn(&cnnSettings);
+    CNNProcessor cnn(cnnSettings);
     Gui gui(&window, &ui);
     
     //register callbacks (link pipeline)

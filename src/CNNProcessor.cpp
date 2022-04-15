@@ -8,10 +8,14 @@ void CNNProcessor::LoadModel(std::string modelPath){
     net = cv::dnn::readNetFromTensorflow(modelPath);
 }
 
-CNNProcessor::CNNProcessor(CNNProcessorSettings* s) {
-    settings = s;
-    LoadModel(settings->ModelPath);
+/*!
+ * Constructor, inits settings and loads model
+ * @param s
+ */
+CNNProcessor::CNNProcessor(CNNProcessorSettings s) : settings(s) {
+    LoadModel(settings.ModelPath);
 }
+
 
 /*!
  * Makes OpenCV image "blob" from the region of interest in the frame. Blob format is required for inference.
@@ -24,7 +28,7 @@ cv::Mat CNNProcessor::MakeBlob(Scene scene){
     int height = scene.regionOfInterest.LowerRight.y - y;
     cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
     cv::Mat small;
-    cv::resize(roi, small, cv::Size(settings->InputDim_x,settings->InputDim_y));
+    cv::resize(roi, small, cv::Size(settings.InputDim_x,settings.InputDim_y));
     cv::Mat blob;
     cv::dnn::blobFromImage(small, blob, (1.0 / 255.0));
     return blob;

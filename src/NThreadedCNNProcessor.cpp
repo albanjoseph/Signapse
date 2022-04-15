@@ -1,9 +1,8 @@
 #include "NThreadedCNNProcessor.h"
 #include "BlockingQueue.cpp"
 
-NThreadedCNNProcessor::NThreadedCNNProcessor(CNNProcessorSettings* settings, int nrThreads) : CNNProcessor(settings),
+NThreadedCNNProcessor::NThreadedCNNProcessor(CNNProcessorSettings settings, int nrThreads) : CNNProcessor(settings),
                                                                                               MultiThreadedSchedulableLink(nrThreads) {
-    LoadModel(settings->ModelPath);
 }
 
 void NThreadedCNNProcessor::LoadModel(std::string filename) {

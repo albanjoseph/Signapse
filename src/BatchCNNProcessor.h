@@ -8,7 +8,7 @@
 
 class BatchCNNProcessor : public CNNProcessor {
 public:
-    BatchCNNProcessor(CNNProcessorSettings* settings, int batchSize);
+    BatchCNNProcessor(CNNProcessorSettings settings, int batchSize);
     std::vector<Scene> ProcessScenes(std::vector<Scene> scenes);
     std::string PostProcess(cv::Mat out);
     void NextScene(Scene s);

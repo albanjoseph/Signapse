@@ -1,6 +1,6 @@
 #include "BatchCNNProcessor.h"
 
-BatchCNNProcessor::BatchCNNProcessor(CNNProcessorSettings* settings, int batchSz) : CNNProcessor(settings){
+BatchCNNProcessor::BatchCNNProcessor(CNNProcessorSettings settings, int batchSz) : CNNProcessor(settings){
     batchSize = batchSz;
     time(&start);
     isOn = true;
@@ -49,7 +49,7 @@ std::vector<Scene> BatchCNNProcessor::ProcessScenes(std::vector<Scene> scenes){
         int height = scene.regionOfInterest.LowerRight.y - y;
         cv::Mat roi = scene.frame(cv::Range(y, y+height), cv::Range(x, x+width));
         cv::Mat small;
-        cv::resize(roi, small, cv::Size(settings->InputDim_x,settings->InputDim_y));
+        cv::resize(roi, small, cv::Size(settings.InputDim_x,settings.InputDim_y));
         mats[i] = small;
     }
     cv::Mat blob;

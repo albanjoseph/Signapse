@@ -18,7 +18,7 @@
 */
 class NThreadedCNNProcessor : public virtual MultiThreadedSchedulableLink, public CNNProcessor{
 public:
-    NThreadedCNNProcessor(CNNProcessorSettings* settings, int nrThreads);
+    NThreadedCNNProcessor(CNNProcessorSettings settings, int nrThreads);
     Scene ProcessScene(Scene s);
 
 private:

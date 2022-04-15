@@ -9,10 +9,10 @@
  */
 void PreProcessor::NextScene(Scene scene){
    cv::Size sz = scene.frame.size();
-   scene.regionOfInterest = BoundingBox((int)(sz.width * settings->relativeBoundingBox[0]),
-                                        (int)(sz.height * settings->relativeBoundingBox[1]),
-                                        (int)(sz.width * settings->relativeBoundingBox[2]),
-                                        (int)(sz.height * settings->relativeBoundingBox[3]));
+   scene.regionOfInterest = BoundingBox((int)(sz.width * settings.relativeBoundingBox[0]),
+                                        (int)(sz.height * settings.relativeBoundingBox[1]),
+                                        (int)(sz.width * settings.relativeBoundingBox[2]),
+                                        (int)(sz.height * settings.relativeBoundingBox[3]));
    Scene out = switchRGB2BGR(scene);
    out = drawBox(scene);
     if(!sceneCallback) return;
@@ -66,17 +66,17 @@ Scene PreProcessor::drawBox(Scene s) {
  * @param lowerRightY
  */
 void PreProcessor::SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY) {
-    settings->relativeBoundingBox[0] = upperLeftX;
-    settings->relativeBoundingBox[1] = upperLeftY;
-    settings->relativeBoundingBox[2] = lowerRightX;
-    settings->relativeBoundingBox[3] = lowerRightY;
+    settings.relativeBoundingBox[0] = upperLeftX;
+    settings.relativeBoundingBox[1] = upperLeftY;
+    settings.relativeBoundingBox[2] = lowerRightX;
+    settings.relativeBoundingBox[3] = lowerRightY;
     for(int i = 0; i < 4; i++){
-        float val = settings->relativeBoundingBox[i];
+        float val = settings.relativeBoundingBox[i];
         if(val > 1.0f){
-            settings->relativeBoundingBox[i] = 1.0f;
+            settings.relativeBoundingBox[i] = 1.0f;
         }
         else if (val < 0.0f){
-            settings->relativeBoundingBox[i] = 0.0f;
+            settings.relativeBoundingBox[i] = 0.0f;
         }
     }
 }

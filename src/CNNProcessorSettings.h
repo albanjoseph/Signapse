@@ -19,6 +19,15 @@ struct CNNProcessorSettings {
             ; //space for more default network setups
         }
     }
+    /*!
+     * Copy constructor
+     * @param cpy
+     */
+    CNNProcessorSettings(const CNNProcessorSettings& cpy){
+        ModelPath = cpy.ModelPath;
+        InputDim_x = cpy.InputDim_x;
+        InputDim_y = cpy.InputDim_y;
+    }
     std::string ModelPath = "";
     int InputDim_x = 0;
     int InputDim_y = 0;
