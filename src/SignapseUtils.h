@@ -46,9 +46,15 @@ namespace {
          *
          */
         static std::string makeTask() {
-            srand((unsigned) time(NULL));
             int task_int = rand() % NR_TASKS;
             return getLetterFromDigit(task_int);
+        }
+        /*!
+         * Sets the random seed to current system time.
+         *
+         */
+        static void randSeed(){
+            srand((unsigned) time(NULL));
         }
         /*!
          * @return Path of the currently used CNN network. Path given as std::string

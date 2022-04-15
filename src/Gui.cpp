@@ -15,6 +15,7 @@ Gui::Gui(QMainWindow* win, Ui_MainWindow* ui_win) {
     ui->setupUi(widget);
     SetTask("A");
     makeConnections();
+    SignapseUtils::randSeed();
 }
 /*!
  * Handles the next scene from the video processing pipeline. If the result is empty, the viewing pane is updated, otherwise, the progress bar is updated.
