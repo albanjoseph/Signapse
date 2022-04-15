@@ -22,9 +22,12 @@ void PreProcessor::NextScene(Scene scene){
  *
  * @param PreProcessorSettings for initialisation
  */
-PreProcessor::PreProcessor(PreProcessorSettings* s) {
-    settings = s;
-}
+PreProcessor::PreProcessor(PreProcessorSettings s) : settings(s) {}
+
+/*!
+ * Default constructor; inits default settings
+ */
+PreProcessor::PreProcessor() : settings() {}
 
 /*!
  * Processing method to switch the pixel format of the internal frame. Performed with standard OpenCV functions

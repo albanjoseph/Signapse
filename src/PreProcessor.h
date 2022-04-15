@@ -7,13 +7,14 @@
  */
 class PreProcessor : public PipelineLink{
 public:
-    PreProcessor(PreProcessorSettings* settings);
+    PreProcessor();
+    PreProcessor(PreProcessorSettings settings);
     void NextScene(Scene scene);
     void SetBoundingBox(float upperLeftX, float upperLeftY, float lowerRightX, float lowerRightY);
     
 private:
     Scene drawBox(Scene s);
     Scene switchRGB2BGR(Scene s);
-    PreProcessorSettings* settings;
+    PreProcessorSettings settings;
 };
 

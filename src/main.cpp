@@ -31,7 +31,7 @@ int main(int argc, char* argv[]){
     CameraSettings cameraSettings;
     Camera camera(cameraSettings);
     PreProcessorSettings preProcessorSettings;
-    PreProcessor preProcessor(&preProcessorSettings);
+    PreProcessor preProcessor(preProcessorSettings);
     LinkSplitter linkSplitter;
     CNNProcessorSettings cnnSettings;
     CNNProcessor cnn(&cnnSettings);

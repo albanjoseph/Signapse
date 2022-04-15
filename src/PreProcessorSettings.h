@@ -13,5 +13,11 @@ struct PreProcessorSettings{
         relativeBoundingBox[2] = X1;
         relativeBoundingBox[3] = Y1;
     }
+    PreProcessorSettings(const PreProcessorSettings& cpy){
+        relativeBoundingBox[0] = cpy.relativeBoundingBox[0];
+        relativeBoundingBox[1] = cpy.relativeBoundingBox[1];
+        relativeBoundingBox[2] = cpy.relativeBoundingBox[2];
+        relativeBoundingBox[3] = cpy.relativeBoundingBox[3];
+    }
     float relativeBoundingBox[4];
 };
