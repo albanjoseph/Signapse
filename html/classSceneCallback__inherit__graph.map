@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$classPipelineLink.html" title=" " alt="" coords="242,175,381,267"/>
 <area shape="rect" id="node4" href="$classCamera.html" title=" " alt="" coords="5,381,92,531"/>
 <area shape="rect" id="node5" href="$classLinkSplitter.html" title=" " alt="" coords="115,410,315,502"/>
-<area shape="rect" id="node6" href="$classPreProcessor.html" title=" " alt="" coords="340,403,477,509"/>
+<area shape="rect" id="node6" href="$classPreProcessor.html" title=" " alt="" coords="340,395,477,517"/>
 <area shape="rect" id="node7" href="$classSchedulableLink.html" title=" " alt="" coords="501,359,628,553"/>
 <area shape="rect" id="node8" href="$classCNNProcessor.html" title=" " alt="" coords="500,601,629,737"/>
 </map>
