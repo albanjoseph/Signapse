@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['inputdim_5fx_0',['InputDim_x',['../structCNNProcessorSettings.html#ab96f0eeb86d18bf47230c84aa547990b',1,'CNNProcessorSettings']]],
-  ['inputdim_5fy_1',['InputDim_y',['../structCNNProcessorSettings.html#a7d22e32876d7a9f782a5298e4b369d0d',1,'CNNProcessorSettings']]],
-  ['isempty_2',['IsEmpty',['../classBlockingQueue.html#ab144302dd6dbdd50fc994f3432581d12',1,'BlockingQueue']]],
-  ['ison_3',['isOn',['../classSchedulableLink.html#abb5941fb4cd42cd854195130e8ae64f0',1,'SchedulableLink']]]
+  ['geton_0',['getOn',['../classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4',1,'Camera']]],
+  ['getprogress_1',['GetProgress',['../classProgressBar.html#a9741f4e72806c3045ac357ace2345767',1,'ProgressBar']]],
+  ['gui_2',['Gui',['../classGui.html',1,'Gui'],['../classGui.html#ada7f4f3d768f6aaff6d697040256befc',1,'Gui::Gui()']]],
+  ['gui_2ecpp_3',['Gui.cpp',['../Gui_8cpp.html',1,'']]],
+  ['gui_2eh_4',['Gui.h',['../Gui_8h.html',1,'']]]
 ];

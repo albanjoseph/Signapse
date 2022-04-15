@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['_7ecamera_0',['~Camera',['../classCamera.html#ad1897942d0ccf91052386388a497349f',1,'Camera']]]
+  ['y_0',['y',['../structPoint.html#a2e1b5fb2b2a83571f5c0bc0f66a73cf7',1,'Point']]],
+  ['y0_1',['Y0',['../PreProcessorSettings_8h.html#a0b0dcdd1ffa302474e907d3d7ad9dbfe',1,'PreProcessorSettings.h']]],
+  ['y1_2',['Y1',['../PreProcessorSettings_8h.html#a294189cdea31dda8faf609b9b3e2000a',1,'PreProcessorSettings.h']]]
 ];

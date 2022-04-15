@@ -77,7 +77,7 @@ Inheritance diagram for Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCamera__inherit__graph.png" border="0" usemap="#aCamera_inherit__map" alt="Inheritance graph"/></div>
 <map name="aCamera_inherit__map" id="aCamera_inherit__map">
-<area shape="rect" title=" " alt="" coords="28,271,121,421"/>
+<area shape="rect" title=" " alt="" coords="31,271,118,421"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="5,131,144,223"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="20,5,129,83"/>
 </map>
@@ -87,7 +87,7 @@ Collaboration diagram for Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCamera__coll__graph.png" border="0" usemap="#aCamera_coll__map" alt="Collaboration graph"/></div>
 <map name="aCamera_coll__map" id="aCamera_coll__map">
-<area shape="rect" title=" " alt="" coords="28,287,121,437"/>
+<area shape="rect" title=" " alt="" coords="31,287,118,437"/>
 <area shape="rect" href="classPipelineLink.html" title=" " alt="" coords="5,145,144,237"/>
 <area shape="rect" href="classSceneCallback.html" title=" " alt="" coords="20,5,129,83"/>
 </map>
@@ -97,8 +97,8 @@ Collaboration diagram for Camera:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a01f94c3543f56ede7af49dc778f19331"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a> ()</td></tr>
 <tr class="separator:a01f94c3543f56ede7af49dc778f19331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1897942d0ccf91052386388a497349f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a> ()</td></tr>
-<tr class="separator:ad1897942d0ccf91052386388a497349f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d40adb62f84db90726c7b889e8205d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ae3d40adb62f84db90726c7b889e8205d">Camera</a> (<a class="el" href="structCameraSettings.html">CameraSettings</a> settings)</td></tr>
+<tr class="separator:ae3d40adb62f84db90726c7b889e8205d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eefea2d6ea67dd7d86b94a0e3a5efc4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">getOn</a> ()</td></tr>
 <tr class="separator:a3eefea2d6ea67dd7d86b94a0e3a5efc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5cea7c91c22b813050379eb2c43ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">setOn</a> (bool state)</td></tr>
@@ -125,10 +125,10 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Simple Pipeline element which integrates frame acquisition from the camera feed. </p>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8h_source.html#l00014">14</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Camera_8h_source.html#l00015">15</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a01f94c3543f56ede7af49dc778f19331" name="a01f94c3543f56ede7af49dc778f19331"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01f94c3543f56ede7af49dc778f19331">&#9670;&nbsp;</a></span>Camera()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f94c3543f56ede7af49dc778f19331">&#9670;&nbsp;</a></span>Camera() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,34 +141,36 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p ><a class="el" href="classCamera.html">Camera</a> constructor, sets isOn to true. </p>
+<p ><a class="el" href="classCamera.html">Camera</a> default constructor, inits settings, sets isOn to true. </p>
 
 <p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00006">6</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>               {</div>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>               : cameraSettings() {</div>
 <div class="line"><span class="lineno">    7</span>    isOn=<span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">    8</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ad1897942d0ccf91052386388a497349f" name="ad1897942d0ccf91052386388a497349f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1897942d0ccf91052386388a497349f">&#9670;&nbsp;</a></span>~Camera()</h2>
+<a id="ae3d40adb62f84db90726c7b889e8205d" name="ae3d40adb62f84db90726c7b889e8205d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d40adb62f84db90726c7b889e8205d">&#9670;&nbsp;</a></span>Camera() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Camera::~Camera </td>
+          <td class="memname">Camera::Camera </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structCameraSettings.html">CameraSettings</a>&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p ><a class="el" href="classCamera.html">Camera</a> constructor from settings, sets isOn to true. </p>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00069">69</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                {</div>
-<div class="line"><span class="lineno">   70</span>    <span class="comment">//Stop();</span></div>
-<div class="line"><span class="lineno">   71</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00012">12</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>                                      : cameraSettings(settings){</div>
+<div class="line"><span class="lineno">   13</span>    isOn = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   14</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,10 +191,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the isON state of the camera </p><dl class="section return"><dt>Returns</dt><dd>true if on; false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00065">65</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                   {</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> isOn;</div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00071">71</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                   {</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> isOn;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,10 +220,10 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00014">14</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>                            {</div>
-<div class="line"><span class="lineno">   15</span>    isOn = state;</div>
-<div class="line"><span class="lineno">   16</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00020">20</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                            {</div>
+<div class="line"><span class="lineno">   21</span>    isOn = state;</div>
+<div class="line"><span class="lineno">   22</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,11 +243,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Starts the worker thread recording </p>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00047">47</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                  {</div>
-<div class="line"><span class="lineno">   48</span>    videoCapture.open(deviceID, apiID);</div>
-<div class="line"><span class="lineno">   49</span>    cameraThread = std::thread(&amp;Camera::threadLoop, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   50</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00053">53</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                  {</div>
+<div class="line"><span class="lineno">   54</span>    videoCapture.open(cameraSettings.<a class="code hl_variable" href="structCameraSettings.html#adf80a15802500d2e025923d1e9d8e173">deviceID</a>, cameraSettings.<a class="code hl_variable" href="structCameraSettings.html#a0ef36d65fe6b519f6510ae713f486090">apiID</a>);</div>
+<div class="line"><span class="lineno">   55</span>    cameraThread = std::thread(&amp;Camera::threadLoop, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="astructCameraSettings_html_a0ef36d65fe6b519f6510ae713f486090"><div class="ttname"><a href="structCameraSettings.html#a0ef36d65fe6b519f6510ae713f486090">CameraSettings::apiID</a></div><div class="ttdeci">int apiID</div><div class="ttdoc">Member variable containing web cam API ID.</div><div class="ttdef"><b>Definition:</b> <a href="CameraSettings_8h_source.html#l00022">CameraSettings.h:22</a></div></div>
+<div class="ttc" id="astructCameraSettings_html_adf80a15802500d2e025923d1e9d8e173"><div class="ttname"><a href="structCameraSettings.html#adf80a15802500d2e025923d1e9d8e173">CameraSettings::deviceID</a></div><div class="ttdeci">int deviceID</div><div class="ttdef"><b>Definition:</b> <a href="CameraSettings_8h_source.html#l00017">CameraSettings.h:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -265,12 +269,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Frees thread resources and stops recording, must be called prior to program exit. </p>
 
-<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00055">55</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                 {</div>
-<div class="line"><span class="lineno">   56</span>    isOn=<span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   57</span>    cameraThread.join();</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Camera_8cpp_source.html#l00061">61</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                 {</div>
+<div class="line"><span class="lineno">   62</span>    isOn=<span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   63</span>    cameraThread.join();</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

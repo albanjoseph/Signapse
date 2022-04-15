@@ -79,37 +79,37 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="PipelineLink_8h.html">PipelineLink.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="CameraSettings_8h.html">CameraSettings.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classCamera.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classCamera.html">Camera</a>: <span class="keyword">public</span> <a class="code hl_class" href="classPipelineLink.html">PipelineLink</a>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">getOn</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">setOn</a>(<span class="keywordtype">bool</span> state);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a758234ad0415d4072c69820c8e0f15a8">Start</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Stop</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> postFrame();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> threadLoop();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    cv::VideoCapture videoCapture;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> deviceID = 0;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">int</span> apiID = cv::CAP_ANY;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::thread cameraThread;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> isOn = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classCamera.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classCamera.html">Camera</a>: <span class="keyword">public</span> <a class="code hl_class" href="classPipelineLink.html">PipelineLink</a>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>(<a class="code hl_struct" href="structCameraSettings.html">CameraSettings</a> settings);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">getOn</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">setOn</a>(<span class="keywordtype">bool</span> state);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a758234ad0415d4072c69820c8e0f15a8">Start</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Stop</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> postFrame();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> threadLoop();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    cv::VideoCapture videoCapture;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_struct" href="structCameraSettings.html">CameraSettings</a> cameraSettings;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::thread cameraThread;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> isOn = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+<div class="ttc" id="aCameraSettings_8h_html"><div class="ttname"><a href="CameraSettings_8h.html">CameraSettings.h</a></div></div>
 <div class="ttc" id="aPipelineLink_8h_html"><div class="ttname"><a href="PipelineLink_8h.html">PipelineLink.h</a></div></div>
-<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8h_source.html#l00014">Camera.h:14</a></div></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8h_source.html#l00015">Camera.h:15</a></div></div>
 <div class="ttc" id="aclassCamera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00006">Camera.cpp:6</a></div></div>
-<div class="ttc" id="aclassCamera_html_a3eefea2d6ea67dd7d86b94a0e3a5efc4"><div class="ttname"><a href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a></div><div class="ttdeci">bool getOn()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00065">Camera.cpp:65</a></div></div>
-<div class="ttc" id="aclassCamera_html_a758234ad0415d4072c69820c8e0f15a8"><div class="ttname"><a href="classCamera.html#a758234ad0415d4072c69820c8e0f15a8">Camera::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00047">Camera.cpp:47</a></div></div>
-<div class="ttc" id="aclassCamera_html_aba5fb6404d7d0876d428fc79b918d019"><div class="ttname"><a href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Camera::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00055">Camera.cpp:55</a></div></div>
-<div class="ttc" id="aclassCamera_html_acc5cea7c91c22b813050379eb2c43ecc"><div class="ttname"><a href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">Camera::setOn</a></div><div class="ttdeci">void setOn(bool state)</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00014">Camera.cpp:14</a></div></div>
-<div class="ttc" id="aclassCamera_html_ad1897942d0ccf91052386388a497349f"><div class="ttname"><a href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a></div><div class="ttdeci">~Camera()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00069">Camera.cpp:69</a></div></div>
+<div class="ttc" id="aclassCamera_html_a3eefea2d6ea67dd7d86b94a0e3a5efc4"><div class="ttname"><a href="classCamera.html#a3eefea2d6ea67dd7d86b94a0e3a5efc4">Camera::getOn</a></div><div class="ttdeci">bool getOn()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00071">Camera.cpp:71</a></div></div>
+<div class="ttc" id="aclassCamera_html_a758234ad0415d4072c69820c8e0f15a8"><div class="ttname"><a href="classCamera.html#a758234ad0415d4072c69820c8e0f15a8">Camera::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00053">Camera.cpp:53</a></div></div>
+<div class="ttc" id="aclassCamera_html_aba5fb6404d7d0876d428fc79b918d019"><div class="ttname"><a href="classCamera.html#aba5fb6404d7d0876d428fc79b918d019">Camera::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00061">Camera.cpp:61</a></div></div>
+<div class="ttc" id="aclassCamera_html_acc5cea7c91c22b813050379eb2c43ecc"><div class="ttname"><a href="classCamera.html#acc5cea7c91c22b813050379eb2c43ecc">Camera::setOn</a></div><div class="ttdeci">void setOn(bool state)</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00020">Camera.cpp:20</a></div></div>
 <div class="ttc" id="aclassPipelineLink_html"><div class="ttname"><a href="classPipelineLink.html">PipelineLink</a></div><div class="ttdef"><b>Definition:</b> <a href="PipelineLink_8h_source.html#l00010">PipelineLink.h:10</a></div></div>
+<div class="ttc" id="astructCameraSettings_html"><div class="ttname"><a href="structCameraSettings.html">CameraSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="CameraSettings_8h_source.html#l00006">CameraSettings.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
