@@ -7,7 +7,7 @@
 #include <deque>
 #include <mutex>
 #include <condition_variable>
-#include "scene.h"
+#include "Scene.h"
 
 
 template <typename T>
@@ -15,16 +15,17 @@ template <typename T>
 /*!
     
 */
+
+/*!
+ * Class to wrap around std::deque and block thread execution when no data is available at the output.
+ * @tparam T Type of elements in the queue
+ */
 class BlockingQueue {
 public:
-    //!  Public member function
-    /*!
-        
-    */
     void Push(T toPush);
     T Pop();
     bool IsEmpty();
-
+    int Size();
 private:
     std::deque<T> internalQueue;
     std::mutex mutex;

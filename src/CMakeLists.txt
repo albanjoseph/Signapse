@@ -1,25 +1,31 @@
+#find and include opencv
 set(OpenCV_DIR "../opencv_build")
-message("Linking OpenCV build at directory: " ${OpenCV_DIR}$ )
 find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
-message("Including OpenCV build at directory: " ${OpenCV_INCLUDE_DIRS})
 
+#find Qt5Widgets
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Signapse main.cpp reel.cpp camera.cpp taskmaster.cpp CNNProcessor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp)
-target_link_libraries(Signapse ${OpenCV_LIBS} Qt5::Widgets)
+#find Threads, prefer pthread
+set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+find_package(Threads REQUIRED)
 
-add_library(reel reel.cpp reel.h)
-target_link_libraries(reel ${OpenCV_LIBS})
+#compile and link main signapse executable
+add_executable(Signapse main.cpp Camera.cpp CNNProcessor.cpp PipelineLink.cpp LinkSplitter.cpp SchedulableLink.cpp PreProcessor.cpp BlockingQueue.cpp Gui.cpp ProgressBar.cpp )
+target_link_libraries(Signapse ${OpenCV_LIBS} Qt5::Widgets Threads::Threads)
 
-add_library(camera camera.cpp camera.h)
-target_link_libraries(camera ${OpenCV_LIBS} reel)
+#build objects for testing as static libs
+add_library(Camera Camera.cpp Camera.h)
+target_link_libraries(Camera ${OpenCV_LIBS} Threads::Threads)
 
-add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h)
-target_link_libraries(CNNProcessor ${OpenCV_LIBS})
+add_library(CNNProcessor CNNProcessor.cpp CNNProcessor.h SchedulableLink.cpp PipelineLink.cpp)
+target_link_libraries(CNNProcessor ${OpenCV_LIBS} Threads::Threads)
 
-add_library(FrameEditor FrameEditor.cpp FrameEditor.h)
-target_link_libraries(FrameEditor ${OpenCV_LIBS})
+add_library(PreProcessor PreProcessor.cpp PreProcessor.h)
+target_link_libraries(PreProcessor ${OpenCV_LIBS})
+
+add_library(BlockingQueue BlockingQueue.cpp BlockingQueue.h)
 
 add_library(Gui Gui.cpp Gui.h)
-target_link_libraries(Gui ${OpenCV_LIBS} Qt5::Widgets)
+target_link_libraries(Gui ${OpenCV_LIBS} Qt5::Widgets Threads::Threads)

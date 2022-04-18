@@ -3,18 +3,21 @@
 #include "iostream"
 
 ProgressBar::ProgressBar(){
-    count = 0;
-    threshold = 100;
+    SetThreshold(100);
 }
 
-int ProgressBar::get_progress(Scene s, char task){
-    if(task == *s.result.c_str()){
+int ProgressBar::GetProgress(std::string result, std::string task){
+    if(task == result){
         count++;
     }
     int progress = 100*count/threshold;
     return progress;
 }
 
-void ProgressBar::reset_progress(){
+void ProgressBar::ResetProgress(){
     count = 0;
+}
+
+void ProgressBar::SetThreshold(int thres) {
+    threshold = thres;
 }

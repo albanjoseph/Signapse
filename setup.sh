@@ -1,8 +1,6 @@
-sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qt5-default libgtest-dev -y
 
 CV_VERSION="69357b1e88680658a07cffde7678a4d697469f03"
-
 ## Download OpenCV code
 printf "Downloading OpenCV ..."
 if [ ! -d "opencv_src" ]; then
@@ -13,17 +11,17 @@ if [ ! -d "opencv_src" ]; then
 else
   printf " skipped\n"
 fi
-
-## Build OpenCV
-printf "Building OpenCV ..."
 if [ ! -d "opencv_build" ]; then
   printf "\n"
   mkdir -p opencv_build
   cd opencv_build
-  cmake -D WITH_QT=ON -DCMAKE_BUILD_TYPE=Release ../opencv_src || exit 1
-  make || exit 1
+  #install with only the nessessary packages - reduces build time
+  cmake -DBUILD_LIST=dnn,improc,videoio, -DCMAKE_BUILD_TYPE=Release ../opencv_src || exit 1
+  #set make jobs to 4 - reduces build time
+  make -j4 || exit 1
   cd ..
 else
   printf " skipped\n"
 fi
+
 

@@ -1,14 +1,13 @@
-//
-// Created by ross on 28/03/2022.
-//
-
 #ifndef SIGNAPSE_SCENECALLBACK_H
 #define SIGNAPSE_SCENECALLBACK_H
-#include "scene.h"
 
+#include "Scene.h"
+/*!
+ * A simple callback interface for passing Scenes through the pipeline
+ */
 class SceneCallback{
 public:
-    virtual void nextScene(Scene next) = 0;
+    virtual void NextScene(Scene next) = 0;
 };
 
-#endif //SIGNAPSE_SCENECALLBACK_H
+#endif
