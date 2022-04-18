@@ -13,8 +13,6 @@
 #include "PreProcessor.h"
 #include "SignapseUtils.h"
 #include "LinkSplitter.h"
-#include "NThreadedCNNProcessor.h"
-#include "BatchCNNProcessor.h"
 
 using namespace cv;
 using namespace std;
