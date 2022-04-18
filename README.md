@@ -41,17 +41,19 @@
 
 
 
-# About Signapse
+# In a Nutshell 🌰
 
-**Signapse is an open source software tool that helps everyday people learn sign language for free!​**
+**Signapse is free open source software that helps everyday people learn sign language for free!​**
 
-For more information check out our <a href="https://github.com/albanjoseph/Signapse/wiki">Wiki</a> where you can find our <a href="https://github.com/albanjoseph/Signapse/wiki/Installation-Guide">installation guide</a>, <a href="https://albanjoseph.github.io/Signapse/html/annotated.html">developer documentation</a> and more. Or to get started quickly simply watch our install guide and demo video below.
+Our deep learning enhanced video pipeline is able to detect when users are making the correct input sign, this is used to challenge users to make example signs shown on-screen. At present Signapse is configured to teach the American Sign Language character alphabet; although we hope to add support for more complex and varied hand signs in the future. 
+
+For installation information check out our <a href="https://github.com/albanjoseph/Signapse/wiki/Installation-Guide">installation guide</a>; or to get started quickly simply watch our install guide and demo video below. For best results using Signapse, we reccomend keeping your hand witin the green box shown on screen and signing in a well lit environment with a plain background; this helps our AI system easily detect your hand signs. Happy Signapsing! 🥳
 
 
 https://user-images.githubusercontent.com/33161910/163428318-66b07cc5-5431-41e9-8261-a6f18a6c4551.mp4
 
 
-# Social Media
+# Social Media 🌐
 Keep up to date with Signapse! Find us on all our social channels:
 </br>
 <p align="center">
@@ -63,7 +65,7 @@ Keep up to date with Signapse! Find us on all our social channels:
    <a href="https://www.instagram.com/gu_signapse" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="instagram" height="100" width="100" /></a> 
 </p>
 
-# Technologies
+# Technologies ⚙️
 Signapse is built using:
 - [C++ Programming Language](https://www.cplusplus.com/)
 - [Debian/Ubuntu Linux](https://www.linux.org/)
@@ -76,15 +78,15 @@ Signapse is built using:
 
 <!-- LICENSE -->
 
-# License
+# License 📰
 
 Distributed under the GPL-3.0 License. See [`LICENSE`](https://github.com/albanjoseph/Signapse/blob/main/LICENSE) for more information.
 
 
-# Contact Us
+# Contact Us 📞
 - 🔭This project is being completed by a team of students at the University of Glasgow :
   * [Adam Frew](https://github.com/Saweenbarra) 
   * [Alban Joseph](https://github.com/albanjoseph)
   * [Lewis Russell](https://github.com/charger4241)
   * [Ross Gardiner](https://github.com/rossGardiner)
-- 📫 Contact us: **signapse.glasgow@gmail.com**
+- 📫 Email: **signapse.glasgow@gmail.com**
