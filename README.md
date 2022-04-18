@@ -56,6 +56,7 @@ https://user-images.githubusercontent.com/33161910/163428318-66b07cc5-5431-41e9-
 # Social Media 🌐
 Keep up to date with Signapse! Find us on all our social channels:
 </br>
+
 <p align="center">
 <a href="https://twitter.com/GU_Signapse" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="signups" height="150" width="100" /></a>·
 <a href="https://www.facebook.com/Signapse-125793226671815" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="signapse" height="150" width="100" /></a> ·
@@ -63,6 +64,7 @@ Keep up to date with Signapse! Find us on all our social channels:
 <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="youtube" height="150" width="100"  /></a>·
 <a href="https://www.tiktok.com/@GU_signapse" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="tiktok" height="150" width="150" /></a> ·
    <a href="https://www.instagram.com/gu_signapse" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="instagram" height="100" width="100" /></a> 
+
 </p>
 
 # Technologies ⚙️
