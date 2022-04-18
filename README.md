@@ -32,7 +32,7 @@
     📜 Explore our 
     <a href="https://github.com/albanjoseph/Signapse/wiki"> Wiki</a> to learn more!!
     <br />
-    🖇️ Explore the 
+    🖇️ Browse the 
     <a href="https://albanjoseph.github.io/Signapse/html/annotated.html"> Developer Documentation</a>!! 
   </p>
 </p>
