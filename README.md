@@ -21,8 +21,8 @@
     .
     <a href="https://github.com/albanjoseph/Signapse/issues">Request Feature</a>
  <br />
- 
-![Build and Test](https://github.com/albanjoseph/Signapse/actions/workflows/cmake_build.yml/badge.svg)
+
+![Build and Test](https://github.com/albanjoseph/Signapse/actions/workflows/cmake_build.yml/badge.svg?branch=dev&event=push)
 ![Docs](https://github.com/albanjoseph/Signapse/actions/workflows/docs.yml/badge.svg)
 
   <p align="center">
