@@ -50,11 +50,9 @@ Our deep learning enhanced video pipeline is able to detect when users are makin
 For installation information check out our <a href="https://github.com/albanjoseph/Signapse/wiki/Installation-Guide">installation guide</a>; or to get started quickly simply watch our install guide and demo video below. For best results using Signapse, we reccomend keeping your hand witin the green box shown on screen and signing in a well lit environment with a plain background; this helps our AI system easily detect your hand signs. Happy Signapsing! 🥳
 
 
-<<<<<<< HEAD
+# Demo Video
 [![Demo Video](https://github.com/albanjoseph/Signapse/blob/main/images/thumbnail_compress.gif)](https://youtu.be/wkhXxTbKkyo "Signapse - Demo Video!")
-=======
-[![Demo Video](http://i.imgur.com/bhjdtqgh.gif)](https://youtu.be/wkhXxTbKkyo "Signapse - Demo Video!")
->>>>>>> 07a88b956f74e7998e57949b3d8abb621a7194fc
+
 
 
 # Social Media 🌐
