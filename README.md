@@ -27,7 +27,7 @@
 
   <p align="center">
     🎥 Check out our product
-    <a href="https://www.youtube.com/channel/UCh2uG2pYoSloEU0IFeqDQMA"> Demo Video</a>!!
+    <a href="https://www.youtube.com/watch?v=wkhXxTbKkyo&ab_channel=Signapse"> Demo Video</a>!!
     <br />
     📜 Explore our 
     <a href="https://github.com/albanjoseph/Signapse/wiki"> Wiki</a> to learn more!!
