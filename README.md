@@ -45,7 +45,7 @@
 
 **Signapse is free open source software that helps everyday people learn sign language for free!​**
 
-Our deep learning enhanced video pipeline is able to detect when users are making the correct input sign, this is used to challenge users to make example signs shown on-screen. At present Signapse is configured to teach the American Sign Language character alphabet; although we hope to add support for more complex and varied hand signs in the future. 
+Our deep learning enhanced video pipeline is able to detect when users are making the correct input sign, this is used to challenge users to make example signs shown on-screen. At present Signapse is configured to teach the American Sign Language character alphabet; we hope to add support for more complex and varied hand signs in the future. 
 
 For installation information check out our [installation guide](https://github.com/albanjoseph/Signapse/wiki/2.-Installation-Guide). For a demo on how to use the application, check out our demo video below. For best results using Signapse, we reccomend keeping your hand witin the green box shown on screen and signing in a well lit environment with a plain background - this helps our AI system easily detect your hand signs. Happy Signapsing! 🥳
 
